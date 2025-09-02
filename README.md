@@ -1,4 +1,4 @@
-# Pizza Management System REST API
+# Administrative Dashboard REST API
 
 ### Technologies
 <section align="left">
