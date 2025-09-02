@@ -1,0 +1,467 @@
+2025-08-26 21:12:50,373 - INFO - sec4you.id-interns-0? source.app.routes.menus_blueprint - Accessing the URI to retrieve all menus
+2025-08-26 21:14:01,499 - INFO - integrative-project source.app.routes.menus_blueprint - Accessing the URI to retrieve all menus
+2025-08-26 21:14:10,280 - INFO - integrative-project source.app.routes.menus_blueprint - Accessing the URI to retrieve all menus
+2025-08-26 21:15:59,878 - INFO - integrative-project source.app.routes.menus_blueprint - Accessing the URI to create a new menu
+2025-08-26 21:15:59,878 - INFO - integrative-project source.app.routes.menus_blueprint - Getting JSON data from request
+2025-08-26 21:15:59,878 - INFO - integrative-project source.app.routes.menus_blueprint - Validating input data
+2025-08-26 21:15:59,879 - INFO - integrative-project source.app.routes.menus_blueprint - Creating new menu in the database
+2025-08-26 21:15:59,906 - INFO - integrative-project source.app.routes.menus_blueprint - Menu created successfully
+2025-08-26 21:18:27,017 - INFO - integrative-project source.app.routes.menus_blueprint - POST /menus - creating new menu
+2025-08-26 21:18:27,017 - INFO - integrative-project source.app.routes.menus_blueprint - Getting JSON data from request and validating fields
+2025-08-26 21:18:39,467 - INFO - integrative-project source.app.routes.menus_blueprint - POST /menus - creating new menu
+2025-08-26 21:18:39,467 - INFO - integrative-project source.app.routes.menus_blueprint - Getting JSON data from request and validating fields
+2025-08-26 21:18:39,498 - INFO - integrative-project source.app.routes.menus_blueprint - Menu created successfully
+2025-08-26 21:21:56,785 - INFO - integrative-project source.app.routes.menus_blueprint - POST /menus - creating new menu
+2025-08-26 21:21:56,785 - INFO - integrative-project source.app.routes.menus_blueprint - Getting JSON data from request and validating fields
+2025-08-26 21:21:56,817 - INFO - integrative-project source.app.routes.menus_blueprint - Menu created successfully
+2025-08-26 21:22:02,469 - INFO - integrative-project source.app.routes.menus_blueprint - Accessing the URI to delete a menu
+2025-08-26 21:22:02,474 - ERROR - integrative-project source.app.handlers.handlers_exceptions - Menu not found: Menu not found.
+2025-08-26 21:22:07,319 - INFO - integrative-project source.app.routes.menus_blueprint - Accessing the URI to delete a menu
+2025-08-26 21:22:07,323 - ERROR - integrative-project source.app.handlers.handlers_exceptions - Menu not found: Menu not found.
+2025-08-26 21:22:08,946 - INFO - integrative-project source.app.routes.menus_blueprint - Accessing the URI to delete a menu
+2025-08-26 21:22:08,950 - ERROR - integrative-project source.app.handlers.handlers_exceptions - Menu not found: Menu not found.
+2025-08-26 21:22:09,897 - INFO - integrative-project source.app.routes.menus_blueprint - Accessing the URI to delete a menu
+2025-08-26 21:22:09,901 - ERROR - integrative-project source.app.handlers.handlers_exceptions - Menu not found: Menu not found.
+2025-08-26 21:23:02,294 - INFO - integrative-project source.app.routes.menus_blueprint - Accessing the URI to delete a menu
+2025-08-26 21:23:02,311 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Menu not found: Menu not found.
+2025-08-29 21:04:51,411 - INFO - integrative-project source.app.routes.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 21:11:09,487 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 21:11:10,228 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 21:15:31,046 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-29 21:16:15,914 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-29 21:16:20,178 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-29 21:16:23,246 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-29 21:16:24,383 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-29 21:16:34,719 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-29 21:16:35,840 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-29 21:16:57,076 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-29 21:16:58,043 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-29 21:17:16,648 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 21:17:16,648 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-08-29 21:18:52,090 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 21:18:52,090 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-08-29 21:18:59,843 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 21:19:07,926 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 21:19:07,926 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'name': ['Missing data for required field.'], 'description': ['Missing data for required field.']}
+2025-08-29 21:19:37,338 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 21:19:37,338 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: type object 'Response' has no attribute 'success'
+2025-08-29 21:19:56,857 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:02:32,575 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:02:32,597 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:02:32,622 - WARNING - integrative-project source.app.services.categories_services - No image URL provided, using default image URL.
+2025-08-29 22:02:32,622 - INFO - integrative-project source.app.services.categories_services - Creating a new category in the repository
+2025-08-29 22:02:32,622 - INFO - integrative-project source.app.repository.categories_repository - Adding new category to the database.
+2025-08-29 22:02:32,628 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "categories" violates not-null constraint
+DETAIL:  Failing row contains (null, Nome da Categoria, Descrição da Categoria, d069a344-62e9-400e-a270-8d91d92dbd36, https://example.com/default-category-image.png, 2025-08-30 01:02:32.624418).
+
+[SQL: INSERT INTO categories (name, description, url_image, created_at, menu_id) VALUES (%(name)s, %(description)s, %(url_image)s, %(created_at)s, %(menu_id)s::UUID)]
+[parameters: {'name': 'Nome da Categoria', 'description': 'Descrição da Categoria', 'url_image': 'https://example.com/default-category-image.png', 'created_at': datetime.datetime(2025, 8, 29, 22, 2, 32, 624418, tzinfo=zoneinfo.ZoneInfo(key='America/Sao_Paulo')), 'menu_id': UUID('d069a344-62e9-400e-a270-8d91d92dbd36')}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-29 22:02:43,838 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:02:43,838 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:02:43,843 - WARNING - integrative-project source.app.services.categories_services - No image URL provided, using default image URL.
+2025-08-29 22:02:43,843 - INFO - integrative-project source.app.services.categories_services - Creating a new category in the repository
+2025-08-29 22:02:43,843 - INFO - integrative-project source.app.repository.categories_repository - Adding new category to the database.
+2025-08-29 22:02:43,846 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "categories" violates not-null constraint
+DETAIL:  Failing row contains (null, Nome da Categoria, Descrição da Categoria, d069a344-62e9-400e-a270-8d91d92dbd36, https://example.com/default-category-image.png, 2025-08-30 01:02:43.844329).
+
+[SQL: INSERT INTO categories (name, description, url_image, created_at, menu_id) VALUES (%(name)s, %(description)s, %(url_image)s, %(created_at)s, %(menu_id)s::UUID)]
+[parameters: {'name': 'Nome da Categoria', 'description': 'Descrição da Categoria', 'url_image': 'https://example.com/default-category-image.png', 'created_at': datetime.datetime(2025, 8, 29, 22, 2, 43, 844329, tzinfo=zoneinfo.ZoneInfo(key='America/Sao_Paulo')), 'menu_id': UUID('d069a344-62e9-400e-a270-8d91d92dbd36')}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-29 22:02:53,596 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:02:53,596 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:02:53,615 - WARNING - integrative-project source.app.services.categories_services - No image URL provided, using default image URL.
+2025-08-29 22:02:53,615 - INFO - integrative-project source.app.services.categories_services - Creating a new category in the repository
+2025-08-29 22:02:53,616 - INFO - integrative-project source.app.repository.categories_repository - Adding new category to the database.
+2025-08-29 22:02:53,620 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "categories" violates not-null constraint
+DETAIL:  Failing row contains (null, Nome da Categoria, Descrição da Categoria, d069a344-62e9-400e-a270-8d91d92dbd36, https://example.com/default-category-image.png, 2025-08-30 01:02:53.618176).
+
+[SQL: INSERT INTO categories (name, description, url_image, created_at, menu_id) VALUES (%(name)s, %(description)s, %(url_image)s, %(created_at)s, %(menu_id)s::UUID)]
+[parameters: {'name': 'Nome da Categoria', 'description': 'Descrição da Categoria', 'url_image': 'https://example.com/default-category-image.png', 'created_at': datetime.datetime(2025, 8, 29, 22, 2, 53, 618176, tzinfo=zoneinfo.ZoneInfo(key='America/Sao_Paulo')), 'menu_id': UUID('d069a344-62e9-400e-a270-8d91d92dbd36')}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-29 22:04:17,694 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:04:17,694 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:04:17,713 - WARNING - integrative-project source.app.services.categories_services - No image URL provided, using default image URL.
+2025-08-29 22:04:17,713 - INFO - integrative-project source.app.services.categories_services - Creating a new category in the repository
+2025-08-29 22:04:17,713 - INFO - integrative-project source.app.repository.categories_repository - Adding new category to the database.
+2025-08-29 22:04:17,729 - ERROR - integrative-project source.app.services.categories_services - Failed to create category in the repository.
+2025-08-29 22:04:17,729 - ERROR - integrative-project source.app.handlers.handlers_exceptions - Category creation failed: Failed to create category.
+2025-08-29 22:08:29,172 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:08:29,172 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:08:29,201 - ERROR - integrative-project source.app.services.categories_services - Category 'Nome da Categoria' already exists in this menu.
+2025-08-29 22:08:29,201 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category duplicate name: Category name already exists in this menu.
+2025-08-29 22:08:35,031 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:08:35,031 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:08:35,035 - WARNING - integrative-project source.app.services.categories_services - No image URL provided, using default image URL.
+2025-08-29 22:08:35,035 - INFO - integrative-project source.app.services.categories_services - Creating a new category in the repository
+2025-08-29 22:08:35,035 - INFO - integrative-project source.app.repository.categories_repository - Adding new category to the database.
+2025-08-29 22:08:35,054 - INFO - integrative-project source.app.services.categories_services - Category created successfully. ID = b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c
+2025-08-29 22:08:35,054 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Category created successfully. ID = {adding_category.id}
+2025-08-29 22:13:34,961 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:13:34,961 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:13:34,986 - ERROR - integrative-project source.app.services.categories_services - Category 'nome da Categoria' already exists in this menu.
+2025-08-29 22:13:34,986 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category duplicate name: Category name already exists in this menu.
+2025-08-29 22:13:36,129 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:13:36,129 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:13:36,132 - ERROR - integrative-project source.app.services.categories_services - Category 'nome da Categoria' already exists in this menu.
+2025-08-29 22:13:36,132 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category duplicate name: Category name already exists in this menu.
+2025-08-29 22:13:40,592 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:13:40,592 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:13:40,595 - ERROR - integrative-project source.app.services.categories_services - Category 'nomE da Categoria' already exists in this menu.
+2025-08-29 22:13:40,596 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category duplicate name: Category name already exists in this menu.
+2025-08-29 22:13:41,545 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:13:41,545 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:13:41,548 - ERROR - integrative-project source.app.services.categories_services - Category 'nomE da Categoria' already exists in this menu.
+2025-08-29 22:13:41,549 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category duplicate name: Category name already exists in this menu.
+2025-08-29 22:13:43,961 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:13:43,961 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:13:43,963 - WARNING - integrative-project source.app.services.categories_services - No image URL provided, using default image URL.
+2025-08-29 22:13:43,963 - INFO - integrative-project source.app.services.categories_services - Creating a new category in the repository
+2025-08-29 22:13:43,964 - INFO - integrative-project source.app.repository.categories_repository - Adding new category to the database.
+2025-08-29 22:13:43,970 - INFO - integrative-project source.app.services.categories_services - Category created successfully.
+2025-08-29 22:13:43,970 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Category created successfully. ID = {adding_category.id}
+2025-08-29 22:13:49,926 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:13:49,926 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:13:49,931 - ERROR - integrative-project source.app.services.categories_services - Category 'nomE da Categoria' already exists in this menu.
+2025-08-29 22:13:49,931 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category duplicate name: Category name already exists in this menu.
+2025-08-29 22:13:51,652 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:13:51,652 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:13:51,656 - ERROR - integrative-project source.app.services.categories_services - Category 'nomE da Categoria' already exists in this menu.
+2025-08-29 22:13:51,656 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category duplicate name: Category name already exists in this menu.
+2025-08-29 22:13:56,183 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-29 22:13:56,183 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-29 22:13:56,186 - ERROR - integrative-project source.app.services.categories_services - Category 'nomE da CatEGoria' already exists in this menu.
+2025-08-29 22:13:56,186 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category duplicate name: Category name already exists in this menu.
+2025-08-29 22:14:25,151 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:20:34,202 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:23:26,918 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:36:33,749 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:36:34,816 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:36:37,005 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:36:37,862 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:36:38,573 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:36:39,235 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:36:39,924 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:37:42,391 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:37:43,351 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:38:59,132 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:38:59,135 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 'MenuServices' object has no attribute 'category_repository'
+2025-08-29 22:39:18,102 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:39:18,107 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 'MenuServices' object has no attribute 'category_repository'
+2025-08-29 22:42:14,269 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:43:17,231 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:43:18,331 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:43:19,545 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:51:14,495 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-29 22:51:14,553 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-29 22:51:14,592 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-29 22:52:24,660 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:52:55,774 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:53:12,754 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:53:36,591 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:54:22,951 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:57:46,019 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-29 22:58:08,315 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus
+2025-08-30 13:04:55,599 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 13:04:55,652 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 13:05:09,103 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 13:05:09,105 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 13:05:38,943 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 13:05:38,945 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 13:05:52,741 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 13:05:52,743 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 13:06:00,522 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-30 13:06:00,522 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-30 13:06:00,538 - ERROR - integrative-project source.app.services.categories_services - Category 'nomE da CatEGoria' already exists in this menu.
+2025-08-30 13:06:00,538 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category duplicate name: Category name already exists in this menu.
+2025-08-30 13:40:45,955 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 13:40:45,983 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 13:40:55,505 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:40:55,509 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = d069a344-62e9-400e-a270-8d91d92dbd36
+2025-08-30 13:40:55,509 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: Object of type CategoriesEntity is not JSON serializable
+2025-08-30 13:41:37,743 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:41:37,763 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 'list' object has no attribute 'serialize'
+2025-08-30 13:41:39,282 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:41:39,285 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 'list' object has no attribute 'serialize'
+2025-08-30 13:42:32,038 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:42:32,060 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = d069a344-62e9-400e-a270-8d91d92dbd36
+2025-08-30 13:42:52,166 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:42:52,168 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = d069a344-62e9-400e-a270-8d91d92dbd36
+2025-08-30 13:42:52,841 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:42:52,843 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = d069a344-62e9-400e-a270-8d91d92dbd36
+2025-08-30 13:43:04,195 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-30 13:43:04,196 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-30 13:43:04,199 - WARNING - integrative-project source.app.services.categories_services - No image URL provided, using default image URL.
+2025-08-30 13:43:04,200 - INFO - integrative-project source.app.services.categories_services - Creating a new category in the repository
+2025-08-30 13:43:04,200 - INFO - integrative-project source.app.repository.categories_repository - Adding new category to the database.
+2025-08-30 13:43:04,218 - INFO - integrative-project source.app.services.categories_services - Category created successfully.
+2025-08-30 13:43:04,218 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Category created successfully. ID = {adding_category.id}
+2025-08-30 13:43:08,210 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:43:08,212 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = d069a344-62e9-400e-a270-8d91d92dbd36
+2025-08-30 13:43:14,720 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 13:43:14,723 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 13:43:18,559 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 13:43:18,565 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 13:43:27,546 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 13:43:27,554 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 13:52:55,717 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 13:52:55,743 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 13:53:00,090 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 13:53:00,092 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 13:53:07,103 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:53:07,107 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-08-30 13:53:07,107 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = d069a344-62e9-400e-a270-8d91d92dbd36
+2025-08-30 13:53:10,967 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:53:10,971 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-08-30 13:53:10,971 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = d069a344-62e9-400e-a270-8d91d92dbd36
+2025-08-30 13:53:15,240 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:53:15,243 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Menu not found: Menu not found.
+2025-08-30 13:53:27,566 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:53:27,571 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-08-30 13:53:27,571 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-08-30 13:54:41,122 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:54:41,146 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-08-30 13:54:41,146 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: No categories registered in this menu.
+2025-08-30 13:54:42,113 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:54:42,118 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-08-30 13:54:42,118 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: No categories registered in this menu.
+2025-08-30 13:54:52,169 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:54:52,191 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-08-30 13:54:52,191 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: No categories registered in this menu.
+2025-08-30 13:54:53,006 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:54:53,010 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-08-30 13:54:53,010 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: No categories registered in this menu.
+2025-08-30 13:55:38,775 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:55:38,797 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-08-30 13:55:38,797 - ERROR - integrative-project source.app.services.categories_services - No category found in menu whose id is dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-08-30 13:55:38,797 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: No categories registered in this menu.
+2025-08-30 13:57:36,489 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 13:57:36,513 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-08-30 13:57:36,513 - WARNING - integrative-project source.app.services.categories_services - No category found in menu whose id is dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-08-30 13:57:36,513 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: No categories registered in this menu.
+2025-08-30 14:01:16,012 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 14:01:16,034 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-08-30 14:01:16,034 - WARNING - integrative-project source.app.services.categories_services - No category found in menu whose id is dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-08-30 14:01:16,034 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category not found: No categories registered in this menu.
+2025-08-30 14:02:13,816 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 14:02:13,835 - WARNING - integrative-project source.app.services.categories_services - No menu found whose id is dced97b3-6831-44ae-ace4-5047b1ecbbd1
+2025-08-30 14:02:13,835 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Menu not found: Menu not found.
+2025-08-30 14:02:32,548 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 14:02:32,569 - WARNING - integrative-project source.app.services.categories_services - No menu found whose id is 'dced97b3-6831-44ae-ace4-5047b1ecbbd1'
+2025-08-30 14:02:32,569 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Menu not found: Menu not found.
+2025-08-30 14:06:16,562 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 14:06:16,593 - WARNING - integrative-project source.app.services.categories_services - No menu found whose id is 'dced97b3-6831-44ae-ace4-5047b1ecbbd1'
+2025-08-30 14:06:16,593 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Menu not found: Menu with id 'dced97b3-6831-44ae-ace4-5047b1ecbbd1' not found.
+2025-08-30 14:06:23,656 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 14:06:23,659 - WARNING - integrative-project source.app.services.categories_services - No menu found whose id is 'dced97b3-6831-44ae-ace4-5047b1ecbbd1'
+2025-08-30 14:06:23,659 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Menu not found: Menu with id 'dced97b3-6831-44ae-ace4-5047b1ecbbd1' not found.
+2025-08-30 15:53:16,052 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-30 15:53:16,114 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-30 16:04:39,469 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 16:04:39,469 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-08-30 16:04:45,935 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 16:04:45,955 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 16:05:03,881 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/<menu_id>/categories - retrieving categories for a menu
+2025-08-30 16:05:03,888 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-08-30 16:05:03,889 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = d069a344-62e9-400e-a270-8d91d92dbd36
+2025-08-30 16:11:46,760 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-30 16:11:46,761 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-30 16:11:46,761 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-08-30 16:11:52,229 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 16:11:52,248 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 16:12:05,127 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 16:12:05,138 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 16:13:38,163 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-30 16:13:38,163 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-30 16:13:38,166 - WARNING - integrative-project source.app.services.categories_services - No image URL provided, using default image URL.
+2025-08-30 16:13:38,167 - INFO - integrative-project source.app.services.categories_services - Creating a new category in the repository
+2025-08-30 16:13:38,167 - INFO - integrative-project source.app.repository.categories_repository - Adding new category to the database.
+2025-08-30 16:13:38,173 - INFO - integrative-project source.app.services.categories_services - Category created successfully.
+2025-08-30 16:13:38,173 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Category created successfully. ID = {adding_category.id}
+2025-08-30 16:13:42,156 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 16:13:42,163 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 16:17:04,799 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/<menu_id>/categories - creating a new category for a menu
+2025-08-30 16:17:04,799 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-08-30 16:17:04,818 - WARNING - integrative-project source.app.services.categories_services - No image URL provided, using default image URL.
+2025-08-30 16:17:04,818 - INFO - integrative-project source.app.services.categories_services - Creating a new category in the repository
+2025-08-30 16:17:04,818 - INFO - integrative-project source.app.repository.categories_repository - Adding new category to the database.
+2025-08-30 16:17:04,832 - INFO - integrative-project source.app.services.categories_services - Category created successfully.
+2025-08-30 16:17:04,832 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Category created successfully. ID = {adding_category.id}
+2025-08-30 16:17:08,068 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-30 16:17:08,076 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-30 16:35:42,817 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-30 16:35:42,817 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-08-30 16:35:49,678 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu
+2025-08-30 16:35:49,699 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-08-30 16:35:49,700 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = d069a344-62e9-400e-a270-8d91d92dbd36
+2025-08-30 16:35:58,061 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-30 16:35:58,062 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: Object of type CategoriesServices is not JSON serializable
+2025-08-30 16:36:21,355 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-30 16:36:21,355 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: Object of type CategoriesServices is not JSON serializable
+2025-08-30 16:36:23,172 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-30 16:36:23,172 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: Object of type CategoriesServices is not JSON serializable
+2025-08-30 16:37:18,669 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-30 16:37:18,670 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: Object of type CategoriesServices is not JSON serializable
+2025-08-30 16:37:19,991 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-30 16:37:19,991 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: Object of type CategoriesServices is not JSON serializable
+2025-08-30 16:38:03,579 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-30 16:38:03,579 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 'CategoriesServices' object has no attribute 'serialize'
+2025-08-30 16:38:04,829 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-30 16:38:04,829 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 'CategoriesServices' object has no attribute 'serialize'
+2025-08-30 16:38:43,275 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-30 16:38:43,275 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to fetch category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-30 16:38:43,275 - INFO - integrative-project source.app.repository.categories_repository - Fetching category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c' from the database
+2025-08-30 16:38:49,466 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-30 16:38:49,466 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to fetch category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00d'
+2025-08-30 16:38:49,466 - INFO - integrative-project source.app.repository.categories_repository - Fetching category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00d' from the database
+2025-08-30 16:38:49,468 - WARNING - integrative-project source.app.services.categories_services - Category whose id is 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00d' not found.
+2025-08-30 16:38:49,468 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category not found: Category not found.
+2025-08-30 16:39:03,087 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-30 16:39:03,087 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to fetch category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-30 16:39:03,087 - INFO - integrative-project source.app.repository.categories_repository - Fetching category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c' from the database
+2025-08-31 11:09:41,058 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-31 11:09:41,080 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-31 11:09:41,127 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-31 11:12:58,516 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:12:58,570 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-31 11:13:03,115 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:13:03,117 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-31 11:13:08,437 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:13:08,440 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-31 11:32:50,469 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:32:50,502 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-31 11:33:03,157 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - delete category by ID
+2025-08-31 11:33:03,157 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:33:11,880 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-31 11:33:11,880 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to fetch category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:33:11,880 - INFO - integrative-project source.app.repository.categories_repository - Fetching category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c' from the database
+2025-08-31 11:33:14,262 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-31 11:33:14,262 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to fetch category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:33:14,262 - INFO - integrative-project source.app.repository.categories_repository - Fetching category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c' from the database
+2025-08-31 11:33:15,652 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-31 11:33:15,652 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to fetch category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:33:15,652 - INFO - integrative-project source.app.repository.categories_repository - Fetching category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c' from the database
+2025-08-31 11:33:32,250 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - delete category by ID
+2025-08-31 11:33:32,251 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:33:49,503 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - delete category by ID
+2025-08-31 11:33:53,503 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:34:03,492 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - delete category by ID
+2025-08-31 11:34:10,981 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:34:22,580 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - delete category by ID
+2025-08-31 11:34:29,798 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:34:57,238 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - delete category by ID
+2025-08-31 11:34:57,238 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:34:58,170 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - delete category by ID
+2025-08-31 11:34:58,170 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:34:58,897 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - delete category by ID
+2025-08-31 11:34:58,897 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:34:59,687 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - delete category by ID
+2025-08-31 11:34:59,687 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:35:06,977 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:35:06,985 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-31 11:37:56,683 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:37:56,709 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-31 11:38:03,753 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - DELETE /categories/{category_id} - delete category by ID
+2025-08-31 11:38:03,753 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:38:04,604 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - DELETE /categories/{category_id} - delete category by ID
+2025-08-31 11:38:04,604 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:38:04,608 - WARNING - integrative-project source.app.services.categories_services - Category whose id is 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c' not found.
+2025-08-31 11:38:04,609 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category not found: Category not found.
+2025-08-31 11:38:08,517 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID
+2025-08-31 11:38:08,518 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to fetch category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c'
+2025-08-31 11:38:08,518 - INFO - integrative-project source.app.repository.categories_repository - Fetching category with ID 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c' from the database
+2025-08-31 11:38:08,520 - WARNING - integrative-project source.app.services.categories_services - Category whose id is 'b3e9b3dc-4ab3-49d9-ab45-cb6440feb00c' not found.
+2025-08-31 11:38:08,520 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category not found: Category not found.
+2025-08-31 11:38:12,501 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:38:12,509 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-31 11:38:24,134 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - DELETE /categories/{category_id} - delete category by ID
+2025-08-31 11:38:24,134 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID '8bcd392c-cec3-46a3-8f74-583c5ad82be5'
+2025-08-31 11:38:26,989 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:38:27,007 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-31 11:38:34,290 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - DELETE /categories/{category_id} - delete category by ID
+2025-08-31 11:38:34,290 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID '0b8b6272-a706-419d-8adc-2b62f54b4fc5'
+2025-08-31 11:38:40,296 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:38:40,304 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-31 11:38:48,640 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - DELETE /categories/{category_id} - delete category by ID
+2025-08-31 11:38:48,640 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'd2b361b5-a4ad-47e5-be5b-f122169680da'
+2025-08-31 11:38:50,922 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:38:50,929 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-31 11:39:02,229 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - DELETE /categories/{category_id} - delete category by ID
+2025-08-31 11:39:02,229 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID 'b2f109d8-5ad5-4045-a3ab-5e8214a7d214'
+2025-08-31 11:39:05,135 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:39:05,145 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-31 11:39:13,561 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - DELETE /categories/{category_id} - delete category by ID
+2025-08-31 11:39:13,561 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to delete category with ID '15dd2e6a-0bc1-477c-a323-e919998a9ae2'
+2025-08-31 11:39:16,250 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:39:16,259 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-08-31 11:43:44,524 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-08-31 11:43:44,532 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-01 11:44:58,432 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-01 11:44:58,483 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-01 11:45:02,767 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-01 11:45:02,772 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-01 11:45:45,631 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/{menu_id}/categories - creating a new category for a menu
+2025-09-01 11:45:45,631 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-09-01 11:45:45,645 - WARNING - integrative-project source.app.services.categories_services - No image URL provided, using default image URL.
+2025-09-01 11:45:45,646 - INFO - integrative-project source.app.services.categories_services - Creating a new category in the repository
+2025-09-01 11:45:45,646 - INFO - integrative-project source.app.repository.categories_repository - Adding new category to the database.
+2025-09-01 11:45:45,653 - INFO - integrative-project source.app.services.categories_services - Category created successfully.
+2025-09-01 11:45:45,653 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Category created successfully. ID = {adding_category.id}
+2025-09-01 11:45:46,640 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/{menu_id}/categories - creating a new category for a menu
+2025-09-01 11:45:46,640 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-09-01 11:45:46,643 - ERROR - integrative-project source.app.services.categories_services - Category 'nomE da CatEGorieeeadd' already exists in this menu.
+2025-09-01 11:45:46,643 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category duplicate name: Category name already exists in this menu.
+2025-09-01 11:45:49,504 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-01 11:45:49,518 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-01 11:52:55,558 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - PUT /categories/{category_id} - change category by ID.
+2025-09-01 11:52:55,558 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-09-01 11:53:03,254 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-01 11:53:03,289 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-01 11:53:10,875 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - PUT /categories/{category_id} - change category by ID.
+2025-09-01 11:55:50,663 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - PUT /categories/{category_id} - change category by ID.
+2025-09-01 11:55:50,663 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Category whose ID is '{'id': UUID('13d0f906-6736-4069-aa52-2e64f8be7ded')}' changed successfully.
+2025-09-01 11:57:12,518 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - PUT /categories/{category_id} - change category by ID.
+2025-09-01 11:57:12,518 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Category whose ID is '13d0f906-6736-4069-aa52-2e64f8be7ded' changed successfully.
+2025-09-01 12:07:00,726 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-01 12:07:00,756 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-01 12:11:11,160 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - PUT /categories/{category_id} - change category by ID.
+2025-09-01 12:11:11,160 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: CategoriesServices.change_category_by_id() missing 1 required positional argument: 'category_data'
+2025-09-01 12:13:35,480 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - PUT /categories/{category_id} - change category by ID.
+2025-09-01 12:13:35,480 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-09-01 12:13:35,481 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-09-01 12:13:45,966 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - PUT /categories/{category_id} - change category by ID.
+2025-09-01 12:13:45,966 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-09-01 12:13:45,967 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'name': ['Missing data for required field.'], 'description': ['Missing data for required field.']}
+2025-09-01 12:14:23,350 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - PUT /categories/{category_id} - change category by ID.
+2025-09-01 12:14:23,350 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-09-01 12:14:23,350 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to change category with ID '{'id': UUID('13d0f906-6736-4069-aa52-2e64f8be7ded')}'.
+2025-09-01 12:14:23,350 - INFO - integrative-project source.app.repository.categories_repository - Fetching category with ID '{'id': UUID('13d0f906-6736-4069-aa52-2e64f8be7ded')}' from the database
+2025-09-01 12:14:23,369 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.ProgrammingError) can't adapt type 'dict'
+[SQL: SELECT categories.id AS categories_id, categories.name AS categories_name, categories.description AS categories_description, categories.url_image AS categories_url_image, categories.created_at AS categories_created_at, categories.menu_id AS categories_menu_id 
+FROM categories 
+WHERE categories.id = %(id_1)s::UUID 
+ LIMIT %(param_1)s]
+[parameters: {'id_1': {'id': UUID('13d0f906-6736-4069-aa52-2e64f8be7ded')}, 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-01 12:14:41,647 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - PUT /categories/{category_id} - change category by ID.
+2025-09-01 12:14:41,647 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-09-01 12:14:41,647 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to change category with ID '13d0f906-6736-4069-aa52-2e64f8be7ded'.
+2025-09-01 12:14:41,647 - INFO - integrative-project source.app.repository.categories_repository - Fetching category with ID '13d0f906-6736-4069-aa52-2e64f8be7ded' from the database
+2025-09-01 12:14:41,673 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: CategoriesRepository.update() missing 2 required positional arguments: 'category_id' and 'category_data'
+2025-09-01 12:15:09,204 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - PUT /categories/{category_id} - change category by ID.
+2025-09-01 12:15:09,204 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-09-01 12:15:09,204 - INFO - integrative-project source.app.services.categories_services - Accessing category service layer to change category with ID '13d0f906-6736-4069-aa52-2e64f8be7ded'.
+2025-09-01 12:15:09,204 - INFO - integrative-project source.app.repository.categories_repository - Fetching category with ID '13d0f906-6736-4069-aa52-2e64f8be7ded' from the database
+2025-09-01 12:15:09,232 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Category whose ID is '13d0f906-6736-4069-aa52-2e64f8be7ded' changed successfully.
+2025-09-01 12:15:16,334 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-01 12:15:16,341 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-01 12:15:17,438 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-01 12:15:17,448 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-01 12:15:18,382 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-01 12:15:18,388 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-01 12:15:19,053 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-01 12:15:19,061 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-01 12:15:19,725 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-01 12:15:19,730 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-01 12:15:20,411 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-01 12:15:20,418 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
