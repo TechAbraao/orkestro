@@ -1,5 +1,5 @@
 from source.app.settings.definitions_settings import db as database
-from source.app.decorators.database import transactional    
+from source.app.utils.decorators.database import transactional
 from source.app.entities.menus_entity import MenusEntity
 
 class MenusRepository:

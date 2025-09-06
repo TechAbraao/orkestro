@@ -1,6 +1,7 @@
+from source.app.repository.products_repository import ProductsRepository
 from source.app.repository.menus_repository import MenusRepository
 from source.app.entities.menus_entity import MenusEntity
-from source.app.decorators.database import database_connection
+from source.app.utils.decorators.database import database_connection
 from uuid import uuid4
 from source.app.exceptions.menu_exceptions import *
 from datetime import datetime
@@ -14,12 +15,12 @@ class MenuServices:
     def __init__(self):
         self.menu_repository = MenusRepository()
         self.category_repository = CategoriesRepository()
+        self.products_repository = ProductsRepository()
         self.menu_entity = MenusEntity()
+
     
     @database_connection
     def create_menu(self, data) -> bool:
-        """ Create a new Menu """
-
         entity = MenusEntity(
             id=uuid4(),
             name=data.get("name"),
@@ -37,10 +38,17 @@ class MenuServices:
 
         for menu in menus:
             menu_data = menu.serialize
-            if include == "categories":
+
+            if include and "categories" in include:
                 categories = self.category_repository.find_by_menu_id(menu.id)
                 menu_data["categories"] = [c.serialize for c in categories]
+
+            if include and "products" in include:
+                products = self.products_repository.find_by_menu_id(menu.id)
+                menu_data["products"] = [p.serialize for p in products]
+
             result.append(menu_data)
+
         return result
 
     @database_connection

@@ -1,6 +1,6 @@
 from source.app.entities.categories_entity import CategoriesEntity
 from source.app.settings.definitions_settings import db as database
-from source.app.decorators.database import transactional    
+from source.app.utils.decorators.database import transactional
 from source.app.settings.logging_settings import get_logger
 from sqlalchemy import func
 

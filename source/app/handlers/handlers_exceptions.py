@@ -4,6 +4,7 @@ from werkzeug.exceptions import *
 from source.app.exceptions.database_exceptions import *
 from source.app.exceptions.menu_exceptions import *
 from source.app.exceptions.category_exceptions import *
+from source.app.exceptions.products_exceptions import *
 from source.app.settings.logging_settings import get_logger
 
 logger = get_logger(__name__)
@@ -67,5 +68,32 @@ def register_error_handlers(app):
         response = Response.error(
             errors=str(err.message),
             status_code=InternalServerError.code
+        )
+        return response
+
+    @app.errorhandler(ProductDuplicateNameException)
+    def handle_product_duplicate_name_exception(err):
+        logger.warning(f"Product duplicate name: {str(err.message)}")
+        response = Response.error(
+            errors=str(err.message),
+            status_code=Conflict.code
+        )
+        return response
+
+    @app.errorhandler(ProductNotFoundException)
+    def handle_product_not_found_exception(err):
+        logger.warning(f"Product not found: {str(err.message)}")
+        response = Response.error(
+            errors=str(err.message),
+            status_code=NotFound.code
+        )
+        return response
+
+    @app.errorhandler(ProductsNotFoundException)
+    def handle_products_not_found_exception(err):
+        logger.warning(f"Products not found: {str(err.message)}")
+        response = Response.error(
+            errors=str(err.message),
+            status_code=NotFound.code
         )
         return response

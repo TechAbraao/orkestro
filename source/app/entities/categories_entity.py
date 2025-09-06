@@ -1,35 +1,27 @@
 from source.app.settings.definitions_settings import db as database
-from datetime import datetime
+
+from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+import uuid
+
 
 class CategoriesEntity(database.Model):
-    """ Entity Model for Categories """
     __tablename__ = "categories"
-    __table_args__ = (
-        database.UniqueConstraint('menu_id', 'name', name='uix_menu_category'),
-    )
-    
-    
-    id = database.Column(database.UUID(as_uuid=True), primary_key=True)
+
+    id = database.Column(database.UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     name = database.Column(database.String, nullable=False)
     description = database.Column(database.String, nullable=True)
     url_image = database.Column(database.String(255), nullable=True)
     created_at = database.Column(
-        database.DateTime,
-        nullable=False,
-        default=lambda: datetime.now(ZoneInfo("America/Sao_Paulo"))
+        database.DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
+
     menu_id = database.Column(
-        database.UUID(as_uuid=True),
-        database.ForeignKey("menus.id", ondelete="CASCADE"),
-        nullable=False
+        database.UUID(as_uuid=True), database.ForeignKey("menus.id", ondelete="CASCADE"), nullable=False
     )
-    """ Relationship N:1 with MenusEntity """
-    
-    menu = database.relationship(
-        "MenusEntity",
-        back_populates="categories"
-    )
+
+    menu = database.relationship("MenusEntity", back_populates="categories")
+    products = database.relationship("ProductsEntity", back_populates="category", cascade="all, delete")
 
     @property
     def serialize(self):
@@ -38,5 +30,6 @@ class CategoriesEntity(database.Model):
             "name": self.name,
             "description": self.description,
             "menu_id": str(self.menu_id),
-            "url_image": self.url_image
+            "url_image": self.url_image,
+            "products": [product.serialize for product in self.products]
         }

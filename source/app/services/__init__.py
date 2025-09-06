@@ -1,6 +1,8 @@
 from source.app.services.menu_services import MenuServices
 from source.app.services.categories_services import CategoriesServices
+from source.app.services.products_services import ProductsServices
 
 # Initialize service instances
 menu_services = MenuServices()
 categories_services = CategoriesServices()
+products_services = ProductsServices()

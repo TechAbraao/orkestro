@@ -2,7 +2,7 @@ from source.app.repository.categories_repository import CategoriesRepository
 from source.app.repository.menus_repository import MenusRepository
 from source.app.settings.logging_settings import get_logger
 from source.app.entities.categories_entity import CategoriesEntity
-from source.app.decorators.database import database_connection
+from source.app.utils.decorators.database import database_connection
 from source.app.exceptions.category_exceptions import *
 from source.app.exceptions.menu_exceptions import *
 from flask import url_for, current_app
@@ -92,7 +92,7 @@ class CategoriesServices:
         )
 
         if not category:
-            logger.warning(f""Category whose id is '{category_id}' not found.")
+            logger.warning(f"Category whose id is '{category_id}' not found.")
             raise CategoryNotFoundException("Category not found.")
 
 

@@ -465,3 +465,413 @@ WHERE categories.id = %(id_1)s::UUID
 2025-09-01 12:15:19,730 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
 2025-09-01 12:15:20,411 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
 2025-09-01 12:15:20,418 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 13:22:06,464 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 13:22:06,488 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 'MenusEntity' object has no attribute 'serialize'
+2025-09-03 13:25:13,775 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 13:25:13,834 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:21:04,968 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:21:05,077 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:21:14,475 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:21:14,493 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:21:23,350 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:21:23,375 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:21:24,824 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:21:24,839 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:21:26,889 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:21:27,035 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:21:37,929 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:21:38,057 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:21:38,803 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:21:38,817 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:21:55,408 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:21:55,428 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:22:31,953 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:23:13,936 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:23:25,842 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:23:25,896 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:23:41,647 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:23:41,670 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:24:22,280 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - DELETE /menus/<menu_id> - deleting a menu
+2025-09-03 19:24:26,442 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:24:26,538 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:24:27,584 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:24:27,602 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:25:31,946 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:25:32,065 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:25:33,023 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:25:33,036 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:26:05,505 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/{menu_id}/categories - creating a new category for a menu
+2025-09-03 19:26:05,505 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-09-03 19:26:05,513 - WARNING - integrative-project source.app.services.categories_services - No image URL provided, using default image URL.
+2025-09-03 19:26:05,513 - INFO - integrative-project source.app.services.categories_services - Creating a new category in the repository
+2025-09-03 19:26:05,514 - INFO - integrative-project source.app.repository.categories_repository - Adding new category to the database.
+2025-09-03 19:26:05,522 - INFO - integrative-project source.app.services.categories_services - Category created successfully.
+2025-09-03 19:26:05,522 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Category created successfully. ID = {adding_category.id}
+2025-09-03 19:26:12,023 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 19:26:12,028 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 19:26:12,028 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 19:26:17,094 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:26:17,111 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:26:18,188 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:26:18,199 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:26:20,990 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:26:21,004 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:27:41,624 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:27:41,644 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:27:44,492 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:27:44,503 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:29:04,621 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:29:04,652 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:29:09,808 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:29:09,810 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:29:34,381 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:29:34,384 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:29:44,609 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:29:44,620 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:29:50,714 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:29:50,720 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:29:52,154 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:29:52,160 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:29:53,436 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:29:53,442 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:29:54,153 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:29:54,159 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:29:54,841 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:29:54,852 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:29:55,431 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:29:55,438 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:33:11,034 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:33:11,054 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:33:12,324 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:33:12,326 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:33:54,281 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:33:54,318 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 19:34:00,161 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:34:00,165 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 'MenuServices' object has no attribute 'product_repository'
+2025-09-03 19:34:07,229 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 19:34:07,235 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 20:11:02,688 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 20:11:02,718 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 20:11:10,954 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 20:11:10,957 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 'MenuServices' object has no attribute 'product_repository'
+2025-09-03 20:11:22,561 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 20:11:22,566 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 20:16:09,925 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 20:16:09,962 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 20:16:11,354 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 20:16:11,360 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 20:16:16,441 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 20:16:16,445 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: type object 'ProductsEntity' has no attribute 'menu_id'
+2025-09-03 20:20:39,691 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 20:20:39,732 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 20:20:46,903 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 20:20:46,909 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 20:20:49,975 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 20:20:49,977 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 20:20:52,681 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 20:20:52,687 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 20:20:53,928 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 20:20:53,940 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 20:52:07,650 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 20:52:07,666 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 21:06:43,804 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-03 21:08:05,028 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:08:05,028 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:08:05,029 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-09-03 21:08:06,125 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:08:06,125 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:08:06,125 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-09-03 21:08:12,933 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:08:12,933 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:09:04,029 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:09:04,029 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:09:04,029 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-09-03 21:09:05,066 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:09:05,066 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:09:05,067 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-09-03 21:09:09,487 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:09:09,488 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:09:09,488 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-09-03 21:10:35,590 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:10:35,590 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:10:35,591 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-09-03 21:10:43,438 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 21:10:43,466 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 21:10:43,466 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 21:10:54,135 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:10:54,135 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:12:19,880 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:12:19,880 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:12:19,880 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'description': ['Missing data for required field.'], 'price': ['Missing data for required field.']}
+2025-09-03 21:12:27,667 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:12:27,667 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:12:27,667 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'description': ['Missing data for required field.'], 'price': ['Missing data for required field.']}
+2025-09-03 21:14:07,568 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:14:07,569 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:14:07,569 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'name': ['Length must be between 6 and 255.'], 'description': ['Missing data for required field.'], 'price': ['Missing data for required field.']}
+2025-09-03 21:14:09,990 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:14:09,990 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:14:09,990 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'name': ['Length must be between 6 and 255.'], 'description': ['Missing data for required field.'], 'price': ['Missing data for required field.']}
+2025-09-03 21:17:13,350 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 21:17:13,350 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 21:17:13,351 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'name': ['Length must be between 6 and 255.'], 'description': ['Missing data for required field.'], 'price': ['Missing data for required field.']}
+2025-09-03 22:39:16,894 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 22:39:16,894 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 22:39:16,894 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'name': ['Length must be between 6 and 255.'], 'description': ['Missing data for required field.'], 'price': ['Missing data for required field.']}
+2025-09-03 22:39:37,795 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: get_products_in_category() got an unexpected keyword argument 'category_id'
+2025-09-03 22:39:49,869 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 22:39:49,869 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 22:39:49,869 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'name': ['Length must be between 6 and 255.'], 'description': ['Missing data for required field.'], 'price': ['Missing data for required field.']}
+2025-09-03 22:40:11,123 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 22:40:11,123 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 22:40:11,152 - INFO - integrative-project None - Fetching category with ID '87aef173-c5fe-43e9-a991-04fa8d64d6c9' from the database
+2025-09-03 22:40:11,173 - INFO - integrative-project None - Product 'NAMENAME' created successfully in category '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-03 22:40:11,174 - INFO - integrative-project None - Product created successfully.
+2025-09-03 22:40:16,280 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 22:40:16,280 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 22:40:16,285 - WARNING - integrative-project None - Product with name 'NAMENAME' exists in this category with id '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-03 22:40:16,285 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Product duplicate name: Duplicate product name in the same category.
+2025-09-03 22:41:16,467 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 22:41:16,483 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 22:41:16,484 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 22:41:17,530 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 22:41:17,545 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 22:41:17,545 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 22:41:23,570 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 22:41:23,584 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 22:41:36,012 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 22:41:36,023 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 22:41:37,798 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 22:41:37,814 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 22:41:40,352 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 22:41:40,361 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 22:41:42,089 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-03 22:41:42,101 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-03 22:41:56,669 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 22:41:56,674 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 22:41:56,674 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 22:41:57,928 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 22:41:57,940 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 22:41:57,941 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 22:42:53,030 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 22:42:53,100 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 22:42:53,106 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 22:43:03,110 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 22:43:03,116 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 22:43:03,117 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 22:43:18,607 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 22:43:18,612 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 22:43:18,614 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 22:45:02,629 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 22:45:02,636 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 22:45:02,637 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 22:46:36,514 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /categories/{category_id} - fetch category by ID.
+2025-09-03 22:46:36,514 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-09-03 22:46:40,303 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 22:46:40,303 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 22:46:40,307 - WARNING - integrative-project None - Product with name 'NAMENAME' exists in this category with id '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-03 22:46:40,307 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Product duplicate name: Duplicate product name in the same category.
+2025-09-03 22:46:46,943 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 22:46:46,943 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 22:46:46,945 - WARNING - integrative-project None - Product with name 'NAMENAME' exists in this category with id '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-03 22:46:46,945 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Product duplicate name: Duplicate product name in the same category.
+2025-09-03 22:46:47,774 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new menu
+2025-09-03 22:46:47,774 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-03 22:46:47,776 - WARNING - integrative-project None - Product with name 'NAMENAME' exists in this category with id '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-03 22:46:47,777 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Product duplicate name: Duplicate product name in the same category.
+2025-09-03 22:56:00,758 - INFO - integrative-project None - Product with id '{{categoryId}}' returned successfully.
+2025-09-03 23:28:47,383 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category
+2025-09-03 23:28:47,383 - INFO - integrative-project None - Validating the UUID.
+2025-09-03 23:28:47,383 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-09-03 23:28:57,639 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 23:28:57,664 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 23:28:57,668 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 23:29:18,105 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category
+2025-09-03 23:29:18,106 - INFO - integrative-project None - Validating the UUID.
+2025-09-03 23:29:18,106 - INFO - integrative-project None - Product with id '87aef173-c5fe-43e9-a991-04fa8d64d6c9' returned successfully.
+2025-09-03 23:50:09,222 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category
+2025-09-03 23:50:09,222 - INFO - integrative-project None - Validating the UUID.
+2025-09-03 23:50:09,245 - INFO - integrative-project None - All products returned in category id '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-03 23:50:09,245 - INFO - integrative-project None - Product with id '87aef173-c5fe-43e9-a991-04fa8d64d6c9' returned successfully.
+2025-09-03 23:50:11,949 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category
+2025-09-03 23:50:11,949 - INFO - integrative-project None - Validating the UUID.
+2025-09-03 23:50:11,952 - INFO - integrative-project None - All products returned in category id '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-03 23:50:11,952 - INFO - integrative-project None - Product with id '87aef173-c5fe-43e9-a991-04fa8d64d6c9' returned successfully.
+2025-09-03 23:50:56,034 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category
+2025-09-03 23:50:56,034 - INFO - integrative-project None - Validating the UUID.
+2025-09-03 23:50:56,037 - INFO - integrative-project None - All products returned in category id '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-03 23:50:56,037 - INFO - integrative-project None - Product with id '87aef173-c5fe-43e9-a991-04fa8d64d6c9' returned successfully.
+2025-09-03 23:51:43,396 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category.
+2025-09-03 23:51:43,396 - INFO - integrative-project None - Validating the UUID.
+2025-09-03 23:51:43,430 - INFO - integrative-project None - All products returned in category id '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-03 23:51:43,430 - INFO - integrative-project None - Product with id '87aef173-c5fe-43e9-a991-04fa8d64d6c9' returned successfully.
+2025-09-03 23:51:49,253 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 23:51:49,261 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 23:51:49,264 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 23:51:51,262 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 23:51:51,268 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 23:51:51,270 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 23:52:00,180 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/{menu_id}/categories - creating a new category for a menu
+2025-09-03 23:52:00,180 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-09-03 23:52:00,198 - WARNING - integrative-project source.app.services.categories_services - No image URL provided, using default image URL.
+2025-09-03 23:52:00,199 - INFO - integrative-project source.app.services.categories_services - Creating a new category in the repository
+2025-09-03 23:52:00,199 - INFO - integrative-project source.app.repository.categories_repository - Adding new category to the database.
+2025-09-03 23:52:00,207 - INFO - integrative-project source.app.services.categories_services - Category created successfully.
+2025-09-03 23:52:00,207 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Category created successfully. ID = {adding_category.id}
+2025-09-03 23:52:02,192 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - POST /menus/{menu_id}/categories - creating a new category for a menu
+2025-09-03 23:52:02,192 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - Getting JSON data from request and validating fields
+2025-09-03 23:52:02,196 - ERROR - integrative-project source.app.services.categories_services - Category 'nomE da CatEGorieeeaddwqewq' already exists in this menu.
+2025-09-03 23:52:02,196 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category duplicate name: Category name already exists in this menu.
+2025-09-03 23:52:04,729 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-03 23:52:04,735 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-03 23:52:04,738 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-03 23:52:23,181 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category.
+2025-09-03 23:52:23,181 - INFO - integrative-project None - Validating the UUID.
+2025-09-03 23:52:23,183 - WARNING - integrative-project None - Category with id '4781a34d-7fe7-43a1-ba6a-201d6cbe7056' not found or has no products.
+2025-09-03 23:52:23,183 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category not found: Category not found or empty.
+2025-09-03 23:52:39,034 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category.
+2025-09-03 23:52:39,034 - INFO - integrative-project None - Validating the UUID.
+2025-09-03 23:52:39,039 - WARNING - integrative-project None - Category with id '4781a34d-7fe7-43a1-ba6a-201d6cbe7056' not found or has no products.
+2025-09-03 23:52:39,039 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category not found: Category not found or empty.
+2025-09-03 23:53:46,932 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category.
+2025-09-03 23:53:46,932 - INFO - integrative-project None - Validating the UUID.
+2025-09-03 23:53:46,935 - WARNING - integrative-project None - Category with id '4781a34d-7fe7-43a1-ba6a-201d6cbe7056' not found or has no products.
+2025-09-03 23:53:46,935 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category not found: Category not found or empty.
+2025-09-04 00:01:29,205 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new product in category
+2025-09-04 00:01:29,205 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-04 00:01:29,252 - WARNING - integrative-project None - Product with name 'NAMENAME' exists in this category with id '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-04 00:01:29,252 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Product duplicate name: Duplicate product name in the same category.
+2025-09-04 00:01:37,739 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new product in category
+2025-09-04 00:01:37,739 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-04 00:01:37,741 - INFO - integrative-project None - Fetching category with ID '87aef173-c5fe-43e9-a991-04fa8d64d6c9' from the database
+2025-09-04 00:01:37,753 - INFO - integrative-project None - Product 'NAMENAMEEE' created successfully in category '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-04 00:01:37,753 - INFO - integrative-project None - Product created successfully.
+2025-09-04 00:01:41,440 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new product in category
+2025-09-04 00:01:41,441 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-04 00:01:41,443 - INFO - integrative-project None - Fetching category with ID '87aef173-c5fe-43e9-a991-04fa8d64d6c9' from the database
+2025-09-04 00:01:41,460 - INFO - integrative-project None - Product 'NAMENAMEEEEE' created successfully in category '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-04 00:01:41,460 - INFO - integrative-project None - Product created successfully.
+2025-09-04 00:01:44,616 - INFO - integrative-project None - POST /categories/{categoryId}/products - creating new product in category
+2025-09-04 00:01:44,616 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-04 00:01:44,619 - INFO - integrative-project None - Fetching category with ID '87aef173-c5fe-43e9-a991-04fa8d64d6c9' from the database
+2025-09-04 00:01:44,635 - INFO - integrative-project None - Product 'NAMENAMEEEEEEE' created successfully in category '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-04 00:01:44,635 - INFO - integrative-project None - Product created successfully.
+2025-09-04 00:02:05,285 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category.
+2025-09-04 00:02:05,285 - INFO - integrative-project None - Validating the UUID.
+2025-09-04 00:02:05,306 - WARNING - integrative-project None - Category with id '4781a34d-7fe7-43a1-ba6a-201d6cbe7056' not found or has no products.
+2025-09-04 00:02:05,306 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Category not found: Category not found or empty.
+2025-09-04 00:02:12,022 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-04 00:02:12,030 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-04 00:02:12,035 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-04 00:02:44,757 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category.
+2025-09-04 00:02:44,758 - INFO - integrative-project None - Validating the UUID.
+2025-09-04 00:02:44,758 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-09-04 00:02:49,995 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category.
+2025-09-04 00:02:49,995 - INFO - integrative-project None - Validating the UUID.
+2025-09-04 00:02:49,998 - INFO - integrative-project None - All products returned in category id '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-04 00:02:49,998 - INFO - integrative-project None - Product with id '87aef173-c5fe-43e9-a991-04fa8d64d6c9' returned successfully.
+2025-09-04 00:03:09,084 - INFO - integrative-project None - GET /categories/{categoryId}/products - get all products in category.
+2025-09-04 00:03:09,084 - INFO - integrative-project None - Validating the UUID.
+2025-09-04 00:03:09,111 - INFO - integrative-project None - All products returned in category id '87aef173-c5fe-43e9-a991-04fa8d64d6c9'.
+2025-09-04 00:03:09,111 - INFO - integrative-project None - Product with id '87aef173-c5fe-43e9-a991-04fa8d64d6c9' returned successfully.
+2025-09-05 21:13:06,470 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-05 21:13:06,494 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-05 21:13:06,595 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-05 21:14:04,503 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-05 21:14:04,572 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-05 21:14:16,034 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-05 21:14:16,037 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-05 21:14:26,090 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - GET /menus/{menu_id}/categories - retrieving categories for a menu.
+2025-09-05 21:14:26,095 - INFO - integrative-project source.app.repository.categories_repository - Query performed on the categories table.
+2025-09-05 21:14:26,097 - INFO - integrative-project source.app.blueprints.api.categories_blueprint - All categories returned by id = dced97b3-6831-44ae-ace4-5047b1ecbbd0
+2025-09-05 21:40:42,591 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-05 21:40:42,632 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-05 21:41:37,772 - INFO - integrative-project None - GET /products/{productId} - get a specific product.
+2025-09-05 21:41:37,772 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 21:45:48,592 - INFO - integrative-project None - GET /products/{productId} - get a specific product.
+2025-09-05 21:45:48,593 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 21:45:55,145 - INFO - integrative-project None - GET /products/{productId} - get a specific product.
+2025-09-05 21:45:55,145 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 21:45:55,145 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-09-05 21:46:00,448 - INFO - integrative-project None - GET /products/{productId} - get a specific product.
+2025-09-05 21:46:00,448 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 21:46:00,451 - WARNING - integrative-project None - Product with id '7b099b5c-71aa-44bb-bbf1-5e5127148c3d' not found.
+2025-09-05 21:46:00,451 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Product not found: Product Not Found.
+2025-09-05 21:46:05,365 - INFO - integrative-project None - GET /products/{productId} - get a specific product.
+2025-09-05 21:46:05,365 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 22:24:46,818 - INFO - integrative-project None - GET /products/{productId} - Delete a specific product.
+2025-09-05 22:24:46,819 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 22:24:46,819 - INFO - integrative-project None - Attempting to delete product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e'
+2025-09-05 22:24:46,843 - INFO - integrative-project None - Product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e' deleted successfully.
+2025-09-05 22:24:48,991 - INFO - integrative-project None - GET /products/{productId} - Delete a specific product.
+2025-09-05 22:24:48,991 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 22:24:48,991 - INFO - integrative-project None - Attempting to delete product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e'
+2025-09-05 22:24:48,993 - WARNING - integrative-project None - Product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e' not found.
+2025-09-05 22:24:48,994 - WARNING - integrative-project None - Product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e' not found.
+2025-09-05 22:24:48,994 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Product not found: Product not found.
+2025-09-05 22:24:53,028 - INFO - integrative-project None - GET /products/{productId} - Delete a specific product.
+2025-09-05 22:24:53,028 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 22:24:53,028 - INFO - integrative-project None - Attempting to delete product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e'
+2025-09-05 22:24:53,031 - WARNING - integrative-project None - Product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e' not found.
+2025-09-05 22:24:53,032 - WARNING - integrative-project None - Product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e' not found.
+2025-09-05 22:24:53,032 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Product not found: Product not found.
+2025-09-05 22:24:53,683 - INFO - integrative-project None - GET /products/{productId} - Delete a specific product.
+2025-09-05 22:24:53,683 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 22:24:53,683 - INFO - integrative-project None - Attempting to delete product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e'
+2025-09-05 22:24:53,685 - WARNING - integrative-project None - Product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e' not found.
+2025-09-05 22:24:53,686 - WARNING - integrative-project None - Product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e' not found.
+2025-09-05 22:24:53,686 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Product not found: Product not found.
+2025-09-05 22:24:57,211 - INFO - integrative-project None - GET /products/{productId} - Delete a specific product.
+2025-09-05 22:24:57,211 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 22:24:57,211 - INFO - integrative-project None - Attempting to delete product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3d'
+2025-09-05 22:24:57,213 - WARNING - integrative-project None - Product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3d' not found.
+2025-09-05 22:24:57,214 - WARNING - integrative-project None - Product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3d' not found.
+2025-09-05 22:24:57,214 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Product not found: Product not found.
+2025-09-05 22:25:02,251 - INFO - integrative-project None - GET /products/{productId} - Delete a specific product.
+2025-09-05 22:25:02,251 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 22:25:02,251 - INFO - integrative-project None - Attempting to delete product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e'
+2025-09-05 22:25:02,253 - WARNING - integrative-project None - Product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e' not found.
+2025-09-05 22:25:02,254 - WARNING - integrative-project None - Product with ID '7b099b5c-71aa-44bb-bbf1-5e5127148c3e' not found.
+2025-09-05 22:25:02,254 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Product not found: Product not found.
+2025-09-05 22:25:06,863 - INFO - integrative-project None - GET /products/{productId} - Delete a specific product.
+2025-09-05 22:25:06,863 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 22:25:06,863 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'id': ['Not a valid UUID.']}
+2025-09-05 22:38:05,636 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - GET /menus - retrieving all menus.
+2025-09-05 22:38:05,698 - INFO - integrative-project source.app.blueprints.api.menus_blueprint - All menus returned,
+2025-09-05 22:40:07,804 - INFO - integrative-project None - GET /products/{productId} - Changing a specific product.
+2025-09-05 22:40:07,804 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-05 22:40:07,804 - ERROR - integrative-project source.app.handlers.handlers_exceptions - An error occurred: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-09-05 22:40:17,220 - INFO - integrative-project None - GET /products/{productId} - Changing a specific product.
+2025-09-05 22:40:17,220 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-05 22:40:17,220 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'name': ['Missing data for required field.'], 'description': ['Missing data for required field.'], 'price': ['Missing data for required field.']}
+2025-09-05 22:46:27,466 - INFO - integrative-project None - GET /products/{productId} - Changing a specific product.
+2025-09-05 22:46:27,466 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-05 22:46:27,466 - WARNING - integrative-project source.app.handlers.handlers_exceptions - Validation error: {'name': ['Missing data for required field.'], 'description': ['Missing data for required field.'], 'price': ['Missing data for required field.']}
+2025-09-05 22:47:03,890 - INFO - integrative-project None - GET /products/{productId} - Changing a specific product.
+2025-09-05 22:47:03,890 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-05 22:47:03,890 - INFO - integrative-project None - Attempting to update product with ID '08e6fbc0-4694-4bf2-a711-b312603e58da'
+2025-09-05 22:47:03,919 - INFO - integrative-project None - Product with ID '08e6fbc0-4694-4bf2-a711-b312603e58da' updated successfully.
+2025-09-05 22:47:05,929 - INFO - integrative-project None - GET /products/{productId} - Changing a specific product.
+2025-09-05 22:47:05,929 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-05 22:47:05,929 - INFO - integrative-project None - Attempting to update product with ID '08e6fbc0-4694-4bf2-a711-b312603e58da'
+2025-09-05 22:47:05,932 - INFO - integrative-project None - Product with ID '08e6fbc0-4694-4bf2-a711-b312603e58da' updated successfully.
+2025-09-05 22:47:20,733 - INFO - integrative-project None - GET /products/{productId} - get a specific product.
+2025-09-05 22:47:20,733 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 22:47:21,797 - INFO - integrative-project None - GET /products/{productId} - get a specific product.
+2025-09-05 22:47:21,797 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 22:47:27,074 - INFO - integrative-project None - GET /products/{productId} - Changing a specific product.
+2025-09-05 22:47:27,074 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-05 22:47:27,074 - INFO - integrative-project None - Attempting to update product with ID '08e6fbc0-4694-4bf2-a711-b312603e58da'
+2025-09-05 22:47:27,076 - INFO - integrative-project None - Product with ID '08e6fbc0-4694-4bf2-a711-b312603e58da' updated successfully.
+2025-09-05 22:47:29,914 - INFO - integrative-project None - GET /products/{productId} - Changing a specific product.
+2025-09-05 22:47:29,914 - INFO - integrative-project None - Getting JSON data from request and validating fields
+2025-09-05 22:47:29,914 - INFO - integrative-project None - Attempting to update product with ID '08e6fbc0-4694-4bf2-a711-b312603e58da'
+2025-09-05 22:47:29,917 - INFO - integrative-project None - Product with ID '08e6fbc0-4694-4bf2-a711-b312603e58da' updated successfully.
+2025-09-05 22:47:32,257 - INFO - integrative-project None - GET /products/{productId} - get a specific product.
+2025-09-05 22:47:32,257 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 22:47:33,060 - INFO - integrative-project None - GET /products/{productId} - get a specific product.
+2025-09-05 22:47:33,060 - INFO - integrative-project None - Validating the UUID.
+2025-09-05 22:50:45,214 - INFO - integrative-project - GET /products/{productId} - get a specific product.
+2025-09-05 22:50:45,215 - INFO - integrative-project - Validating the UUID.
+2025-09-05 22:51:00,704 - INFO - integrative-project - GET /products/{productId} - get a specific product.
+2025-09-05 22:51:00,704 - INFO - integrative-project - Validating the UUID.
