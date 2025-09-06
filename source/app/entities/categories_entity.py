@@ -25,11 +25,22 @@ class CategoriesEntity(database.Model):
 
     @property
     def serialize(self):
-        return {
+        return self._serialize(include_products=True)
+
+    @property
+    def serialize_without_products(self):
+        return self._serialize(include_products=False)
+
+    def _serialize(self, include_products: bool):
+        data = {
             "id": str(self.id),
             "name": self.name,
             "description": self.description,
             "menu_id": str(self.menu_id),
             "url_image": self.url_image,
-            "products": [product.serialize for product in self.products]
         }
+
+        if include_products:
+            data["products"] = [product.serialize for product in self.products]
+
+        return data

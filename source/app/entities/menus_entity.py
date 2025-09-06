@@ -37,7 +37,9 @@ class MenusEntity(database.Model):
         }
 
         if include_categories:
-            data["categories"] = [category.serialize for category in self.categories] if self.categories else []
+            data["categories"] = [
+                category._serialize(include_products=include_products) for category in self.categories
+            ]
 
         if include_products:
             data["products"] = [product.serialize for product in self.products] if self.products else []

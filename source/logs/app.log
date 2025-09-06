@@ -1045,3 +1045,42 @@ WHERE menus.slug = %(slug_1)s
 2025-09-06 16:09:45,798 - INFO - integrative-project - GET /menus - retrieving all menus.
 2025-09-06 16:09:45,807 - INFO - integrative-project - All menus returned,
 2025-09-06 16:10:26,317 - INFO - integrative-project - Fetching category '8855b409-b879-45ba-86b8-111f4cd832d9' for menu with slug 'adega-da-praa-cura'
+2025-09-06 16:21:53,574 - WARNING - integrative-project - Menu with slug adega-sao-joao not found.
+2025-09-06 16:21:53,574 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-06 16:21:53,611 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-06 16:22:06,784 - INFO - integrative-project - Menu with slogan 'adega-sao-jorge' found
+2025-09-06 16:22:15,842 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:25:45,797 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:25:46,988 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:25:55,615 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:27:35,913 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:27:40,326 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:27:41,374 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:28:30,715 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:28:31,848 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:28:32,671 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:29:35,777 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:29:36,586 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:29:37,217 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:29:37,390 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:29:37,544 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:29:37,701 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:29:37,840 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:34:14,839 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:34:40,962 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-06 16:34:50,937 - INFO - integrative-project - Fetching category '8855b409-b879-45ba-86b8-111f4cd832d9' for menu with slug 'adega-da-praa-cura'
+2025-09-06 16:41:05,034 - INFO - integrative-project - Fetching category '8855b409-b879-45ba-86b8-111f4cd832d9' for menu with slug 'adega-da-praa-cura'
+2025-09-06 16:41:06,101 - INFO - integrative-project - Fetching category '8855b409-b879-45ba-86b8-111f4cd832d9' for menu with slug 'adega-da-praa-cura'
+2025-09-06 16:41:09,367 - INFO - integrative-project - Menu with slogan 'adega-sao-jorge' found
+2025-09-06 16:41:10,234 - INFO - integrative-project - Menu with slogan 'adega-sao-jorge' found
+2025-09-06 16:41:12,023 - INFO - integrative-project - Menu with slogan 'adega-sao-jorge' found
+2025-09-06 16:41:12,788 - INFO - integrative-project - Menu with slogan 'adega-sao-jorge' found
+2025-09-06 16:41:35,436 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 16:41:35,447 - INFO - integrative-project - All menus returned,
+2025-09-06 16:42:26,224 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:44:02,720 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:44:48,382 - ERROR - integrative-project - An error occurred: 'MenusEntity' object has no attribute 'serialize_without_products'
+2025-09-06 16:47:02,847 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:49:22,814 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:49:24,060 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-06 16:52:00,471 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found

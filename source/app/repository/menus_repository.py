@@ -2,6 +2,8 @@ from source.app.settings.definitions_settings import db as database
 from source.app.utils.decorators.database import transactional
 from source.app.entities.menus_entity import MenusEntity
 
+from sqlalchemy.orm import raiseload
+
 class MenusRepository:
     def __init__(self):
         self.session = database.session
@@ -14,6 +16,8 @@ class MenusRepository:
         menu = (
             self.session
             .query(MenusEntity)
+            # I was supposed to ignore the products!
+            .options(raiseload(MenusEntity.products))
             .filter(MenusEntity.slug == slug)
             .first()
         )
