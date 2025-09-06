@@ -971,3 +971,77 @@ WHERE menus.slug = %(slug_1)s
  LIMIT %(param_1)s]
 [parameters: {'slug_1': 'adega-sao-jorge', 'param_1': 1}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-06 15:44:42,019 - WARNING - integrative-project - Menu with slug {{slug}} not found.
+2025-09-06 15:44:42,020 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-06 15:45:07,563 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 15:45:07,566 - INFO - integrative-project - All menus returned,
+2025-09-06 15:45:28,250 - INFO - integrative-project - Menu with slogan 'adega-sao-jorge' found
+2025-09-06 15:48:18,368 - INFO - integrative-project - Menu with slogan 'adega-sao-jorge' found
+2025-09-06 15:48:19,634 - INFO - integrative-project - Menu with slogan 'adega-sao-jorge' found
+2025-09-06 16:02:32,690 - WARNING - integrative-project - Validation error: {'id': ['Not a valid UUID.']}
+2025-09-06 16:05:33,219 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 16:05:33,251 - INFO - integrative-project - All menus returned,
+2025-09-06 16:05:37,757 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 16:05:37,762 - INFO - integrative-project - All menus returned,
+2025-09-06 16:05:41,243 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 16:05:41,255 - INFO - integrative-project - All menus returned,
+2025-09-06 16:05:58,656 - INFO - integrative-project - POST /menus/{menu_id}/categories - creating a new category for a menu
+2025-09-06 16:05:58,656 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 16:05:58,671 - WARNING - integrative-project - No image URL provided, using default image URL.
+2025-09-06 16:05:58,671 - INFO - integrative-project - Creating a new category in the repository
+2025-09-06 16:05:58,671 - INFO - integrative-project - Adding new category to the database.
+2025-09-06 16:05:58,680 - INFO - integrative-project - Category created successfully.
+2025-09-06 16:05:58,680 - INFO - integrative-project - Category created successfully. ID = {adding_category.id}
+2025-09-06 16:06:02,771 - INFO - integrative-project - POST /menus/{menu_id}/categories - creating a new category for a menu
+2025-09-06 16:06:02,772 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 16:06:02,775 - WARNING - integrative-project - No image URL provided, using default image URL.
+2025-09-06 16:06:02,775 - INFO - integrative-project - Creating a new category in the repository
+2025-09-06 16:06:02,775 - INFO - integrative-project - Adding new category to the database.
+2025-09-06 16:06:02,778 - INFO - integrative-project - Category created successfully.
+2025-09-06 16:06:02,778 - INFO - integrative-project - Category created successfully. ID = {adding_category.id}
+2025-09-06 16:06:05,326 - INFO - integrative-project - POST /menus/{menu_id}/categories - creating a new category for a menu
+2025-09-06 16:06:05,326 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 16:06:05,329 - WARNING - integrative-project - No image URL provided, using default image URL.
+2025-09-06 16:06:05,329 - INFO - integrative-project - Creating a new category in the repository
+2025-09-06 16:06:05,329 - INFO - integrative-project - Adding new category to the database.
+2025-09-06 16:06:05,342 - INFO - integrative-project - Category created successfully.
+2025-09-06 16:06:05,342 - INFO - integrative-project - Category created successfully. ID = {adding_category.id}
+2025-09-06 16:06:11,024 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 16:06:11,034 - INFO - integrative-project - All menus returned,
+2025-09-06 16:06:39,179 - INFO - integrative-project - GET /categories/{categoryId}/products - get all products in category.
+2025-09-06 16:06:39,179 - INFO - integrative-project - Validating the UUID.
+2025-09-06 16:06:39,182 - WARNING - integrative-project - Category with id '8855b409-b879-45ba-86b8-111f4cd832d9' not found or has no products.
+2025-09-06 16:06:39,182 - WARNING - integrative-project - Category not found: Category not found or empty.
+2025-09-06 16:06:50,422 - INFO - integrative-project - POST /categories/{categoryId}/products - creating new product in category
+2025-09-06 16:06:50,422 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 16:06:50,426 - INFO - integrative-project - Fetching category with ID '8855b409-b879-45ba-86b8-111f4cd832d9' from the database
+2025-09-06 16:06:50,442 - INFO - integrative-project - Product 'NAMENAMEEEEEEE' created successfully in category '8855b409-b879-45ba-86b8-111f4cd832d9'.
+2025-09-06 16:06:50,443 - INFO - integrative-project - Product created successfully.
+2025-09-06 16:06:55,060 - INFO - integrative-project - GET /categories/{categoryId}/products - get all products in category.
+2025-09-06 16:06:55,060 - INFO - integrative-project - Validating the UUID.
+2025-09-06 16:06:55,062 - INFO - integrative-project - All products returned in category id '8855b409-b879-45ba-86b8-111f4cd832d9'.
+2025-09-06 16:06:55,062 - INFO - integrative-project - Product with id '8855b409-b879-45ba-86b8-111f4cd832d9' returned successfully.
+2025-09-06 16:07:05,852 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 16:07:05,861 - INFO - integrative-project - All menus returned,
+2025-09-06 16:07:16,516 - INFO - integrative-project - POST /categories/{categoryId}/products - creating new product in category
+2025-09-06 16:07:16,516 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 16:07:16,519 - INFO - integrative-project - Fetching category with ID 'c2b06575-6eb7-4742-830d-041927436383' from the database
+2025-09-06 16:07:16,533 - INFO - integrative-project - Product 'NAMENAMEEEEEEE' created successfully in category 'c2b06575-6eb7-4742-830d-041927436383'.
+2025-09-06 16:07:16,533 - INFO - integrative-project - Product created successfully.
+2025-09-06 16:07:17,724 - INFO - integrative-project - POST /categories/{categoryId}/products - creating new product in category
+2025-09-06 16:07:17,724 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 16:07:17,727 - WARNING - integrative-project - Product with name 'NAMENAMEEEEEEE' exists in this category with id 'c2b06575-6eb7-4742-830d-041927436383'.
+2025-09-06 16:07:17,727 - WARNING - integrative-project - Product duplicate name: Duplicate product name in the same category.
+2025-09-06 16:07:35,051 - INFO - integrative-project - POST /categories/{categoryId}/products - creating new product in category
+2025-09-06 16:07:35,051 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 16:07:35,053 - INFO - integrative-project - Fetching category with ID '349264e5-ff70-45b9-b1d4-83efcfe730cf' from the database
+2025-09-06 16:07:35,067 - INFO - integrative-project - Product 'NAMENAMEEEEEEE' created successfully in category '349264e5-ff70-45b9-b1d4-83efcfe730cf'.
+2025-09-06 16:07:35,067 - INFO - integrative-project - Product created successfully.
+2025-09-06 16:07:41,492 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 16:07:41,504 - INFO - integrative-project - All menus returned,
+2025-09-06 16:09:35,401 - INFO - integrative-project - Fetching category '8855b409-b879-45ba-86b8-111f4cd832d9' for menu with slug 'adega-sao-joao'
+2025-09-06 16:09:35,409 - WARNING - integrative-project - Category '8855b409-b879-45ba-86b8-111f4cd832d9' not found for menu 'adega-sao-joao'
+2025-09-06 16:09:35,409 - WARNING - integrative-project - Category not found: Category '8855b409-b879-45ba-86b8-111f4cd832d9' not found for menu 'adega-sao-joao'
+2025-09-06 16:09:45,798 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 16:09:45,807 - INFO - integrative-project - All menus returned,
+2025-09-06 16:10:26,317 - INFO - integrative-project - Fetching category '8855b409-b879-45ba-86b8-111f4cd832d9' for menu with slug 'adega-da-praa-cura'

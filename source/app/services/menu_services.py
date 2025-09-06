@@ -79,4 +79,4 @@ class MenuServices:
             raise MenuNotFoundException("Menu not found.")
 
         logger.info(f"Menu with slogan '{slug}' found")
-        return menu.serialize_client
+        return menu.serialize_client(include_categories=True, include_products=False)

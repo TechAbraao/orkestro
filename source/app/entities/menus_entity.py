@@ -27,16 +27,22 @@ class MenusEntity(database.Model):
             # "categories": [category.serialize for category in self.categories] if self.categories else [],
             # "products": [product.serialize for product in self.products] if self.products else []
         }
-    @property
-    def serialize_client(self):
-        return {
+
+    def serialize_client(self, include_categories: bool = True, include_products: bool = True):
+        data = {
             "name": self.name,
             "description": self.description,
             "created_at": self.created_at.isoformat() if self.created_at else None,
             "slug": self.slug,
-            "categories": [category.serialize for category in self.categories] if self.categories else [],
-            "products": [product.serialize for product in self.products] if self.products else []
         }
+
+        if include_categories:
+            data["categories"] = [category.serialize for category in self.categories] if self.categories else []
+
+        if include_products:
+            data["products"] = [product.serialize for product in self.products] if self.products else []
+
+        return data
 
 
 from source.app.entities.associations_tables_entity import menu_product

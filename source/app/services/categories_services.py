@@ -106,3 +106,10 @@ class CategoriesServices:
         )
 
         return True
+
+    @database_connection
+    def get_category_by_id_and_slug(self, slug: str, category_id: str):
+        category = self.categories_repository.get_category_by_slug_and_id(slug, category_id)
+        if not category:
+            raise CategoryNotFoundException(f"Category '{category_id}' not found for menu '{slug}'")
+        return category.serialize

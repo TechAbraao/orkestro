@@ -1,7 +1,9 @@
 from source.app.entities.categories_entity import CategoriesEntity
+from source.app.entities.menus_entity import MenusEntity
 from source.app.settings.definitions_settings import db as database
 from source.app.utils.decorators.database import transactional
 from source.app.settings.logging_settings import get_logger
+from sqlalchemy.orm import joinedload
 from sqlalchemy import func
 
 
@@ -45,7 +47,26 @@ class CategoriesRepository:
             .filter(CategoriesEntity.menu_id == menu_id)
             .all()
         )
-    
+
+    def get_category_by_slug_and_id(self, slug: str, category_id: str):
+        logger.info(f"Fetching category '{category_id}' for menu with slug '{slug}'")
+
+        category = (
+            self.session.query(CategoriesEntity)
+            .join(MenusEntity, CategoriesEntity.menu_id == MenusEntity.id)
+            .options(joinedload(CategoriesEntity.products))
+            .filter(
+                MenusEntity.slug == slug,
+                CategoriesEntity.id == category_id
+            )
+            .first()
+        )
+
+        if not category:
+            logger.warning(f"Category '{category_id}' not found for menu '{slug}'")
+        return category
+
+
     @transactional
     def update_category(self, category_id, name=None, description=None):
         pass
