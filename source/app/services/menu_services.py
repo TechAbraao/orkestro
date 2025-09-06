@@ -8,6 +8,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 from source.app.settings.logging_settings import get_logger
 from source.app.repository.categories_repository import CategoriesRepository
+from source.app.utils.slugs import slug_generator
 
 logger = get_logger(__name__)
 
@@ -18,14 +19,17 @@ class MenuServices:
         self.products_repository = ProductsRepository()
         self.menu_entity = MenusEntity()
 
-    
+
     @database_connection
     def create_menu(self, data) -> bool:
+
+        slug = slug_generator(data.get("name"))
         entity = MenusEntity(
             id=uuid4(),
             name=data.get("name"),
             description=data.get("description"),
-            created_at=datetime.now(ZoneInfo("America/Sao_Paulo"))
+            created_at=datetime.now(ZoneInfo("America/Sao_Paulo")),
+            slug=slug
         )
         
         self.menu_repository.save(entity)
@@ -60,7 +64,19 @@ class MenuServices:
         
     @database_connection
     def update_menu(self, menu_id: str, data) -> None:
+        data["slug"] = slug_generator(data.get("name"))
+
         updated = self.menu_repository.update(menu_id, data)
 
         if not updated:
             raise MenuNotFoundException("Menu not found.")
+
+    @database_connection
+    def get_menu_by_slug(self, slug: str):
+        menu = self.menu_repository.get_by_slug(slug)
+        if not menu:
+            logger.warning(f"Menu with slug {slug} not found.")
+            raise MenuNotFoundException("Menu not found.")
+
+        logger.info(f"Menu with slogan '{slug}' found")
+        return menu.serialize_client

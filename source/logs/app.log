@@ -875,3 +875,99 @@ WHERE categories.id = %(id_1)s::UUID
 2025-09-05 22:50:45,215 - INFO - integrative-project - Validating the UUID.
 2025-09-05 22:51:00,704 - INFO - integrative-project - GET /products/{productId} - get a specific product.
 2025-09-05 22:51:00,704 - INFO - integrative-project - Validating the UUID.
+2025-09-06 02:57:00,115 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 02:57:00,137 - ERROR - integrative-project - An error occurred: (psycopg2.errors.UndefinedColumn) column menus.slug does not exist
+LINE 1: ...at AS menus_created_at, menus.name AS menus_name, menus.slug...
+                                                             ^
+
+[SQL: SELECT menus.id AS menus_id, menus.created_at AS menus_created_at, menus.name AS menus_name, menus.slug AS menus_slug, menus.description AS menus_description 
+FROM menus]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-06 02:57:08,895 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 02:57:08,897 - ERROR - integrative-project - An error occurred: (psycopg2.errors.UndefinedColumn) column menus.slug does not exist
+LINE 1: ...at AS menus_created_at, menus.name AS menus_name, menus.slug...
+                                                             ^
+
+[SQL: SELECT menus.id AS menus_id, menus.created_at AS menus_created_at, menus.name AS menus_name, menus.slug AS menus_slug, menus.description AS menus_description 
+FROM menus]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-06 02:58:56,106 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 02:58:56,125 - ERROR - integrative-project - An error occurred: (psycopg2.errors.UndefinedColumn) column menus.slug does not exist
+LINE 1: ...at AS menus_created_at, menus.name AS menus_name, menus.slug...
+                                                             ^
+
+[SQL: SELECT menus.id AS menus_id, menus.created_at AS menus_created_at, menus.name AS menus_name, menus.slug AS menus_slug, menus.description AS menus_description 
+FROM menus]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-06 03:01:36,526 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:01:36,547 - INFO - integrative-project - All menus returned,
+2025-09-06 03:02:04,523 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:02:04,546 - INFO - integrative-project - All menus returned,
+2025-09-06 03:02:05,972 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:02:05,975 - INFO - integrative-project - All menus returned,
+2025-09-06 03:02:13,592 - INFO - integrative-project - DELETE /menus/<menu_id> - deleting a menu
+2025-09-06 03:02:23,772 - INFO - integrative-project - DELETE /menus/<menu_id> - deleting a menu
+2025-09-06 03:02:24,530 - INFO - integrative-project - DELETE /menus/<menu_id> - deleting a menu
+2025-09-06 03:02:24,533 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-06 03:02:36,837 - INFO - integrative-project - DELETE /menus/<menu_id> - deleting a menu
+2025-09-06 03:02:39,256 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:02:39,258 - INFO - integrative-project - All menus returned,
+2025-09-06 03:02:49,181 - INFO - integrative-project - DELETE /menus/<menu_id> - deleting a menu
+2025-09-06 03:02:51,558 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:02:51,561 - INFO - integrative-project - All menus returned,
+2025-09-06 03:05:26,894 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:05:26,916 - INFO - integrative-project - All menus returned,
+2025-09-06 03:05:32,218 - INFO - integrative-project - POST /menus - creating new menu
+2025-09-06 03:05:32,218 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 03:05:32,218 - WARNING - integrative-project - Validation error: {'name': ['Missing data for required field.'], 'description': ['Missing data for required field.'], 'Hello': ['Unknown field.']}
+2025-09-06 03:05:37,928 - INFO - integrative-project - POST /menus - creating new menu
+2025-09-06 03:05:37,928 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 03:05:37,928 - WARNING - integrative-project - Validation error: {'name': ['Missing data for required field.'], 'description': ['Missing data for required field.']}
+2025-09-06 03:06:07,309 - INFO - integrative-project - POST /menus - creating new menu
+2025-09-06 03:06:07,309 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 03:06:07,323 - INFO - integrative-project - Menu created successfully
+2025-09-06 03:06:10,499 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:06:10,501 - INFO - integrative-project - All menus returned,
+2025-09-06 03:08:02,225 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:08:02,245 - INFO - integrative-project - All menus returned,
+2025-09-06 03:08:12,154 - INFO - integrative-project - PUT /menus/<menu_id> - updating a menu
+2025-09-06 03:08:12,154 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 03:08:17,529 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:08:17,532 - INFO - integrative-project - All menus returned,
+2025-09-06 03:08:19,005 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:08:19,007 - INFO - integrative-project - All menus returned,
+2025-09-06 03:08:41,999 - INFO - integrative-project - POST /menus - creating new menu
+2025-09-06 03:08:41,999 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 03:08:42,014 - INFO - integrative-project - Menu created successfully
+2025-09-06 03:08:44,298 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:08:44,301 - INFO - integrative-project - All menus returned,
+2025-09-06 03:14:35,286 - INFO - integrative-project - PUT /menus/<menu_id> - updating a menu
+2025-09-06 03:14:35,286 - INFO - integrative-project - Getting JSON data from request and validating fields
+2025-09-06 03:14:38,783 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:14:38,786 - INFO - integrative-project - All menus returned,
+2025-09-06 03:15:57,626 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:15:57,628 - INFO - integrative-project - All menus returned,
+2025-09-06 03:38:17,573 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-06 03:38:17,593 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-06 03:38:17,710 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-06 03:38:23,744 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-06 03:38:26,274 - WARNING - integrative-project - Menu with slug qwe not found.
+2025-09-06 03:38:26,275 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-06 03:38:56,240 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-06 03:38:56,243 - INFO - integrative-project - All menus returned,
+2025-09-06 03:39:04,391 - INFO - integrative-project - Menu with slogan 'adega-sao-jorge' found
+2025-09-06 03:40:51,698 - INFO - integrative-project - Menu with slogan 'adega-sao-jorge' found
+2025-09-06 03:45:43,607 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-06 03:45:49,645 - INFO - integrative-project - Menu with slogan 'adega-sao-jorge' found
+2025-09-06 03:45:54,589 - WARNING - integrative-project - Menu with slug adega-sao-jorg not found.
+2025-09-06 03:45:54,589 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-06 03:54:19,185 - ERROR - integrative-project - Database unavailable: (psycopg2.OperationalError) server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+[SQL: SELECT menus.id AS menus_id, menus.created_at AS menus_created_at, menus.name AS menus_name, menus.slug AS menus_slug, menus.description AS menus_description 
+FROM menus 
+WHERE menus.slug = %(slug_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'slug_1': 'adega-sao-jorge', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

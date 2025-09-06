@@ -16,6 +16,7 @@ def create_menu():
     data = request.get_json()
     data_validated = menu_schema.load(data)
 
+
     created = menu_services.create_menu(data_validated)
 
     logger.info(f"Menu created successfully")

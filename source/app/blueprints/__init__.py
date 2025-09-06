@@ -1,5 +1,13 @@
-""" All routes should be imported here """
+""" All routes should be imported here. """
 
-from .api.categories_blueprint import categories_bp
-from .api.menus_blueprint import menus_bp
-from .api.products_blueprint import products_bp
+""" Routes for the administrator to manipulate. """
+
+""" Admin Routes """
+from source.app.blueprints.api.admin.categories_admin import categories_bp
+from source.app.blueprints.api.admin.menus_admin import menus_bp
+from source.app.blueprints.api.admin.products_admin import products_bp
+
+""" Clients Routes """
+from source.app.blueprints.api.client.menus_client import menus_client
+
+""" Dashboard Routes """

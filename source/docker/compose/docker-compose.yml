@@ -26,6 +26,14 @@ services:
     networks:
       - network-pizza-management-system
 
+  redis:
+    image: redis:7.2
+    container_name: redis-pizza-management-system
+    ports:
+      - "6381:6379"
+    networks:
+      - network-pizza-management-system
+
 volumes:
   pgdata:
 

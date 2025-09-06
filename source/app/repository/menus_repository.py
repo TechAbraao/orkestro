@@ -9,7 +9,20 @@ class MenusRepository:
     def all(self):
         """ Retrieve all menu records from the database """
         return self.session.query(MenusEntity).all()
-    
+
+    def get_by_slug(self, slug: str):
+        menu = (
+            self.session
+            .query(MenusEntity)
+            .filter(MenusEntity.slug == slug)
+            .first()
+        )
+
+        if not menu:
+            return False
+
+        return menu
+
     @transactional
     def save(self, menu: MenusEntity) -> None:
         self.session.add(menu)
@@ -40,10 +53,9 @@ class MenusRepository:
         if not menu:
             return False  
 
-        allowed_fields = {"name", "description"}
+        allowed_fields = {"name", "description", "slug"}
         for key, value in data.items():
             if key in allowed_fields:
                 setattr(menu, key, value)
                 
         return True
-

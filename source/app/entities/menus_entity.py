@@ -10,6 +10,7 @@ class MenusEntity(database.Model):
         database.DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
     name = database.Column(database.String, nullable=False)
+    slug = database.Column(database.String, nullable=True)
     description = database.Column(database.Text, nullable=True)
 
     categories = database.relationship(
@@ -22,8 +23,19 @@ class MenusEntity(database.Model):
             "name": self.name,
             "description": self.description,
             "created_at": self.created_at.isoformat() if self.created_at else None,
+            "slug": self.slug
             # "categories": [category.serialize for category in self.categories] if self.categories else [],
             # "products": [product.serialize for product in self.products] if self.products else []
+        }
+    @property
+    def serialize_client(self):
+        return {
+            "name": self.name,
+            "description": self.description,
+            "created_at": self.created_at.isoformat() if self.created_at else None,
+            "slug": self.slug,
+            "categories": [category.serialize for category in self.categories] if self.categories else [],
+            "products": [product.serialize for product in self.products] if self.products else []
         }
 
 

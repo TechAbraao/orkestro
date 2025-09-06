@@ -1,7 +1,7 @@
 from source.app.settings.database_settings import postgres_settings
 from source.app.settings.definitions_settings import db, ma
 from source.app.handlers.handlers_exceptions import register_error_handlers
-from source.app.blueprints import menus_bp, categories_bp, products_bp
+from source.app.blueprints import menus_bp, categories_bp, products_bp, menus_client
 from flask import Flask
 from flask_migrate import Migrate
 from flasgger import Swagger
@@ -48,6 +48,7 @@ def create_app() -> Flask:
     app.register_blueprint(menus_bp)
     app.register_blueprint(categories_bp)
     app.register_blueprint(products_bp)
+    app.register_blueprint(menus_client)
 
     register_error_handlers(app)
 
