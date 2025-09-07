@@ -1084,3 +1084,45 @@ WHERE menus.slug = %(slug_1)s
 2025-09-06 16:49:22,814 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
 2025-09-06 16:49:24,060 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
 2025-09-06 16:52:00,471 - INFO - integrative-project - Menu with slogan 'adega-da-praa-cura' found
+2025-09-07 12:53:42,452 - ERROR - integrative-project - An error occurred: get_cache_key_by_slug() missing 1 required positional argument: 'self'
+2025-09-07 12:56:14,612 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praca:categories'.
+2025-09-07 12:56:14,612 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 12:56:46,610 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praca:categories'.
+2025-09-07 12:56:46,610 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 12:57:30,069 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praca:categories'.
+2025-09-07 12:57:30,767 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 12:58:49,202 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praca:categories'.
+2025-09-07 12:58:53,726 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 12:59:12,986 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praca:categories'.
+2025-09-07 12:59:12,987 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 13:03:03,670 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praca:categories'
+2025-09-07 13:03:03,670 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 13:03:14,914 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praca:categories'
+2025-09-07 13:03:14,915 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 13:05:00,100 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praca:categories'
+2025-09-07 13:05:02,108 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 13:12:38,718 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praca:categories'
+2025-09-07 13:12:38,719 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 13:13:19,235 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praca:categories'
+2025-09-07 13:13:19,274 - WARNING - integrative-project - Menu with slug adega-da-praca not found.
+2025-09-07 13:13:19,275 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-07 13:13:26,918 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praca:categories'
+2025-09-07 13:13:26,921 - WARNING - integrative-project - Menu with slug adega-da-praca not found.
+2025-09-07 13:13:26,921 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-07 13:13:53,540 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-07 13:13:53,579 - INFO - integrative-project - All menus returned,
+2025-09-07 13:13:59,855 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-07 13:13:59,857 - INFO - integrative-project - All menus returned,
+2025-09-07 13:14:12,785 - INFO - integrative-project - Caching key created, it is 'menu:adega-sao-jorge:categories'
+2025-09-07 13:14:12,792 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 13:14:50,667 - INFO - integrative-project - Caching key created, it is 'menu:adega-sao-jorge:categories'
+2025-09-07 13:14:57,660 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 13:16:53,853 - INFO - integrative-project - Caching key created, it is 'menu:adega-sao-jorge:categories'
+2025-09-07 13:16:53,876 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 13:17:21,510 - INFO - integrative-project - Caching key created, it is 'menu:adega-sao-jorge:categories'
+2025-09-07 13:17:21,531 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 13:17:23,968 - INFO - integrative-project - Caching key created, it is 'menu:adega-sao-jorge:categories'
+2025-09-07 13:17:23,971 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 13:19:41,970 - INFO - integrative-project - Caching key created, it is 'menu:adega-sao-jorge:categories'
+2025-09-07 13:19:41,994 - INFO - integrative-project - Cache set for key menu:adega-sao-jorge:categories
+2025-09-07 13:19:41,994 - INFO - integrative-project - Menu with slug 'adega-sao-jorge' found

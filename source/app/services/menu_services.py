@@ -9,6 +9,9 @@ from zoneinfo import ZoneInfo
 from source.app.settings.logging_settings import get_logger
 from source.app.repository.categories_repository import CategoriesRepository
 from source.app.utils.slugs import slug_generator
+from source.app.repository.redis_repository import RedisRepository
+from source.app.utils.cache_keys import get_cache_key_by_slug
+import json
 
 logger = get_logger(__name__)
 
@@ -18,7 +21,7 @@ class MenuServices:
         self.category_repository = CategoriesRepository()
         self.products_repository = ProductsRepository()
         self.menu_entity = MenusEntity()
-
+        self.redis_repository = RedisRepository()
 
     @database_connection
     def create_menu(self, data) -> bool:
@@ -73,10 +76,29 @@ class MenuServices:
 
     @database_connection
     def get_menu_by_slug(self, slug: str):
+        cache_key = get_cache_key_by_slug(slug=slug, include_products=False, include_categories=True)
+
+        logger.info(f"Caching key created, it is '{cache_key}'")
+
+        """
+        cached_data = self.redis_repository.get(cache_key)
+        if cached_data:
+            logger.info(f"Cache hit for key {cache_key}.")
+            return json.loads(cached_data)
+        """
+
         menu = self.menu_repository.get_by_slug(slug)
         if not menu:
             logger.warning(f"Menu with slug {slug} not found.")
             raise MenuNotFoundException("Menu not found.")
 
-        logger.info(f"Menu with slogan '{slug}' found")
-        return menu.serialize_client(include_categories=True, include_products=False)
+        result = menu.serialize_client(include_categories=True, include_products=False)
+
+        """
+        self.redis_repository.set(cache_key, result, expire=60)
+        """
+
+        logger.info(f"Cache set for key {cache_key}")
+
+        logger.info(f"Menu with slug '{slug}' found")
+        return result
