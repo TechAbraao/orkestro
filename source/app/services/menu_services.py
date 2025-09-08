@@ -74,7 +74,6 @@ class MenuServices:
         cache_key = get_cache_key_by_slug(slug=slug, include_products=False, include_categories=True)
         self.redis_repository.delete(cache_key)
 
-
     @database_connection
     def update_menu(self, menu_id: str, data) -> None:
         logger.info(f"Looking for old slug for menu id '{menu_id}'.")

@@ -9,5 +9,6 @@ from source.app.blueprints.api.admin.products_admin import products_bp
 
 """ Clients Routes """
 from source.app.blueprints.api.client.menus_client import menus_client
+from source.app.blueprints.api.client.orders_client import orders_client
 
 """ Dashboard Routes """

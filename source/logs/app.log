@@ -1432,3 +1432,5 @@ WHERE menus.slug = %(slug_1)s
 2025-09-08 16:36:22,585 - INFO - integrative-project - Caching key created, it is 'menu:adega-sao-jorge:categories'
 2025-09-08 16:36:22,588 - WARNING - integrative-project - Menu with slug adega-sao-jorge not found.
 2025-09-08 16:36:22,588 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-08 16:40:01,678 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-08 16:40:01,680 - INFO - integrative-project - All menus returned,
