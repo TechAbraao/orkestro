@@ -61,20 +61,61 @@ class MenuServices:
     def delete_menu(self, menu_id: str) -> None:
         exists = self.menu_repository.exists(menu_id)
         if not exists:
+            logger.warning(f"Menu with id '{menu_id}' could not be deleted.")
             raise MenuNotFoundException("Menu not found.")
-        self.menu_repository.delete(menu_id)    
-        
+        menu_object = self.menu_repository.get(menu_id)
+        slug = menu_object.slug
+        logger.info(f"Getting the slug '{slug}' from the ID current menu '{menu_id}'")
+
+        self.menu_repository.delete(menu_id)
+        logger.info(f"Menu with id '{menu_id}' deleted successfully.")
+
+        logger.info(f"Invalidating cache for slug '{slug}'.")
+        cache_key = get_cache_key_by_slug(slug=slug, include_products=False, include_categories=True)
+        self.redis_repository.delete(cache_key)
+
+
     @database_connection
     def update_menu(self, menu_id: str, data) -> None:
+        logger.info(f"Looking for old slug for menu id '{menu_id}'.")
+        old_menu = self.menu_repository.get(menu_id)
+
+        if not old_menu:
+            raise MenuNotFoundException("Menu not found.")
+
+        old_slug = old_menu.slug
+
+        logger.info(f"Generating new slug for menu id '{menu_id}'.")
         data["slug"] = slug_generator(data.get("name"))
+        new_slug = data["slug"]
 
         updated = self.menu_repository.update(menu_id, data)
-
         if not updated:
-            raise MenuNotFoundException("Menu not found.")
+            raise MenuNotFoundException("Menu not found during update.")
+
+        if old_slug and old_slug != new_slug:
+            old_cache_key = get_cache_key_by_slug(
+                slug=old_slug,
+                include_products=False,
+                include_categories=True,
+            )
+            self.redis_repository.delete(old_cache_key)
+            logger.info(f"Cache invalidated for old slug '{old_cache_key}'.")
+
+        new_cache_key = get_cache_key_by_slug(
+            slug=new_slug,
+            include_products=False,
+            include_categories=True,
+        )
+        self.redis_repository.delete(new_cache_key)
+        logger.info(f"Cache invalidated for new slug '{new_cache_key}'.")
+
+        logger.info(f"Menu id '{menu_id}' updated successfully.")
 
     @database_connection
     def get_menu_by_slug(self, slug: str):
+        EXPIRE: int = (10 * 60)
+
         cache_key = get_cache_key_by_slug(slug=slug, include_products=False, include_categories=True)
         logger.info(f"Caching key created, it is '{cache_key}'")
 
@@ -91,7 +132,7 @@ class MenuServices:
             raise MenuNotFoundException("Menu not found.")
 
         result = menu.serialize_client(include_categories=True, include_products=False)
-        self.redis_repository.set(cache_key, result, expire=60)
+        self.redis_repository.set(cache_key, result, expire=EXPIRE)
         logger.info(f"Cache set for key {cache_key}.")
 
         logger.info(f"Menu with slug '{slug}' found.")

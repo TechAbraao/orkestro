@@ -63,3 +63,13 @@ class MenusRepository:
                 setattr(menu, key, value)
                 
         return True
+
+    def get(self, menu_id: str):
+        return (
+            self
+            .session
+            .query(MenusEntity)
+            .filter(
+                MenusEntity.id == menu_id
+            ).first()
+        )
