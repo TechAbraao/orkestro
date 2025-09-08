@@ -3,13 +3,14 @@ from source.app.settings.definitions_settings import db, ma
 from source.app.handlers.handlers_exceptions import register_error_handlers
 from source.app.blueprints import menus_bp, categories_bp, products_bp, menus_client, orders_client
 from flask import Flask
+from source.app.extesions.socket_io import socketio
 from flask_migrate import Migrate
 from flasgger import Swagger
 import yaml
 from pathlib import Path
 
 
-def create_app() -> Flask:
+def create_app():
     app = Flask(__name__)
 
     app.config['SQLALCHEMY_DATABASE_URI'] = postgres_settings.get_uri()
@@ -49,5 +50,7 @@ def create_app() -> Flask:
     app.register_blueprint(orders_client)
 
     register_error_handlers(app)
+
+    socketio.init_app(app)
 
     return app

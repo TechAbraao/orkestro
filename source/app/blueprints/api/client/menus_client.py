@@ -6,7 +6,7 @@ from source.app.schemas import uuid_schema
 menus_client = Blueprint(
     "menus_client",
     __name__,
-    url_prefix=""
+    url_prefix="/api"
 )
 
 @menus_client.route("/stores/<string:slug>", methods=["GET"])

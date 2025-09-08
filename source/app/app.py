@@ -1,10 +1,15 @@
+import eventlet
+eventlet.monkey_patch()
+
 from source.app import create_app
 from source.app.settings.application_settings import application_settings as settings
+from source.app.extesions.socket_io import socketio
 
 app = create_app()
 
 if __name__ == "__main__":
-    app.run(
+    socketio.run(
+        app,
         host=settings.FLASK_HOST,
         port=settings.FLASK_PORT,
         debug=settings.FLASK_DEBUG
