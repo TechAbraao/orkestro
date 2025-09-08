@@ -1,4 +1,4 @@
-# Back-end service for Menu Manager and Dynamic Dashboard
+# Menu Manager and Dynamic Dashboard
 
 ### Technologies
 
