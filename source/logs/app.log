@@ -1126,3 +1126,169 @@ WHERE menus.slug = %(slug_1)s
 2025-09-07 13:19:41,970 - INFO - integrative-project - Caching key created, it is 'menu:adega-sao-jorge:categories'
 2025-09-07 13:19:41,994 - INFO - integrative-project - Cache set for key menu:adega-sao-jorge:categories
 2025-09-07 13:19:41,994 - INFO - integrative-project - Menu with slug 'adega-sao-jorge' found
+2025-09-07 23:04:22,725 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:04:22,752 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-07 23:04:22,752 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-07 23:04:47,628 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:04:47,632 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-07 23:04:47,632 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-07 23:04:48,329 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:04:48,333 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-07 23:04:48,333 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-07 23:04:49,047 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:04:49,051 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-07 23:04:49,051 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-07 23:04:49,810 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:04:49,813 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-07 23:04:49,813 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-07 23:04:50,466 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:04:50,469 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-07 23:04:50,470 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-07 23:04:51,151 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:04:51,154 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-07 23:04:51,154 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-07 23:04:52,896 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:04:52,900 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-07 23:04:52,900 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-07 23:07:04,534 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:07:56,686 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:07:58,089 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 23:09:28,597 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:09:35,211 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 23:10:11,414 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:10:11,414 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 23:10:13,483 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:10:13,483 - ERROR - integrative-project - An error occurred: invalid literal for int() with base 10: ''
+2025-09-07 23:13:25,753 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:13:25,816 - ERROR - integrative-project - An error occurred: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+2025-09-07 23:15:29,721 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:15:29,748 - ERROR - integrative-project - An error occurred: Invalid input of type: 'dict'. Convert to a bytes, string, int or float first.
+2025-09-07 23:18:27,085 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:18:27,113 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-07 23:18:27,113 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-07 23:18:29,754 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:18:29,755 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-07 23:18:29,755 - ERROR - integrative-project - An error occurred: the JSON object must be str, bytes or bytearray, not dict
+2025-09-07 23:19:11,618 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:19:11,620 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-07 23:19:13,205 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:19:13,207 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-07 23:19:36,263 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:19:36,288 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-07 23:19:36,288 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-07 23:19:37,102 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:19:37,103 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-07 23:19:37,915 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:19:37,916 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-07 23:19:38,685 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:19:38,686 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-07 23:19:39,601 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:19:39,602 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-07 23:19:40,506 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:19:40,507 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-07 23:20:13,828 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:20:18,518 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-07 23:20:53,276 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-07 23:21:02,744 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-07 23:21:03,114 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-08 00:24:26,740 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:24:26,771 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-08 00:24:26,771 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-08 00:24:29,088 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:24:29,089 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:24:30,008 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:24:30,010 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:24:30,757 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:24:30,758 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:24:31,428 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:24:31,429 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:24:32,106 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:24:32,107 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:24:32,795 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:24:32,796 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:24:33,450 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:24:33,451 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:24:34,174 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:24:34,175 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:24:34,968 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:24:34,969 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:25:09,820 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:25:13,549 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:25:57,860 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:25:57,886 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-08 00:25:57,886 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-08 00:26:24,786 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:26:24,787 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:26:25,519 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:26:25,520 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:26:26,208 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:26:26,209 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:26:26,861 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:26:26,862 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:26:27,612 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:26:27,613 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:26:28,387 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:26:28,391 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:26:29,882 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:26:29,883 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:26:32,784 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:26:32,785 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:29:48,228 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:29:55,034 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-08 00:29:56,113 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-08 00:30:11,748 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:11,750 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:30:12,449 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:12,450 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:30:13,006 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:13,007 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:30:13,577 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:13,578 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:30:14,127 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:14,128 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:30:14,681 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:14,682 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:30:15,280 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:15,281 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:30:15,989 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:15,990 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:30:16,426 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:16,427 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:30:17,069 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:17,070 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:30:17,771 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:17,772 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:30:18,194 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:18,195 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:30:18,880 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:30:18,881 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:31:08,947 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:31:08,975 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories
+2025-09-08 00:31:08,975 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found
+2025-09-08 00:31:50,140 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:31:50,143 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:31:50,143 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 00:31:52,794 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:31:52,795 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:31:52,795 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 00:31:54,873 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:31:54,874 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:31:54,874 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 00:31:56,864 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:31:56,864 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:31:56,865 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 00:31:57,800 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:31:57,801 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:31:57,801 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 00:31:58,696 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:31:58,697 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:31:58,697 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 00:31:59,637 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:31:59,638 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:31:59,638 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 00:32:00,539 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:32:00,540 - INFO - integrative-project - Cache hit for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:32:00,540 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 00:33:04,897 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praa-cura:categories'
+2025-09-08 00:33:04,923 - INFO - integrative-project - Cache set for key menu:adega-da-praa-cura:categories.
+2025-09-08 00:33:04,923 - INFO - integrative-project - Menu with slug 'adega-da-praa-cura' found.
