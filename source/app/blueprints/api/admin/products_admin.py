@@ -10,7 +10,7 @@ from flask import Blueprint, request
 logger = get_logger()
 products_bp = Blueprint("products_bp", __name__, url_prefix="/api")
 
-""" Create Product in a Category. """
+""" 1. Create Product in a Category. """
 @products_bp.route("/categories/<string:category_id>/products", methods=["POST"])
 def post_products_in_category(category_id: str):
     logger.info("POST /categories/{categoryId}/products - creating new product in category")
@@ -31,7 +31,7 @@ def post_products_in_category(category_id: str):
         status_code=200
     )
 
-""" List all Products in a Category. """
+""" 2. List all Products in a Category. """
 @products_bp.route("/categories/<string:category_id>/products", methods=["GET"])
 def get_products_in_category(category_id: str):
     logger.info("GET /categories/{categoryId}/products - get all products in category.")
@@ -50,7 +50,7 @@ def get_products_in_category(category_id: str):
         data=products_in_category
     )
 
-""" Get Specific Product """
+""" 3. Get Specific Product """
 @products_bp.route("/products/<string:product_id>", methods=["GET"])
 def get_product(product_id: str):
     logger.info("GET /products/{productId} - get a specific product.")
@@ -65,7 +65,7 @@ def get_product(product_id: str):
         status_code=200
     )
 
-""" Update Specific Product. """
+""" 4. Update Specific Product. """
 @products_bp.route("/products/<string:product_id>", methods=["PUT"])
 # @validate_request(ProductUpdateSchema())
 def put_product(product_id: str):
@@ -86,7 +86,7 @@ def put_product(product_id: str):
         status_code=200
     )
 
-""" Deleting Specific Product. """
+""" 5. Deleting Specific Product. """
 @products_bp.route("/products/<string:product_id>", methods=["DELETE"])
 def delete_product(product_id: str):
     logger.info("GET /products/{productId} - Delete a specific product.")
@@ -101,7 +101,7 @@ def delete_product(product_id: str):
         status_code=200
     )
 
-""" List all Products in a Menu (associated categories). """
+""" 6. List all Products in a Menu (associated categories). """
 @products_bp.route("/menus/<string:menu_id>/products", methods=["GET"])
 def get_products_in_menu(menu_id: str):
     pass

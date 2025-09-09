@@ -9,11 +9,13 @@ menus_client = Blueprint(
     url_prefix="/api"
 )
 
+""" 1.  """
 @menus_client.route("/stores/<string:slug>", methods=["GET"])
 def render_menu_with_slug(slug: str):
     menu = menu_services.get_menu_by_slug(slug)
     return jsonify(menu)
 
+""" 2.  """
 @menus_client.route("/stores/<string:slug>/categories/<string:category_id>", methods=["GET"])
 def get_category(slug: str, category_id: str):
     validation_query_params = uuid_schema.load({"id": category_id})

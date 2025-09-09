@@ -7,7 +7,7 @@ from source.app.settings.logging_settings import get_logger
 logger = get_logger(__name__)
 menus_bp = Blueprint("menus_bp", __name__, url_prefix="/api/menus")
 
-""" Criar um Cardápio """
+""" 1. Criar um Cardápio """
 @menus_bp.route("/", methods=["POST"])
 def create_menu():
     logger.info("POST /menus - creating new menu")
@@ -26,7 +26,7 @@ def create_menu():
         data=None,
     )
 
-""" Listar todos os Cardápios """
+""" 2. Listar todos os Cardápios """
 @menus_bp.route("/", methods=["GET"])
 def all_menus():
     logger.info("GET /menus - retrieving all menus.")
@@ -37,7 +37,7 @@ def all_menus():
     logger.info("All menus returned,")
     return jsonify(all_menus_returned)
 
-""" Deletar um Cardápio """
+""" 3. Deletar um Cardápio """
 @menus_bp.route("/<string:menu_id>", methods=["DELETE"])
 def delete_menu(menu_id: str):
     logger.info("DELETE /menus/<menu_id> - deleting a menu")
@@ -51,7 +51,7 @@ def delete_menu(menu_id: str):
     )
 
 
-""" Atualizar um Cardápio """
+""" 4. Atualizar um Cardápio """
 @menus_bp.route("/<string:menu_id>", methods=["PUT"])
 def update_menu(menu_id: str):
     logger.info("PUT /menus/<menu_id> - updating a menu")
