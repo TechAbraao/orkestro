@@ -1461,3 +1461,52 @@ WHERE menus.slug = %(slug_1)s
 2025-09-08 18:24:11,132 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 2025-09-08 18:24:30,358 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 2025-09-08 18:26:02,169 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-08 22:01:11,759 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-08 22:01:25,889 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-08 22:18:36,544 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-08 22:18:36,633 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-08 22:18:36,663 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-08 22:18:45,944 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-08 22:18:55,341 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-praca:categories'
+2025-09-08 22:18:55,373 - WARNING - integrative-project - Menu with slug adega-da-praca not found.
+2025-09-08 22:18:55,373 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-08 22:19:13,136 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-08 22:19:13,138 - INFO - integrative-project - All menus returned,
+2025-09-08 22:19:18,395 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-jaca:categories'
+2025-09-08 22:19:18,403 - INFO - integrative-project - Cache set for key menu:adega-da-jaca:categories.
+2025-09-08 22:19:18,403 - INFO - integrative-project - Menu with slug 'adega-da-jaca' found.
+2025-09-08 22:19:24,183 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-jaca:categories'
+2025-09-08 22:19:24,184 - INFO - integrative-project - Cache hit for key menu:adega-da-jaca:categories.
+2025-09-08 22:19:24,184 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 22:19:24,820 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-jaca:categories'
+2025-09-08 22:19:24,822 - INFO - integrative-project - Cache hit for key menu:adega-da-jaca:categories.
+2025-09-08 22:19:24,822 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 22:19:25,905 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-jaca:categories'
+2025-09-08 22:19:25,906 - INFO - integrative-project - Cache hit for key menu:adega-da-jaca:categories.
+2025-09-08 22:19:25,906 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 22:19:26,934 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-jaca:categories'
+2025-09-08 22:19:26,936 - INFO - integrative-project - Cache hit for key menu:adega-da-jaca:categories.
+2025-09-08 22:19:26,936 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 22:19:28,576 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-jaca:categories'
+2025-09-08 22:19:28,577 - INFO - integrative-project - Cache hit for key menu:adega-da-jaca:categories.
+2025-09-08 22:19:28,578 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 22:19:29,743 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-jaca:categories'
+2025-09-08 22:19:29,744 - INFO - integrative-project - Cache hit for key menu:adega-da-jaca:categories.
+2025-09-08 22:19:29,745 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 22:19:30,525 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-jaca:categories'
+2025-09-08 22:19:30,527 - INFO - integrative-project - Cache hit for key menu:adega-da-jaca:categories.
+2025-09-08 22:19:30,527 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 22:19:31,306 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-jaca:categories'
+2025-09-08 22:19:31,307 - INFO - integrative-project - Cache hit for key menu:adega-da-jaca:categories.
+2025-09-08 22:19:31,307 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 22:19:32,087 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-jaca:categories'
+2025-09-08 22:19:32,093 - INFO - integrative-project - Cache hit for key menu:adega-da-jaca:categories.
+2025-09-08 22:19:32,093 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 22:19:47,365 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-jaca:categories'
+2025-09-08 22:19:47,367 - INFO - integrative-project - Cache hit for key menu:adega-da-jaca:categories.
+2025-09-08 22:19:47,367 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 22:19:47,797 - INFO - integrative-project - Caching key created, it is 'menu:adega-da-jaca:categories'
+2025-09-08 22:19:47,800 - INFO - integrative-project - Cache hit for key menu:adega-da-jaca:categories.
+2025-09-08 22:19:47,800 - INFO - integrative-project - Cache success in method 'get_menu_by_slug'.
+2025-09-08 22:20:48,765 - WARNING - integrative-project - Validation error: {'id': ['Not a valid UUID.']}
+2025-09-08 22:20:51,428 - INFO - integrative-project - Fetching category '8855b409-b879-45ba-86b8-111f4cd832d9' for menu with slug 'adega-da-jaca'

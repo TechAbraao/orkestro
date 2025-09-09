@@ -20,7 +20,7 @@ def create_app():
 
     db.init_app(app)
     ma.init_app(app)
-    Migrate(app, db)
+    Migrate(app, db, directory="source/migrations")
 
     swagger = Swagger(app, template_file=str(SWAGGER_PATH))
 
