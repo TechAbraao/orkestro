@@ -1,6 +1,5 @@
 from source.app.schemas import uuid_schema
 from source.app.extesions.socket_io import socketio
-
 from flask import Blueprint, request
 
 orders_client = Blueprint(
@@ -42,6 +41,6 @@ def post_order_by_slug(): pass
 
 """ 7.  """
 @orders_client.route("/stores/<string:slug>/orders/<string:order_id>", methods=["GET"])
-def post_order_by_slug(): pass
+def get_order_by_slug(): pass
 
 

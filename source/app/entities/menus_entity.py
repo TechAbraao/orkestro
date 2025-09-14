@@ -1,5 +1,6 @@
 from source.app.settings.definitions_settings import db as database
 from datetime import datetime, timezone
+from source.app.entities.stores_entity import StoresEntity
 import uuid
 
 class MenusEntity(database.Model):
@@ -16,6 +17,14 @@ class MenusEntity(database.Model):
     categories = database.relationship(
         "CategoriesEntity", back_populates="menu", cascade="all, delete"
     )
+    store_id = database.Column(
+        database.UUID(as_uuid=True),
+        database.ForeignKey("stores.id", ondelete="CASCADE"),
+        nullable=False
+    )
+    store = database.relationship("StoresEntity", back_populates="menus")
+
+
     @property
     def serialize(self):
         return {

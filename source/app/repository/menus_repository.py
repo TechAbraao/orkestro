@@ -1,7 +1,6 @@
 from source.app.settings.definitions_settings import db as database
 from source.app.utils.decorators.database import transactional
 from source.app.entities.menus_entity import MenusEntity
-
 from sqlalchemy.orm import raiseload
 
 class MenusRepository:
@@ -9,7 +8,6 @@ class MenusRepository:
         self.session = database.session
     
     def all(self):
-        """ Retrieve all menu records from the database """
         return self.session.query(MenusEntity).all()
 
     def get_by_slug(self, slug: str):
