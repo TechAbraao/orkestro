@@ -11,6 +11,8 @@ services:
       - ./../../../source:/app
     env_file:
       - .env
+    networks:
+      - network-pizza-management-system
   postgres:
     image: postgres:16.3
     container_name: postgres-pizza-management-system
