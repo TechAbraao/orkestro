@@ -11,6 +11,7 @@
     <img alt="Static Badge" src="https://img.shields.io/badge/Flask--Migrate-grey?style=flat&logo=Flask">
     <img alt="Static Badge" src="https://img.shields.io/badge/HTML5-grey?style=flat&logo=HTML5">
     <img alt="Static Badge" src="https://img.shields.io/badge/Jinja-grey?style=flat&logo=Jinja">
+    <img alt="Static Badge" src="https://img.shields.io/badge/JQuery-grey?style=flat&logo=JQuery">
     <img alt="Static Badge" src="https://img.shields.io/badge/TailwindCSS-grey?style=flat&logo=TailwindCSS">
     <img alt="Static Badge" src="https://img.shields.io/badge/PyTest-grey?style=flat&logo=PyTest">
     <img alt="Static Badge" src="https://img.shields.io/badge/Docker-grey?style=flat&logo=Docker">

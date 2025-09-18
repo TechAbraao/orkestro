@@ -5,9 +5,8 @@
 {% endblock title %}
 
 {% block sidenav %}
-    <nav>
-        SIDENAV
-    </nav>
+    {# Dynamic rendering from the backend #}
+    {% include "partials/navbar.jinja2" %}
 {% endblock sidenav %}
 
 {% block content %}

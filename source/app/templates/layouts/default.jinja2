@@ -7,6 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     {% block scripts %}
     {% endblock scripts %}
+
+    {# Importing all macros #}
+    {% import "macros/buttons.jinja2" as buttons %}
+
 </head>
 <body class="w-full h-screen">
 <header class="w-full h-28 bg-red-500">

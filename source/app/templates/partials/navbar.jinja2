@@ -1,0 +1,11 @@
+<nav class="w-full h-full">
+    <ul class="w-full h-full bg-green-500 flex gap-5 justify-end items-center pr-16">
+        {% if strategy["url"] == "/signin" %}
+            <li>{{ buttons.button(endpoint="authorizations_frontend.views_login", text="Sign In") }}</li>
+            <li>{{ buttons.button(endpoint="authorizations_frontend.views_register", text="Sign Up") }}</li>
+        {% elif strategy["url"] == "/signup" %}
+            <li>{{ buttons.button(endpoint="authorizations_frontend.views_login", text="Sign In") }}</li>
+            <li>{{ buttons.button(endpoint="authorizations_frontend.views_register", text="Sign Up") }}</li>
+        {% endif %}
+    </ul>
+</nav>
