@@ -10,9 +10,13 @@
 {% endblock sidenav %}
 
 {% block content %}
-    <section class="w-full h-full bg-purple-400">
-        <p>SIGN IN!</p>
+    <section class="w-full h-full bg-white-50 flex flex-col items-center justify-center">
+        {% include "partials/forms_login_store.jinja2" %}
     </section>
+    <script>
+        const createAccountStoreURL = null
+    </script>
+    <script src="{{ url_for('static', filename='javascript/login_account_store.js') }}" defer></script>
 {% endblock content %}
 
 {% block footer %}

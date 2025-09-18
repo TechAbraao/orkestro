@@ -1694,3 +1694,5 @@ DETAIL:  Key (email)=(abraaosantos.contato@hotmail.com) already exists.
 2025-09-18 15:22:50,621 - INFO - integrative-project - Hashing the password
 2025-09-18 15:22:50,824 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
 2025-09-18 15:22:50,824 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 18:05:09,081 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 18:05:09,115 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
