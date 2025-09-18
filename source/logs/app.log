@@ -1654,3 +1654,43 @@ connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection re
 2025-09-18 13:14:41,180 - ERROR - integrative-project - An error occurred: macros/buttons.jinja2
 2025-09-18 13:15:11,657 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 2025-09-18 13:15:14,558 - ERROR - integrative-project - An error occurred: pages/signup.jinja
+2025-09-18 14:15:52,548 - INFO - integrative-project - 
+2025-09-18 14:15:52,550 - INFO - integrative-project - 
+2025-09-18 14:15:52,551 - INFO - integrative-project - 
+2025-09-18 14:15:56,954 - INFO - integrative-project - 
+2025-09-18 14:15:56,954 - INFO - integrative-project - 
+2025-09-18 14:15:56,954 - INFO - integrative-project - 
+2025-09-18 14:15:56,968 - ERROR - integrative-project - An error occurred: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "stores_email_key"
+DETAIL:  Key (email)=(abraaosantos.contato@hotmail.com) already exists.
+
+[SQL: INSERT INTO stores (id, name, email, password, telephone) VALUES (%(id)s::UUID, %(name)s, %(email)s, %(password)s, %(telephone)s)]
+[parameters: {'id': UUID('abd8c7b5-f252-4904-9d0b-a529b2a3debb'), 'name': 'Adega da Praça', 'email': 'abraaosantos.contato@hotmail.com', 'password': 'SenhaQualquer!', 'telephone': '983263585'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-18 14:32:27,374 - WARNING - integrative-project - Store already exists with fields: email, name, telephone
+2025-09-18 14:32:27,375 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 14:32:35,595 - WARNING - integrative-project - Store already exists with fields: email, name, telephone
+2025-09-18 14:32:35,595 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 14:33:49,245 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 14:33:49,245 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 14:48:02,216 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 14:48:02,217 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 14:50:01,117 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 14:50:01,117 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 15:07:58,733 - INFO - integrative-project - Hashing the password
+2025-09-18 15:07:58,931 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 15:07:58,931 - INFO - integrative-project - Saving new store with email abraaosantos.contato@hotmail.com
+2025-09-18 15:08:04,620 - INFO - integrative-project - Hashing the password
+2025-09-18 15:08:04,822 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 15:08:04,822 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 15:10:51,389 - INFO - integrative-project - Hashing the password
+2025-09-18 15:10:51,612 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 15:10:51,613 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 15:10:56,074 - INFO - integrative-project - Hashing the password
+2025-09-18 15:10:56,315 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 15:10:56,315 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name
+2025-09-18 15:11:00,520 - INFO - integrative-project - Hashing the password
+2025-09-18 15:11:00,732 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 15:11:00,732 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 15:22:50,621 - INFO - integrative-project - Hashing the password
+2025-09-18 15:22:50,824 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 15:22:50,824 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone

@@ -4,6 +4,7 @@
 
 <section align="left">
     <img alt="Static Badge" src="https://img.shields.io/badge/Python-grey?style=flat&logo=Python">
+    <img alt="Static Badge" src="https://img.shields.io/badge/JavaScript-grey?style=flat&logo=JavaScript">
     <img alt="Static Badge" src="https://img.shields.io/badge/Flask-grey?style=flat&logo=Flask">
     <img alt="Static Badge" src="https://img.shields.io/badge/Flask--Marshmallow-grey?style=flat&logo=Flask">
     <img alt="Static Badge" src="https://img.shields.io/badge/Flask--SQLAlchemy-grey?style=flat&logo=Flask">

@@ -34,7 +34,7 @@ def create_app():
 
     from source.app.entities.associations_tables_entity import menu_product
 
-    # Database Entities
+    # Entities
     from source.app.entities.stores_entity import StoresEntity
     from source.app.entities.users_entity import UsersEntity
     from source.app.entities.menus_entity import MenusEntity
@@ -44,12 +44,16 @@ def create_app():
     from source.app.entities.orders_products_entity import OrderProductsEntity
     from source.app.entities.chat_history_entity import ChatHistory
 
+    # Api
     app.register_blueprint(menus_bp)
     app.register_blueprint(categories_bp)
     app.register_blueprint(products_bp)
     app.register_blueprint(menus_client)
     app.register_blueprint(orders_client)
     app.register_blueprint(sign_up_auth)
+    app.register_blueprint(sign_in_auth)
+
+    # Front-end
     app.register_blueprint(authorizations_frontend)
 
     register_error_handlers(app)

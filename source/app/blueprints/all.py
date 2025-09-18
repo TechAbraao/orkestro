@@ -14,6 +14,7 @@ from source.app.blueprints.api.client.orders_client import orders_client
 
 """ Auth Routes. """
 from source.app.blueprints.api.auth.sign_up_auth import sign_up_auth
+from source.app.blueprints.api.auth.sign_in_auth import sign_in_auth
 
 
 """ Front-end Routes. """
