@@ -8,9 +8,11 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./../../../source:/app
+      - ./../../../:/app
     env_file:
       - .env
+    environment:
+      - PYTHONPATH=/app
     networks:
       - network-pizza-management-system
   postgres:

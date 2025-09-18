@@ -1543,3 +1543,38 @@ FROM menus]
 2025-09-13 14:38:48,384 - WARNING - integrative-project - Validation error: {'name': ['Length must be between 6 and 30.'], 'email': ['Missing data for required field.'], 'password': ['Missing data for required field.'], 'telephone': ['Missing data for required field.']}
 2025-09-14 12:23:39,779 - WARNING - integrative-project - Validation error: {'name': ['Length must be between 6 and 30.'], 'email': ['Missing data for required field.'], 'password': ['Missing data for required field.'], 'telephone': ['Missing data for required field.']}
 2025-09-14 12:25:13,384 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-17 23:47:09,456 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-17 23:47:09,459 - ERROR - integrative-project - Database unavailable: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-17 23:47:24,251 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-17 23:47:24,252 - ERROR - integrative-project - Database unavailable: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-17 23:49:29,923 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-17 23:49:29,934 - ERROR - integrative-project - Database unavailable: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-17 23:49:35,019 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-17 23:49:35,021 - ERROR - integrative-project - Database unavailable: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-17 23:49:40,658 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-17 23:49:40,659 - ERROR - integrative-project - Database unavailable: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
