@@ -1,14 +1,7 @@
 from source.app.settings.database_settings import postgres_settings
 from source.app.settings.definitions_settings import db, ma
 from source.app.handlers.handlers_exceptions import register_error_handlers
-from source.app.blueprints import (
-    menus_bp,
-    categories_bp,
-    products_bp,
-    menus_client,
-    orders_client,
-    sign_up_auth
-)
+from source.app.blueprints.all import *
 from flask import Flask
 from source.app.extesions.socket_io import socketio
 from flask_migrate import Migrate
@@ -57,6 +50,7 @@ def create_app():
     app.register_blueprint(menus_client)
     app.register_blueprint(orders_client)
     app.register_blueprint(sign_up_auth)
+    app.register_blueprint(authorizations_frontend)
 
     register_error_handlers(app)
 

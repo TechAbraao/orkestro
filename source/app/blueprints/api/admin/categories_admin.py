@@ -8,7 +8,7 @@ from werkzeug.exceptions import *
 logger = get_logger(__name__)
 categories_bp = Blueprint("categories_bp", __name__, url_prefix="/api")
 
-""" 1. Criar Categoria em um Menu """
+""" 01. Create Category in a Menu """
 @categories_bp.route("/menus/<string:menu_id>/categories", methods=["POST"])
 def create_category_in_menu(menu_id: str):
     logger.info("POST /menus/{menu_id}/categories - creating a new category for a menu")
@@ -37,7 +37,7 @@ def create_category_in_menu(menu_id: str):
         status_code=201
     ), 201
 
-""" 2. Pegar Categorias de um Menu """
+""" 02. Get Categories from a Menu """
 @categories_bp.route("/menus/<string:menu_id>/categories", methods=["GET"])
 def categories_by_menu(menu_id: str):
     logger.info("GET /menus/{menu_id}/categories - retrieving categories for a menu.")
@@ -54,7 +54,7 @@ def categories_by_menu(menu_id: str):
         data=categories_by_id
     )
 
-""" 3. Pegar Categoria específica """
+""" 03. Get Specific Category """
 @categories_bp.route("/categories/<string:category_id>", methods=["GET"])
 def get_category_by_id(category_id: str):
     logger.info("GET /categories/{category_id} - fetch category by ID.")
@@ -68,7 +68,7 @@ def get_category_by_id(category_id: str):
         data=category
     )
 
-""" 4. Deletar Categoria específica """
+""" 04. Delete specific Category """
 @categories_bp.route("/categories/<string:category_id>", methods=["DELETE"])
 def delete_category_by_id(category_id: str):
     logger.info("DELETE /categories/{category_id} - delete category by ID.")
@@ -88,7 +88,7 @@ def delete_category_by_id(category_id: str):
         status_code=200
     )
 
-""" 5. Atualizar Categoria Específica """
+""" 05. Update Specific Category """
 @categories_bp.route("/categories/<string:category_id>", methods=["PUT"])
 def put_category_by_id(category_id: str):
     logger.info("PUT /categories/{category_id} - change category by ID.")

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Default {% endblock title %} | Cocina </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% block scripts %}
+    {% endblock scripts %}
+</head>
+<body class="w-full h-screen">
+<header class="w-full h-28 bg-red-500">
+    {% block sidenav %}
+    {% endblock sidenav %}
+</header>
+
+<main class="w-full h-3/4">
+    {% block content %}
+    {% endblock content %}
+</main>
+
+<footer class="w-full h-[135px] bg-red-400">
+    {% block footer %}
+    {% endblock footer %}
+</footer>
+</body>
+</html>

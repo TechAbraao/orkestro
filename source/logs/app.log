@@ -1644,3 +1644,13 @@ connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection re
 2025-09-18 01:14:27,081 - INFO - integrative-project - All menus returned,
 2025-09-18 01:14:27,689 - INFO - integrative-project - GET /menus - retrieving all menus.
 2025-09-18 01:14:27,693 - INFO - integrative-project - All menus returned,
+2025-09-18 13:12:14,335 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 13:12:14,419 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 13:12:14,427 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 13:12:18,934 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 13:12:20,951 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 13:14:16,959 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 13:14:17,696 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 13:14:41,180 - ERROR - integrative-project - An error occurred: macros/buttons.jinja2
+2025-09-18 13:15:11,657 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 13:15:14,558 - ERROR - integrative-project - An error occurred: pages/signup.jinja
