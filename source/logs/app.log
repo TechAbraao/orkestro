@@ -1578,3 +1578,69 @@ connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection re
 	Is the server running on that host and accepting TCP/IP connections?
 
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-18 00:48:34,994 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 00:48:34,998 - ERROR - integrative-project - Database unavailable: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-18 00:49:27,366 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 00:49:27,412 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 00:49:27,628 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 00:50:24,681 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 00:50:24,684 - ERROR - integrative-project - Database unavailable: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-18 00:50:25,636 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 00:50:25,639 - ERROR - integrative-project - Database unavailable: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-18 00:55:26,645 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 00:55:26,718 - INFO - integrative-project - All menus returned,
+2025-09-18 01:08:45,827 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:08:45,889 - INFO - integrative-project - All menus returned,
+2025-09-18 01:09:16,662 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:09:16,672 - INFO - integrative-project - All menus returned,
+2025-09-18 01:09:17,936 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:09:17,939 - INFO - integrative-project - All menus returned,
+2025-09-18 01:09:21,786 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:09:21,794 - INFO - integrative-project - All menus returned,
+2025-09-18 01:09:23,449 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:09:23,454 - INFO - integrative-project - All menus returned,
+2025-09-18 01:09:24,360 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:09:24,364 - INFO - integrative-project - All menus returned,
+2025-09-18 01:12:56,421 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:12:56,471 - INFO - integrative-project - All menus returned,
+2025-09-18 01:13:02,990 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:13:02,997 - INFO - integrative-project - All menus returned,
+2025-09-18 01:13:04,149 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:13:04,154 - INFO - integrative-project - All menus returned,
+2025-09-18 01:13:07,774 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:13:07,779 - INFO - integrative-project - All menus returned,
+2025-09-18 01:13:08,943 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:13:08,952 - INFO - integrative-project - All menus returned,
+2025-09-18 01:13:10,237 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:13:10,242 - INFO - integrative-project - All menus returned,
+2025-09-18 01:13:23,002 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:13:23,006 - INFO - integrative-project - All menus returned,
+2025-09-18 01:14:09,333 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:14:09,336 - INFO - integrative-project - All menus returned,
+2025-09-18 01:14:10,529 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:14:10,533 - INFO - integrative-project - All menus returned,
+2025-09-18 01:14:19,824 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:14:19,829 - INFO - integrative-project - All menus returned,
+2025-09-18 01:14:25,653 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:14:25,657 - INFO - integrative-project - All menus returned,
+2025-09-18 01:14:26,457 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:14:26,462 - INFO - integrative-project - All menus returned,
+2025-09-18 01:14:27,077 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:14:27,081 - INFO - integrative-project - All menus returned,
+2025-09-18 01:14:27,689 - INFO - integrative-project - GET /menus - retrieving all menus.
+2025-09-18 01:14:27,693 - INFO - integrative-project - All menus returned,

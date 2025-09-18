@@ -8,6 +8,7 @@
     <img alt="Static Badge" src="https://img.shields.io/badge/Flask--Marshmallow-grey?style=flat&logo=Flask">
     <img alt="Static Badge" src="https://img.shields.io/badge/Flask--SQLAlchemy-grey?style=flat&logo=Flask">
     <img alt="Static Badge" src="https://img.shields.io/badge/Flask--SocketIO-grey?style=flat&logo=Flask">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Flask--Migrate-grey?style=flat&logo=Flask">
     <img alt="Static Badge" src="https://img.shields.io/badge/PyTest-grey?style=flat&logo=PyTest">
     <img alt="Static Badge" src="https://img.shields.io/badge/Docker-grey?style=flat&logo=Docker">
     <img alt="Static Badge" src="https://img.shields.io/badge/Docker Compose-grey?style=flat&logo=Docker">
