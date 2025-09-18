@@ -2,10 +2,11 @@
       class="w-1/3 mx-auto mt-10 bg-white shadow-lg rounded-xl p-8 space-y-6">
     <fieldset>
         <legend id="form-title" class="sr-only">Registration form</legend>
-        {# Field Name #}
+        {# Field StoreName #}
         <div class="flex flex-col space-y-2">
-            <label for="name" class="text-sm font-medium text-gray-700">Store Name</label>
-            <input id="name" name="name" type="text" required autocomplete="name" placeholder="Your Store Name"
+            <label for="storeName" class="text-sm font-medium text-gray-700">Store Name</label>
+            <input id="storeName" name="storeName" type="text" required autocomplete="storeName"
+                   placeholder="Your Store Name"
                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:outline-none"/>
         </div>
         {# Field Email #}
@@ -36,6 +37,24 @@
                     class="w-full bg-red-500 text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition mt-5">
                 Create account
             </button>
+
+            {# Alerts #}
+            <aside class="mt-1 flex items-center justify-center">
+                {{ alerts.alert_forms(
+                type="error",
+                alert_base_class="alert_base_register_error",
+                alert_message_class="alert_register_store_error"
+                ) }}
+            </aside>
+
+            <aside class="mt-1 flex items-center justify-center">
+                {{ alerts.alert_forms(
+                type="success",
+                alert_base_class="alert_base_register_success",
+                alert_message_class="alert_register_store_success"
+                ) }}
+            </aside>
+
         </div>
     </fieldset>
 </form>

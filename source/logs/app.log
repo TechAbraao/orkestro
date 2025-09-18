@@ -1696,3 +1696,153 @@ DETAIL:  Key (email)=(abraaosantos.contato@hotmail.com) already exists.
 2025-09-18 15:22:50,824 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
 2025-09-18 18:05:09,081 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 2025-09-18 18:05:09,115 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 19:25:22,684 - ERROR - integrative-project - An error occurred: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-09-18 19:26:33,369 - ERROR - integrative-project - An error occurred: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 1 (char 0)
+2025-09-18 19:29:18,295 - WARNING - integrative-project - Validation error: {'name': ['Missing data for required field.'], 'telephone': ['Length must be 9.'], 'storeName': ['Unknown field.']}
+2025-09-18 19:45:25,974 - WARNING - integrative-project - Validation error: {'name': ['Missing data for required field.'], 'telephone': ['Length must be 9.'], 'storeName': ['Unknown field.']}
+2025-09-18 19:45:28,360 - WARNING - integrative-project - Validation error: {'name': ['Missing data for required field.'], 'telephone': ['Length must be 9.'], 'storeName': ['Unknown field.']}
+2025-09-18 19:46:51,476 - WARNING - integrative-project - Validation error: {'name': ['Missing data for required field.'], 'telephone': ['Length must be 9.'], 'storeName': ['Unknown field.']}
+2025-09-18 19:47:03,445 - WARNING - integrative-project - Validation error: {'name': ['Missing data for required field.'], 'telephone': ['Length must be 9.'], 'storeName': ['Unknown field.']}
+2025-09-18 19:47:03,860 - WARNING - integrative-project - Validation error: {'name': ['Missing data for required field.'], 'telephone': ['Length must be 9.'], 'storeName': ['Unknown field.']}
+2025-09-18 19:47:04,916 - WARNING - integrative-project - Validation error: {'name': ['Missing data for required field.'], 'telephone': ['Length must be 9.'], 'storeName': ['Unknown field.']}
+2025-09-18 19:47:39,939 - WARNING - integrative-project - Validation error: {'name': ['Missing data for required field.'], 'telephone': ['Length must be 9.'], 'storeName': ['Unknown field.']}
+2025-09-18 19:48:26,271 - WARNING - integrative-project - Validation error: {'name': ['Missing data for required field.'], 'telephone': ['Length must be 9.'], 'storeName': ['Unknown field.']}
+2025-09-18 19:48:34,451 - WARNING - integrative-project - Validation error: {'name': ['Missing data for required field.'], 'telephone': ['Length must be 9.'], 'store': ['Unknown field.']}
+2025-09-18 19:50:50,227 - WARNING - integrative-project - Validation error: {'password': ['Length must be between 6 and 15.'], 'telephone': ['Length must be 9.']}
+2025-09-18 19:53:31,816 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 19:56:37,598 - WARNING - integrative-project - Validation error: {'name': ['Length must be between 6 and 30.'], 'telephone': ['Length must be 9.']}
+2025-09-18 19:57:25,067 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 19:59:52,949 - WARNING - integrative-project - Validation error: {'name': ['Length must be between 6 and 30.'], 'telephone': ['Length must be 9.']}
+2025-09-18 19:59:57,926 - WARNING - integrative-project - Validation error: {'name': ['Length must be between 6 and 30.'], 'telephone': ['Length must be 9.']}
+2025-09-18 20:00:04,914 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:04:02,291 - WARNING - integrative-project - Validation error: {'name': ['Length must be between 6 and 30.'], 'telephone': ['Length must be 9.']}
+2025-09-18 20:06:09,413 - WARNING - integrative-project - Validation error: {'name': ['Length must be between 6 and 30.'], 'telephone': ['Length must be 9.']}
+2025-09-18 20:06:35,783 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:06:42,891 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:06:47,948 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:07:09,841 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:08:56,665 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:09:11,877 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:09:50,697 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:09:54,963 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:11:23,972 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:11:46,815 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:11:51,655 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:11:56,415 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:12:01,740 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:12:11,409 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:12:18,011 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:12:20,603 - INFO - integrative-project - Hashing the password
+2025-09-18 20:12:20,853 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:12:20,853 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:12:22,717 - INFO - integrative-project - Hashing the password
+2025-09-18 20:12:22,935 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:12:22,935 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:12:26,287 - INFO - integrative-project - Hashing the password
+2025-09-18 20:12:26,510 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:12:26,510 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:12:28,051 - INFO - integrative-project - Hashing the password
+2025-09-18 20:12:28,271 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:12:28,271 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:12:31,208 - INFO - integrative-project - Hashing the password
+2025-09-18 20:12:31,430 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:12:31,430 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:12:32,797 - INFO - integrative-project - Hashing the password
+2025-09-18 20:12:33,018 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:12:33,018 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:12:35,161 - INFO - integrative-project - Hashing the password
+2025-09-18 20:12:35,398 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:12:35,398 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:12:36,256 - INFO - integrative-project - Hashing the password
+2025-09-18 20:12:36,479 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:12:36,479 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:12:37,516 - INFO - integrative-project - Hashing the password
+2025-09-18 20:12:37,746 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:12:37,747 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:12:40,262 - INFO - integrative-project - Hashing the password
+2025-09-18 20:12:40,484 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:12:40,484 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:14:45,295 - INFO - integrative-project - Hashing the password
+2025-09-18 20:14:45,536 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:14:45,536 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:15:31,219 - INFO - integrative-project - Hashing the password
+2025-09-18 20:15:31,452 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:15:31,452 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:15:36,256 - INFO - integrative-project - Hashing the password
+2025-09-18 20:15:36,483 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:15:36,483 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:16:05,321 - INFO - integrative-project - Hashing the password
+2025-09-18 20:16:05,518 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:16:05,518 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:16:10,439 - INFO - integrative-project - Hashing the password
+2025-09-18 20:16:10,676 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:16:10,677 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:16:16,853 - INFO - integrative-project - Hashing the password
+2025-09-18 20:16:17,053 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:16:17,053 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:16:23,639 - INFO - integrative-project - Hashing the password
+2025-09-18 20:16:23,847 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:16:23,847 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:16:25,663 - INFO - integrative-project - Hashing the password
+2025-09-18 20:16:25,865 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:16:25,865 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:17:11,591 - INFO - integrative-project - Hashing the password
+2025-09-18 20:17:11,808 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:17:11,808 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:18:43,180 - WARNING - integrative-project - Validation error: {'password': ['Length must be between 6 and 15.']}
+2025-09-18 20:18:49,064 - INFO - integrative-project - Hashing the password
+2025-09-18 20:18:49,260 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:18:49,260 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:18:53,982 - INFO - integrative-project - Hashing the password
+2025-09-18 20:18:54,173 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:18:54,173 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:20:15,630 - INFO - integrative-project - Hashing the password
+2025-09-18 20:20:15,829 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:20:15,829 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:20:21,225 - INFO - integrative-project - Hashing the password
+2025-09-18 20:20:21,422 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:20:21,423 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:21:03,989 - INFO - integrative-project - Hashing the password
+2025-09-18 20:21:04,214 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:21:04,214 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, telephone
+2025-09-18 20:23:31,518 - INFO - integrative-project - Hashing the password
+2025-09-18 20:23:31,719 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:23:31,719 - INFO - integrative-project - Saving new store with email abraaosantos.contato@hotmail.com
+2025-09-18 20:30:46,593 - INFO - integrative-project - Hashing the password
+2025-09-18 20:30:46,784 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:30:46,784 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 20:30:51,838 - INFO - integrative-project - Hashing the password
+2025-09-18 20:30:52,047 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:30:52,047 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 20:30:56,734 - INFO - integrative-project - Hashing the password
+2025-09-18 20:30:56,931 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:30:56,931 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 20:32:08,615 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:32:13,601 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:32:18,312 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:32:23,024 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:35:29,542 - INFO - integrative-project - Hashing the password
+2025-09-18 20:35:29,742 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:35:29,743 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 20:35:32,690 - INFO - integrative-project - Hashing the password
+2025-09-18 20:35:32,888 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:35:32,888 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 20:36:53,304 - WARNING - integrative-project - Validation error: {'telephone': ['Length must be 9.']}
+2025-09-18 20:36:58,819 - INFO - integrative-project - Hashing the password
+2025-09-18 20:36:59,015 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:36:59,015 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 20:37:10,029 - INFO - integrative-project - Hashing the password
+2025-09-18 20:37:10,223 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:37:10,223 - INFO - integrative-project - Saving new store with email abraaosantos.contato@hotmail.com
+2025-09-18 20:40:45,496 - INFO - integrative-project - Hashing the password
+2025-09-18 20:40:45,699 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:40:45,700 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 20:40:54,968 - INFO - integrative-project - Hashing the password
+2025-09-18 20:40:55,164 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:40:55,164 - INFO - integrative-project - Saving new store with email abraaosantos.contato@hotmail.com
+2025-09-18 20:41:00,574 - INFO - integrative-project - Hashing the password
+2025-09-18 20:41:00,776 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:41:00,777 - WARNING - integrative-project - Conflict when registering store: Conflict with fields: email, name, telephone
+2025-09-18 20:41:11,764 - INFO - integrative-project - Hashing the password
+2025-09-18 20:41:11,958 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
+2025-09-18 20:41:11,959 - INFO - integrative-project - Saving new store with email abraaosantos.contato@hotmail.com
