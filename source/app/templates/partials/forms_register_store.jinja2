@@ -32,11 +32,7 @@
                    autocomplete="tel" placeholder="+1 (555) 555-0123"
                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:outline-none"/>
         </div>
-        <div>
-            <button type="submit"
-                    class="w-full bg-red-500 text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition mt-5">
-                Create account
-            </button>
+        <div class="flex flex-center flex-col">
 
             {# Alerts - ERROR IN REGISTER #}
             <aside class="mt-1 flex items-center justify-center">
@@ -55,6 +51,14 @@
                 alert_message_class="alert_register_store_success"
                 ) }}
             </aside>
+
+            <button type="submit"
+                    class="w-full bg-red-500 text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition mt-5">
+                Create account
+            </button>
+            <span class="text-center mt-1 cursor-pointer">
+                <a href="{{ url_for("authorizations_frontend.views_login") }}">Already have an account? </a>
+            </span>
         </div>
     </fieldset>
 </form>

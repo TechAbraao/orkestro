@@ -1,16 +1,21 @@
 {% macro alert_forms(type="info", alert_base_class="", alert_message_class="") %}
-    {% set base_classes = alert_base_class + " px-4 py-3 rounded relative mb-4 w-full hidden" %}
+    {% set base_classes = alert_base_class + " px-4 py-3 rounded-lg relative mb-2 w-full hidden flex items-center gap-2" %}
     {% if type == "success" %}
-        {% set alert_classes = base_classes + " bg-green-100 border border-green-400 text-green-700" %}
+        {% set alert_classes = base_classes + " bg-green-50 border border-green-300 text-green-800" %}
+        {% set icon = "✔️" %}
     {% elif type == "error" %}
-        {% set alert_classes = base_classes + " bg-red-100 border border-red-400 text-red-700" %}
+        {% set alert_classes = base_classes + " bg-red-50 border border-red-300 text-red-800" %}
+        {% set icon = "❌" %}
     {% elif type == "warning" %}
-        {% set alert_classes = base_classes + " bg-yellow-100 border border-yellow-400 text-yellow-700" %}
+        {% set alert_classes = base_classes + " bg-yellow-50 border border-yellow-300 text-yellow-800" %}
+        {% set icon = "⚠️" %}
     {% else %}
-        {% set alert_classes = base_classes + " bg-blue-100 border border-blue-400 text-blue-700" %}
+        {% set alert_classes = base_classes + " bg-blue-50 border border-blue-300 text-blue-800" %}
+        {% set icon = "ℹ️" %}
     {% endif %}
 
     <div class="{{ alert_classes }}">
-        <span class="{{ alert_message_class }}"></span>
+        <span class="text-lg">{{ icon }}</span>
+        <span class="{{ alert_message_class }} font-medium"></span>
     </div>
 {% endmacro %}
