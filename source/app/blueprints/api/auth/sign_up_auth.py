@@ -3,11 +3,7 @@ from source.app.utils.responses import Response
 from source.app.schemas import stores_schemas
 from source.app.services import stores_services
 
-sign_up_auth = Blueprint(
-    "sign_up_auth",
-    __name__,
-    url_prefix="/api/auth"
-)
+sign_up_auth = Blueprint("sign_up_auth", __name__, url_prefix="/api/auth")
 
 """ 1. Create a new account """
 @sign_up_auth.route("/signup", methods=["POST"])
@@ -26,3 +22,9 @@ def create_new_account():
         message="Store created successfully.",
         status_code=200
     )
+
+""" 2. Search all accounts """
+
+""" 3. Delete an account """
+
+""" 4. Change an existing account """

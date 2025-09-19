@@ -44,7 +44,7 @@ def create_app():
     from source.app.entities.orders_products_entity import OrderProductsEntity
     from source.app.entities.chat_history_entity import ChatHistory
 
-    # Api
+    # Back-end (API Layer)
     app.register_blueprint(menus_bp)
     app.register_blueprint(categories_bp)
     app.register_blueprint(products_bp)
@@ -53,8 +53,9 @@ def create_app():
     app.register_blueprint(sign_up_auth)
     app.register_blueprint(sign_in_auth)
 
-    # Front-end
+    # Front-end (Views)
     app.register_blueprint(authorizations_frontend)
+    app.register_blueprint(main_frontend)
 
     register_error_handlers(app)
 

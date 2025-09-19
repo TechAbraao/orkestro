@@ -1846,3 +1846,10 @@ DETAIL:  Key (email)=(abraaosantos.contato@hotmail.com) already exists.
 2025-09-18 20:41:11,764 - INFO - integrative-project - Hashing the password
 2025-09-18 20:41:11,958 - INFO - integrative-project - Checking for conflicts with store name, phone number and email
 2025-09-18 20:41:11,959 - INFO - integrative-project - Saving new store with email abraaosantos.contato@hotmail.com
+2025-09-18 21:19:21,139 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 21:28:24,092 - ERROR - integrative-project - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2025-09-18 21:28:35,153 - ERROR - integrative-project - An error occurred: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-09-18 21:28:35,990 - ERROR - integrative-project - An error occurred: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-09-18 21:28:59,601 - ERROR - integrative-project - An error occurred: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-09-18 21:29:00,702 - ERROR - integrative-project - An error occurred: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-09-18 21:29:08,030 - WARNING - integrative-project - Validation error: {'email': ['Missing data for required field.'], 'password': ['Missing data for required field.']}

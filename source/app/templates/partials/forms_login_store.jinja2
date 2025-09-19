@@ -18,11 +18,15 @@
                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:outline-none"/>
         </div>
 
-        <div>
+        {# Button + or Create your Account Now #}
+        <div class="flex flex-center flex-col">
             <button type="submit"
                     class="w-full bg-red-500 text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition mt-5">
                 Sign In
             </button>
+            <span class="text-center mt-1 cursor-pointer">
+                <a href="{{ url_for("authorizations_frontend.views_register") }}">Or create your account now </a>
+            </span>
         </div>
     </fieldset>
 </form>
