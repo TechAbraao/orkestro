@@ -12,9 +12,17 @@
     {% import "macros/buttons.jinja2" as buttons %}
     {% import "macros/alerts.jinja2" as alerts %}
     {% import "macros/inputs.jinja2" as inputs %}
+    {% import "macros/modals.jinja2" as modals %}
 </head>
 <body class="min-h-screen flex flex-col">
 <div class="flex flex-1 min-h-0">
+    {# Modals #}
+    {{ modals.modal_logout(
+    header_text="Confirm Logout",
+    description_text="Are you sure you want to log out of your account?"
+            )}}
+
+
     {# Sidenav #}
     {% block sidenav %}
     {% endblock sidenav %}

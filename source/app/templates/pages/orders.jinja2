@@ -1,7 +1,7 @@
 {% extends "layouts/administrative.jinja2" %}
 
 {% block title %}
-    Dashboard
+    Orders
 {% endblock title %}
 
 {% block sidenav %}
@@ -15,15 +15,21 @@
 {% endblock sidenav %}
 
 {% block dashboard %}
-    <section class="w-full h-full bg-red-50 flex flex-col items-center justify-center">
-        DASHBOARD
+    <section class="w-full h-full bg-red-50 flex flex-col items-center justify-start p-10">
+        <h2 class="text-2xl font-bold mb-6">Orders Dashboard</h2>
+        <ul id="orders-list" class="w-full max-w-4xl bg-white rounded-xl shadow-md p-6 space-y-3">
+            {# Orders will be entered here #}
+        </ul>
     </section>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='javascript/websocket_orders.js') }}" defer></script>
 {% endblock dashboard %}
 
 {% block navbar %}
     <aside class="w-full pl-10 text-lg font-extrabold">
-        Dashboard | <span class="font-extralight">Welcome back,</span> <span class="font-extralight"
-                                                                             id="store-name-navbar">Company name</span>
+        Orders | <span class="font-extralight">Welcome back,</span> <span class="font-extralight"
+                                                                          id="store-name-navbar">Company name</span>
     </aside>
 {% endblock navbar %}
 

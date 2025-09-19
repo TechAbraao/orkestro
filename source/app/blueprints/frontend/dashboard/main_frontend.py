@@ -14,3 +14,9 @@ def views_main_dashboard():
 @authorization_required
 def views_profile_dashboard():
     return render_template("pages/store_profile.jinja2")
+
+
+@main_frontend.get("/orders")
+@authorization_required
+def views_orders_dashboard():
+    return render_template("pages/orders.jinja2")

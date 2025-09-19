@@ -1,3 +1,35 @@
-{% macro modal_logout() %}
+{% macro modal_logout(header_text="", description_text="") %}
+    <div id="logoutModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
+            {# Headers #}
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold text-gray-800">{{ header_text }}</h3>
+                <button onclick="document.getElementById('logoutModal').classList.add('hidden')"
+                        class="text-gray-400 hover:text-gray-600">&times;
+                </button>
+            </div>
 
+            {# Content #}
+            <p class="text-gray-600 mb-6">
+                {{ description_text }}
+            </p>
+
+            {# Buttons #}
+            <div class="flex justify-end gap-3">
+                <button
+                        onclick="document.getElementById('logoutModal').classList.add('hidden')"
+                        class="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 text-gray-700 transition-colors">
+                    Cancel
+                </button>
+                <form method="#">
+                    <button
+                            type="submit"
+                            id="btn-confirm-logout"
+                            class="px-4 py-2 rounded bg-red-600 hover:bg-red-700 text-white transition-colors">
+                        Confirm Logout
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endmacro %}
