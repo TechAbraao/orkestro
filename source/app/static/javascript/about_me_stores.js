@@ -3,10 +3,10 @@ $(document).ready(function () {
         url: "/api/stores/me",
         method: "GET",
         success: function (response) {
-            console.log("User info:", response);
+            console.log("User Infos:", response);
         },
         error: function (xhr) {
-            console.error("Erro ao buscar usuário:", xhr.responseText);
+            console.error("Error:", xhr.responseText);
         }
     });
 });
