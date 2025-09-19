@@ -17,3 +17,15 @@ toggleBtn.addEventListener("click", () => {
 
     document.querySelectorAll("nav a").forEach(link => link.classList.toggle("justify-center "));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const settingsBtn = document.getElementById("settings-btn");
+    const settingsSubmenu = document.getElementById("settings-submenu");
+    const settingsArrow = document.getElementById("settings-arrow");
+
+    settingsBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        settingsSubmenu.classList.toggle("hidden");
+        settingsArrow.classList.toggle("rotate-180");
+    });
+});

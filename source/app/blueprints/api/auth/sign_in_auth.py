@@ -1,9 +1,11 @@
 from flask import Blueprint, jsonify, request, make_response
 from source.app.schemas import login_stores_schemas
 from source.app.utils.responses import Response
+from source.app.settings.logging_settings import get_logger
 from source.app.services import authorizations_services
 from source.app.utils.decorators.authorizations import *
 
+logger = get_logger(__name__)
 sign_in_auth = Blueprint("sign_in_auth", __name__, url_prefix="/api/auth")
 
 """ 1. Enter the platform """

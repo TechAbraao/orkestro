@@ -18,8 +18,13 @@
     <section class="w-full h-full bg-white-50 flex flex-col items-center justify-center">
         DASHBOARD
     </section>
-
 {% endblock content %}
+
+{% block navbar %}
+    <aside class="w-full pl-10 text-lg font-extrabold">
+        Dashboard | <span class="font-light"> Welcome back, Company name </span>
+    </aside>
+{% endblock navbar %}
 
 {% block footer %}
     <aside class="w-auto h-full">

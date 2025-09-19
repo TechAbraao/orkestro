@@ -1,4 +1,4 @@
-# Orkestro | Menu management, chatbot and analytics.
+# Orkestro | Menus, chatbot and analytics.
 
 ### Technologies
 
@@ -38,3 +38,17 @@ A complete web app for intelligent menu management, combining chatbot automation
 ### API Swagger
 
 ### Web Docs
+
+## Product Maintainers
+<table style="width: 100%; text-align: center;">
+  <tr>
+    <td align="center">
+      <img src="public/images/maintainer-abraao.jpeg" width="150px" alt="AS" /><br/>
+      <b>Abraão Santos</b>
+    </td>
+    <td align="center">
+      <img src="public/images/maintainer-anthony.png" width="140px" alt="AC" /><br/>
+      <b>Anthony Chukwudi</b>
+    </td>
+  </tr>
+</table>
