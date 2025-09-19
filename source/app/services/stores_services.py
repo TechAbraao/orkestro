@@ -46,3 +46,7 @@ class StoresServices:
         logger.info(f"Saving new store with email {email}")
         self.stores_repository.save(account)
         return True
+
+    def about_me_store_account(self, store_id: str):
+        store = self.stores_repository.find_by_id(store_id)
+        return store.serialize_frontend

@@ -25,3 +25,11 @@ class StoresEntity(database.Model):
             "email": self.email,
             "telephone": self.telephone,
         }
+
+    @property
+    def serialize_frontend(self):
+        return {
+            "name": self.name,
+            "email": self.email,
+            "telephone": self.telephone,
+        }

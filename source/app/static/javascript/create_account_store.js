@@ -27,6 +27,9 @@ $(document).ready(function () {
                 setTimeout(() => {
                     $("aside .alert_base_register_success").addClass("hidden");
                 }, 4000);
+
+
+
             },
             error: function (xhr) {
                 let errorMessage = "";
@@ -53,6 +56,9 @@ $(document).ready(function () {
                 setTimeout(() => {
                     $("aside .alert_base_register_error").addClass("hidden");
                 }, 4000)
+                setTimeout(function () {
+                    window.location.href = "/login";
+                }, 2300)
             }
         });
     });

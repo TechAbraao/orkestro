@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} Default {% endblock title %} | Orkestra </title>
+    <title>{% block title %} Default {% endblock title %} | Orkestro </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     {% block scripts %}
@@ -40,6 +40,9 @@
         </footer>
     </div>
 </div>
+<script>
+    let aboutMeStore = "{{ url_for('about_auth.about_me_store') }}"
+</script>
 <script src="{{ url_for('static', filename='javascript/about_me_stores.js') }}" defer></script>
 </body>
 </html>
