@@ -11,12 +11,12 @@
         </button>
     </div>
     <nav class="flex-1 px-2 py-6 space-y-1">
-        <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-            <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Profile" class="w-6 h-6 mr-3">
-            <span class="text-sm font-medium sidebar-text">Profile</span>
+         <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+            <img src="{{ url_for('static', filename='icons/dashboard.png') }}" alt="Dashboard" class="w-6 h-6 mr-3">
+            <span class="text-sm font-medium sidebar-text">Dashboard</span>
         </a>
         <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-            <img src="{{ url_for('static', filename='icons/graphics.png') }}" alt="Dashboard" class="w-6 h-6 mr-3">
+            <img src="{{ url_for('static', filename='icons/graphics.png') }}" alt="Statistics" class="w-6 h-6 mr-3">
             <span class="text-sm font-medium sidebar-text">Statistics</span>
         </a>
         <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
@@ -31,13 +31,17 @@
             <img src="{{ url_for('static', filename='icons/settings.png') }}" alt="Settings" class="w-6 h-6 mr-3">
             <span class="text-sm font-medium sidebar-text">Settings</span>
         </a>
+        <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+            <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Profile" class="w-6 h-6 mr-3">
+            <span class="text-sm font-medium sidebar-text">Profile</span>
+        </a>
         <br>
         <div class="pt-7 border-t border-gray-700">
             <a href="#" class="flex items-center px-2 py-2 rounded-lg hover:bg-gray-700 transition group">
                 <img src="{{ url_for('static', filename='icons/infos.png') }}" alt="About" class="w-6 h-6 mr-3">
                 <span class="text-sm font-medium sidebar-text px-1">About</span>
             </a>
-            <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+            <a href="#" id="btn-logout" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
                 <img src="{{ url_for('static', filename='icons/logout.png') }}" alt="Logout" class="w-6 h-6 mr-3">
                 <span class="text-sm font-medium sidebar-text">Logout</span>
             </a>

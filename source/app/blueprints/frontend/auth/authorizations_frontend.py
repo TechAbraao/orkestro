@@ -1,8 +1,10 @@
 from flask import Blueprint, render_template, request
+from source.app.utils.decorators.authorizations import authorized_client
 
 authorizations_frontend = Blueprint("authorizations_frontend", __name__, url_prefix="")
 
 @authorizations_frontend.get("/signin")
+@authorized_client
 def views_login():
     rendering_strategy = {
         "url": f"{request.path}",
@@ -15,6 +17,7 @@ def views_login():
     return render_template("pages/signin.jinja2", strategy=rendering_strategy)
 
 @authorizations_frontend.get("/signup")
+@authorized_client
 def views_register():
     rendering_strategy = {
         "url": f"{request.path}",
@@ -25,3 +28,4 @@ def views_register():
     }
 
     return render_template("pages/signup.jinja2", strategy=rendering_strategy)
+

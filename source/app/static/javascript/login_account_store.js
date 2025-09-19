@@ -15,7 +15,21 @@ $(document).ready(function () {
             }),
             success: function (response) {
                 let successMessage = response.message || "Login successful";
+                // let access_token = response.access_token || null
+                /*
+                if (access_token == null) {
+                    let tokenMessage = "No access token received by server"
 
+                    $("aside .alert_base_login_warning .alert_login_store_warning").text(tokenMessage);
+                    $("aside .alert_base_login_warning").removeClass("hidden");
+
+                    setTimeout(() => {
+                        $("aside .alert_base_login_warning").addClass("hidden");
+                    }, 2300);
+                    return;
+                } else {
+                    }
+                */
                 $("aside .alert_base_login_success .alert_login_store_success").text(successMessage);
                 $("aside .alert_base_login_success").removeClass("hidden");
 

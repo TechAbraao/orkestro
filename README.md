@@ -1,4 +1,4 @@
-# Orkestro | Web App for menu management with chatbot and analytics.
+# Orkestro | Menu management, chatbot and analytics.
 
 ### Technologies
 

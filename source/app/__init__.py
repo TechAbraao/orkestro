@@ -52,6 +52,7 @@ def create_app():
     app.register_blueprint(orders_client)
     app.register_blueprint(sign_up_auth)
     app.register_blueprint(sign_in_auth)
+    app.register_blueprint(analytics_dashboard)
 
     # Front-end (Views)
     app.register_blueprint(authorizations_frontend)

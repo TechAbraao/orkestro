@@ -2061,3 +2061,165 @@ DETAIL:  Key (email)=(abraaosantos.contato@hotmail.com) already exists.
 2025-09-19 10:46:22,045 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
 2025-09-19 10:46:28,783 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
 2025-09-19 10:46:28,988 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 10:57:18,541 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:57:18,766 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 10:57:18,766 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 10:57:23,078 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:57:23,313 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 10:58:18,263 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:58:18,467 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 10:58:18,467 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 10:58:20,019 - WARNING - integrative-project - Validation error: {'password': ['Length must be between 6 and 15.']}
+2025-09-19 10:58:28,332 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:58:28,544 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 10:58:28,544 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 10:58:30,813 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:58:31,034 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 10:58:31,034 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 10:58:33,286 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:58:33,544 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 10:58:33,545 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 10:58:36,439 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:58:36,674 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 10:58:36,674 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 10:58:38,471 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:58:38,690 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 10:58:38,691 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 10:58:52,739 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:58:52,955 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 10:58:52,955 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 10:59:11,915 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:59:12,135 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 10:59:12,135 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 11:02:51,419 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:02:51,654 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:02:53,635 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:02:53,840 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:02:54,562 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:02:54,756 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:05:18,538 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:05:18,786 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:11:28,042 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:11:28,269 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 11:11:28,269 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiZjdmYTQ4My1kNmUyLTRiMmItYWI3OC1lNzY2MDc4YWNmODQiLCJyb2xlIjoiQ09NTU9OIiwiZXhwIjoxNzU4Mjk0Njg4fQ.b2kGpKgUkuoEkuiUIDXBWI9fsaelLTVejbt5zxuWIsg
+2025-09-19 11:11:28,269 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:13:56,328 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:13:56,550 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 11:13:56,551 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgyOTQ4MzZ9.eq8chR-wq42s1QZUGL_PTg_8HbBqr2WHBXo_ZcmG5rk
+2025-09-19 11:13:56,551 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:20:16,804 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:20:17,032 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 11:20:17,032 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTUyMTd9.ZY6FGpNVK8LxmHBuWgJ7s22ESOGmLJXvGX9Foi4eDV4
+2025-09-19 11:20:17,032 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:28:32,937 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:28:33,180 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 11:28:33,180 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTU3MTN9.azNCAZo_ho-nowQm8gomTFLfyKP_tmZcwqToJVYK_EM
+2025-09-19 11:28:33,180 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:29:25,948 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:29:26,147 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 11:29:26,148 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTU3NjZ9.9zkG9VXz9JKCdf0cS7AqhmS128sYpZADcLYKcqDoxR0
+2025-09-19 11:29:26,148 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:29:29,762 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:29:29,969 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 11:29:29,969 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTU3Njl9.XuvoGyfKRkrLcOlnfbEv2zmM3laI5q_IKRr_epjHb78
+2025-09-19 11:29:29,969 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:29:33,055 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:29:33,276 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 11:29:33,276 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTU3NzN9.fD-7aiNCw7aGD0uXIkXPM2eJqS9p7olEdlvFsofxh1w
+2025-09-19 11:29:33,276 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:29:36,767 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:29:36,978 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 11:29:36,978 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTU3NzZ9.1iDmOHqj1Wksc3N6JTKsRyc4YfCr_6RjnorNugPMRi8
+2025-09-19 11:29:36,978 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:30:37,875 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:30:38,128 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 11:30:38,128 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTU4Mzh9.qhcs5Y-_JjqGAflI4BSzubzup_wbohDpmSu2uYON--8
+2025-09-19 11:30:38,128 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:38:26,965 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:38:27,182 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgyOTYzMDd9.ST27LNkKukh5irys_CEWJNW43Ay3oL9fd7SeiKhwiSs
+2025-09-19 11:38:27,182 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:41:16,536 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:41:16,767 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgyOTY0NzZ9.b9izo-sD6nQ8aovVB8GoMFkAC7VZGN3qfNAn-3nO5yQ
+2025-09-19 11:41:16,767 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:44:01,136 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:44:01,368 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 11:44:01,368 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTY2NDF9.2N-ETqFyVUf4XlzkIlHtLLa3HNEk-kg4EgSgsfQWp-o
+2025-09-19 11:44:01,368 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:47:36,721 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 11:47:36,942 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 11:47:36,942 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTY4NTZ9.h4YKnRJA_RIz7xmKXNkiEGAjf7A30qmAJjC3vBhmcE8
+2025-09-19 11:47:36,942 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 11:49:13,846 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 12:00:01,765 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:00:01,964 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 12:00:01,964 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 12:00:06,600 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:00:06,802 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 12:00:06,802 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 12:00:11,394 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:00:11,590 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 12:00:11,590 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTc2MTF9.Ui35xT1d3nimcw67QpNceixuGNzKkTZqk8eY_3XNrWU
+2025-09-19 12:00:11,590 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 12:07:14,757 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:07:14,981 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 12:07:14,981 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTgwMzR9.C8xbae4gq6x_uT-eVcRmWp_N3EVoFHfMR7QWwQhWMFo
+2025-09-19 12:07:14,981 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 12:09:40,519 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:09:40,720 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 12:09:40,720 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTgxODB9.VDABDX5DluG-fICuyH3YxwGmjUDAwTP_hANinNLCiKk
+2025-09-19 12:09:40,720 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 12:12:19,492 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 12:24:43,706 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:24:43,941 - INFO - integrative-project - Creating claims for user whose id is 'bf7fa483-d6e2-4b2b-ab78-e766078acf84'
+2025-09-19 12:24:43,941 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiIiLCJleHAiOjE3NTgyOTkwODN9.GwcmH8fQgOLZ0386js0LNzLOmSIkcYQULcW9EIVWZ3Y
+2025-09-19 12:24:43,941 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 12:24:46,416 - ERROR - integrative-project - An error occurred: get_analytics() got an unexpected keyword argument 'current_user'
+2025-09-19 12:24:51,595 - ERROR - integrative-project - An error occurred: get_analytics() got an unexpected keyword argument 'current_user'
+2025-09-19 12:24:52,080 - ERROR - integrative-project - An error occurred: get_analytics() got an unexpected keyword argument 'current_user'
+2025-09-19 12:32:16,653 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'sign_in_auth.enter_the_plataform'. Did you mean 'sign_in_auth.enter_the_platform' instead?
+2025-09-19 12:32:41,090 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'sign_in_auth.enter_the_plataform'. Did you mean 'sign_in_auth.enter_the_platform' instead?
+2025-09-19 12:33:47,056 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'sign_in_auth.enter_the_plataform'. Did you mean 'sign_in_auth.enter_the_platform' instead?
+2025-09-19 12:33:47,738 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'sign_in_auth.enter_the_plataform'. Did you mean 'sign_in_auth.enter_the_platform' instead?
+2025-09-19 12:33:48,474 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'sign_in_auth.enter_the_plataform'. Did you mean 'sign_in_auth.enter_the_platform' instead?
+2025-09-19 12:35:46,502 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:35:46,732 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 12:35:46,732 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 12:35:51,361 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:35:51,566 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgyOTk3NTF9.2iBGN_i1TOG39JNaKXhSq_zbM5Q4uph5TztB7r-gFAs
+2025-09-19 12:35:55,102 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:35:55,304 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgyOTk3NTV9.o8fE--lZwLk46K2ziu9Tw9lTBv8jXrSei4PsAhyYngw
+2025-09-19 12:35:59,094 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:35:59,294 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgyOTk3NTl9.BltvgCeHH4eXUN7Uf3KMvOqDqAl0ZCTCtpDtpgeigaU
+2025-09-19 12:36:24,736 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:36:24,961 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgyOTk3ODR9.Of8zOCjQXZXRKRmUHjE3Jtp_izc-R1Of_raotMzlOAc
+2025-09-19 12:36:27,275 - ERROR - integrative-project - An error occurred: views_main_dashboard() got an unexpected keyword argument 'current_user'
+2025-09-19 12:39:21,538 - ERROR - integrative-project - An error occurred: views_main_dashboard() got an unexpected keyword argument 'current_user'
+2025-09-19 12:39:22,014 - ERROR - integrative-project - An error occurred: views_main_dashboard() got an unexpected keyword argument 'current_user'
+2025-09-19 12:39:22,482 - ERROR - integrative-project - An error occurred: views_main_dashboard() got an unexpected keyword argument 'current_user'
+2025-09-19 12:39:23,122 - ERROR - integrative-project - An error occurred: views_main_dashboard() got an unexpected keyword argument 'current_user'
+2025-09-19 12:39:29,849 - ERROR - integrative-project - An error occurred: views_main_dashboard() got an unexpected keyword argument 'current_user'
+2025-09-19 12:45:03,511 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:45:03,757 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgzMDAzMDN9.8jjNhifX2aeGA6ZYeDnXs5DIm6lED3nuI3-zoCVVTRY
+2025-09-19 12:45:38,063 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 12:58:14,618 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 12:58:14,851 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgzMDEwOTR9.vZAB4ASn71PRKqnzSUMWhlYD-2PRgCX9YL5CN7XTwEE
+2025-09-19 13:07:51,015 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 13:07:55,779 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 13:07:56,284 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 13:07:57,184 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 13:11:06,233 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 13:11:06,500 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgzMDE4NjZ9.BsoG3D4jmtU9BBgIF0y2X_huDpYjFTB5zkHOMWpzk4c
+2025-09-19 13:11:28,896 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 13:13:17,894 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 13:13:28,756 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 13:13:28,962 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgzMDIwMDh9._gw3MPCMs2mlIyWphLqLly9QbFw9EFTP3XBl6qbidzs
+2025-09-19 13:13:32,771 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 13:14:36,832 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 13:14:37,443 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 13:14:40,736 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 13:15:11,209 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 13:15:11,431 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgzMDIxMTF9.lo8js3ONX9fsMFNxfF0YbVxPnd7aox8dOJUuHnPY_VE
+2025-09-19 13:16:53,071 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 13:16:53,278 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgzMDIyMTN9._xpoiUxw1-J2ZxRAb9BgcYXsw5pPTtT_rJyOJGAFmhE
+2025-09-19 13:22:06,158 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 13:22:06,366 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImJmN2ZhNDgzLWQ2ZTItNGIyYi1hYjc4LWU3NjYwNzhhY2Y4NCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTgzMDI1MjZ9.C2qVgFmkxapTsI9v-NQtl0UD2RHfPGkuqhuM_tfVg-I

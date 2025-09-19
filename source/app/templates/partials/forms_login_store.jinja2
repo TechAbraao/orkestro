@@ -21,6 +21,16 @@
         {# Button + or Create your Account Now #}
         <div class="flex flex-center flex-col">
 
+            {# Alerts - WARNING IN LOGIN #}
+            <aside class="mt-1 flex items-center justify-center">
+                {{ alerts.alert_forms(
+                type="warning",
+                alert_base_class="alert_base_login_warning",
+                alert_message_class="alert_login_store_warning"
+                ) }}
+            </aside>
+
+
             {# Alerts - ERROR IN LOGIN #}
             <aside class="mt-1 flex items-center justify-center">
                 {{ alerts.alert_forms(
