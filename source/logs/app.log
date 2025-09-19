@@ -1912,3 +1912,6 @@ DETAIL:  Key (email)=(abraaosantos.contato@hotmail.com) already exists.
 2025-09-18 23:51:23,187 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
 2025-09-18 23:53:15,672 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'home'. Did you mean 'menus_bp.all_menus' instead?
 2025-09-18 23:53:16,897 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'home'. Did you mean 'menus_bp.all_menus' instead?
+2025-09-19 00:17:53,319 - ERROR - integrative-project - An error occurred: Flask.url_for() takes 2 positional arguments but 3 were given
+2025-09-19 00:18:00,779 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'static' with values ['static']. Did you forget to specify values ['filename']?
+2025-09-19 01:29:36,738 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.

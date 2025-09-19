@@ -1,4 +1,4 @@
-{% extends "layouts/default.jinja2" %}
+{% extends "layouts/administrative.jinja2" %}
 
 {% block title %}
     Dashboard
@@ -7,6 +7,7 @@
 {% block sidenav %}
     {# Dynamic rendering from the backend #}
     {% include "partials/sidebar.jinja2" %}
+    <script src="{{ url_for('static', filename='javascript/toggle_sidenav.js') }}" defer></script>
 {% endblock sidenav %}
 
 {% block content %}
@@ -16,7 +17,7 @@
 {% endblock content %}
 
 {% block footer %}
-    <aside class="w-full h-full">
-        FOOTER
+    <aside class="w-auto h-full">
+        Cocina
     </aside>
 {% endblock footer %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Default {% endblock title %} | Cocina </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    {% block scripts %}
+    {% endblock scripts %}
+
+    {% import "macros/buttons.jinja2" as buttons %}
+    {% import "macros/alerts.jinja2" as alerts %}
+    {% import "macros/inputs.jinja2" as inputs %}
+</head>
+<body class="min-h-screen flex flex-col">
+<div class="flex flex-1 min-h-0">
+    {# Sidenav #}
+    {% block sidenav %}
+    {% endblock sidenav %}
+
+    {# Main Content #}
+    <div class="flex-1 flex flex-col min-h-0">
+
+        {# Dashboard #}
+        <main class="flex-1 overflow-auto p-6 bg-gray-50">
+            {% block dashboard %}
+            {% endblock dashboard %}
+        </main>
+
+        {# Footer #}
+        <footer class="bg-red-400 text-white text-center py-4 flex-shrink-0">
+            {% block footer %}
+            {% endblock footer %}
+        </footer>
+    </div>
+</div>
+</body>
+</html>
