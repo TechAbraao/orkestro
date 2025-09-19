@@ -1,4 +1,4 @@
-<form action="#" method="post" autocomplete="on" aria-labelledby="form-title"
+<form action="#" method="" autocomplete="on" aria-labelledby="form-title"
       class="w-1/3 mx-auto mt-10 bg-white shadow-lg rounded-xl p-8 space-y-6">
     <fieldset>
         <legend id="form-title" class="sr-only">Login form</legend>
@@ -20,6 +20,25 @@
 
         {# Button + or Create your Account Now #}
         <div class="flex flex-center flex-col">
+
+            {# Alerts - ERROR IN LOGIN #}
+            <aside class="mt-1 flex items-center justify-center">
+                {{ alerts.alert_forms(
+                type="error",
+                alert_base_class="alert_base_login_error",
+                alert_message_class="alert_login_store_error"
+                ) }}
+            </aside>
+
+            {# Alerts - SUCCESS IN LOGIN #}
+            <aside class="mt-1 flex items-center justify-center">
+                {{ alerts.alert_forms(
+                type="success",
+                alert_base_class="alert_base_login_success",
+                alert_message_class="alert_login_store_success"
+                ) }}
+            </aside>
+
             <button type="submit"
                     class="w-full bg-red-500 text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition mt-5">
                 Sign In
@@ -28,5 +47,6 @@
                 <a href="{{ url_for("authorizations_frontend.views_register") }}">Or create your account now </a>
             </span>
         </div>
+
     </fieldset>
 </form>

@@ -1,0 +1,22 @@
+{% extends "layouts/default.jinja2" %}
+
+{% block title %}
+    Dashboard
+{% endblock title %}
+
+{% block sidenav %}
+    {# Dynamic rendering from the backend #}
+    {% include "partials/sidebar.jinja2" %}
+{% endblock sidenav %}
+
+{% block content %}
+    <section class="w-full h-full bg-white-50 flex flex-col items-center justify-center">
+        DASHBOARD
+    </section>
+{% endblock content %}
+
+{% block footer %}
+    <aside class="w-full h-full">
+        FOOTER
+    </aside>
+{% endblock footer %}

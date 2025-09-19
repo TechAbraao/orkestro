@@ -20,3 +20,12 @@ class Response:
         if message:
             payload["message"] = message
         return make_response(jsonify(payload), status_code)
+
+    @staticmethod
+    def with_token(message=None, status_code=400, access_token=None):
+        payload = {"success": True}
+        if access_token:
+            payload["access_token"] = access_token
+        if message:
+            payload["message"] = message
+        return make_response(jsonify(payload), status_code)

@@ -29,6 +29,11 @@ class StoresRepository:
     def find_all(self) -> list[StoresEntity]:
         return self.session.query(StoresEntity).all()
 
+    def find_by_email(self, email: str):
+        return (self.session.query(StoresEntity).filter(
+            StoresEntity.email == email
+        ).first())
+
     @transactional
     def update(self, store: StoresEntity, **kwargs) -> StoresEntity:
         for key, value in kwargs.items():

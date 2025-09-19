@@ -1853,3 +1853,62 @@ DETAIL:  Key (email)=(abraaosantos.contato@hotmail.com) already exists.
 2025-09-18 21:28:59,601 - ERROR - integrative-project - An error occurred: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
 2025-09-18 21:29:00,702 - ERROR - integrative-project - An error occurred: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
 2025-09-18 21:29:08,030 - WARNING - integrative-project - Validation error: {'email': ['Missing data for required field.'], 'password': ['Missing data for required field.']}
+2025-09-18 22:38:00,339 - WARNING - integrative-project - Validation error: {'email': ['Missing data for required field.'], 'password': ['Missing data for required field.']}
+2025-09-18 22:38:02,148 - WARNING - integrative-project - Validation error: {'email': ['Missing data for required field.'], 'password': ['Missing data for required field.']}
+2025-09-18 22:38:02,796 - WARNING - integrative-project - Validation error: {'email': ['Missing data for required field.'], 'password': ['Missing data for required field.']}
+2025-09-18 22:38:03,430 - WARNING - integrative-project - Validation error: {'email': ['Missing data for required field.'], 'password': ['Missing data for required field.']}
+2025-09-18 22:58:23,586 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 22:58:23,806 - INFO - integrative-project - Store 'abraaosantos.contato@hotmail.com' authenticated successfully.
+2025-09-18 22:58:25,854 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 22:58:26,055 - INFO - integrative-project - Store 'abraaosantos.contato@hotmail.com' authenticated successfully.
+2025-09-18 22:58:47,414 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 22:58:47,637 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-18 22:58:47,637 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-18 22:58:53,932 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 22:58:54,139 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-18 22:58:54,139 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-18 22:58:57,749 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 22:58:57,943 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-18 22:58:57,943 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-18 22:59:11,348 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.cm' exists in the database.
+2025-09-18 22:59:11,352 - WARNING - integrative-project - No email 'abraaosantos.contato@hotmail.cm' found.
+2025-09-18 22:59:11,352 - WARNING - integrative-project - Store not found: Store not found.
+2025-09-18 22:59:14,985 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 22:59:15,186 - INFO - integrative-project - Store 'abraaosantos.contato@hotmail.com' authenticated successfully.
+2025-09-18 22:59:18,723 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 22:59:18,915 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-18 22:59:18,915 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-18 23:01:02,452 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 23:01:02,650 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-18 23:01:02,650 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-18 23:19:51,891 - ERROR - integrative-project - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2025-09-18 23:29:12,667 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 23:29:12,874 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-18 23:29:12,874 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-18 23:29:19,632 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 23:29:19,844 - INFO - integrative-project - Store 'abraaosantos.contato@hotmail.com' authenticated successfully.
+2025-09-18 23:33:29,832 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 23:33:30,067 - INFO - integrative-project - Store 'abraaosantos.contato@hotmail.com' authenticated successfully.
+2025-09-18 23:33:37,117 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 23:33:37,339 - INFO - integrative-project - Store 'abraaosantos.contato@hotmail.com' authenticated successfully.
+2025-09-18 23:34:07,665 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 23:34:07,905 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-18 23:34:09,530 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 23:34:09,732 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-18 23:38:34,217 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 23:38:34,452 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-18 23:39:05,296 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 23:39:05,510 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-18 23:39:10,709 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 23:39:10,912 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-18 23:39:10,912 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-18 23:40:18,577 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-18 23:40:18,796 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-18 23:40:18,796 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-18 23:50:45,676 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 23:50:48,439 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-18 23:51:21,725 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
+2025-09-18 23:51:22,393 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
+2025-09-18 23:51:23,187 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
+2025-09-18 23:53:15,672 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'home'. Did you mean 'menus_bp.all_menus' instead?
+2025-09-18 23:53:16,897 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'home'. Did you mean 'menus_bp.all_menus' instead?
