@@ -20,3 +20,4 @@ from source.app.blueprints.api.auth.sign_in_auth import sign_in_auth
 """ Front-end Routes. """
 from source.app.blueprints.frontend.auth.authorizations_frontend import *
 from source.app.blueprints.frontend.dashboard.main_frontend import *
+from source.app.blueprints.frontend.home.homepage_frontend import *

@@ -2043,3 +2043,21 @@ DETAIL:  Key (email)=(abraaosantos.contato@hotmail.com) already exists.
 2025-09-19 09:53:55,081 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
 2025-09-19 09:53:59,104 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
 2025-09-19 09:53:59,304 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.
+2025-09-19 10:25:19,145 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
+2025-09-19 10:26:21,067 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
+2025-09-19 10:26:21,576 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
+2025-09-19 10:26:21,938 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
+2025-09-19 10:26:22,118 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
+2025-09-19 10:26:22,398 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
+2025-09-19 10:26:22,736 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
+2025-09-19 10:26:22,934 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
+2025-09-19 10:26:23,134 - ERROR - integrative-project - An error occurred: 'strategy' is undefined
+2025-09-19 10:27:39,221 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-19 10:46:16,576 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:46:16,812 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 10:46:16,812 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 10:46:21,821 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:46:22,044 - WARNING - integrative-project - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-19 10:46:22,045 - WARNING - integrative-project - Invalid passwords: Passwords are not the same.
+2025-09-19 10:46:28,783 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-19 10:46:28,988 - INFO - integrative-project - Store with id 'bf7fa483-d6e2-4b2b-ab78-e766078acf84' authenticated successfully.

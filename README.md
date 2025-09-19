@@ -1,4 +1,4 @@
-# Menu Manager and Dynamic Dashboard
+# Orkestro | Web App for menu management with chatbot and analytics.
 
 ### Technologies
 
@@ -27,8 +27,13 @@
 </section>
 
 ## Description
-A Flux Mind product for managing menus, categories, and products, offering additional dashboard features for analytics and management.
+
+## How to start the project
 
 ## How to contribute
 
-## API Swagger
+## Documentation
+
+### API Swagger
+
+### Web Docs

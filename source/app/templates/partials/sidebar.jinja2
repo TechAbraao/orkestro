@@ -1,48 +1,46 @@
 <aside id="sidebar" class="h-screen w-64 bg-gray-900 text-white flex flex-col shadow-lg transition-all duration-300">
-  <div class="flex items-center justify-between h-16 bg-gradient-to-r from-gray-800 to-gray-700 px-4">
-    <span id="sidebar-title" class="text-[15px] font-bold tracking-wide">Orkestra</span>
-    <button id="toggle-btn-sidenav" class="text-gray-300 hover:text-white focus:outline-none">
-      <img
-              src="{{ url_for('static', filename='icons/left-arrow.png') }}"
-              alt="Dashboard"
-              class="w-6 h-6 mr-3"
-              id="toggle-btn-sidenav-icon"
-      >
-    </button>
-  </div>
-  <nav class="flex-1 px-2 py-6 space-y-1">
-    <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-      <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Profile" class="w-6 h-6 mr-3">
-      <span class="text-sm font-medium sidebar-text">Profile</span>
-    </a>
-    <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-      <img src="{{ url_for('static', filename='icons/graphics.png') }}" alt="Dashboard" class="w-6 h-6 mr-3">
-      <span class="text-sm font-medium sidebar-text">Statistics</span>
-    </a>
-    <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-      <img src="{{ url_for('static', filename='icons/bell.png') }}" alt="Orders" class="w-6 h-6 mr-3">
-      <span class="text-sm font-medium sidebar-text">Orders</span>
-    </a>
-    <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-      <img src="{{ url_for('static', filename='icons/menus.png') }}" alt="Menus" class="w-6 h-6 mr-3">
-      <span class="text-sm font-medium sidebar-text">Menus</span>
-    </a>
-    <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-      <img src="{{ url_for('static', filename='icons/settings.png') }}" alt="Settings" class="w-6 h-6 mr-3">
-        <span class="text-sm font-medium sidebar-text">Settings</span>
-    </a>
-      <br>
-      <div class="pt-7 border-t border-gray-700">
-          <a href="#" class="flex items-center px-2 py-2 rounded-lg hover:bg-gray-700 transition group">
-              <img src="{{ url_for('static', filename='icons/infos.png') }}" alt="About" class="w-6 h-6 mr-3">
-              <span class="text-sm font-medium sidebar-text px-1">About</span>
-          </a>
-          <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-              <img src="{{ url_for('static', filename='icons/logout.png') }}" alt="Logout" class="w-6 h-6 mr-3">
-              <span class="text-sm font-medium sidebar-text">Logout</span>
-          </a>
-      </div>
-  </nav>
-
-
+    <div class="flex items-center justify-between h-16 bg-gradient-to-r from-gray-800 to-gray-700 px-4">
+        <span id="sidebar-title" class="text-[23px] font-bold tracking-wide">Orkestro</span>
+        <button id="toggle-btn-sidenav" class="text-gray-300 hover:text-white focus:outline-none">
+            <img
+                    src="{{ url_for('static', filename='icons/left-arrow.png') }}"
+                    alt="Dashboard"
+                    class="w-6 h-6 mr-3"
+                    id="toggle-btn-sidenav-icon"
+            >
+        </button>
+    </div>
+    <nav class="flex-1 px-2 py-6 space-y-1">
+        <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+            <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Profile" class="w-6 h-6 mr-3">
+            <span class="text-sm font-medium sidebar-text">Profile</span>
+        </a>
+        <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+            <img src="{{ url_for('static', filename='icons/graphics.png') }}" alt="Dashboard" class="w-6 h-6 mr-3">
+            <span class="text-sm font-medium sidebar-text">Statistics</span>
+        </a>
+        <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+            <img src="{{ url_for('static', filename='icons/bell.png') }}" alt="Orders" class="w-6 h-6 mr-3">
+            <span class="text-sm font-medium sidebar-text">Orders</span>
+        </a>
+        <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+            <img src="{{ url_for('static', filename='icons/menus.png') }}" alt="Menus" class="w-6 h-6 mr-3">
+            <span class="text-sm font-medium sidebar-text">Menus</span>
+        </a>
+        <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+            <img src="{{ url_for('static', filename='icons/settings.png') }}" alt="Settings" class="w-6 h-6 mr-3">
+            <span class="text-sm font-medium sidebar-text">Settings</span>
+        </a>
+        <br>
+        <div class="pt-7 border-t border-gray-700">
+            <a href="#" class="flex items-center px-2 py-2 rounded-lg hover:bg-gray-700 transition group">
+                <img src="{{ url_for('static', filename='icons/infos.png') }}" alt="About" class="w-6 h-6 mr-3">
+                <span class="text-sm font-medium sidebar-text px-1">About</span>
+            </a>
+            <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+                <img src="{{ url_for('static', filename='icons/logout.png') }}" alt="Logout" class="w-6 h-6 mr-3">
+                <span class="text-sm font-medium sidebar-text">Logout</span>
+            </a>
+        </div>
+    </nav>
 </aside>

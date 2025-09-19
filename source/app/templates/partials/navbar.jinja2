@@ -2,12 +2,28 @@
     <ul class="flex gap-8 justify-end items-center pr-16 py-4 h-28">
         {% if strategy["url"] == "/signin" %}
             <li>
+                {{ buttons.button(endpoint="homepage_frontend.views_homepage", text="Homepage") }}
+            </li>
+            <li>
                 {{ buttons.button(endpoint="authorizations_frontend.views_login", text="Sign In") }}
             </li>
             <li>
                 {{ buttons.button(endpoint="authorizations_frontend.views_register", text="Sign Up") }}
             </li>
         {% elif strategy["url"] == "/signup" %}
+            <li>
+                {{ buttons.button(endpoint="homepage_frontend.views_homepage", text="Homepage") }}
+            </li>
+            <li>
+                {{ buttons.button(endpoint="authorizations_frontend.views_login", text="Sign In") }}
+            </li>
+            <li>
+                {{ buttons.button(endpoint="authorizations_frontend.views_register", text="Sign Up") }}
+            </li>
+        {% elif strategy["url"] == "/home" %}
+            <li>
+                {{ buttons.button(endpoint="homepage_frontend.views_homepage", text="Homepage") }}
+            </li>
             <li>
                 {{ buttons.button(endpoint="authorizations_frontend.views_login", text="Sign In") }}
             </li>

@@ -56,6 +56,7 @@ def create_app():
     # Front-end (Views)
     app.register_blueprint(authorizations_frontend)
     app.register_blueprint(main_frontend)
+    app.register_blueprint(homepage_frontend)
 
     register_error_handlers(app)
 

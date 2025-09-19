@@ -1,23 +1,20 @@
-{% extends "layouts/administrative.jinja2" %}
+{% extends "layouts/default.jinja2" %}
 
 {% block title %}
-    Dashboard
+    Home
 {% endblock title %}
 
 {% block sidenav %}
     {# Dynamic rendering from the backend #}
-    {% include "partials/sidebar.jinja2" %}
-    <script src="{{ url_for('static', filename='javascript/toggle_sidenav.js') }}" defer></script>
+    {% include "partials/navbar.jinja2" %}
 {% endblock sidenav %}
 
 {% block content %}
     <section class="w-full h-full bg-white-50 flex flex-col items-center justify-center">
-        DASHBOARD
+        Home Page
     </section>
 {% endblock content %}
 
 {% block footer %}
-    <aside class="w-auto h-full">
-        Orkestro © 2025 | version 1.0.0
-    </aside>
+    {% include "partials/default_footer.jinja2" %}
 {% endblock footer %}
