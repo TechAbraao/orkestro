@@ -27,6 +27,7 @@
 </section>
 
 ## Description
+A complete web app for intelligent menu management, combining chatbot automation to enhance customer interaction and advanced analytics to drive smarter decisions.
 
 ## How to start the project
 
