@@ -25,7 +25,7 @@ def put_order(): pass
 def delete_order(): pass
 
 """ 05. Update order list on WebSocket. """
-@orders_client.route("/orders/notify", methods=["POST"])
+@orders_client.route("/orders/notify", methods=["GET"])
 def notify_order():
     data = request.get_json()
     order_id = data.get("order_id")

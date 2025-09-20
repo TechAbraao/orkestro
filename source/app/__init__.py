@@ -12,6 +12,7 @@ from pathlib import Path
 def create_app():
     app = Flask(__name__)
 
+
     app.config['SQLALCHEMY_DATABASE_URI'] = postgres_settings.get_uri()
 
     BASE_DIR = Path(__file__).resolve().parent
