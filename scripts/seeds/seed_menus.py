@@ -1,4 +1,3 @@
-# scripts/seeds/seed_menus.py
 
 from source.app import create_app
 from source.app.entities.menus_entity import MenusEntity
