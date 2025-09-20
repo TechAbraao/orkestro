@@ -6,6 +6,8 @@
     <title>{% block title %} Default {% endblock title %} | Orkestro </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/transitions.css') }}">
+
     {% block scripts %}
     {% endblock scripts %}
 
@@ -20,7 +22,11 @@
     {{ modals.modal_logout(
     header_text="Confirm Logout",
     description_text="Are you sure you want to log out of your account?"
-            )}}
+            ) }}
+
+    {{ modals.modal_about_orkestro(
+
+    ) }}
 
 
     {# Sidenav #}
@@ -52,5 +58,6 @@
     let aboutMeStore = "{{ url_for('about_auth.about_me_store') }}"
 </script>
 <script src="{{ url_for('static', filename='javascript/about_me_stores.js') }}" defer></script>
+<script src="{{ url_for('static', filename='javascript/about_orkestro.js') }}"></script>
 </body>
 </html>

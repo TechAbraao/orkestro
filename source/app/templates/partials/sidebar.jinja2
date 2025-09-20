@@ -14,51 +14,69 @@
         <a href="{{ url_for("main_frontend.views_main_dashboard") }}"
            class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
             <img src="{{ url_for('static', filename='icons/dashboard.png') }}" alt="Dashboard" class="w-6 h-6 mr-3">
-            <span class="text-sm font-medium sidebar-text">Dashboard</span>
+            <span class="text-sm font-medium sidebar-text">Overview</span>
         </a>
-        <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+        <a href="#" id="statistics-btn" class=" flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
             <img src="{{ url_for('static', filename='icons/graphics.png') }}" alt="Statistics" class="w-6 h-6 mr-3">
-            <span class="text-sm font-medium sidebar-text">Statistics</span>
+            <span class="text-sm font-medium sidebar-text">Estatísticas</span>
+
+            <svg class="ml-auto w-4 h-4 transition-transform duration-200" id="statistics-arrow"
+                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
         </a>
+
+        <div id="statistics-submenu" class="submenu ml-8 mt-2 space-y-1">
+            <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+                <span class="text-sm font-medium sidebar-text">Relatórios Gráficos</span>
+            </a>
+            <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+                <span class="text-sm font-medium sidebar-text">Histórico de Pedidos</span>
+            </a>
+            <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+                <span class="text-sm font-medium sidebar-text">Histórico Clientes</span>
+            </a>
+        </div>
+
         <a href="{{ url_for("main_frontend.views_orders_dashboard") }}" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
             <img src="{{ url_for('static', filename='icons/bell.png') }}" alt="Orders" class="w-6 h-6 mr-3">
-            <span class="text-sm font-medium sidebar-text">Orders</span>
+            <span class="text-sm font-medium sidebar-text">Pedidos</span>
         </a>
-        <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+        <a href="{{ url_for("main_frontend.views_menus_manager_dashboard") }}" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
             <img src="{{ url_for('static', filename='icons/menus.png') }}" alt="Menus" class="w-6 h-6 mr-3">
-            <span class="text-sm font-medium sidebar-text">Menus</span>
+            <span class="text-sm font-medium sidebar-text">Cardápios</span>
         </a>
         <a href="#" id="settings-btn"
            class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
             <img src="{{ url_for('static', filename='icons/settings.png') }}" alt="Settings" class="w-6 h-6 mr-3">
-            <span class="text-sm font-medium sidebar-text">Settings</span>
+            <span class="text-sm font-medium sidebar-text">Configurações</span>
             <svg class="ml-auto w-4 h-4 transition-transform duration-200" id="settings-arrow"
                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
         </a>
 
-        <div id="settings-submenu" class="ml-8 mt-2 space-y-1 hidden">
+        <div id="settings-submenu" class="submenu ml-8 mt-2 space-y-1">
             <a href="#" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-                <span class="text-sm font-medium sidebar-text">Chatbot integration</span>
+                <span class="text-sm font-medium sidebar-text">Integração com WhatsApp</span>
             </a>
         </div>
 
         <a href="{{ url_for("main_frontend.views_profile_dashboard") }}"
            class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
             <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Profile" class="w-6 h-6 mr-3">
-            <span class="text-sm font-medium sidebar-text">Store Profile</span>
+            <span class="text-sm font-medium sidebar-text">Perfil da Loja</span>
         </a>
         <br>
         <div class="pt-7 border-t border-gray-700">
-            <a href="#" class="flex items-center px-2 py-2 rounded-lg hover:bg-gray-700 transition group">
+            <a href="#" id="btn-about-orkestro" class="flex items-center px-2 py-2 rounded-lg hover:bg-gray-700 transition group">
                 <img src="{{ url_for('static', filename='icons/infos.png') }}" alt="About" class="w-6 h-6 mr-3">
-                <span class="text-sm font-medium sidebar-text px-1">About</span>
+                <span class="text-sm font-medium sidebar-text px-1">Sobre a Orkestro</span>
             </a>
             <a href="#" id="btn-logout"
                class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
                 <img src="{{ url_for('static', filename='icons/logout.png') }}" alt="Logout" class="w-6 h-6 mr-3">
-                <span class="text-sm font-medium sidebar-text">Logout</span>
+                <span class="text-sm font-medium sidebar-text">Sair</span>
             </a>
         </div>
     </nav>

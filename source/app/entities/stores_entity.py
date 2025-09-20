@@ -9,6 +9,7 @@ class StoresEntity(database.Model):
     name = database.Column(database.String(255), nullable=False)
     email = database.Column(database.String(255), unique=True, nullable=False)
     password = database.Column(database.String(255), nullable=False)
+    logo_url = database.Column(database.String(255), nullable=True)
     telephone = database.Column(database.String(20), nullable=True)
 
     menus = database.relationship(
@@ -24,6 +25,7 @@ class StoresEntity(database.Model):
             "name": self.name,
             "email": self.email,
             "telephone": self.telephone,
+            "logo_url": self.logo_url
         }
 
     @property
@@ -32,4 +34,5 @@ class StoresEntity(database.Model):
             "name": self.name,
             "email": self.email,
             "telephone": self.telephone,
+            "logo_url": str(self.logo_url)
         }

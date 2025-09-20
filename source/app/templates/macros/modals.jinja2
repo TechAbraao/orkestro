@@ -33,3 +33,46 @@
         </div>
     </div>
 {% endmacro %}
+
+{% macro modal_about_orkestro() %}
+    <div id="aboutOrkestroModal"
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-2xl shadow-lg max-w-lg w-full p-6 relative">
+
+            <button onclick="document.getElementById('aboutOrkestroModal').classList.add('hidden')"
+                    class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+                ✕
+            </button>
+
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                Sobre o Orkestro
+             <small id="versionProjectOrkestro" class="text-xs text-gray-500">versão 1.0.0</small>
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                O <strong>Orkestro</strong> é um projeto desenvolvido para simplificar e organizar
+                processos de forma acessível e funcional. Nossa missão é fornecer uma
+                plataforma que atue como um <em>MVP</em> inicial, mas com base sólida para
+                futuras evoluções.
+            </p>
+
+            <ul class="list-disc pl-5 text-gray-600 space-y-1 mb-4">
+                <li>Foco em acessibilidade e usabilidade</li>
+                <li>Desenvolvimento ágil e iterativo</li>
+                <li>Baseado em tecnologias modernas</li>
+            </ul>
+
+            <p class="text-gray-600 leading-relaxed">
+                Essa é apenas a primeira versão, mas acreditamos que o Orkestro pode
+                evoluir para se tornar uma solução robusta e completa.
+            </p>
+
+            <div class="mt-6 text-right">
+                <button onclick="document.getElementById('aboutOrkestroModal').classList.add('hidden')"
+                        class="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+

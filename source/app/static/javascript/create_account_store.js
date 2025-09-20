@@ -31,7 +31,6 @@ $(document).ready(function () {
                 setTimeout(function () {
                     window.location.href = "/signin";
                 }, 2300)
-
             },
             error: function (xhr) {
                 let errorMessage = "";
@@ -51,7 +50,6 @@ $(document).ready(function () {
                 } catch (e) {
                     errorMessage = xhr.responseText;
                 }
-
                 $("aside .alert_base_register_error .alert_register_store_error").text(errorMessage);
                 $("aside .alert_base_register_error").removeClass("hidden");
 

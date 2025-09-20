@@ -3,6 +3,7 @@ from source.app.entities.stores_entity import StoresEntity
 from source.app.settings.logging_settings import get_logger
 from source.app.exceptions.stores_exceptions import *
 from source.app.utils.passwords import *
+from flask import url_for, current_app
 import uuid
 
 logger = get_logger(__name__)
@@ -35,12 +36,17 @@ class StoresServices:
                 conflict_fields.append("telephone")
             raise StoresDuplicateException(f"Conflict with fields: {', '.join(conflict_fields)}")
 
+        logger.warning("No logoo image URL provided, using default image URL.")
+        with current_app.app_context():
+            logo_url = url_for('static', filename='images/default-store-logo.png', _external=False)
+
         account = StoresEntity(
             id=uuid.uuid4(),
             name=account_data.get("name", "Undefined"),
             email=email,
             password=hashed_password,
-            telephone=account_data.get("telephone", "Undefined")
+            telephone=account_data.get("telephone", "Undefined"),
+            logo_url=f"{logo_url}"
         )
 
         logger.info(f"Saving new store with email {email}")

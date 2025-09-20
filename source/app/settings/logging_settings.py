@@ -9,7 +9,7 @@ def set_log_level(level='INFO'):
     log_level = get_level_from_str(level)
     loggers = [logging.getLogger(name) for name in logging.root.manager.loggerDict]
     for logger in loggers:
-        if not logger.name.startswith('integrative-project') or logger.name == 'root':
+        if not logger.name.startswith('orkestro') or logger.name == 'root':
             continue
         logger.setLevel(log_level)
         for h in logger.handlers:

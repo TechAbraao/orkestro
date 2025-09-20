@@ -9,14 +9,17 @@ main_frontend = Blueprint("main_frontend", __name__, url_prefix="")
 def views_main_dashboard():
     return render_template("pages/dashboard.jinja2")
 
-
 @main_frontend.get("/profile")
 @authorization_required
 def views_profile_dashboard():
     return render_template("pages/store_profile.jinja2")
 
-
 @main_frontend.get("/orders")
 @authorization_required
 def views_orders_dashboard():
     return render_template("pages/orders.jinja2")
+
+@main_frontend.get("/menus")
+@authorization_required
+def views_menus_manager_dashboard():
+    return render_template("pages/manage_menu.jinja2")
