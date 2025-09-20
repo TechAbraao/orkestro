@@ -28,7 +28,9 @@ $(document).ready(function () {
                     $("aside .alert_base_register_success").addClass("hidden");
                 }, 4000);
 
-
+                setTimeout(function () {
+                    window.location.href = "/signin";
+                }, 2300)
 
             },
             error: function (xhr) {
@@ -56,9 +58,6 @@ $(document).ready(function () {
                 setTimeout(() => {
                     $("aside .alert_base_register_error").addClass("hidden");
                 }, 4000)
-                setTimeout(function () {
-                    window.location.href = "/login";
-                }, 2300)
             }
         });
     });

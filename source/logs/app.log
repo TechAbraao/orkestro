@@ -2972,3 +2972,4 @@ DETAIL:  Key (email)=(abraaosantos.contato@hotmail.com) already exists.
 2025-09-19 18:51:46,860 - INFO - integrative-project - Request received successfully at N8N, id is '123e4567-e89b-12d3-a456-426614174000'.
 2025-09-19 18:51:47,341 - INFO - integrative-project - Request stored in WebSocket whose id is '123e4567-e89b-12d3-a456-426614174000' successful.
 2025-09-19 18:51:47,341 - INFO - integrative-project - Request received successfully at N8N, id is '123e4567-e89b-12d3-a456-426614174000'.
+2025-09-19 23:26:32,320 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
