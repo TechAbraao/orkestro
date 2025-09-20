@@ -104,8 +104,12 @@ http://localhost:port
       <b>Abraão Santos</b>
     </td>
     <td align="center">
-      <img src="public/images/maintainer-anthony.png" width="140px" alt="AC" /><br/>
+      <img src="public/images/maintainer-anthony.png" width="150px" alt="AC" /><br/>
       <b>Anthony Chukwudi</b>
+    </td>
+    <td align="center">
+      <img src="public/images/maintainer-isak.jpeg" width="150px" alt="IF" /><br/>
+      <b>Isak Freitas</b>
     </td>
   </tr>
 </table>
