@@ -127,3 +127,11 @@ def register_error_handlers(app):
             status_code=Unauthorized.code
         )
         return response
+    @app.errorhandler(OneMenuPerStoreException)
+    def handle_one_menu_per_store_exception(err):
+        logger.warning(f"More than one menu: {str(err.message)}")
+        response = Response.error(
+            errors=str(err.message),
+            status_code=Unauthorized.code
+        )
+        return response

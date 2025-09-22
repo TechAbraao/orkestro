@@ -14,7 +14,9 @@
 
 {% block dashboard %}
     <section class="w-full h-full bg-red-50 flex flex-col items-center justify-center">
-       MENU MANAGER
+       {% if strategy.get("profile")["hasMenu"] == True %}
+            <button>Criar um novo Cardápio</button>
+        {% endif %}
     </section>
 {% endblock dashboard %}
 

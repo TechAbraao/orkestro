@@ -1,8 +1,10 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request, g
 from source.app.utils.decorators.authorizations import authorization_required
+from source.app.settings.logging_settings import get_logger
+from source.app.services import menu_services
 
 main_frontend = Blueprint("main_frontend", __name__, url_prefix="")
-
+logger = get_logger(__name__)
 
 @main_frontend.get("/dashboard")
 @authorization_required
@@ -22,4 +24,18 @@ def views_orders_dashboard():
 @main_frontend.get("/menus")
 @authorization_required
 def views_menus_manager_dashboard():
-    return render_template("pages/manage_menu.jinja2")
+    store_id = g.jwt_claims.get("sub")
+    logger.info(f"GET /menus - View Menu with store_id: '{store_id}'")
+
+    """ Verificar se a Loja possui um cardápio ativo para renderizar no template. """
+    hasMenu = menu_services.exists_menu_by_store_id(store_id)
+
+    rendering_strategy = {
+        "url": f"{request.path}",
+        "profile": {
+            "roles": f"",
+            "hasMenu": hasMenu
+        },
+        "logged": False
+    }
+    return render_template("pages/manage_menu.jinja2", strategy=rendering_strategy)

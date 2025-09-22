@@ -13,7 +13,11 @@ class MenusEntity(database.Model):
     name = database.Column(database.String, nullable=False)
     slug = database.Column(database.String, nullable=True)
     description = database.Column(database.Text, nullable=True)
-
+    activated = database.Column(
+        database.Boolean,
+        nullable=False,
+        default=False
+    )
     categories = database.relationship(
         "CategoriesEntity", back_populates="menu", cascade="all, delete"
     )
