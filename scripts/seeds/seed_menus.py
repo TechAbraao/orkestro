@@ -35,6 +35,7 @@ with app.app_context():
             db.session.add(new_menu)
     try:
         db.session.commit()
+        db.session.close()
     except Exception as e:
         exit(f"Error populating menus: {e}")
-    print("Menu seeds inserted successfully!")
+    print("Menu seeds inserted successfully.")

@@ -39,7 +39,7 @@ $(document).ready(function () {
 
                 setTimeout(function () {
                     window.location.href = "/dashboard";
-                }, 2300)
+                }, 1100)
             },
             error: function (xhr) {
                 let errorMessage = "";

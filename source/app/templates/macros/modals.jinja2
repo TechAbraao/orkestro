@@ -76,3 +76,67 @@
     </div>
 {% endmacro %}
 
+{% macro modal_create_menu() %}
+<div id="modalCreateMenuModal"
+     class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+
+  {# Content #}
+  <div class="bg-white rounded-xl shadow-lg w-full max-w-md p-6 relative">
+
+    <button type="button"
+            onclick="document.getElementById('modalCreateMenuModal').classList.add('hidden')"
+            class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    {# Title #}
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">
+      Criar Novo Cardápio
+    </h2>
+
+    {# Forms #}
+    <form method="POST" action="/menus/create" class="space-y-4">
+      <div>
+        <label for="menu_name" class="block text-sm font-medium text-gray-700">
+          Nome
+        </label>
+        <input type="text" id="menu_name" name="name" required
+               class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm
+                      focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"/>
+      </div>
+
+      {# Description #}
+      <div>
+        <label for="menu_description" class="block text-sm font-medium text-gray-700">
+          Descrição
+        </label>
+        <textarea id="menu_description" name="description" rows="3"
+                  class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm
+                         focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+      </div>
+
+        {# Actions #}
+      <div class="flex justify-end gap-3">
+        <button type="button"
+                onclick="document.getElementById('modalCreateMenuModal').classList.add('hidden')"
+                class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700
+                       hover:bg-gray-50 focus:outline-none focus:ring-2
+                       focus:ring-indigo-500">
+          Cancelar
+        </button>
+        <button type="submit"
+                id="btn-create-menu"
+                class="px-4 py-2 rounded-lg bg-indigo-600 text-white
+                       hover:bg-indigo-700 focus:outline-none focus:ring-2
+                       focus:ring-indigo-500">
+          Criar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endmacro %}

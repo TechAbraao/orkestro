@@ -8,7 +8,7 @@ from source.app.utils.decorators.authorizations import authorization_required
 logger = get_logger(__name__)
 menus_bp = Blueprint("menus_bp", __name__, url_prefix="/api/menus")
 
-""" 1. Create a Menu """
+""" 1. Criar um novo Menu. """
 @menus_bp.route("/", methods=["POST"])
 @authorization_required
 def create_menu():
@@ -27,19 +27,33 @@ def create_menu():
         data=None,
     )
 
-""" 2. List all Menus """
+""" 2. Obter menus (do usuário autenticado ou todos). """
 @menus_bp.route("/", methods=["GET"])
 @authorization_required
-def all_menus():
-    logger.info("GET /menus - retrieving all menus.")
+def get_menus():
+    logger.info("GET /menus ou /menus?mine=true - Retornando todos os menus.")
 
-    include = request.args.get("include", "").lower().split(",")
-    all_menus_returned = menu_services.get_all_menus(include=include)
+    """ Caso o usuário queira os menus da própria loja (precisa estar autenticado). """
+    only_my_store = request.args.get("mine", "false").lower() == "true"
 
-    logger.info("All menus returned,")
-    return jsonify(all_menus_returned)
+    if only_my_store:
+        store_id = g.jwt_claims.get("sub")
+        logger.info(f"Retornando os menus da loja autenticada. UUID da loja: '{store_id}'. ")
 
-""" 3. Delete a Menu """
+        menus = menu_services.get_menus_by_store_id(store_id)
+        return Response.success(
+            message="Menus returned successfully (by store).",
+            status_code=200,
+            data=menus
+        )
+    else:
+        logger.info("Retornando todos os menus disponíveis.")
+        include = request.args.get("include", "").lower().split(",")
+        all_menus_returned = menu_services.get_all_menus(include=include)
+        return jsonify(all_menus_returned)
+
+
+""" 3. Deletar Menu. """
 @menus_bp.route("/<string:menu_id>", methods=["DELETE"])
 @authorization_required
 def delete_menu(menu_id: str):
@@ -53,7 +67,7 @@ def delete_menu(menu_id: str):
         status_code=200
     )
 
-""" 4. Update a Menu """
+""" 4. Atualizar Menu. """
 @menus_bp.route("/<string:menu_id>", methods=["PUT"])
 @authorization_required
 def update_menu(menu_id: str):

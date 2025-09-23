@@ -43,6 +43,17 @@ class MenusRepository:
         MenusEntity.id == id
         ).first() is not None
 
+    def get_by_store_id(self, store_id):
+        return (self.session.query(MenusEntity)
+                .filter(MenusEntity.store_id == store_id)
+                .all())
+
+    @transactional
+    def exists_menu_by_store_id(self, store_id: str) -> bool:
+        return self.session.query(MenusEntity).filter(
+            MenusEntity.store_id == store_id
+        ).first() is not None
+
     @transactional
     def update(self, menu_id: str, data) -> bool:
         menu = (

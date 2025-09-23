@@ -10,8 +10,6 @@
     <script>
         const logoutURL = "{{ url_for('sign_in_auth.end_session_store') }}"
     </script>
-    <script src="{{ url_for('static', filename='javascript/toggle_sidenav.js') }}" defer></script>
-    <script src="{{ url_for('static', filename='javascript/logout.js') }}" defer></script>
 {% endblock sidenav %}
 
 {% block dashboard %}
@@ -35,6 +33,6 @@
 
 {% block footer %}
     <aside class="w-auto h-full">
-        Orkestro © 2025 | version 1.0.0
+        Orkestro © 2025 | versão 1.0.0
     </aside>
 {% endblock footer %}

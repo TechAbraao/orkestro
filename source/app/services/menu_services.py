@@ -29,14 +29,14 @@ class MenuServices:
             Ou seja, não é permitido cadastrar mais de um cardápio vinculado à mesma loja.
         """
         logger.info(f"Checking for the existence of a menu in store_id '{data["store_id"]}'")
-        exists = self.menu_repository.all()
+        exists = self.menu_repository.exists_menu_by_store_id(store_id=data.get("store_id"))
         if exists:
             logger.warning(f"It is not possible to register more than one menu in store_id '{data["store_id"]}'")
             raise OneMenuPerStoreException("You have already found a registered menu.")
 
         """
             2. Cada cardápio terá um Slug, que é feito pelo nome.
-            Através do Slug, será possível acessar o cardápio.
+            Através do Slug, será possível acessar o cardápio web.
         """
         slug = slug_generator(data.get("name"))
 
@@ -75,14 +75,18 @@ class MenuServices:
 
     @database_connection
     def exists_menu_by_store_id(self, store_id: str):
-        exists = self.menu_repository.exists(store_id)
+        exists = self.menu_repository.exists_menu_by_store_id(store_id)
         if exists:
             return True
         return False
 
     @database_connection
     def get_menus_by_store_id(self, store_id: str):
-        pass
+        menus = self.menu_repository.get_by_store_id(store_id)
+        if not menus:
+            raise MenuNotFoundException("No menu found")
+
+        return [menu.serialize for menu in menus]
 
     @database_connection
     def delete_menu(self, menu_id: str) -> None:

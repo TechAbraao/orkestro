@@ -1,0 +1,33 @@
+{% macro menu_card(menu) %}
+<div class="bg-white rounded-2xl shadow-md p-6 w-full max-w-sm hover:shadow-xl transition-shadow duration-300">
+
+    {# Nome do cardápio #}
+    <h3 class="text-xl font-semibold text-gray-900 mb-2 capitalize">
+        {{ menu.name }}
+    </h3>
+
+    {# Slug (opcional, pode mostrar ou não) #}
+    <p class="text-sm text-indigo-600 mb-2">
+        {{ menu.slug }}
+    </p>
+
+    {# Descrição #}
+    <p class="text-gray-700 mb-4">
+        {{ menu.description }}
+    </p>
+
+    {# Data de criação #}
+    <p class="text-xs text-gray-400">
+        Criado em: {{ menu.created_at[:10] }}  {# Apenas YYYY-MM-DD #}
+    </p>
+
+    {# Botão de ação, por exemplo "Ver Cardápio" #}
+    <div class="mt-4 flex justify-end">
+        <a href="/menus/{{ menu.slug }}"
+           class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium
+                  hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
+            Ver Cardápio
+        </a>
+    </div>
+</div>
+{% endmacro %}
