@@ -60,6 +60,7 @@ def create_app():
     app.register_blueprint(authorizations_frontend)
     app.register_blueprint(main_frontend)
     app.register_blueprint(homepage_frontend)
+    app.register_blueprint(menus_client_frontend)
 
     register_error_handlers(app)
 

@@ -6542,3 +6542,86 @@ WHERE menus.id = %(id_1)s::UUID
 2025-09-23 10:40:13,658 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
 2025-09-23 10:40:13,662 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
 2025-09-23 10:40:13,663 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 10:47:09,675 - INFO - integrative-project - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 10:47:09,874 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Mzc2MDZ9.i4u0tS9jxBn-KfLphAs1Lsx85s6hjOq4cs7xxannlcI'
+2025-09-23 10:47:09,875 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
+2025-09-23 10:47:09,878 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 10:47:09,879 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 10:47:10,365 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Mzc2MDZ9.i4u0tS9jxBn-KfLphAs1Lsx85s6hjOq4cs7xxannlcI'
+2025-09-23 10:47:10,365 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
+2025-09-23 10:47:11,071 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Mzc2MDZ9.i4u0tS9jxBn-KfLphAs1Lsx85s6hjOq4cs7xxannlcI'
+2025-09-23 10:47:11,071 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
+2025-09-23 10:47:11,480 - INFO - integrative-project - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 10:47:11,597 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Mzc2MDZ9.i4u0tS9jxBn-KfLphAs1Lsx85s6hjOq4cs7xxannlcI'
+2025-09-23 10:47:11,597 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
+2025-09-23 10:47:11,602 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 10:47:11,603 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 10:48:35,706 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 10:48:37,209 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 10:48:38,208 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 10:48:39,084 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 10:48:45,938 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 10:48:46,782 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 10:48:47,768 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 10:49:06,667 - INFO - integrative-project - Caching key created, it is 'menu:cardapio-da-gi-safada:categories'
+2025-09-23 10:49:07,235 - ERROR - integrative-project - An error occurred: Error 111 connecting to localhost:6379. Connection refused.
+2025-09-23 10:49:19,430 - INFO - integrative-project - Caching key created, it is 'menu:cardapio-da-gi-safada:categories'
+2025-09-23 10:49:19,431 - ERROR - integrative-project - An error occurred: Error 111 connecting to localhost:6379. Connection refused.
+2025-09-23 10:49:20,897 - INFO - integrative-project - Caching key created, it is 'menu:cardapio-da-gi-safada:categories'
+2025-09-23 10:49:20,897 - ERROR - integrative-project - An error occurred: Error 111 connecting to localhost:6379. Connection refused.
+2025-09-23 10:52:37,209 - INFO - integrative-project - Caching key created, it is 'menu:cardapio-da-gi-safada:categories'
+2025-09-23 10:52:37,311 - ERROR - integrative-project - An error occurred: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+2025-09-23 10:52:39,301 - INFO - integrative-project - Caching key created, it is 'menu:cardapio-da-gi-safada:categories'
+2025-09-23 10:52:39,360 - ERROR - integrative-project - An error occurred: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+2025-09-23 10:52:40,199 - INFO - integrative-project - Caching key created, it is 'menu:cardapio-da-gi-safada:categories'
+2025-09-23 10:52:40,281 - ERROR - integrative-project - An error occurred: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+2025-09-23 10:52:41,019 - INFO - integrative-project - Caching key created, it is 'menu:cardapio-da-gi-safada:categories'
+2025-09-23 10:52:41,055 - ERROR - integrative-project - An error occurred: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+2025-09-23 10:52:42,735 - INFO - integrative-project - Caching key created, it is 'menu:cardapio-da-gi-safada:categories'
+2025-09-23 10:52:42,771 - ERROR - integrative-project - An error occurred: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+2025-09-23 10:52:45,203 - INFO - integrative-project - Caching key created, it is 'menu:cardapio-da-gi-safada:categories'
+2025-09-23 10:52:45,235 - ERROR - integrative-project - An error occurred: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+2025-09-23 10:53:33,148 - INFO - integrative-project - Caching key created, it is 'menu:cardapio-da-gi-safada:categories'
+2025-09-23 10:53:33,184 - INFO - integrative-project - Cache set for key menu:cardapio-da-gi-safada:categories.
+2025-09-23 10:53:33,184 - INFO - integrative-project - Menu with slug 'cardapio-da-gi-safada' found.
+2025-09-23 10:56:29,249 - INFO - integrative-project - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 10:56:29,464 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Mzc2MDZ9.i4u0tS9jxBn-KfLphAs1Lsx85s6hjOq4cs7xxannlcI'
+2025-09-23 10:56:29,464 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
+2025-09-23 10:56:29,471 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 10:56:29,472 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 10:56:34,428 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 10:56:39,353 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 10:56:39,355 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 10:56:39,355 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 10:56:49,543 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 10:56:49,544 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 10:56:49,544 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 11:01:25,842 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Mzc2MDZ9.i4u0tS9jxBn-KfLphAs1Lsx85s6hjOq4cs7xxannlcI'
+2025-09-23 11:01:25,842 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
+2025-09-23 11:01:26,453 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Mzc2MDZ9.i4u0tS9jxBn-KfLphAs1Lsx85s6hjOq4cs7xxannlcI'
+2025-09-23 11:01:26,453 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
+2025-09-23 11:01:27,104 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Mzc2MDZ9.i4u0tS9jxBn-KfLphAs1Lsx85s6hjOq4cs7xxannlcI'
+2025-09-23 11:01:27,104 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
+2025-09-23 11:01:27,647 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Mzc2MDZ9.i4u0tS9jxBn-KfLphAs1Lsx85s6hjOq4cs7xxannlcI'
+2025-09-23 11:01:27,647 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
+2025-09-23 11:01:28,146 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Mzc2MDZ9.i4u0tS9jxBn-KfLphAs1Lsx85s6hjOq4cs7xxannlcI'
+2025-09-23 11:01:28,147 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
+2025-09-23 11:01:28,411 - INFO - integrative-project - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 11:01:28,548 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Mzc2MDZ9.i4u0tS9jxBn-KfLphAs1Lsx85s6hjOq4cs7xxannlcI'
+2025-09-23 11:01:28,548 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
+2025-09-23 11:01:28,552 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 11:01:28,554 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 11:01:35,030 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 11:01:37,937 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 11:06:59,651 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 11:07:00,437 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 11:07:05,217 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 11:07:05,992 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 11:07:06,985 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 11:07:07,842 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 11:07:09,229 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 11:07:09,973 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 11:09:58,480 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Mzc2MDZ9.i4u0tS9jxBn-KfLphAs1Lsx85s6hjOq4cs7xxannlcI'
+2025-09-23 11:09:58,480 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
+2025-09-23 11:10:02,357 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 11:10:08,161 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.

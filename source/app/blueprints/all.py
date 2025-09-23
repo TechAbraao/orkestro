@@ -15,3 +15,4 @@ from source.app.blueprints.api.auth.me_auth import about_auth
 from source.app.blueprints.frontend.auth.authorizations_frontend import *
 from source.app.blueprints.frontend.dashboard.main_frontend import *
 from source.app.blueprints.frontend.home.homepage_frontend import *
+from source.app.blueprints.frontend.client.menus_client_frontend import *

@@ -147,23 +147,23 @@ class MenuServices:
         EXPIRE: int = (10 * 60)
 
         cache_key = get_cache_key_by_slug(slug=slug, include_products=False, include_categories=True)
-        logger.info(f"Caching key created, it is '{cache_key}'")
+        logger.info(f"Chave de cacheamento criado, a chave é '{cache_key}'.")
 
         cached_data = self.redis_repository.get(cache_key)
         if cached_data:
-            logger.info(f"Cache hit for key {cache_key}.")
-            logger.info(f"Cache success in method 'get_menu_by_slug'.")
+            logger.info(f"Chave de Cache encontrada: {cache_key}.")
+            logger.info(f"Sucesso do cache no método 'get_menu_by_slug'.")
             return cached_data
 
 
         menu = self.menu_repository.get_by_slug(slug)
         if not menu:
-            logger.warning(f"Menu with slug {slug} not found.")
+            logger.warning(f"Menu com Slug {slug} não encontrado.")
             raise MenuNotFoundException("Menu not found.")
 
         result = menu.serialize_client(include_categories=True, include_products=False)
         self.redis_repository.set(cache_key, result, expire=EXPIRE)
-        logger.info(f"Cache set for key {cache_key}.")
+        logger.info(f"Cache inserido com sucesso. A chave é: {cache_key}.")
 
-        logger.info(f"Menu with slug '{slug}' found.")
+        logger.info(f"Menu com Slug '{slug}' encontrado.")
         return result

@@ -1,6 +1,6 @@
-# Orkestro | Menus, chatbot and analytics.
+# Orkestro | Menus, chatbot e análises.
 
-### Technologies
+### Tecnologias
 
 <section align="left">
     <img alt="Static Badge" src="https://img.shields.io/badge/Python-grey?style=flat&logo=Python">
@@ -26,7 +26,7 @@
     <img alt="Static Badge" src="https://img.shields.io/badge/Makefile-grey?style=flat&logo=Make">
 </section>
 
-## Description
+## Descrição
 A complete web app for intelligent menu management, combining chatbot automation to enhance customer interaction and advanced analytics to drive smarter decisions.
 
 ## How to start the project
