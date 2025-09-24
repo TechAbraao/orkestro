@@ -37,7 +37,7 @@ def get_logger(name=None):
     if loggers.get(name):
         return loggers[name]
     logging.getLogger().handlers = []
-    logger = logging.getLogger('integrative-project')
+    logger = logging.getLogger('orkestro')
     logger.setLevel(log_level)
     if not len(logger.handlers):
         logger.handlers = []

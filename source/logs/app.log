@@ -6625,3 +6625,752 @@ WHERE menus.id = %(id_1)s::UUID
 2025-09-23 11:09:58,480 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758637606}'
 2025-09-23 11:10:02,357 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 2025-09-23 11:10:08,161 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:21:22,776 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:28:24,133 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:29:11,283 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:29:11,924 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:34,396 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:34,960 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:35,725 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:36,155 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:36,445 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:40,452 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:41,081 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:41,240 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:41,393 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:52,980 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:53,673 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:54,206 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:54,595 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:54,851 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:55,912 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:30:57,758 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:31:14,582 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:31:15,374 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:31:16,426 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:31:17,216 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:31:18,888 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:31:37,864 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:31:39,575 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:32:02,815 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:32:13,599 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:32:30,468 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:32:31,076 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:32:31,652 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:32:31,828 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:32:37,893 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:32:38,690 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:32:46,702 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:33:31,748 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:33:32,060 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:33:58,047 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:33:58,540 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 21:34:31,621 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:06:17,559 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:06:37,755 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-23 22:06:38,039 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk1OTh9.E58jfc0_XnP3sAtaSqLFX3GnbkF7vaX4xpTPR2JVHgA
+2025-09-23 22:06:39,295 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk1OTh9.E58jfc0_XnP3sAtaSqLFX3GnbkF7vaX4xpTPR2JVHgA'
+2025-09-23 22:06:39,295 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758679598}'
+2025-09-23 22:06:41,558 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk1OTh9.E58jfc0_XnP3sAtaSqLFX3GnbkF7vaX4xpTPR2JVHgA'
+2025-09-23 22:06:41,558 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758679598}'
+2025-09-23 22:06:42,677 - INFO - integrative-project - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 22:06:42,823 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk1OTh9.E58jfc0_XnP3sAtaSqLFX3GnbkF7vaX4xpTPR2JVHgA'
+2025-09-23 22:06:42,823 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758679598}'
+2025-09-23 22:06:42,831 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:06:42,832 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 22:06:44,206 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:07:26,101 - INFO - integrative-project - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 22:07:26,240 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk1OTh9.E58jfc0_XnP3sAtaSqLFX3GnbkF7vaX4xpTPR2JVHgA'
+2025-09-23 22:07:26,241 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758679598}'
+2025-09-23 22:07:26,246 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:07:26,247 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 22:07:26,945 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:08:22,519 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:11:43,025 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:11:44,406 - INFO - integrative-project - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 22:11:44,531 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk1OTh9.E58jfc0_XnP3sAtaSqLFX3GnbkF7vaX4xpTPR2JVHgA'
+2025-09-23 22:11:44,531 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758679598}'
+2025-09-23 22:11:44,535 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:11:44,535 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 22:11:45,585 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:11:49,795 - INFO - integrative-project - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 22:11:49,908 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk1OTh9.E58jfc0_XnP3sAtaSqLFX3GnbkF7vaX4xpTPR2JVHgA'
+2025-09-23 22:11:49,911 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:11:49,911 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758679598}'
+2025-09-23 22:11:49,911 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 22:11:51,234 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk1OTh9.E58jfc0_XnP3sAtaSqLFX3GnbkF7vaX4xpTPR2JVHgA'
+2025-09-23 22:11:51,234 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758679598}'
+2025-09-23 22:11:59,774 - INFO - integrative-project - Checking if email 'abraao.cutielips@hotmail.com' exists in the database.
+2025-09-23 22:11:59,978 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5MTl9.bWJUlsD97kCxc-UcB1SC-i6zIG_fNSwDtd-NyRu3iZM
+2025-09-23 22:12:01,205 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5MTl9.bWJUlsD97kCxc-UcB1SC-i6zIG_fNSwDtd-NyRu3iZM'
+2025-09-23 22:12:01,205 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758679919}'
+2025-09-23 22:12:03,096 - INFO - integrative-project - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-23 22:12:03,203 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5MTl9.bWJUlsD97kCxc-UcB1SC-i6zIG_fNSwDtd-NyRu3iZM'
+2025-09-23 22:12:03,203 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758679919}'
+2025-09-23 22:12:03,208 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:12:03,209 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-23 22:12:04,310 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:12:07,985 - INFO - integrative-project - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-23 22:12:08,104 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5MTl9.bWJUlsD97kCxc-UcB1SC-i6zIG_fNSwDtd-NyRu3iZM'
+2025-09-23 22:12:08,104 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758679919}'
+2025-09-23 22:12:08,110 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:12:08,111 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-23 22:12:08,818 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5MTl9.bWJUlsD97kCxc-UcB1SC-i6zIG_fNSwDtd-NyRu3iZM'
+2025-09-23 22:12:08,818 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758679919}'
+2025-09-23 22:12:09,613 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5MTl9.bWJUlsD97kCxc-UcB1SC-i6zIG_fNSwDtd-NyRu3iZM'
+2025-09-23 22:12:09,613 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758679919}'
+2025-09-23 22:12:10,600 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5MTl9.bWJUlsD97kCxc-UcB1SC-i6zIG_fNSwDtd-NyRu3iZM'
+2025-09-23 22:12:10,600 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758679919}'
+2025-09-23 22:12:18,884 - INFO - integrative-project - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-23 22:12:18,998 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5MTl9.bWJUlsD97kCxc-UcB1SC-i6zIG_fNSwDtd-NyRu3iZM'
+2025-09-23 22:12:18,999 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758679919}'
+2025-09-23 22:12:19,002 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:12:19,002 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-23 22:12:21,748 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:12:24,403 - INFO - integrative-project - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-23 22:12:24,524 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5MTl9.bWJUlsD97kCxc-UcB1SC-i6zIG_fNSwDtd-NyRu3iZM'
+2025-09-23 22:12:24,524 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758679919}'
+2025-09-23 22:12:24,529 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:12:24,530 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-23 22:12:28,425 - INFO - integrative-project - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-23 22:12:28,530 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5MTl9.bWJUlsD97kCxc-UcB1SC-i6zIG_fNSwDtd-NyRu3iZM'
+2025-09-23 22:12:28,530 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758679919}'
+2025-09-23 22:12:28,535 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:12:28,535 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-23 22:12:29,432 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5MTl9.bWJUlsD97kCxc-UcB1SC-i6zIG_fNSwDtd-NyRu3iZM'
+2025-09-23 22:12:29,432 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758679919}'
+2025-09-23 22:12:37,409 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-23 22:12:37,610 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5NTd9.qCtN_SYqD6IkJkPKnek8lT3dgo7wvdQnpF9pKfm6dhM
+2025-09-23 22:12:38,852 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5NTd9.qCtN_SYqD6IkJkPKnek8lT3dgo7wvdQnpF9pKfm6dhM'
+2025-09-23 22:12:38,853 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758679957}'
+2025-09-23 22:12:41,106 - INFO - integrative-project - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 22:12:41,228 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5NTd9.qCtN_SYqD6IkJkPKnek8lT3dgo7wvdQnpF9pKfm6dhM'
+2025-09-23 22:12:41,228 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758679957}'
+2025-09-23 22:12:41,233 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:12:41,234 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 22:12:43,558 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:13:25,544 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:{{slug}}:categories'.
+2025-09-23 22:13:25,550 - WARNING - integrative-project - Menu com Slug {{slug}} não encontrado.
+2025-09-23 22:13:25,550 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-23 22:13:32,071 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:13:32,088 - INFO - integrative-project - Cache inserido com sucesso. A chave é: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:13:32,088 - INFO - integrative-project - Menu com Slug 'cardapio-da-gi-safada' encontrado.
+2025-09-23 22:13:55,662 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:14:48,004 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:25:56,887 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'menus_client_frontend.view_menu_by_slug'. Did you forget to specify values ['slug']?
+2025-09-23 22:28:04,201 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'menus_client_frontend.view_menu_by_slug'. Did you forget to specify values ['slug']?
+2025-09-23 22:28:04,812 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'menus_client_frontend.view_menu_by_slug'. Did you forget to specify values ['slug']?
+2025-09-23 22:28:05,543 - ERROR - integrative-project - An error occurred: Could not build url for endpoint 'menus_client_frontend.view_menu_by_slug'. Did you forget to specify values ['slug']?
+2025-09-23 22:28:42,138 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:07,528 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:08,714 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:09,454 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:10,271 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:11,484 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:12,654 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:35,195 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:36,022 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:36,687 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:40,013 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:32:40,013 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:32:40,062 - INFO - integrative-project - Cache inserido com sucesso. A chave é: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:32:40,063 - INFO - integrative-project - Menu com Slug 'cardapio-da-gi-safada' encontrado.
+2025-09-23 22:32:40,063 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:32:40,097 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:40,141 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:32:40,142 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:32:40,143 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:32:40,143 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:32:40,143 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:32:46,919 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:32:46,919 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:32:46,920 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:32:46,920 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:32:46,920 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:32:46,941 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:47,001 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:32:47,001 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:32:47,002 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:32:47,002 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:32:47,002 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:32:47,843 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:32:47,843 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:32:47,845 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:32:47,845 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:32:47,845 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:32:47,872 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:32:47,920 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:32:47,921 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:32:47,921 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:32:47,922 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:32:47,922 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:33:37,831 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:33:37,832 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:33:37,835 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:33:37,835 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:33:37,835 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:33:37,869 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:33:37,937 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:33:37,937 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:33:37,939 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:33:37,939 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:33:37,939 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:34:57,490 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:34:57,490 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:34:57,491 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:34:57,491 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:34:57,492 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:34:57,514 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:34:57,585 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:34:57,585 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:34:57,586 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:34:57,586 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:34:57,586 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:34:58,257 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:34:58,257 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:34:58,258 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:34:58,258 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:34:58,258 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:34:58,275 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:34:58,324 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:34:58,324 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:34:58,325 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:34:58,325 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:34:58,325 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:35:21,189 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:35:21,189 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:35:21,191 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:35:21,191 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:35:21,191 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:35:21,213 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:35:21,268 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:35:21,268 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:35:21,269 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:35:21,269 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:35:21,269 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:35:21,663 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:35:21,663 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:35:21,664 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:35:21,664 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:35:21,664 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:35:21,690 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:35:21,727 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:35:21,727 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:35:21,728 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:35:21,728 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:35:21,728 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:35:48,773 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:35:48,773 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:35:48,777 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:35:48,777 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:35:48,777 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:35:48,814 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:35:48,856 - INFO - integrative-project - Buscando menu através do slug 'cardapio-da-gi-safada'
+2025-09-23 22:35:48,856 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:35:48,858 - INFO - integrative-project - Chave de Cache encontrada: menu:cardapio-da-gi-safada:categories.
+2025-09-23 22:35:48,858 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:35:48,858 - INFO - integrative-project - Menu encontrado: {'name': 'Cardapio da Gi safada', 'description': 'gisafada cardapio', 'created_at': '2025-09-23T01:33:03.570360+00:00', 'slug': 'cardapio-da-gi-safada', 'categories': []}
+2025-09-23 22:45:55,266 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5NTd9.qCtN_SYqD6IkJkPKnek8lT3dgo7wvdQnpF9pKfm6dhM'
+2025-09-23 22:45:55,266 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758679957}'
+2025-09-23 22:45:55,271 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:45:55,272 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 22:46:05,448 - INFO - integrative-project - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-23 22:46:05,652 - INFO - integrative-project - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODE5NjV9.evPGSYhh5mlOjAxFxkY7mwlHKMessgSNKZBTKeMNkb4
+2025-09-23 22:46:16,393 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:46:16,393 - INFO - integrative-project - Retornando todos os menus disponíveis.
+2025-09-23 22:46:28,596 - INFO - integrative-project - DELETE /menus/<menu_id> - deleting a menu
+2025-09-23 22:46:28,601 - INFO - integrative-project - Getting the slug 'cardapio-da-gi-safada' from the ID current menu '29fa0dc6-49b9-4b64-9790-3cae0cb813ba'
+2025-09-23 22:46:28,628 - INFO - integrative-project - Menu with id '29fa0dc6-49b9-4b64-9790-3cae0cb813ba' deleted successfully.
+2025-09-23 22:46:28,628 - INFO - integrative-project - Invalidating cache for slug 'cardapio-da-gi-safada'.
+2025-09-23 22:46:31,211 - INFO - integrative-project - DELETE /menus/<menu_id> - deleting a menu
+2025-09-23 22:46:31,214 - WARNING - integrative-project - Menu with id '29fa0dc6-49b9-4b64-9790-3cae0cb813ba' could not be deleted.
+2025-09-23 22:46:31,214 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-23 22:46:34,270 - INFO - integrative-project - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 22:46:34,447 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5NTd9.qCtN_SYqD6IkJkPKnek8lT3dgo7wvdQnpF9pKfm6dhM'
+2025-09-23 22:46:34,447 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758679957}'
+2025-09-23 22:46:34,451 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:46:34,451 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 22:46:34,453 - WARNING - integrative-project - Menu not found: No menu found
+2025-09-23 22:46:40,918 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:47:08,346 - INFO - integrative-project - POST /menus - creating new menu in store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 22:47:08,347 - INFO - integrative-project - Checking for the existence of a menu in store_id '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 22:47:08,397 - INFO - integrative-project - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 22:47:08,613 - INFO - integrative-project - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2Nzk5NTd9.qCtN_SYqD6IkJkPKnek8lT3dgo7wvdQnpF9pKfm6dhM'
+2025-09-23 22:47:08,615 - INFO - integrative-project - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 22:47:08,616 - INFO - integrative-project - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758679957}'
+2025-09-23 22:47:08,616 - INFO - integrative-project - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 22:47:12,669 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 22:47:12,669 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 22:47:12,681 - INFO - integrative-project - Cache inserido com sucesso. A chave é: menu:adega-da-praca:categories.
+2025-09-23 22:47:12,681 - INFO - integrative-project - Menu com Slug 'adega-da-praca' encontrado.
+2025-09-23 22:47:12,681 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 22:47:12,709 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:47:12,774 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 22:47:12,775 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 22:47:12,776 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 22:47:12,776 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:47:12,776 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 22:58:39,815 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:58:39,818 - WARNING - integrative-project - Menu com Slug cardapio-da-gi-safada não encontrado.
+2025-09-23 22:58:39,818 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-23 22:58:41,157 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:cardapio-da-gi-safada:categories'.
+2025-09-23 22:58:41,160 - WARNING - integrative-project - Menu com Slug cardapio-da-gi-safada não encontrado.
+2025-09-23 22:58:41,161 - WARNING - integrative-project - Menu not found: Menu not found.
+2025-09-23 22:58:49,283 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 22:58:49,284 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 22:58:49,289 - INFO - integrative-project - Cache inserido com sucesso. A chave é: menu:adega-da-praca:categories.
+2025-09-23 22:58:49,289 - INFO - integrative-project - Menu com Slug 'adega-da-praca' encontrado.
+2025-09-23 22:58:49,289 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 22:58:49,309 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:58:49,436 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 22:58:49,436 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 22:58:49,437 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 22:58:49,437 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:58:49,437 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 22:58:50,669 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 22:58:50,669 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 22:58:50,671 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 22:58:50,671 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:58:50,671 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 22:58:50,693 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:58:50,775 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 22:58:50,775 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 22:58:50,777 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 22:58:50,777 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:58:50,777 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 22:59:00,001 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 22:59:00,002 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 22:59:00,002 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 22:59:08,489 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 22:59:37,003 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 22:59:37,005 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 22:59:37,005 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:02:02,955 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:02:02,955 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:02:02,958 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:02:02,958 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:02:02,958 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:02:02,991 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:02:02,995 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:02:03,155 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:02:03,157 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:02:03,157 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:05:38,009 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:06:40,372 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:06:40,373 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:06:40,375 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:06:40,376 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:06:40,376 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:06:40,425 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:06:40,432 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:06:40,676 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:06:40,679 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:06:40,679 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:07:38,405 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:07:38,405 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:07:38,418 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:07:38,418 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:07:38,418 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:07:38,463 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:07:38,467 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:07:38,684 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:07:38,685 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:07:38,685 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:11:53,851 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:11:53,852 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:11:53,909 - INFO - integrative-project - Cache inserido com sucesso. A chave é: menu:adega-da-praca:categories.
+2025-09-23 23:11:53,909 - INFO - integrative-project - Menu com Slug 'adega-da-praca' encontrado.
+2025-09-23 23:11:53,909 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:11:53,958 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:11:53,958 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:11:54,174 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:11:54,175 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:11:54,175 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:15:19,619 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:15:19,619 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:15:19,621 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:15:19,621 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:15:19,621 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:15:19,648 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:15:19,817 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:15:19,818 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:15:19,818 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:15:21,694 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:15:21,695 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:15:21,697 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:15:21,698 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:15:21,698 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:15:21,719 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:15:21,792 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:15:21,795 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:15:21,795 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:15:22,338 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:15:22,338 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:15:22,340 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:15:22,340 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:15:22,340 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:15:22,355 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:15:22,440 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:15:22,441 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:15:22,442 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:15:22,905 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:15:22,905 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:15:22,909 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:15:22,909 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:15:22,909 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:15:22,934 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:15:22,988 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:15:22,989 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:15:22,989 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:15:23,544 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:15:23,545 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:15:23,546 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:15:23,546 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:15:23,546 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:15:23,582 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:15:23,662 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:15:23,665 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:15:23,665 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:16:19,771 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:16:19,771 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:16:19,773 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:16:19,773 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:16:19,773 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:16:19,794 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:16:19,877 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:16:19,878 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:16:19,878 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:16:20,774 - INFO - integrative-project - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:16:20,774 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:16:20,775 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:16:20,775 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:16:20,775 - INFO - integrative-project - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:16:20,798 - ERROR - integrative-project - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:16:20,853 - INFO - integrative-project - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:16:20,856 - INFO - integrative-project - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:16:20,857 - INFO - integrative-project - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:21:39,390 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:21:39,391 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:21:39,404 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:21:39,404 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:21:39,404 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:21:39,439 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:21:39,573 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:21:39,574 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:21:39,574 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:21:47,361 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:21:47,362 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:21:47,364 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:21:47,365 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:21:47,365 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:21:47,386 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:21:47,449 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:21:47,450 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:21:47,450 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:21:48,323 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:21:48,324 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:21:48,325 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:21:48,325 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:21:48,325 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:21:48,352 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:21:48,408 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:21:48,409 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:21:48,409 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:21:48,974 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:21:48,974 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:21:48,975 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:21:48,975 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:21:48,975 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:21:49,000 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:21:49,062 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:21:49,063 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:21:49,063 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:21:49,487 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:21:49,487 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:21:49,489 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:21:49,489 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:21:49,489 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:21:49,514 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:21:49,564 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:21:49,565 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:21:49,565 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:22:09,063 - INFO - orkestro - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-23 23:22:09,295 - INFO - orkestro - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxMjl9.zwQACJ9hYlqAcWLSz-Ar9h9quy0QqwVzDSmL0qKA7pQ
+2025-09-23 23:22:10,575 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxMjl9.zwQACJ9hYlqAcWLSz-Ar9h9quy0QqwVzDSmL0qKA7pQ'
+2025-09-23 23:22:10,575 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684129}'
+2025-09-23 23:22:21,547 - INFO - orkestro - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-23 23:22:21,747 - INFO - orkestro - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE
+2025-09-23 23:22:22,977 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:22:22,977 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:22:24,386 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:22:24,386 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:22:25,499 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:22:25,632 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:22:25,632 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:22:25,637 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:22:25,638 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:25:12,750 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:25:12,750 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:25:12,771 - INFO - orkestro - Cache inserido com sucesso. A chave é: menu:adega-da-praca:categories.
+2025-09-23 23:25:12,771 - INFO - orkestro - Menu com Slug 'adega-da-praca' encontrado.
+2025-09-23 23:25:12,772 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:25:12,791 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:25:12,930 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:25:12,931 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:25:12,931 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:25:23,530 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:25:23,530 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:25:23,532 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:25:23,532 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:25:23,532 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:25:23,554 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:25:23,623 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:25:23,624 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:25:23,624 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:27:04,918 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:27:05,065 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:27:05,066 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:27:05,070 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:27:05,070 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:27:06,971 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:27:06,972 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:29:46,652 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:29:46,854 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:29:46,854 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:29:46,858 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:29:46,858 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:29:54,625 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:29:54,774 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:29:54,774 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:29:54,779 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:29:54,780 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:30:03,954 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:30:03,954 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:30:03,956 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:30:03,956 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:30:03,956 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:30:03,985 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:30:04,066 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:30:04,067 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:30:04,067 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:30:12,940 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:30:13,115 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:30:13,116 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:30:13,123 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:30:13,123 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:30:13,607 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:30:13,781 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:30:13,781 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:30:13,788 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:30:13,789 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:30:49,934 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:30:50,170 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:30:50,170 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:30:50,172 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:30:50,172 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:31:58,851 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:31:58,999 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:31:58,999 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:31:59,959 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:32:00,170 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:32:00,170 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:32:30,788 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:32:30,986 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:32:30,987 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:32:31,001 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:32:31,002 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:32:31,349 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:32:31,535 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:32:31,535 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:32:31,540 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:32:31,540 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:33:08,690 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:33:08,832 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:33:08,833 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:33:08,838 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:33:08,839 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:33:17,903 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:33:18,040 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:33:18,040 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:33:18,046 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:33:18,046 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:33:18,928 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:33:18,929 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:33:18,933 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:33:18,933 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:33:18,934 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:33:18,973 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:33:19,016 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:33:19,018 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:33:19,018 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:33:26,522 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:33:26,641 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:33:26,642 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:33:26,648 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:33:26,649 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:33:27,844 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:33:27,977 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:33:27,977 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:33:27,987 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:33:27,987 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:33:28,454 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:33:28,593 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:33:28,593 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:33:28,602 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:33:28,602 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:33:50,186 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:33:50,187 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:33:50,189 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:33:50,189 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:33:50,189 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:33:50,208 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:33:50,358 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:33:50,359 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:33:50,359 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:33:52,026 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:33:52,027 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:33:52,027 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:33:54,115 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:33:54,268 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:33:54,268 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:33:54,272 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:33:54,272 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:33:54,864 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:33:55,055 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:33:55,055 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:33:55,059 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:33:55,060 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:34:10,750 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:34:10,884 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:34:10,885 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:34:10,890 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:34:10,890 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:35:39,577 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:35:39,738 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:35:39,738 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:35:39,746 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:35:39,747 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:35:44,371 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:35:44,520 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:35:44,520 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:35:44,525 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:35:44,525 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:35:45,034 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:35:45,185 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:35:45,185 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:35:45,188 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:35:45,189 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:35:47,414 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:35:47,556 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:35:47,557 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:35:47,561 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:35:47,563 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:35:52,146 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:35:52,273 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:35:52,274 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:35:52,280 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:35:52,280 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:36:23,623 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:36:23,625 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:36:23,637 - INFO - orkestro - Cache inserido com sucesso. A chave é: menu:adega-da-praca:categories.
+2025-09-23 23:36:23,637 - INFO - orkestro - Menu com Slug 'adega-da-praca' encontrado.
+2025-09-23 23:36:23,637 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:36:23,657 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:36:23,744 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:36:23,745 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:36:23,746 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:36:25,940 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:36:25,940 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:36:25,941 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:36:25,941 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:36:25,942 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:36:25,971 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:36:26,046 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:36:26,049 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:36:26,049 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:37:45,570 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:37:45,698 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:37:45,698 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:37:45,702 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:37:45,703 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:37:46,698 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:37:46,814 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:37:46,815 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:37:46,819 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:37:46,819 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:39:33,716 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:39:33,717 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:39:33,720 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:39:33,720 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:39:33,720 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:39:33,754 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:39:33,813 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:39:33,814 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:39:33,814 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:40:17,687 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:40:17,687 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:40:19,047 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:40:19,047 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:40:21,530 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:40:21,530 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:40:21,954 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:40:22,071 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:40:22,071 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:40:22,076 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:40:22,077 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:40:23,407 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:40:23,516 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:40:23,517 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:40:23,521 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:40:23,521 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:42:54,918 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-23 23:42:54,918 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:42:54,919 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:42:54,920 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:42:54,920 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-23 23:42:54,942 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:42:55,060 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-23 23:42:55,061 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-23 23:42:55,061 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:43:03,431 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODQxNDF9.wVRyeqITJi8qRJ4H5vFnXqIzkfK3MrVJoKSkF_wIBtE'
+2025-09-23 23:43:03,431 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758684141}'
+2025-09-23 23:43:13,238 - INFO - orkestro - Checking if email 'abraao.cutielips@hotmail.com' exists in the database.
+2025-09-23 23:43:13,451 - INFO - orkestro - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODUzOTN9.7_BkUEZuHufUCU7Mlwn3vOteF_SzX0zcYWNDyMi3Vgw
+2025-09-23 23:43:14,668 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODUzOTN9.7_BkUEZuHufUCU7Mlwn3vOteF_SzX0zcYWNDyMi3Vgw'
+2025-09-23 23:43:14,668 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758685393}'
+2025-09-23 23:43:16,329 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-23 23:43:16,451 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODUzOTN9.7_BkUEZuHufUCU7Mlwn3vOteF_SzX0zcYWNDyMi3Vgw'
+2025-09-23 23:43:16,451 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758685393}'
+2025-09-23 23:43:16,455 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:43:16,456 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-23 23:43:17,815 - INFO - orkestro - Buscando menu através do slug 'existeeeee'
+2025-09-23 23:43:17,815 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-23 23:43:17,831 - INFO - orkestro - Cache inserido com sucesso. A chave é: menu:existeeeee:categories.
+2025-09-23 23:43:17,832 - INFO - orkestro - Menu com Slug 'existeeeee' encontrado.
+2025-09-23 23:43:17,832 - INFO - orkestro - Menu encontrado: {'name': 'Existeeeee', 'description': 'eeeeeeeeeeeeeeeeeeeeee', 'created_at': '2025-09-23T02:14:52.570359+00:00', 'slug': 'existeeeee', 'categories': []}
+2025-09-23 23:43:17,869 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:43:17,917 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-23 23:43:17,919 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-23 23:43:17,919 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:43:25,171 - INFO - orkestro - Buscando menu através do slug 'existeeeee'
+2025-09-23 23:43:25,171 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-23 23:43:25,173 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-23 23:43:25,173 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:43:25,173 - INFO - orkestro - Menu encontrado: {'name': 'Existeeeee', 'description': 'eeeeeeeeeeeeeeeeeeeeee', 'created_at': '2025-09-23T02:14:52.570359+00:00', 'slug': 'existeeeee', 'categories': []}
+2025-09-23 23:43:25,206 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-23 23:43:25,272 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-23 23:43:25,273 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-23 23:43:25,273 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-23 23:43:33,405 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODUzOTN9.7_BkUEZuHufUCU7Mlwn3vOteF_SzX0zcYWNDyMi3Vgw'
+2025-09-23 23:43:33,405 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758685393}'
+2025-09-23 23:43:49,973 - INFO - orkestro - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-23 23:43:50,167 - INFO - orkestro - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODU0MzB9.NC6-_5l3zw7H81sfGhCKoGgT7uIBJ-nryZQ-oNBnGZo
+2025-09-23 23:43:51,378 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODU0MzB9.NC6-_5l3zw7H81sfGhCKoGgT7uIBJ-nryZQ-oNBnGZo'
+2025-09-23 23:43:51,378 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758685430}'
+2025-09-23 23:43:52,764 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODU0MzB9.NC6-_5l3zw7H81sfGhCKoGgT7uIBJ-nryZQ-oNBnGZo'
+2025-09-23 23:43:52,764 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758685430}'
+2025-09-23 23:43:55,301 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-23 23:43:55,421 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-23 23:43:55,421 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-23 23:43:55,425 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODU0MzB9.NC6-_5l3zw7H81sfGhCKoGgT7uIBJ-nryZQ-oNBnGZo'
+2025-09-23 23:43:55,425 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758685430}'

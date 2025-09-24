@@ -1,29 +1,39 @@
 function createMenuCard(menu) {
     return `
-    <div class="bg-white rounded-md shadow-md p-6 w-64 h-64 hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
-        <button 
-            class="btn-delete-menu px-3 py-1 rounded-md bg-red-500 text-white text-sm font-medium 
-         hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 
-         transition-colors duration-200 shadow-sm" 
-            data-id="${menu.id}">
-            Excluir
-        </button>
-        <div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-1 capitalize">${menu.name}</h3>
-            <p class="text-sm text-indigo-600 mb-2 truncate">${menu.slug}</p>
-            <p class="text-gray-700 text-sm line-clamp-3">${menu.description}</p>
+    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col justify-between w-72 p-6">
+        
+        <div class="flex justify-between items-start mb-4">
+            <h3 class="text-xl font-bold text-gray-900 capitalize">${menu.name}</h3>
+            <button 
+                class="btn-delete-menu px-3 py-1 rounded-full bg-red-500 text-white text-sm font-semibold
+                       hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 transition"
+                data-id="${menu.id}">
+                Excluir
+            </button>
         </div>
-        <div class="mt-2 flex flex-col gap-2">
+        
+        <p class="text-sm text-indigo-600 mb-2 truncate font-medium">${menu.slug}</p>
+        <p class="text-gray-700 text-sm line-clamp-4 mb-4">${menu.description}</p>
+        
+        <div class="mt-auto flex flex-col gap-3">
             <p class="text-xs text-gray-400">Criado em: ${menu.created_at ? menu.created_at.slice(0, 10) : "N/A"}</p>
-            <a href="/stores/${menu.slug}" 
-               class="px-3 py-1 rounded-md bg-indigo-600 text-white text-sm font-medium
-                      hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition text-center">
+            
+            <a href="" 
+               class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium text-center
+                      hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
+                Editar Cardápio
+            </a>
+            
+            <a href="/menus/${menu.slug}" 
+               class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium text-center
+                      hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
                 Ver Cardápio
             </a>
         </div>
     </div>
     `;
 }
+
 
 $(document).ready(function () {
     $.ajax({

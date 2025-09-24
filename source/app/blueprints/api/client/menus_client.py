@@ -10,7 +10,11 @@ menus_client = Blueprint("menus_client", __name__, url_prefix="/api")
 @menus_client.route("/stores/<string:slug>", methods=["GET"])
 def render_menu_with_slug(slug: str):
     menu = menu_services.get_menu_by_slug(slug)
-    return jsonify(menu)
+    return Response.success(
+        message="Menu returned successfully.",
+        data=menu,
+        status_code=200
+    )
 
 """ 02. X """
 @menus_client.route("/stores/<string:slug>/categories/<string:category_id>", methods=["GET"])

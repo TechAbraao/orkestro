@@ -1,0 +1,34 @@
+{% extends "layouts/menus.jinja2" %}
+
+{% block title %}
+    {{ strategy["menu_name"] }}
+{% endblock title %}
+
+{% block navbar %}
+    <header class="bg-gray-900 text-white py-6 h-[ shadow-md">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"
+                     class="h-12 w-12 rounded-full border-2 border-gray-700">
+                <div>
+                    <h1 id="menu-name" class="text-2xl font-bold">Nome da Empresa</h1>
+                    <p id="menu-description" class="text-sm text-gray-300">Descrição do Cardápio</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-6">
+                <a href="#" class="hover:text-gray-300 transition">Contato</a>
+            </nav>
+        </div>
+    </header>
+    <script>
+        const menuClient = "{{ url_for('menus_client.render_menu_with_slug', slug=strategy['menu_slug']) }}";
+    </script>
+    <script src="{{ url_for('static', filename='javascript/menus.js') }}" defer></script>
+{% endblock navbar %}
+
+{% block menu %}
+    <section class="w-full h-full bg-red-50 flex flex-col items-center justify-center">
+        MENUS FICAM AQUI
+    </section>
+{% endblock menu %}
+

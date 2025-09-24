@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Default {% endblock title %} | Orkestro </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/transitions.css') }}">
+
+    {% block scripts %}
+    {% endblock scripts %}
+
+    {# Importing all macros #}
+    {% import "macros/buttons.jinja2" as buttons %}
+    {% import "macros/alerts.jinja2" as alerts %}
+    {% import "macros/inputs.jinja2" as inputs %}
+    {% import "macros/modals.jinja2" as modals %}
+    {% import "macros/cards.jinja2" as cards %}
+</head>
+<body class="min-h-screen flex flex-col">
+{# Modals #}
+    {# Navbar #}
+    <section class="text-white py-4 flex-shrink-0 bg-red-900 transition-all duration-300">
+        {% block navbar %}
+
+        {% endblock navbar %}
+    </section>
+
+    {# Menus #}
+    <main class="flex-1 overflow-auto p-6 bg-gray-50 h-screen">
+        {% block menu %}
+
+        {% endblock menu %}
+    </main>
+</body>
+</html>
