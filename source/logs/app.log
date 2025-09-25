@@ -7374,3 +7374,821 @@ WHERE menus.id = %(id_1)s::UUID
 2025-09-23 23:43:55,421 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
 2025-09-23 23:43:55,425 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg2ODU0MzB9.NC6-_5l3zw7H81sfGhCKoGgT7uIBJ-nryZQ-oNBnGZo'
 2025-09-23 23:43:55,425 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758685430}'
+2025-09-24 11:57:07,036 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 11:57:18,533 - INFO - orkestro - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-24 11:57:18,799 - WARNING - orkestro - Password for 'abraaosantos.contato@hotmail.com' does not match.
+2025-09-24 11:57:18,800 - WARNING - orkestro - Invalid passwords: Passwords are not the same.
+2025-09-24 11:57:22,359 - INFO - orkestro - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-24 11:57:22,568 - INFO - orkestro - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U
+2025-09-24 11:57:23,841 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 11:57:23,841 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 11:57:25,221 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 11:57:25,361 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 11:57:25,362 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 11:57:25,367 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 11:57:25,367 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 11:57:26,743 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 11:57:26,743 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 11:57:26,760 - INFO - orkestro - Cache inserido com sucesso. A chave é: menu:adega-da-praca:categories.
+2025-09-24 11:57:26,760 - INFO - orkestro - Menu com Slug 'adega-da-praca' encontrado.
+2025-09-24 11:57:26,760 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 11:57:26,784 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 11:57:26,834 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 11:57:26,835 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 11:57:26,835 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 11:57:36,777 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 12:00:26,781 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:00:26,782 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:00:26,783 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:00:26,783 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:00:26,783 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:00:26,809 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 12:00:26,815 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 12:00:27,151 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:00:27,152 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:00:27,153 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:00:59,194 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:00:59,194 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:00:59,195 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:00:59,195 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:00:59,195 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:00:59,216 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 12:00:59,334 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:00:59,338 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:00:59,338 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:00:59,339 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:00:59,339 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:01:00,493 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 12:02:33,586 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:02:33,587 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:02:33,588 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:02:33,588 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:02:33,588 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:02:33,612 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 12:02:33,737 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:02:33,741 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:02:33,741 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:02:33,742 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:02:33,742 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:04:32,864 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:04:32,864 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:04:32,865 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:04:32,865 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:04:32,865 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:04:32,953 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:04:32,956 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:04:32,957 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:04:32,958 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:04:32,958 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:05:15,857 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:05:15,857 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:05:15,859 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:05:15,859 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:05:15,859 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:05:15,952 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:05:15,956 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:05:15,956 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:05:15,956 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:05:15,956 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:05:43,462 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:05:43,463 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:05:43,465 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:05:43,465 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:05:43,465 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:05:43,535 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:05:43,535 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:05:43,539 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:05:43,540 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:05:43,540 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:05:53,340 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:05:53,341 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:05:53,342 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:05:53,342 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:05:53,342 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:05:53,439 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:05:53,439 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:05:53,443 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:05:53,445 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:05:53,445 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:06:10,424 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:06:10,424 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:06:10,425 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:06:10,425 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:06:10,425 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:06:10,509 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:06:10,513 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:06:10,513 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:06:10,514 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:06:10,514 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:06:45,375 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:06:45,375 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:06:45,376 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:06:45,376 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:06:45,376 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:06:45,461 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:06:45,465 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:06:45,465 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:06:45,466 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:06:45,466 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:08:02,265 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:08:02,266 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:08:02,272 - INFO - orkestro - Cache inserido com sucesso. A chave é: menu:adega-da-praca:categories.
+2025-09-24 12:08:02,273 - INFO - orkestro - Menu com Slug 'adega-da-praca' encontrado.
+2025-09-24 12:08:02,273 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:08:02,353 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:08:02,357 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:08:02,358 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:08:02,358 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:08:02,358 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:15:29,223 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:15:29,232 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:15:29,233 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:15:29,233 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:15:29,233 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:15:29,384 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:15:29,388 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:15:29,388 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:15:29,389 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:15:29,389 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:21:34,762 - INFO - orkestro - Buscando menu através do slug 'adega-sao-jorge'
+2025-09-24 12:21:34,763 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-sao-jorge:categories'.
+2025-09-24 12:21:34,774 - WARNING - orkestro - Menu com Slug adega-sao-jorge não encontrado.
+2025-09-24 12:21:34,775 - WARNING - orkestro - Menu not found: Menu not found.
+2025-09-24 12:21:37,850 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 12:21:43,297 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 12:21:46,348 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:21:46,348 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:21:48,180 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:21:48,181 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:21:49,618 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:21:49,618 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:24:36,074 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:24:36,074 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:24:38,970 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:24:39,094 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:24:39,098 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:24:39,098 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:24:39,098 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:24:40,305 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:24:40,305 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:24:40,310 - INFO - orkestro - Cache inserido com sucesso. A chave é: menu:adega-da-praca:categories.
+2025-09-24 12:24:40,310 - INFO - orkestro - Menu com Slug 'adega-da-praca' encontrado.
+2025-09-24 12:24:40,310 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:24:40,390 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:24:40,393 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:24:40,394 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:24:40,395 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:24:40,395 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:25:04,540 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:04,672 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:04,675 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:04,676 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:04,676 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:06,738 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:06,843 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:06,844 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:06,849 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:06,849 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:08,125 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:08,227 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:08,227 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:08,233 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:08,233 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:16,919 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:17,025 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:17,025 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:17,030 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:17,031 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:18,645 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:18,754 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:18,754 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:18,758 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:18,759 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:19,916 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:20,038 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:20,039 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:20,042 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:20,043 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:20,502 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:20,614 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:20,614 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:20,618 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:20,618 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:20,921 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:21,047 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:21,047 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:21,052 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:21,052 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:22,752 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:22,872 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:22,872 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:22,876 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:22,876 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:23,684 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:23,783 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:23,784 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:23,789 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:23,789 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:24,605 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:24,739 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:24,740 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:24,744 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:24,745 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:25,614 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:25,718 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:25,719 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:25,721 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:25,722 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:26,171 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:26,284 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:26,284 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:26,286 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:26,287 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:26,724 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:26,844 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:26,844 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:26,849 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:26,849 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:34,152 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:34,259 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:34,259 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:34,262 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:34,263 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:25:36,575 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:25:36,575 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:25:36,576 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:25:36,576 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:25:36,576 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:25:36,639 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:25:36,643 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:36,643 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:36,644 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:25:36,644 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:25:45,630 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:25:45,630 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:25:45,631 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:25:45,632 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:25:45,632 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:25:45,710 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:45,713 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:25:45,713 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:45,714 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:25:45,714 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:25:48,637 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:25:48,637 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:25:48,639 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:25:48,639 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:25:48,639 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:25:48,719 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:48,722 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:25:48,722 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:48,723 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:25:48,723 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:25:50,695 - INFO - orkestro - Buscando menu através do slug 'adega-da-praca'
+2025-09-24 12:25:50,695 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:25:50,696 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:25:50,697 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:25:50,697 - INFO - orkestro - Menu encontrado: {'name': 'Adega da Praça', 'description': 'Cardápio Oficial da Adega da Praça', 'created_at': '2025-09-24T01:47:08.361080+00:00', 'slug': 'adega-da-praca', 'categories': []}
+2025-09-24 12:25:50,848 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:adega-da-praca:categories'.
+2025-09-24 12:25:50,851 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:50,851 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:50,852 - INFO - orkestro - Chave de Cache encontrada: menu:adega-da-praca:categories.
+2025-09-24 12:25:50,852 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:25:54,531 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:25:54,668 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:25:54,668 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:25:54,672 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:25:54,673 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:26:50,905 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:26:51,039 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:26:51,039 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:26:51,044 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:26:51,044 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:27:07,459 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:27:07,592 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:27:07,593 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:27:07,596 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:27:07,597 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:36:07,196 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:07,196 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:08,804 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:08,804 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:09,692 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:09,692 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:09,900 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:36:10,090 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:10,093 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:36:10,093 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:10,093 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:36:11,282 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:11,283 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:11,689 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:11,690 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:12,274 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:36:12,436 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:12,437 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:12,446 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:36:12,446 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:36:12,801 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:36:12,961 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:12,961 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:12,966 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:36:12,967 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:36:14,648 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:14,648 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:15,409 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:15,409 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:16,690 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:16,690 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:17,258 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:17,259 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:17,928 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:17,928 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:19,068 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:19,069 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:36:19,912 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:36:19,913 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:40:15,329 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:40:15,338 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:40:16,202 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:40:16,347 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:40:16,347 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:40:16,352 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:40:16,353 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:41:20,513 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:41:20,634 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:41:20,635 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:41:20,639 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:41:20,639 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:46:14,176 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:46:14,387 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:46:14,387 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:46:14,391 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:46:14,391 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:46:17,693 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:46:17,826 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:46:17,826 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:46:17,832 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:46:17,832 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:46:20,935 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:46:21,058 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:46:21,058 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:46:21,063 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:46:21,064 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:46:21,821 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:46:21,931 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:46:21,935 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:46:21,936 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:46:21,936 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:46:22,494 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:46:22,626 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:46:22,626 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:46:22,630 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:46:22,631 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:46:23,353 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:46:23,460 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:46:23,461 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:46:23,464 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:46:23,465 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:48:54,175 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 12:48:54,294 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:48:54,294 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:48:54,298 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:48:54,299 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:48:55,197 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 12:49:18,465 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:49:18,465 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:49:18,470 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:49:18,471 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 12:49:29,707 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3Mjk0NDJ9.8s2rbkTVvMHXFNeYiid325JML--_ftK0VMG9AUUTS1U'
+2025-09-24 12:49:29,708 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758729442}'
+2025-09-24 12:49:38,958 - INFO - orkestro - Checking if email 'abraao.cutielips@hotmail.com' exists in the database.
+2025-09-24 12:49:39,164 - INFO - orkestro - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk
+2025-09-24 12:49:40,406 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:49:40,407 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:49:42,992 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:49:42,992 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:49:42,998 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:49:42,998 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:49:45,375 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:49:45,376 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:49:45,381 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:49:45,381 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:49:46,627 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:49:46,627 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:49:50,296 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:49:50,296 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:49:50,301 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:49:50,301 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:51:50,267 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 12:51:50,504 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:51:50,504 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:51:50,510 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:51:50,510 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:51:53,250 - INFO - orkestro - Buscando menu através do slug 'existeeeee'
+2025-09-24 12:51:53,250 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-24 12:51:53,260 - INFO - orkestro - Cache inserido com sucesso. A chave é: menu:existeeeee:categories.
+2025-09-24 12:51:53,260 - INFO - orkestro - Menu com Slug 'existeeeee' encontrado.
+2025-09-24 12:51:53,261 - INFO - orkestro - Menu encontrado: {'name': 'Existeeeee', 'description': 'eeeeeeeeeeeeeeeeeeeeee', 'created_at': '2025-09-23T02:14:52.570359+00:00', 'slug': 'existeeeee', 'categories': []}
+2025-09-24 12:51:53,368 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:51:53,372 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-24 12:51:53,372 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:51:53,373 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-24 12:51:53,373 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 12:51:55,375 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:51:55,375 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:51:55,380 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:51:55,381 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:51:58,803 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:51:58,803 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:51:58,807 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:51:58,807 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:52:03,755 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 12:52:03,887 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:52:03,887 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:52:03,891 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:52:03,891 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:52:04,589 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:52:04,589 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:52:04,593 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:52:04,594 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:52:05,998 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:52:05,999 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:52:06,003 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:52:06,004 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:52:10,504 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:52:10,505 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:52:14,229 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 12:52:14,338 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:52:14,338 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:52:14,343 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:52:14,344 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:52:15,744 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:52:15,744 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:52:15,748 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:52:15,749 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:52:20,464 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:52:20,464 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:53:45,720 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:53:45,721 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:53:46,648 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 12:53:46,777 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:53:46,778 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:53:46,783 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:53:46,784 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:53:48,264 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:53:48,265 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:53:48,269 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:53:48,269 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:53:51,043 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:53:51,043 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:53:51,048 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:53:51,049 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:54:16,298 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 12:54:16,403 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:54:16,403 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:54:16,409 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:54:16,410 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:54:18,309 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:54:18,313 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:54:18,313 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 12:54:18,314 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:54:36,606 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3MzI1Nzl9.Wx3zD1TBlcL7Aer5rZfGy4Kvc0v8eDML-P9wCoPGdkk'
+2025-09-24 12:54:36,610 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758732579}'
+2025-09-24 12:54:36,609 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 12:54:36,611 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:15:23,675 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 19:15:23,683 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 19:15:31,117 - INFO - orkestro - Checking if email 'abraaosantos.contato@hotmail.com' exists in the database.
+2025-09-24 19:15:31,383 - INFO - orkestro - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8
+2025-09-24 19:15:32,630 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:15:32,630 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:15:33,785 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 19:15:33,906 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:15:33,907 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:15:33,913 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:15:33,913 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:15:35,470 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:15:35,470 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:15:35,475 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:15:35,475 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:15:50,952 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:15:50,952 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:15:50,957 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:15:50,958 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:15:51,455 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:15:51,455 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:15:51,460 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:15:51,460 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:15:54,828 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 19:15:55,503 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 19:15:58,233 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:15:58,233 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:15:58,239 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:15:58,239 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:17:49,115 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:17:49,115 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:17:49,641 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 19:17:49,776 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:17:49,777 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:17:49,782 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:17:49,782 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:19:21,484 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 19:19:30,589 - ERROR - orkestro - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-24 19:19:31,997 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 19:19:32,125 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:19:32,125 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:19:32,130 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:19:32,130 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:19:32,833 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:19:32,833 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:19:32,837 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:19:32,838 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:19:35,764 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:19:35,764 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:19:35,769 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:19:35,770 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:19:49,918 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:19:49,918 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:19:49,923 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:19:49,924 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:20:00,390 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 19:20:00,528 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:20:00,531 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:00,532 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:20:00,532 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:01,073 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:01,074 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:01,486 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 19:20:01,613 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:01,614 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:01,618 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:20:01,619 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:20:03,006 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:03,006 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:03,011 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:20:03,012 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:20:19,884 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:19,884 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:19,889 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:20:19,889 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:20:22,776 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:22,780 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:20:22,780 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:22,780 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:20:25,096 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:25,096 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:25,100 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:20:25,100 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:20:27,469 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:27,470 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:27,473 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:20:27,474 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:20:35,691 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 19:20:35,832 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:35,832 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:35,837 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:20:35,838 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:20:36,176 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 19:20:36,302 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:36,302 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:36,306 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:20:36,307 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:20:37,308 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:37,309 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:37,314 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:20:37,314 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:20:41,032 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:41,032 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:41,037 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:20:41,038 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:20:42,687 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:20:42,687 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:20:42,692 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:20:42,692 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:21:19,990 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:21:19,990 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:21:19,995 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:21:19,996 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:21:20,249 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:21:20,249 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:21:20,255 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:21:20,256 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:21:20,553 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:21:20,554 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:21:20,558 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:21:20,558 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:21:22,149 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:21:22,149 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:21:22,154 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:21:22,155 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:21:28,149 - INFO - orkestro - GET /menus - View Menu with store_id: '7709906e-3324-44c7-9a81-2b032a1feffd'
+2025-09-24 19:21:28,304 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:21:28,304 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:21:28,309 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:21:28,309 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7709906e-3324-44c7-9a81-2b032a1feffd'. 
+2025-09-24 19:21:32,356 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6Ijc3MDk5MDZlLTMzMjQtNDRjNy05YTgxLTJiMDMyYTFmZWZmZCIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTU3MzF9.ljaJuSF3Llm1KW1IYchSBbvPE9_KmhDg8E6VVfpEgY8'
+2025-09-24 19:21:32,356 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7709906e-3324-44c7-9a81-2b032a1feffd', 'role': 'COMMON', 'exp': 1758755731}'
+2025-09-24 19:21:40,145 - INFO - orkestro - Checking if email 'abraao.cutielips@hotmail.com' exists in the database.
+2025-09-24 19:21:40,366 - INFO - orkestro - Access token created successfully: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4
+2025-09-24 19:21:41,570 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:21:41,570 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:21:42,732 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:21:42,847 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:21:42,847 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:21:42,852 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:21:42,853 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:21:43,898 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:21:43,898 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:21:43,902 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:21:43,903 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:22:01,581 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:22:01,581 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:22:01,585 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:22:01,585 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:22:19,459 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:22:19,460 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:22:19,463 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:22:19,464 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:22:33,150 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:22:33,153 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:22:33,153 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:22:33,153 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:23:57,201 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:23:57,201 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:24:02,022 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:24:02,022 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:24:02,026 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:24:02,027 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:24:03,427 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:24:03,541 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:24:03,541 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:24:03,546 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:24:03,546 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:24:04,849 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:24:04,849 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:24:04,854 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:24:04,855 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:24:07,275 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:24:07,397 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:24:07,397 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:24:07,401 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:24:07,401 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:24:08,969 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:24:09,076 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:24:09,076 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:24:09,081 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:24:09,081 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:24:09,872 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:24:09,872 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:24:09,876 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:24:09,877 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:24:19,722 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:24:19,723 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:24:20,970 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:24:21,093 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:24:21,094 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:24:21,099 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:24:21,099 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:24:23,352 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:24:23,352 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:24:23,357 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:24:23,358 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:24:50,478 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:24:50,953 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:24:50,959 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:24:50,969 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:24:50,975 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:24:52,146 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:24:52,146 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:24:52,168 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:24:52,169 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:25:33,608 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:25:33,609 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:25:34,305 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:25:34,305 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:25:35,602 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:25:35,718 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:25:35,718 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:25:35,722 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:25:35,723 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:25:37,073 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:25:37,073 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:25:37,078 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:25:37,079 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:26:12,442 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:26:12,442 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:26:12,447 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:26:12,447 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:26:12,933 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:26:12,933 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:26:12,938 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:26:12,938 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:26:14,489 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:26:14,489 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:26:14,494 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:26:14,495 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:26:41,784 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:26:41,935 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:26:41,936 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:26:41,940 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:26:41,941 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:26:42,296 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:26:42,406 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:26:42,406 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:26:42,411 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:26:42,412 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:26:45,404 - INFO - orkestro - Buscando menu através do slug 'existeeeee'
+2025-09-24 19:26:45,404 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-24 19:26:45,440 - INFO - orkestro - Cache inserido com sucesso. A chave é: menu:existeeeee:categories.
+2025-09-24 19:26:45,440 - INFO - orkestro - Menu com Slug 'existeeeee' encontrado.
+2025-09-24 19:26:45,440 - INFO - orkestro - Menu encontrado: {'name': 'Existeeeee', 'description': 'eeeeeeeeeeeeeeeeeeeeee', 'created_at': '2025-09-23T02:14:52.570359+00:00', 'slug': 'existeeeee', 'categories': []}
+2025-09-24 19:26:45,529 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-24 19:26:45,534 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:26:45,534 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-24 19:26:45,534 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:26:45,534 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 19:27:02,720 - INFO - orkestro - Buscando menu através do slug 'e6223662-8f8d-4d6b-bf4f-0569f2a3d76e'
+2025-09-24 19:27:02,720 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:e6223662-8f8d-4d6b-bf4f-0569f2a3d76e:categories'.
+2025-09-24 19:27:02,724 - WARNING - orkestro - Menu com Slug e6223662-8f8d-4d6b-bf4f-0569f2a3d76e não encontrado.
+2025-09-24 19:27:02,724 - WARNING - orkestro - Menu not found: Menu not found.
+2025-09-24 19:28:08,691 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:28:08,692 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:28:09,546 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:28:09,702 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:28:09,705 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:28:09,705 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:28:09,706 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:28:10,352 - INFO - orkestro - Buscando menu através do slug 'existeeeee'
+2025-09-24 19:28:10,352 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-24 19:28:10,353 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-24 19:28:10,353 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 19:28:10,353 - INFO - orkestro - Menu encontrado: {'name': 'Existeeeee', 'description': 'eeeeeeeeeeeeeeeeeeeeee', 'created_at': '2025-09-23T02:14:52.570359+00:00', 'slug': 'existeeeee', 'categories': []}
+2025-09-24 19:28:10,420 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-24 19:28:10,423 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:28:10,423 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:28:10,424 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-24 19:28:10,424 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 19:28:13,312 - INFO - orkestro - Buscando menu através do slug 'e6223662-8f8d-4d6b-bf4f-0569f2a3d76e'
+2025-09-24 19:28:13,312 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:e6223662-8f8d-4d6b-bf4f-0569f2a3d76e:categories'.
+2025-09-24 19:28:13,317 - WARNING - orkestro - Menu com Slug e6223662-8f8d-4d6b-bf4f-0569f2a3d76e não encontrado.
+2025-09-24 19:28:13,317 - WARNING - orkestro - Menu not found: Menu not found.
+2025-09-24 19:28:37,244 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:28:37,422 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:28:37,426 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:28:37,426 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:28:37,426 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:28:38,107 - INFO - orkestro - Buscando menu através do slug 'existeeeee'
+2025-09-24 19:28:38,107 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-24 19:28:38,109 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-24 19:28:38,109 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 19:28:38,109 - INFO - orkestro - Menu encontrado: {'name': 'Existeeeee', 'description': 'eeeeeeeeeeeeeeeeeeeeee', 'created_at': '2025-09-23T02:14:52.570359+00:00', 'slug': 'existeeeee', 'categories': []}
+2025-09-24 19:28:38,482 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:28:38,482 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:28:38,487 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-24 19:28:38,489 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-24 19:28:38,489 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 19:28:40,929 - INFO - orkestro - Buscando menu através do slug 'existeeeee'
+2025-09-24 19:28:40,929 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-24 19:28:40,931 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-24 19:28:40,931 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 19:28:40,931 - INFO - orkestro - Menu encontrado: {'name': 'Existeeeee', 'description': 'eeeeeeeeeeeeeeeeeeeeee', 'created_at': '2025-09-23T02:14:52.570359+00:00', 'slug': 'existeeeee', 'categories': []}
+2025-09-24 19:28:41,017 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:28:41,020 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-24 19:28:41,021 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:28:41,022 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-24 19:28:41,022 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 19:28:42,818 - INFO - orkestro - Buscando menu através do slug 'e6223662-8f8d-4d6b-bf4f-0569f2a3d76e'
+2025-09-24 19:28:42,819 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:e6223662-8f8d-4d6b-bf4f-0569f2a3d76e:categories'.
+2025-09-24 19:28:42,822 - WARNING - orkestro - Menu com Slug e6223662-8f8d-4d6b-bf4f-0569f2a3d76e não encontrado.
+2025-09-24 19:28:42,822 - WARNING - orkestro - Menu not found: Menu not found.
+2025-09-24 19:28:57,041 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:28:57,154 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:28:57,154 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:28:57,159 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:28:57,159 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:29:45,700 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:29:45,701 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:29:46,550 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:29:46,551 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:29:46,915 - INFO - orkestro - GET /menus - View Menu with store_id: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'
+2025-09-24 19:29:47,025 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:29:47,026 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:29:47,030 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:29:47,030 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:29:48,850 - INFO - orkestro - Buscando menu através do slug 'existeeeee'
+2025-09-24 19:29:48,850 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-24 19:29:48,851 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-24 19:29:48,852 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 19:29:48,852 - INFO - orkestro - Menu encontrado: {'name': 'Existeeeee', 'description': 'eeeeeeeeeeeeeeeeeeeeee', 'created_at': '2025-09-23T02:14:52.570359+00:00', 'slug': 'existeeeee', 'categories': []}
+2025-09-24 19:29:48,917 - INFO - orkestro - Chave de cacheamento criado, a chave é 'menu:existeeeee:categories'.
+2025-09-24 19:29:48,921 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:29:48,922 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:29:48,922 - INFO - orkestro - Chave de Cache encontrada: menu:existeeeee:categories.
+2025-09-24 19:29:48,922 - INFO - orkestro - Sucesso do cache no método 'get_menu_by_slug'.
+2025-09-24 19:29:52,410 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:29:52,410 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'
+2025-09-24 19:29:52,415 - INFO - orkestro - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2025-09-24 19:29:52,415 - INFO - orkestro - Retornando os menus da loja autenticada. UUID da loja: '7252bff8-d1dc-4c43-938e-75e2a1f9835a'. 
+2025-09-24 19:29:57,448 - INFO - orkestro - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6IjcyNTJiZmY4LWQxZGMtNGM0My05MzhlLTc1ZTJhMWY5ODM1YSIsInJvbGUiOiJDT01NT04iLCJleHAiOjE3NTg3NTYxMDB9.eQoecOioscxmgYe5aCZRhbggiQC48WtQkhGFJOqHSt4'
+2025-09-24 19:29:57,448 - INFO - orkestro - Decrypted token: '{'iss': 'Orkestro', 'sub': '7252bff8-d1dc-4c43-938e-75e2a1f9835a', 'role': 'COMMON', 'exp': 1758756100}'

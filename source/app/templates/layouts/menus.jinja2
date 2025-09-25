@@ -19,7 +19,10 @@
     {% import "macros/cards.jinja2" as cards %}
 </head>
 <body class="min-h-screen flex flex-col">
-{# Modals #}
+    {# Modals #}
+    {{ modals.modal_contact_menu() }}
+
+
     {# Navbar #}
     <section class="text-white py-4 flex-shrink-0 bg-red-900 transition-all duration-300">
         {% block navbar %}

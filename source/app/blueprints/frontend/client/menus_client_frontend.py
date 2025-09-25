@@ -11,7 +11,6 @@ def view_menu_by_slug(slug: str):
     logger.info(f"Buscando menu através do slug '{slug}'")
     menu_by_slug = menu_services.get_menu_by_slug(slug)
     logger.info(f"Menu encontrado: {menu_by_slug}")
-
     rendering_strategy = {
         "menu_slug": slug,
         "menu_name": menu_by_slug.get("name")

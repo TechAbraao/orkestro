@@ -1,0 +1,34 @@
+{% extends "layouts/administrative.jinja2" %}
+
+{% block title %}
+    Editar Cardápio
+{% endblock title %}
+
+{% block sidenav %}
+    {# Dynamic rendering from the backend #}
+    {% include "partials/sidebar.jinja2" %}
+    <script src="{{ url_for('static', filename='javascript/logout.js') }}" defer></script>
+{% endblock sidenav %}
+
+{% block dashboard %}
+    <section class="w-full h-full bg-red-50 flex flex-col items-center justify-start">
+        {# Modals #}
+        <section class="w-full h-full bg-green-400">
+            EDIT MENU
+        </section>
+    </section>
+    <script src="{{ url_for('static', filename='javascript/menus_in_dashboard.js') }}" defer></script>
+{% endblock dashboard %}
+
+{% block navbar %}
+    <aside class="w-full pl-10 text-lg font-extrabold">
+        Editar Cardápio | <span class="font-extralight">Seja bem-vindo novamente,</span> <span
+            class="font-extralight" id="store-name-navbar">Company name</span>
+    </aside>
+{% endblock navbar %}
+
+{% block footer %}
+    <aside class="w-auto h-full">
+        Orkestro © 2025 | versão 1.0.0
+    </aside>
+{% endblock footer %}

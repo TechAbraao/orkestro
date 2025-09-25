@@ -39,3 +39,8 @@ def views_menus_manager_dashboard():
         "logged": False
     }
     return render_template("pages/manage_menu.jinja2", strategy=rendering_strategy)
+
+@main_frontend.get("/menus/<string:menu_id>/edit")
+@authorization_required
+def views_edit_menu_dashboard(menu_id: str):
+    return render_template("pages/edit_menu.jinja2")
