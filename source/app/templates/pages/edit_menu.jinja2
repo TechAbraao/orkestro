@@ -6,6 +6,7 @@
 
 {% block sidenav %}
     {# Dynamic rendering from the backend #}
+
     {% include "partials/sidebar.jinja2" %}
     <script src="{{ url_for('static', filename='javascript/logout.js') }}" defer></script>
 {% endblock sidenav %}
@@ -13,11 +14,34 @@
 {% block dashboard %}
     <section class="w-full h-full bg-red-50 flex flex-col items-center justify-start">
         {# Modals #}
+        {{ modals.modal_create_category() }}
+
+        {# Menu de Opções #}
+        <div class="w-full h-24 flex items-center justify-left">
+            <aside class="w-1/3 flex items-center justify-center gap-3 bg-red-500">
+                {{ buttons.button_redirect(endpoint="main_frontend.views_menus_manager_dashboard", text="Voltar") }}
+                <button id="btn-create-category" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                    Nova Categoria
+                </button>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                    Configurações do Cardápio
+                </button>
+            </aside>
+            <div class="bg-red-200">
+                <p>Nome do Cardápio</p>
+            </div>
+        </div>
+
+        {# Categorias serão renderizadas aqui #}
         <section class="w-full h-full bg-green-400">
             EDIT MENU
         </section>
     </section>
-    <script src="{{ url_for('static', filename='javascript/menus_in_dashboard.js') }}" defer></script>
+    <script>
+        const menuId = "{{ strategy.get("profile")["menu_id"] }}"
+        const getCategoriesURL = `/api/menus/${menuId}/categories`
+    </script>
+    <script src="{{ url_for('static', filename='javascript/category_operations.js') }}" defer></script>
 {% endblock dashboard %}
 
 {% block navbar %}

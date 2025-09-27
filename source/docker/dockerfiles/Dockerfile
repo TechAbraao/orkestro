@@ -9,7 +9,8 @@ RUN apk add --no-cache \
     pkgconfig \
     libffi-dev \
     python3-dev \
-    build-base
+    build-base \
+    postgresql-dev
 
 COPY source/requirements.txt .
 
