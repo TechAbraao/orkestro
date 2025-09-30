@@ -21,8 +21,9 @@ class RedisRepository:
         except (TypeError, json.JSONDecodeError):
             return value
 
-    def delete(self, key: str) -> None:
+    def delete(self, key: str) -> bool:
         self.client.delete(key)
+        return True
 
     def increment(self, key: str) -> int:
         return self.client.incr(key)

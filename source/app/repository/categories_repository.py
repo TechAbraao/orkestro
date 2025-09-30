@@ -84,6 +84,25 @@ class CategoriesRepository:
         self.session.delete(category)
         return True
 
+    def get_menu_by_category_id(self, category_id: str):
+        logger.info(f"Fetching menu_id and menu_name for category '{category_id}'")
+
+        result = (
+            self.session.query(MenusEntity.id, MenusEntity.name)
+            .join(CategoriesEntity, CategoriesEntity.menu_id == MenusEntity.id)
+            .filter(CategoriesEntity.id == category_id)
+            .first()
+        )
+
+        if not result:
+            logger.warning(f"No menu found for category '{category_id}'")
+            return None
+
+        return {
+            "menu_id": result.id,
+            "menu_name": result.name
+        }
+
     def get_categories_by_menu_id(self, menu_id: str):
         categories = (
             self.session

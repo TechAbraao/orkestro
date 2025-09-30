@@ -1,7 +1,8 @@
-from flask import Blueprint, render_template, request, g
+from flask import Blueprint, render_template, request, g, abort, redirect, url_for
 from source.app.utils.decorators.authorizations import authorization_required
 from source.app.settings.logging_settings import get_logger
-from source.app.services import menu_services
+from source.app.services import menu_services, categories_services
+
 
 main_frontend = Blueprint("main_frontend", __name__, url_prefix="")
 logger = get_logger(__name__)
@@ -40,16 +41,29 @@ def views_menus_manager_dashboard():
     }
     return render_template("pages/manage_menu.jinja2", strategy=rendering_strategy)
 
-@main_frontend.get("/menus/<string:menu_id>/edit")
+@main_frontend.get("/menus/<string:menu_id>/categories")
 @authorization_required
 def views_edit_menu_dashboard(menu_id: str):
-    logger.info(f"GET /menus/{menu_id}/edit - Visualizar categorias no menu_id: '{menu_id}'")
+    store_id = g.jwt_claims.get("sub")
+    logger.info(f"GET /menus/{menu_id}/edit - Visualizar categorias no menu_id: '{menu_id}'.")
+    logger.info(f"UUID da Loja: {store_id}.")
+
+    """ Verificar se o Menu/Cardápio (menu_id) existe a partir da Loja (store_id). """
+    logger.info(f"Verificando se o Menu: '{menu_id}' pertence à Loja: '{store_id}'.")
+    belongs_store = menu_services.exists_menu_by_store_and_id(store_id, menu_id)
+    if not belongs_store:
+        logger.warning(f"O Menu '{menu_id}' não pertence à Loja '{store_id}'.")
+        return redirect(url_for("main_frontend.views_menus_manager_dashboard"))
+
+
+    logger.info(f"Buscando informações do 'menu_id' = '{menu_id}' através do 'store_id' = '{store_id}'.")
+    menu_info = menu_services.get_menu_by_id(menu_id)
 
     rendering_strategy = {
         "profile": {
-            "menu_id": menu_id or "None"
+            "menu_id": menu_id,
+            "menu_name": menu_info["name"],
         }
     }
-
 
     return render_template("pages/edit_menu.jinja2", strategy=rendering_strategy)

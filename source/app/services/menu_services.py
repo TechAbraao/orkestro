@@ -1,3 +1,5 @@
+from calendar import day_name
+
 from source.app.repository.products_repository import ProductsRepository
 from source.app.repository.menus_repository import MenusRepository
 from source.app.entities.menus_entity import MenusEntity
@@ -79,6 +81,10 @@ class MenuServices:
         if exists:
             return True
         return False
+
+    @database_connection
+    def exists_menu_by_store_and_id(self, store_id: str, menu_id: str) -> bool:
+        return self.menu_repository.exists_by_store_and_id(store_id, menu_id)
 
     @database_connection
     def get_menus_by_store_id(self, store_id: str):
@@ -167,3 +173,8 @@ class MenuServices:
 
         logger.info(f"Menu com Slug '{slug}' encontrado.")
         return result
+
+    @database_connection
+    def get_menu_by_id(self, menu_id):
+        menu = self.menu_repository.get(menu_id)
+        return menu.serialize

@@ -18,7 +18,7 @@ function createMenuCard(menu) {
         <div class="mt-auto flex flex-col gap-3">
             <p class="text-xs text-gray-400">Criado em: ${menu.created_at ? menu.created_at.slice(0, 10) : "N/A"}</p>
             
-            <a href="/menus/${menu.id}/edit" 
+            <a href="/menus/${menu.id}/categories" 
                 class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium text-center
                 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
                 Editar Cardápio

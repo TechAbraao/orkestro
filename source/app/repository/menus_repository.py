@@ -1,6 +1,7 @@
 from source.app.settings.definitions_settings import db as database
 from source.app.utils.decorators.database import transactional
 from source.app.entities.menus_entity import MenusEntity
+from source.app.entities.stores_entity import StoresEntity
 from sqlalchemy.orm import raiseload
 
 class MenusRepository:
@@ -47,6 +48,18 @@ class MenusRepository:
         return (self.session.query(MenusEntity)
                 .filter(MenusEntity.store_id == store_id)
                 .all())
+
+    @transactional
+    def exists_by_store_and_id(self, store_id: str, menu_id: str) -> bool:
+        return (
+            self.session.query(MenusEntity)
+            .filter(
+                MenusEntity.id == menu_id,
+                MenusEntity.store_id == store_id
+            )
+            .first()
+            is not None
+        )
 
     @transactional
     def exists_menu_by_store_id(self, store_id: str) -> bool:

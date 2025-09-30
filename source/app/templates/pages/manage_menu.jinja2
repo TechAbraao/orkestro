@@ -21,7 +21,7 @@
         </aside>
         <section class="w-full h-full bg-green-400">
             {% if strategy.get("profile")["hasMenu"] == False %}
-                <h1>Nenhum cardápio encontrado;</h1>
+                <h1>Nenhum cardápio encontrado.</h1>
             {% elif strategy.get("profile")["hasMenu"] == True %}
                 <div id="menusContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
                     {# Os cards estão sendo populados aqui! #}
@@ -35,7 +35,7 @@
 
 {% block navbar %}
     <aside class="w-full pl-10 text-lg font-extrabold">
-        Gerenciar Cardápios | <span class="font-extralight">Seja bem-vindo novamente,</span> <span class="font-extralight" id="store-name-navbar">Company name</span>
+        Gerenciar Cardápios | <span class="font-extralight">Tenha total controle sobre seus cardápios de forma rápida e fácil | </span> <span class="font-extralight" id="store-name-navbar">Company name</span>
     </aside>
 {% endblock navbar %}
 
