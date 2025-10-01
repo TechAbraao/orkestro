@@ -12,29 +12,24 @@
 {% endblock sidenav %}
 
 {% block dashboard %}
-    <section class="w-full h-full bg-red-50 flex flex-col items-center justify-start">
+    <section id="" class="w-full h-full flex flex-col items-center justify-start gap-3">
         {# Modals #}
         {{ modals.modal_create_category() }}
 
         {# Menu de Opções #}
-        <div class="w-full h-24 flex items-center justify-left">
-            <aside class="w-1/3 flex items-center justify-center gap-3 bg-red-500">
-                {{ buttons.button_redirect(endpoint="main_frontend.views_menus_manager_dashboard", text="Voltar") }}
-                <button id="btn-create-category" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                    Nova Categoria
-                </button>
-                <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                    Configurações do Cardápio
-                </button>
-            </aside>
-            <div class="bg-red-200">
-                <p>Nome do Cardápio</p>
-            </div>
-        </div>
+        <aside class="w-full h-[70px] pl-5 flex items-center justify-start bg-gray-100 rounded-3xl gap-3">
+            {{ buttons.button_redirect(endpoint="main_frontend.views_menus_manager_dashboard", text="Voltar") }}
+            <button id="btn-create-category" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                Nova Categoria
+            </button>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                Configurações do Cardápio
+            </button>
+        </aside>
 
         {# Categorias serão renderizadas aqui #}
-        <section class="w-full h-full bg-green-400">
-            EDIT MENU
+        <section id="categoriesContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-gray-100 w-full h-full rounded-3xl">
+
         </section>
     </section>
     <script>

@@ -11,20 +11,28 @@
 {% endblock sidenav %}
 
 {% block dashboard %}
-    <section class="w-full h-full bg-red-50 flex flex-col items-center justify-start">
+    <section class="w-full h-full flex flex-col items-center justify-start gap-3">
     {# Modals #}
     {{ modals.modal_create_menu() }}
-        <aside class="w-full h-[70px] bg-red-400">
+        {#  #}
+        <aside class="w-full h-[70px] pl-5 flex items-center justify-start bg-gray-100 rounded-3xl">
             {% if strategy.get("profile")["hasMenu"] == False %}
                 {{ buttons.button_create_menu(id_button="btn-open-modal-create-menu") }}
+            {% elif strategy.get("profile")["hasMenu"] == True %}
+                <button class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
+                    Mais configurações
+                </button>
             {% endif %}
         </aside>
-        <section class="w-full h-full bg-green-400">
+        {#  #}
+        <section class="w-full h-full bg-white-200 flex items-center justify-center">
             {% if strategy.get("profile")["hasMenu"] == False %}
-                <h1>Nenhum cardápio encontrado.</h1>
+                <div class="bg-gray-100 w-full h-full rounded-3xl flex flex-col items-center justify-center">
+                   {% include "partials/no_menu_found.jinja2" %}
+                </div>
             {% elif strategy.get("profile")["hasMenu"] == True %}
-                <div id="menusContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-                    {# Os cards estão sendo populados aqui! #}
+                <div id="menusContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-gray-100 w-full h-full rounded-3xl">
+                    {# Os cards dos Cardápios estão sendo populados aqui! #}
                 </div>
             {% endif %}
         </section>

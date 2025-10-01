@@ -52,7 +52,6 @@ def get_menus():
         all_menus_returned = menu_services.get_all_menus(include=include)
         return jsonify(all_menus_returned)
 
-
 """ 3. Deletar Menu. """
 @menus_bp.route("/<string:menu_id>", methods=["DELETE"])
 @authorization_required

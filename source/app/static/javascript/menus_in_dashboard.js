@@ -1,6 +1,6 @@
 function createMenuCard(menu) {
     return `
-    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col justify-between w-72 p-6">
+    <div class="menu-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col justify-between h-72 w-72 p-6">
         
         <div class="flex justify-between items-start mb-4">
             <h3 class="text-xl font-bold text-gray-900 capitalize">${menu.name}</h3>
@@ -50,9 +50,33 @@ $(document).ready(function () {
             console.error("Error: ", response);
         }
     });
+});
 
-    $(document).on("click", ".btn-delete-menu", function() {
-        const menuId = $(this).data("id");
-        console.log("Excluir menu:", menuId);
+$(document).on("click", ".btn-delete-menu", function() {
+    const menuId = $(this).data("id");
+
+    if (!confirm("Tem certeza que deseja excluir este menu?")) {
+        return;
+    }
+
+    $.ajax({
+        url: `/api/menus/${menuId}`,
+        method: "DELETE",
+        success: function(response) {
+            alert(response.message || "Menu deletado com sucesso!");
+
+            $(`.btn-delete-menu[data-id='${menuId}']`).closest(".menu-card").remove();
+
+            window.location.reload()
+        },
+        error: function(xhr) {
+            let response = {};
+            try {
+                response = JSON.parse(xhr.responseText);
+            } catch(e) {}
+            alert(response.message || "Erro ao excluir o menu.");
+            console.error("Error: ", response);
+        }
     });
 });
+

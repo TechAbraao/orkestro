@@ -19,6 +19,7 @@
     {% import "macros/inputs.jinja2" as inputs %}
     {% import "macros/modals.jinja2" as modals %}
     {% import "macros/cards.jinja2" as cards %}
+    {% import "macros/errors.jinja2" as errors %}
 
 </head>
 <body class="min-h-screen flex flex-col">
@@ -53,7 +54,7 @@
         </main>
 
         {# Footer #}
-        <footer class="bg-red-400 text-white text-center py-4 flex-shrink-0">
+        <footer class="bg-gray-900 transition-all duration-300 text-white text-center py-4 flex-shrink-0">
             {% block footer %}
             {% endblock footer %}
         </footer>

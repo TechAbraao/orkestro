@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    const editMenuSection = $(".w-full.h-full.bg-green-400");
-    const btnCreateCategory = $("#btn-create-category")
+    const categoriesContainer = $("#categoriesContainer");
+    const btnCreateCategory = $("#btn-create-category");
     const modalCreateCategory = $("#modalCreateCategory");
 
     function loadCategories() {
@@ -9,15 +9,12 @@ $(document).ready(function(){
             method: "GET",
             success: function (res) {
                 console.log("Response: ", res);
-                editMenuSection.empty();
+                categoriesContainer.empty();
 
                 if(res.success && res.data.length > 0){
-                    const gridContainer = $('<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4"></div>');
-                    editMenuSection.append(gridContainer);
-
                     res.data.forEach(category => {
                         const categoryCard = $(`
-                            <div class="bg-white rounded-xl shadow-lg p-5 flex flex-col justify-between hover:scale-105 transform transition-all duration-300">
+                            <div class="bg-white rounded-xl h-48 shadow-lg p-5 flex flex-col justify-between hover:scale-105 transform transition-all duration-300">
                                 <div>
                                     <h3 class="text-xl font-bold text-gray-800 mb-2">${category.name}</h3>
                                     <p class="text-gray-600 mb-4">${category.description}</p>
@@ -26,26 +23,27 @@ $(document).ready(function(){
                                     <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded font-semibold edit-btn">
                                         Editar
                                     </button>
-                                    <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded font-semibold delete-btn" data-id="${category.id}">
+                                    <button class="delete-btn bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded font-semibold" data-id="${category.id}">
                                         Excluir
                                     </button>
                                 </div>
                             </div>
                         `);
-                        gridContainer.append(categoryCard);
+                        categoriesContainer.append(categoryCard);
                     });
                 } else {
-                    editMenuSection.html("<p class='text-gray-700 p-4'>Nenhuma categoria encontrada.</p>");
+                    categoriesContainer.html("<p class='text-gray-700 p-4'>Nenhuma categoria encontrada.</p>");
                 }
             },
             error: function (xhr) {
-                let response = JSON.parse(xhr.responseText);
-                console.error("Error: ", response);
+                console.error("Error: ", xhr.responseText);
             }
         });
     }
+
     loadCategories();
-    editMenuSection.on("click", ".delete-btn", function() {
+
+    categoriesContainer.on("click", ".delete-btn", function() {
         const categoryId = $(this).data("id");
         const deleteCategoryURL = `/api/categories/${categoryId}`;
 
@@ -56,21 +54,19 @@ $(document).ready(function(){
                 success: function(res) {
                     if(res.success){
                         alert("Categoria excluída com sucesso!");
-                        window.location.reload();
                         loadCategories();
+                        window.location.reload()
                     } else {
                         alert("Erro ao excluir categoria: " + res.message);
                     }
                 },
                 error: function(xhr) {
-                    let response = JSON.parse(xhr.responseText);
-                    console.error("Error: ", response);
+                    console.error("Error: ", xhr.responseText);
                     alert("Erro ao excluir categoria.");
                 }
             });
         }
     });
-
 
     btnCreateCategory.click(function() {
         modalCreateCategory.removeClass("hidden");
@@ -81,12 +77,12 @@ $(document).ready(function(){
         $("#formCreateCategory")[0].reset();
     });
 
-    const btnConfirmCreateCategory = $("#btn-confirm-create-category")
+    const btnConfirmCreateCategory = $("#btn-confirm-create-category");
     btnConfirmCreateCategory.click(function () {
-        let categoryName = $("#categoryName").val()
-        let categoryDescription = $("#categoryDescription").val()
+        let categoryName = $("#categoryName").val();
+        let categoryDescription = $("#categoryDescription").val();
 
-         $.ajax({
+        $.ajax({
             url: getCategoriesURL,
             method: "POST",
             contentType: "application/json",
@@ -96,14 +92,14 @@ $(document).ready(function(){
             }),
             success: function () {
                 console.log("Categoria criada com sucesso!");
-                window.location.reload()
-
+                modalCreateCategory.addClass("hidden");
+                $("#formCreateCategory")[0].reset();
+                loadCategories();
             },
             error: function (xhr) {
-                let response = JSON.parse(xhr.responseText);
-                console.error("Error: ", response);
+                console.error("Error: ", xhr.responseText);
                 console.error("Erro ao criar categoria.");
             }
         });
-    })
+    });
 });

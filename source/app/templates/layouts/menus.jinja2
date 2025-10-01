@@ -17,6 +17,8 @@
     {% import "macros/inputs.jinja2" as inputs %}
     {% import "macros/modals.jinja2" as modals %}
     {% import "macros/cards.jinja2" as cards %}
+    {% import "macros/errors.jinja2" as errors %}
+
 </head>
 <body class="min-h-screen flex flex-col">
     {# Modals #}
@@ -31,7 +33,7 @@
     </section>
 
     {# Menus #}
-    <main class="flex-1 overflow-auto p-6 bg-gray-50 h-screen">
+    <main class="flex-1 overflow-auto p-6 h-screen">
         {% block menu %}
 
         {% endblock menu %}
