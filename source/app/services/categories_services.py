@@ -66,8 +66,8 @@ class CategoriesServices:
 
         categories_by_menu = self.categories_repository.get_categories_by_menu_id(menu_id)
         if not categories_by_menu:
-            logger.warning(f"No category found in menu whose id is '{menu_id}'")
-            raise CategoryNotFoundException(f"No categories registered in menu with id '{menu_id}'")
+            logger.info(f"No categories found in menu '{menu_id}', returning empty list.")
+            return []
 
         return categories_by_menu
 

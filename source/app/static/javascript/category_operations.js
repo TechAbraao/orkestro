@@ -32,7 +32,7 @@ $(document).ready(function(){
                         categoriesContainer.append(categoryCard);
                     });
                 } else {
-                    categoriesContainer.html("<p class='text-gray-700 p-4'>Nenhuma categoria encontrada.</p>");
+
                 }
             },
             error: function (xhr) {

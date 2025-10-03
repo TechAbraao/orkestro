@@ -1,7 +1,7 @@
 {% extends "layouts/default.jinja2" %}
 
 {% block title %}
-    Registrar
+    Registrar comércio
 {% endblock title %}
 
 {% block sidenav %}
@@ -10,7 +10,7 @@
 {% endblock sidenav %}
 
 {% block content %}
-    <section class="w-full h-full bg-white-50 flex flex-col items-center justify-center">
+    <section class="w-full h-full bg-gray-100 flex flex-col items-center justify-center">
         {% include "partials/forms_register_store.jinja2" %}
     </section>
     <script>
@@ -20,5 +20,7 @@
 {% endblock content %}
 
 {% block footer %}
-    {% include "partials/default_footer.jinja2" %}
+    <section class="w-full h-[99px] flex items-center justify-center">
+        Plataforma Orkestro
+    </section>
 {% endblock footer %}

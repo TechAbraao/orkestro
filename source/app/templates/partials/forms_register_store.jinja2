@@ -1,35 +1,55 @@
 <form action="#" method="post" autocomplete="on" aria-labelledby="form-title"
-      class="w-1/3 mx-auto mt-10 bg-white shadow-lg rounded-xl p-8 space-y-6">
+      class="w-1/3 mx-auto bg-white shadow-sm border-1 p-8 space-y-6 border-2
+       border-solid border-gray-200 rounded-xl ">
     <fieldset>
         <legend id="form-title" class="sr-only">Registration form</legend>
         {# Field StoreName #}
-        <div class="flex flex-col space-y-2">
-            <label for="storeName" class="text-sm font-medium text-gray-700">Store Name</label>
-            <input id="storeName" name="storeName" type="text" required autocomplete="storeName"
-                   placeholder="Your Store Name"
+        <div class="flex flex-col">
+            <label for="storeName" class="text-sm font-medium text-gray-700 pb-2">Nome do comércio
+                <small id="" class="text-[15px] text-red-500 pb-2">*</small>
+            </label>
+
+            <input id="storeName" name="storeName" type="text" autofocus required autocomplete="storeName"
+                   title="Nome do seu comércio."
+                   placeholder="Nome do seu comércio"
                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:outline-none"/>
+            <small id="nameHelp" class="text-xs text-gray-500 pt-2">A quantidade de caracteres deve estar entre 6 e 30.</small>
         </div>
+
         {# Field Email #}
         <div class="flex flex-col space-y-2">
-            <label for="email" class="text-sm font-medium text-gray-700 pt-2">Email</label>
-            <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"
+            <label for="email" class="text-sm font-medium text-gray-700 pt-2">
+                E-mail oficial
+            <small id="" class="text-[15px] text-red-500 pb-2">*</small>
+            </label>
+            <input id="email" name="email" type="email"
+                   required autocomplete="email" placeholder="Seu e-mail" title="Digite seu e-mail comercial."
                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:outline-none"/>
         </div>
+
         {# Field Password #}
         <div class="flex flex-col space-y-2">
-            <label for="password" class="text-sm font-medium text-gray-700 pt-2">Password</label>
-            <input id="password" name="password" type="password" required minlength="8" autocomplete="new-password"
-                   aria-describedby="passwordHelp" placeholder="At least 8 characters"
+            <label for="password" class="text-sm font-medium text-gray-700 pt-2">
+                Senha
+            <small id="" class="text-[15px] text-red-500 pb-2">*</small>
+            </label>
+            <input id="password" name="password" type="password" required minlength="6" autocomplete="new-password"
+                   aria-describedby="passwordHelp" placeholder="Digite sua senha"
+                   title="Preencha com uma senha segura."
                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:outline-none"/>
-            <small id="passwordHelp" class="text-xs text-gray-500">Minimum 8 characters.</small>
+            <small id="passwordHelp" class="text-xs text-gray-500">A quantidade de caracteres deve estar entre 6 e 15.</small>
         </div>
+
         {# Field Telephone #}
-        <div class="flex flex-col space-y-2">
-            <label for="telephone" class="text-sm font-medium text-gray-700">Telephone</label>
+        <div class="flex flex-col space-y-2 pt-2">
+            <label for="telephone" class="text-sm font-medium text-gray-700">
+                Número de telefone
+                <small id="" class="text-[15px] text-red-500 pb-2">*</small>
+            </label>
             <input id="telephone" name="telephone" type="tel" required
                    pattern="\+?[0-9\s\-\(\)]{7,20}"
-                   title="Enter a valid phone number (digits, spaces, +, -, parentheses)."
-                   autocomplete="tel" placeholder="+1 (555) 555-0123"
+                   title="Preencha com um número de telefone válido."
+                   autocomplete="tel" placeholder="+55 xxxxx-xxxx"
                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:outline-none"/>
         </div>
         <div class="flex flex-center flex-col">
@@ -54,10 +74,10 @@
 
             <button type="submit"
                     class="w-full bg-red-500 text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition mt-5">
-                Create account
+                Criar conta comercial
             </button>
-            <span class="text-center mt-1 cursor-pointer">
-                <a href="{{ url_for("authorizations_frontend.views_login") }}">Already have an account? </a>
+            <span class="text-center mt-3 cursor-pointer">
+                <a href="{{ url_for("authorizations_frontend.views_login") }}">Você já tem uma conta comercial? </a>
             </span>
         </div>
     </fieldset>

@@ -1,0 +1,13 @@
+{% macro not_found(title="Nada encontrado", description="Nenhum item disponível para exibir.", icon_class="h-20 w-20 text-gray-400") %}
+    <div class="text-center bg-white shadow-md flex flex-col items-center justify-center p-8 h-2/3 w-1/3 rounded-3xl">
+        <div class="flex justify-center mb-4 p-5 rounded-full bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="{{ icon_class }}" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 4v16m8-8H4"/>
+            </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">{{ title }}</h2>
+        <p class="text-gray-600 mb-6 text-sm">{{ description }}</p>
+    </div>
+{% endmacro %}

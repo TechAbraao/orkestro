@@ -7,15 +7,23 @@
 {% block sidenav %}
     {# Dynamic rendering from the backend #}
     {% include "partials/sidebar.jinja2" %}
-    <script src="{{ url_for('static', filename='javascript/logout.js') }}" defer></script>
+    <script>
+        const logoutURL = "{{ url_for('sign_in_auth.end_session_store') }}"
+    </script>
 {% endblock sidenav %}
 
 {% block dashboard %}
     <section class="w-full h-full flex flex-col items-center justify-start gap-3">
     {# Modals #}
     {{ modals.modal_create_menu() }}
+    {{ modals.modal_confirm_operation(
+    header_text="Confirmação",
+    description_text="Deseja realmente excluir seu cardápio?",
+    id_btn_confirm="btn-confirm-op-delete"
+    ) }}
+
         {#  #}
-        <aside class="w-full h-[70px] pl-5 flex items-center justify-start bg-gray-100 rounded-3xl">
+        <aside class="w-full h-[70px] pl-5 flex items-center justify-start bg-gray-100 rounded-3xl border-2 border-gray-300">
             {% if strategy.get("profile")["hasMenu"] == False %}
                 {{ buttons.button_create_menu(id_button="btn-open-modal-create-menu") }}
             {% elif strategy.get("profile")["hasMenu"] == True %}
@@ -25,14 +33,14 @@
             {% endif %}
         </aside>
         {#  #}
-        <section class="w-full h-full bg-white-200 flex items-center justify-center">
+        <section class="w-full h-full bg-white-200 flex items-center justify-center rounded-3xl border-2 border-gray-300">
             {% if strategy.get("profile")["hasMenu"] == False %}
                 <div class="bg-gray-100 w-full h-full rounded-3xl flex flex-col items-center justify-center">
-                   {% include "partials/no_menu_found.jinja2" %}
+                    {{ errors.not_found(title="Nenhum cardápio encontrado.") }}
                 </div>
             {% elif strategy.get("profile")["hasMenu"] == True %}
                 <div id="menusContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-gray-100 w-full h-full rounded-3xl">
-                    {# Os cards dos Cardápios estão sendo populados aqui! #}
+                    {# Os cards dos Cardápios estão sendo populados aqui. #}
                 </div>
             {% endif %}
         </section>

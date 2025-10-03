@@ -15,7 +15,7 @@ class StoresServices:
     def create_new_account(self, account_data) -> bool:
         email = account_data.get("email")
         if not email or not account_data.get("password") or not account_data.get("telephone"):
-            raise ValueError("Email, password and telephone are required")
+            raise ValueError("E-mail, telefone e senha são campos obrigatórios.")
 
         existing_store = self.stores_repository.find_by_unique_fields(
             email, account_data.get("name"), account_data.get("telephone")

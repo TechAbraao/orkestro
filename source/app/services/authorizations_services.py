@@ -22,11 +22,11 @@ class AuthorizationsServices:
 
         if not store:
             logger.warning(f"No email '{email}' found.")
-            raise StoresNotFoundException("Store not found.")
+            raise StoresNotFoundException("Comércio não encontrado.")
 
         if not verify_password(password=password, hashed_password=store.password):
             logger.warning(f"Password for '{email}' does not match.")
-            raise InvalidPasswordException("Passwords are not the same.")
+            raise InvalidPasswordException("Senhas não são iguais.")
 
         expiration_time = datetime.now(ZoneInfo("America/Sao_Paulo")) + timedelta(minutes=60)
         exp_timestamp = int(expiration_time.timestamp())

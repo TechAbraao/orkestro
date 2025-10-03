@@ -1,10 +1,13 @@
 {% macro button_redirect(endpoint, text) %}
-    <a href="{{ url_for(endpoint) }}" class="">
-        <button class="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600">
-            {{ text }}
-        </button>
-    </a>
+<a href="{{ url_for(endpoint) }}">
+    <button class="px-6 py-3 rounded-full bg-red-500 text-white font-semibold
+                   hover:bg-red-600 transition-colors duration-200">
+        {{ text }}
+    </button>
+</a>
 {% endmacro %}
+
+
 
 {% macro button_create_menu(id_button="") %}
     <button

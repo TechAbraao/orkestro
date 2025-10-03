@@ -55,14 +55,23 @@ def views_edit_menu_dashboard(menu_id: str):
         logger.warning(f"O Menu '{menu_id}' não pertence à Loja '{store_id}'.")
         return redirect(url_for("main_frontend.views_menus_manager_dashboard"))
 
-
-    logger.info(f"Buscando informações do 'menu_id' = '{menu_id}' através do 'store_id' = '{store_id}'.")
     menu_info = menu_services.get_menu_by_id(menu_id)
+
+    logger.info(f"Buscando categorias do 'menu_id' = '{menu_id}'.")
+    has_categories = None
+    categories_info = categories_services.get_all_categories_by_menu(menu_id)
+    if categories_info:
+        logger.info(f"Categoria encontrada no 'menu_id' = '{menu_id}'.")
+        has_categories = True
+    else:
+        logger.info(f"Nenhuma categoria encontrada no 'menu_id' = '{menu_id}'.")
+        has_categories = False
 
     rendering_strategy = {
         "profile": {
             "menu_id": menu_id,
             "menu_name": menu_info["name"],
+            "hasCategories": has_categories
         }
     }
 

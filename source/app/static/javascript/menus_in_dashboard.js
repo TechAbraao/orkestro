@@ -52,31 +52,34 @@ $(document).ready(function () {
     });
 });
 
-$(document).on("click", ".btn-delete-menu", function() {
+$(document).on("click", ".btn-delete-menu", function () {
     const menuId = $(this).data("id");
 
-    if (!confirm("Tem certeza que deseja excluir este menu?")) {
-        return;
-    }
+    const confirmDeleteModal = $("#modalConfirmOperation")
+    confirmDeleteModal.removeClass("hidden");
 
-    $.ajax({
-        url: `/api/menus/${menuId}`,
-        method: "DELETE",
-        success: function(response) {
-            alert(response.message || "Menu deletado com sucesso!");
 
-            $(`.btn-delete-menu[data-id='${menuId}']`).closest(".menu-card").remove();
+    const btnConfirmDelete = $("#btn-confirm-op-delete")
 
-            window.location.reload()
-        },
-        error: function(xhr) {
-            let response = {};
-            try {
-                response = JSON.parse(xhr.responseText);
-            } catch(e) {}
-            alert(response.message || "Erro ao excluir o menu.");
-            console.error("Error: ", response);
-        }
-    });
+    btnConfirmDelete.on("click", function () {
+        $.ajax({
+            url: `/api/menus/${menuId}`,
+            method: "DELETE",
+            success: function (response) {
+                $(`.btn-delete-menu[data-id='${menuId}']`).closest(".menu-card").remove();
+                window.location.reload()
+            },
+            error: function (xhr) {
+                let response = {};
+                try {
+                    response = JSON.parse(xhr.responseText);
+                } catch (e) {
+                }
+                alert(response.message || "Erro ao excluir o menu.");
+                console.error("Error: ", response);
+            }
+        });
+    })
+
 });
 

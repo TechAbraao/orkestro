@@ -14,12 +14,12 @@ def create_new_account():
     created = stores_services.create_new_account(body)
     if not created:
         return Response.error(
-            message="Error creating store.",
+            message="Erro ao criar loja.",
             status_code=400
         )
 
     return Response.success(
-        message="Store created successfully.",
+        message="Loja criada com sucesso.",
         status_code=200
     )
 
