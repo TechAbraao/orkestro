@@ -24,12 +24,14 @@ $(document).ready(function () {
 
             categories.forEach(cat => {
                 let categoryHTML = `
-            <div class="bg-white shadow-lg rounded-2xl p-6 w-[450px] flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-                <div class="w-28 h-28 flex items-center justify-center bg-gray-100 rounded-full overflow-hidden mb-4 border border-gray-200">
+            <div class="bg-white cursor-pointer shadow-lg rounded-2xl p-6 w-[630px] h-[230px] rounded-3xl border-2 border-gray-300 flex items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="w-2/3 h-full flex items-center justify-center bg-gray-100 rounded-xl overflow-hidden border border-gray-200">
                     <img src="${cat.url_image}" alt="${cat.name}" class="w-full h-full object-cover">
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">${cat.name}</h3>
-                <p class="text-sm text-gray-500 line-clamp-2">${cat.description}</p>
+                <div class="w-full h-full">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2 pl-3 pt-3 text-left">${cat.name}</h3>
+                    <p class="text-sm text-gray-500 line-clamp-2 pl-3 text-left">${cat.description}</p>
+                </div>
             </div>
             `;
                 categoriesContainer.append(categoryHTML);

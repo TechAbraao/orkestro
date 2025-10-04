@@ -26,7 +26,7 @@ class AuthorizationsServices:
 
         if not verify_password(password=password, hashed_password=store.password):
             logger.warning(f"Password for '{email}' does not match.")
-            raise InvalidPasswordException("Senhas não são iguais.")
+            raise InvalidPasswordException("Erro ao autenticar comércio.")
 
         expiration_time = datetime.now(ZoneInfo("America/Sao_Paulo")) + timedelta(minutes=60)
         exp_timestamp = int(expiration_time.timestamp())

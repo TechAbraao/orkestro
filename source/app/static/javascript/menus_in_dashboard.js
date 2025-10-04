@@ -1,6 +1,6 @@
 function createMenuCard(menu) {
     return `
-    <div class="menu-card bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col justify-between h-72 w-72 p-6">
+    <div class="menu-card bg-white rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col justify-between h-80 w-[360px] p-6">
         
         <div class="flex justify-between items-start mb-4">
             <h3 class="text-xl font-bold text-gray-900 capitalize">${menu.name}</h3>

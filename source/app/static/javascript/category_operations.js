@@ -47,12 +47,17 @@ $(document).ready(function(){
         const categoryId = $(this).data("id");
         const deleteCategoryURL = `/api/categories/${categoryId}`;
 
-        if(confirm("Tem certeza que deseja excluir esta categoria?")) {
+
+        const confirmDeleteModal = $("#modalConfirmOperation")
+        confirmDeleteModal.removeClass("hidden");
+        const btnConfirmDeleteCategory = $("#btn-confirm-category-delete")
+
+        btnConfirmDeleteCategory.on("click", () => {
             $.ajax({
                 url: deleteCategoryURL,
                 method: "DELETE",
-                success: function(res) {
-                    if(res.success){
+                success: function (res) {
+                    if (res.success) {
                         alert("Categoria excluída com sucesso!");
                         loadCategories();
                         window.location.reload()
@@ -60,12 +65,12 @@ $(document).ready(function(){
                         alert("Erro ao excluir categoria: " + res.message);
                     }
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     console.error("Error: ", xhr.responseText);
                     alert("Erro ao excluir categoria.");
                 }
             });
-        }
+        })
     });
 
     btnCreateCategory.click(function() {

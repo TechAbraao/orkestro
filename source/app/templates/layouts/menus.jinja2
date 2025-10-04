@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} Default {% endblock title %} | Orkestro </title>
+    <title>Cardápio | {% block title %} Default {% endblock title %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/transitions.css') }}">
@@ -26,14 +26,14 @@
 
 
     {# Navbar #}
-    <section class="text-white py-4 flex-shrink-0 bg-red-900 transition-all duration-300">
+    <section class="text-white flex-shrink-0 bg-red-900 transition-all duration-300">
         {% block navbar %}
 
         {% endblock navbar %}
     </section>
 
     {# Menus #}
-    <main class="flex-1 overflow-auto p-6 h-screen">
+    <main class="flex items-center justify-center">
         {% block menu %}
 
         {% endblock menu %}
