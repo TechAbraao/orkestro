@@ -7,3 +7,6 @@ class MenuSchema(ma.Schema):
 
 class UUIDSchema(ma.Schema):
     id = ma.UUID(required=True)
+
+class MenuStatus(ma.Schema):
+    status = ma.String(required=True)

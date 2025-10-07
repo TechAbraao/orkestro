@@ -1,23 +1,53 @@
 let menuNameHTML = $("#menu-name")
 let menuDescriptionHTML = $("#menu-description")
 let btnContactMenu = $("#btn-contact-menu")
+let menuStatusHTML = $("#menu-status")
 
 $(document).ready(function () {
       $.ajax({
         url: menuClient,
         method: "GET",
         success: function (res) {
-            console.log("Response: ", res)
+            console.log("Response Menu: ", res)
 
+            let navbarStatusOption = $("#navbar-status-option")
             let menuDescription = res.data.description;
             let menuName = res.data.name;
             let categories = res.data.categories;
+            let menuStatus = res.data.activated
+            console.log(`Status do menu: ${menuStatus}`)
 
-            console.log("Name: ", menuName);
-            console.log("Menu Description: ", menuDescription);
+            let statusText = "";
+            if (menuStatus === false) {
+                statusText = "Fechado";
+
+                $("#menu-status").text(statusText);
+
+                $("#menu-status")
+                    .removeClass("text-green-700 bg-green-100 border-green-300")
+                    .addClass("text-red-700 bg-red-100 border-red-300");
+
+               navbarStatusOption.removeClass("hidden");
+
+            } else if (menuStatus === true) {
+                statusText = "Aberto";
+                $("#menu-status").text(statusText);
+
+                $("#menu-status")
+                    .removeClass("text-red-700 bg-red-100 border-red-300")
+                    .addClass("text-green-700 bg-green-100 border-green-300");
+
+                navbarStatusOption.addClass("hidden");
+            }
+
+            console.log("Status atualizado:", statusText);
+            console.log("Name:", menuName);
+            console.log("Menu Description:", menuDescription);
+
 
             menuNameHTML.text(menuName);
             menuDescriptionHTML.text(menuDescription);
+            menuStatusHTML.text(statusText);
 
             let categoriesContainer = $("#categoriesContainer");
             categoriesContainer.empty();

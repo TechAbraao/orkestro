@@ -20,10 +20,14 @@
     {% import "macros/modals.jinja2" as modals %}
     {% import "macros/cards.jinja2" as cards %}
     {% import "macros/errors.jinja2" as errors %}
+    {% import "macros/loaders.jinja2" as loaders %}
 
 </head>
 <body class="min-h-screen flex flex-col">
 <div class="flex flex-1 min-h-0">
+    {# Global Pre Loader #}
+    {{ loaders.global_loader() }}
+
     {# Modals #}
     {{ modals.modal_logout(
     header_text="Confirmar saída",
@@ -63,6 +67,7 @@
 <script>
     let aboutMeStore = "{{ url_for('about_auth.about_me_store') }}"
 </script>
+<script src="{{ url_for('static', filename='javascript/global_preLoader.js') }}"></script>
 <script src="{{ url_for('static', filename='javascript/about_me_stores.js') }}" defer></script>
 <script src="{{ url_for('static', filename='javascript/about_orkestro.js') }}"></script>
 </body>

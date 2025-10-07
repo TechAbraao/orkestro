@@ -15,9 +15,13 @@
     {% import "macros/inputs.jinja2" as inputs %}
     {% import "macros/cards.jinja2" as cards %}
     {% import "macros/errors.jinja2" as errors %}
+    {% import "macros/loaders.jinja2" as loaders %}
 
 </head>
 <body class="w-full h-screen">
+    {# Global Pre Loader #}
+    {{ loaders.global_loader() }}
+
 <header class="w-full h-28">
     {% block sidenav %}
     {% endblock sidenav %}
@@ -32,5 +36,6 @@
     {% block footer %}
     {% endblock footer %}
 </footer>
+<script src="{{ url_for('static', filename='javascript/global_preLoader.js') }}"></script>
 </body>
 </html>

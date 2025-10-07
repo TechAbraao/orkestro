@@ -27,7 +27,7 @@
             {% if strategy.get("profile")["hasMenu"] == False %}
                 {{ buttons.button_create_menu(id_button="btn-open-modal-create-menu") }}
             {% elif strategy.get("profile")["hasMenu"] == True %}
-                <button class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
+                <button class="px-5 py-3 bg-gray-900 text-base text-white rounded-3xl hover:bg-gray-800 font-bold">
                     Mais configurações
                 </button>
             {% endif %}

@@ -36,7 +36,8 @@ class MenusEntity(database.Model):
             "name": self.name,
             "description": self.description,
             "created_at": self.created_at.isoformat() if self.created_at else None,
-            "slug": self.slug
+            "slug": self.slug,
+            "activated": self.activated,
             # "categories": [category.serialize for category in self.categories] if self.categories else [],
             # "products": [product.serialize for product in self.products] if self.products else []
         }
@@ -47,6 +48,7 @@ class MenusEntity(database.Model):
             "description": self.description,
             "created_at": self.created_at.isoformat() if self.created_at else None,
             "slug": self.slug,
+            "activated": self.activated,
         }
 
         if include_categories:

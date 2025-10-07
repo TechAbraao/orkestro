@@ -17,17 +17,18 @@
         {# Modals #}
         {{ modals.modal_create_category() }}
         {{ modals.modal_confirm_operation(header_text="Confirmação", description_text="Deseja realmente excluir sua categoria?", id_btn_confirm="btn-confirm-category-delete") }}
+        {{ modals.modal_menu_status() }}
 
         {# Menu de Opções #}
         <aside class="w-full h-[90px] pl-5 flex items-center justify-start bg-gray-100 gap-3 rounded-3xl border-2 border-gray-300">
             {{ buttons.button_redirect(endpoint="main_frontend.views_menus_manager_dashboard", text="Voltar") }}
-            <button id="btn-create-category" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+            <button id="btn-create-category" class="px-5 py-3 bg-gray-900 text-base text-white rounded-3xl hover:bg-gray-800 font-bold">
                 Nova Categoria
             </button>
-            <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+            <button class="px-5 py-3 bg-gray-900 text-base text-white rounded-3xl hover:bg-gray-800 font-bold">
                 Configurações do Cardápio
             </button>
-            <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+            <button id="btn-status-menu" class="px-5 py-3 bg-gray-900 text-base text-white rounded-3xl hover:bg-gray-800 font-bold">
                 Status do Cardápio
             </button>
         </aside>
@@ -51,6 +52,7 @@
         const getCategoriesURL = `/api/menus/${menuId}/categories`
     </script>
     <script src="{{ url_for('static', filename='javascript/category_operations.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='javascript/status_menu.js') }}" defer></script>
 {% endblock dashboard %}
 
 {% block navbar %}

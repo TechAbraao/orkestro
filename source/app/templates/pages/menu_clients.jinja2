@@ -16,7 +16,10 @@
                         <span id="menu-name"></span>
                     </h1>
                     <p id="menu-description" class="text-sm text-gray-300">Descrição do Cardápio</p>
-                    <span class="inline-block px-4 py-1 mt-1 text-sm font-semibold text-green-700 bg-green-100 border border-green-300 rounded-full shadow-sm">
+                    <span   title="O comércio está com o cardápio ativado."
+                            id="menu-status"
+                            class="inline-block px-4 py-1 mt-1 text-sm font-semibold text-green-700
+                            bg-green-100 border border-green-300 rounded-full shadow-sm">
                         Aberto
                     </span>
                 </div>
@@ -27,6 +30,10 @@
             </nav>
         </div>
     </header>
+    <div id="navbar-status-option" class="w-full h-20 flex items-center justify-center hidden bg-white">
+        <p class="bg-red-100 text-lg text-center flex rounded-2xl
+        items-center justify-center w-1/2 h-10 font-bold text-red-900">Loja Fechada</p>
+    </div>
     <script>
         const menuClient = "{{ url_for('menus_client.render_menu_with_slug', slug=strategy['menu_slug']) }}"
         let aboutMeStore = "{{ url_for('about_auth.about_me_store') }}"

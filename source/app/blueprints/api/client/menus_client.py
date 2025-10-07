@@ -3,13 +3,19 @@ from source.app.services import categories_services
 from flask import Blueprint, jsonify
 from source.app.schemas import uuid_schema
 from source.app.utils.responses import Response
+from source.app.settings.logging_settings import get_logger
+
+logger = get_logger(__name__)
 
 menus_client = Blueprint("menus_client", __name__, url_prefix="/api")
 
 """ 01. X """
 @menus_client.route("/stores/<string:slug>", methods=["GET"])
 def render_menu_with_slug(slug: str):
+
     menu = menu_services.get_menu_by_slug(slug)
+    logger.info(f"Status do menu: {menu.get("activated")}")
+
     return Response.success(
         message="Menu returned successfully.",
         data=menu,

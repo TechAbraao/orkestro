@@ -178,3 +178,35 @@ class MenuServices:
     def get_menu_by_id(self, menu_id):
         menu = self.menu_repository.get(menu_id)
         return menu.serialize
+
+    @database_connection
+    def change_status_menu(self, menu_id):
+        """
+        Essa função é responsável por alternar (toggle) o status de ativação do menu.
+        Se estiver ativo, desativa. Se estiver inativo, ativa.
+        """
+        menu = self.menu_repository.get(menu_id)
+
+        if not menu:
+            logger.warning(f"Menu com id '{menu_id}' não encontrado.")
+            raise MenuNotFoundException(f"Menu com id '{menu_id}' não encontrado.")
+
+        new_status = not menu.activated
+        menu.activated = new_status
+        logger.info(f"Status do menu '{menu_id}' alterado para '{new_status}'.")
+
+        """ Eliminando a estratégia de cacheamento """
+        slug = menu.slug
+        logger.info(f"Slug encontrado: {slug}")
+        cache_key = get_cache_key_by_slug(
+            slug=slug,
+            include_products=False,
+            include_categories=True,
+        )
+        logger.info(f"Chave de cacheamento do Redis: {cache_key}")
+        self.redis_repository.delete(cache_key)
+        logger.info("Cacheamento cancelado.")
+
+        self.menu_repository.update_status(menu_id, new_status)
+
+        return new_status

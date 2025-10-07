@@ -95,3 +95,12 @@ class MenusRepository:
                 MenusEntity.id == menu_id
             ).first()
         )
+
+    @transactional
+    def update_status(self, menu_id: str, activated: bool) -> bool:
+        menu = self.session.query(MenusEntity).filter_by(id=menu_id).first()
+        if not menu:
+            return False
+
+        menu.activated = activated
+        return True

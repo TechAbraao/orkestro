@@ -228,8 +228,118 @@
 {% endmacro %}
 
 {% macro modal_menu_status() %}
-    <div id="modalMenuStatus"
-         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+<div id="modalMenuStatus" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
 
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Status do Cardápio</h2>
+
+        {# Switch ON/OFF #}
+        <div class="flex items-center space-x-3">
+            <button
+                id="menuToggle"
+                type="button"
+                class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-300 transition-colors focus:outline-none"
+                role="switch"
+                aria-checked="false"
+            >
+                <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform"></span>
+            </button>
+
+            <span id="menuStatusText" class="text-red-600 font-medium">
+                Cardápio Desativado
+            </span>
+        </div>
+
+        <div class="flex justify-end gap-4 mt-6">
+            <button
+                id="btnCancelStatus"
+                class="px-4 py-2 rounded-xl bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
+                Fechar
+            </button>
+            <button
+                id="btnConfirmStatus"
+                class="px-4 py-2 rounded-xl bg-green-500 text-white hover:bg-green-600 transition">
+                Salvar
+            </button>
+        </div>
     </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("menuToggle");
+    const statusText = document.getElementById("menuStatusText");
+
+    $.ajax({
+        url: `/api/menus/${menuId}/status`,
+        method: "GET",
+        success: function (response) {
+            const statusMenu = Boolean(response.data);
+            console.log("Atualmente ON/OFF:", statusMenu);
+
+            toggleBtn.setAttribute("aria-checked", statusMenu);
+
+            if (statusMenu) {
+                toggleBtn.classList.add("bg-green-500");
+                toggleBtn.querySelector("span").classList.add("translate-x-5");
+                statusText.textContent = "Cardápio Ativado";
+                statusText.classList.add("text-green-600");
+            } else {
+                toggleBtn.classList.add("bg-gray-300");
+                toggleBtn.querySelector("span").classList.add("translate-x-0");
+                statusText.textContent = "Cardápio OFF";
+                statusText.classList.add("text-red-600");
+            }
+
+            toggleBtn.addEventListener("click", () => {
+                const isActive = toggleBtn.getAttribute("aria-checked") === "true";
+
+                if (isActive) {
+                    toggleBtn.setAttribute("aria-checked", "false");
+                    toggleBtn.classList.remove("bg-green-500");
+                    toggleBtn.classList.add("bg-gray-300");
+                    toggleBtn.querySelector("span").classList.remove("translate-x-5");
+                    toggleBtn.querySelector("span").classList.add("translate-x-0");
+                    statusText.textContent = "Cardápio OFF";
+                    statusText.classList.remove("text-green-600");
+                    statusText.classList.add("text-red-600");
+                } else {
+                    toggleBtn.setAttribute("aria-checked", "true");
+                    toggleBtn.classList.remove("bg-gray-300");
+                    toggleBtn.classList.add("bg-green-500");
+                    toggleBtn.querySelector("span").classList.remove("translate-x-0");
+                    toggleBtn.querySelector("span").classList.add("translate-x-5");
+                    statusText.textContent = "Cardápio Ativado";
+                    statusText.classList.remove("text-red-600");
+                    statusText.classList.add("text-green-600");
+                }
+            });
+        },
+        error: function (xhr) {
+            console.error("Error ON/OFF:", xhr.responseText);
+        }
+    });
+
+    document.getElementById("btnCancelStatus").addEventListener("click", () => {
+        document.getElementById("modalMenuStatus").classList.add("hidden");
+    });
+
+    document.getElementById("btnConfirmStatus").addEventListener("click", () => {
+        const isActive = toggleBtn.getAttribute("aria-checked") === "true";
+        alert("Status do cardápio atualizado para: " + (isActive ? "ON" : "OFF"));
+        $.ajax({
+            url: `/api/menus/${menuId}/status`,
+            method: "PATCH",
+            success: function (response) {
+                console.log("Response ON/OFF:", response);
+                document.getElementById("modalMenuStatus").classList.add("hidden");
+            },
+            error: function (xhr) {
+                console.error("Error ON/OFF:", xhr.responseText);
+            }
+        });
+
+    });
+});
+</script>
 {% endmacro %}
