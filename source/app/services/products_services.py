@@ -4,6 +4,7 @@ from source.app.entities.products_entity import ProductsEntity
 from source.app.repository.products_repository import ProductsRepository
 from source.app.repository.categories_repository import CategoriesRepository
 from source.app.exceptions.products_exceptions import *
+from flask import url_for, current_app
 from source.app.exceptions.category_exceptions import *
 import uuid
 
@@ -24,12 +25,19 @@ class ProductsServices:
             logger.warning(f"Product with name '{product_body['name']}' exists in this category with id '{category_id}'.")
             raise ProductDuplicateNameException("Duplicate product name in the same category.")
 
+        image_url = product_body.get("url_image", None)
+        if image_url is None:
+            logger.warning(f"Nenhuma imagem disponibilizada, usando a URL padrão.")
+            with current_app.app_context():
+                image_url = url_for('static', filename='images/default-product.png', _external=True)
+
         product = ProductsEntity(
             id = uuid.uuid4(),
             name=product_body.get("name"),
             description=product_body.get("description"),
             price=product_body.get("price"),
-            category_id=category_id
+            category_id=category_id,
+            image_url=image_url
         )
 
         saved_product = self.products_repository.create(

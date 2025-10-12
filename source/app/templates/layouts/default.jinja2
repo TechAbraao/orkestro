@@ -19,8 +19,7 @@
 
 </head>
 <body class="w-full h-screen">
-    {# Global Pre Loader #}
-    {{ loaders.global_loader() }}
+
 
 <header class="w-full h-28">
     {% block sidenav %}
@@ -36,6 +35,5 @@
     {% block footer %}
     {% endblock footer %}
 </footer>
-<script src="{{ url_for('static', filename='javascript/global_preLoader.js') }}"></script>
 </body>
 </html>

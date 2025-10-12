@@ -14,6 +14,7 @@ class ProductsEntity(database.Model):
     description = database.Column(database.Text, nullable=True)
     price = database.Column(database.Numeric, nullable=False)
     category_id = database.Column(database.UUID(as_uuid=True), database.ForeignKey("categories.id"))
+    image_url = database.Column(database.String(255), nullable=True)
 
     category = database.relationship("CategoriesEntity", back_populates="products")
 
@@ -24,6 +25,7 @@ class ProductsEntity(database.Model):
             "name": self.name,
             "description": self.description,
             "price": float(self.price) if isinstance(self.price, Decimal) else self.price,
+            "image_url": self.image_url,
             "category_id": str(self.category_id) if self.category_id else None,
             "created_at": self.created_at.isoformat() if self.created_at else None,
         }

@@ -14,7 +14,7 @@ def views_login():
         "logged": False
     }
 
-    return render_template("pages/signin.jinja2", strategy=rendering_strategy)
+    return render_template("pages/auth/signin.jinja2", strategy=rendering_strategy)
 
 @authorizations_frontend.get("/signup")
 @authorized_client
@@ -27,5 +27,5 @@ def views_register():
         "logged": False
     }
 
-    return render_template("pages/signup.jinja2", strategy=rendering_strategy)
+    return render_template("pages/auth/signup.jinja2", strategy=rendering_strategy)
 

@@ -3,7 +3,6 @@ from source.app.utils.decorators.authorizations import authorization_required
 from source.app.settings.logging_settings import get_logger
 from source.app.services import menu_services, categories_services
 
-
 main_frontend = Blueprint("main_frontend", __name__, url_prefix="")
 logger = get_logger(__name__)
 
@@ -75,4 +74,4 @@ def views_edit_menu_dashboard(menu_id: str):
         }
     }
 
-    return render_template("pages/edit_menu.jinja2", strategy=rendering_strategy)
+    return render_template("pages/admin/edit_menu.jinja2", strategy=rendering_strategy)

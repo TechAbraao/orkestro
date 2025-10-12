@@ -1,3 +1,5 @@
+{% import "macros/alerts.jinja2" as alerts %}
+
 {% macro modal_logout(header_text="", description_text="") %}
     <div id="logoutModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
         <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
@@ -49,23 +51,16 @@
              <small id="versionProjectOrkestro" class="text-xs text-gray-500">versão 1.0.0</small>
             </h2>
             <p class="text-gray-600 leading-relaxed mb-4">
-                O <strong>Orkestro</strong> é um projeto desenvolvido para simplificar e organizar
-                processos de forma acessível e funcional. Nossa missão é fornecer uma
-                plataforma que atue como um <em>MVP</em> inicial, mas com base sólida para
-                futuras evoluções.
+                A <strong>Orkestro</strong> é uma aplicação web completa para gerenciamento inteligente de <strong>cardápios,</strong>
+                combinando <strong>automação via chatbot</strong> para melhorar a interação com o cliente e <strong>análises avançadas</strong> para
+                apoiar decisões mais inteligentes.
             </p>
 
-            <ul class="list-disc pl-5 text-gray-600 space-y-1 mb-4">
-                <li>Foco em acessibilidade e usabilidade</li>
-                <li>Desenvolvimento ágil e iterativo</li>
-                <li>Baseado em tecnologias modernas</li>
-            </ul>
 
             <p class="text-gray-600 leading-relaxed">
-                Essa é apenas a primeira versão, mas acreditamos que o Orkestro pode
+                Essa é apenas a primeira versão (v1.0.0), mas acreditamos que a <strong>Orkestro</strong> pode
                 evoluir para se tornar uma solução robusta e completa.
             </p>
-
             <div class="mt-6 text-right">
                 <button onclick="document.getElementById('aboutOrkestroModal').classList.add('hidden')"
                         class="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
@@ -191,14 +186,14 @@
 </div>
 {% endmacro %}
 
-{% macro modal_confirm_operation(header_text="Undefined", description_text="Undefined", id_btn_confirm="") %}
-    <div id="modalConfirmOperation"
+{% macro modal_confirm_operation(header_text="Undefined", description_text="Undefined", id_btn_confirm="", modal_id="modalConfirmOperation") %}
+    <div id="{{ modal_id }}"
          class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
         <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
             {# Headers #}
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-lg font-semibold text-gray-800">{{ header_text }}</h3>
-                <button onclick="document.getElementById('modalConfirmOperation').classList.add('hidden')"
+                <button onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')"
                         class="text-gray-400 hover:text-gray-600">&times;
                 </button>
             </div>
@@ -211,7 +206,7 @@
             {# Buttons #}
             <div class="flex justify-end gap-3">
                 <button
-                        onclick="document.getElementById('modalConfirmOperation').classList.add('hidden')"
+                        onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')"
                         class="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 text-gray-700 transition-colors">
                     Cancelar
                 </button>
@@ -250,10 +245,16 @@
             </span>
         </div>
 
+        <div>
+            {{ alerts.alert_forms(
+            type="info", alert_base_class="notify-status-changed",
+            alert_message_class="notify-status-changed-msg") }}
+        </div>
+
         <div class="flex justify-end gap-4 mt-6">
             <button
-                id="btnCancelStatus"
-                class="px-4 py-2 rounded-xl bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
+                    id="btnCancelStatus"
+                    class="px-4 py-2 rounded-xl bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
                 Fechar
             </button>
             <button
@@ -264,18 +265,19 @@
         </div>
     </div>
 </div>
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("menuToggle");
     const statusText = document.getElementById("menuStatusText");
+    const notifyStatusChanged = $(".notify-status-changed")
+const notifyStatusChangedMsg = $(".notify-status-changed-msg")
 
     $.ajax({
         url: `/api/menus/${menuId}/status`,
         method: "GET",
         success: function (response) {
             const statusMenu = Boolean(response.data);
-            console.log("Atualmente ON/OFF:", statusMenu);
+            // console.log("Atualmente ON/OFF:", statusMenu);
 
             toggleBtn.setAttribute("aria-checked", statusMenu);
 
@@ -316,7 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         },
         error: function (xhr) {
-            console.error("Error ON/OFF:", xhr.responseText);
+            // console.error("Error ON/OFF:", xhr.responseText);
         }
     });
 
@@ -326,20 +328,143 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("btnConfirmStatus").addEventListener("click", () => {
         const isActive = toggleBtn.getAttribute("aria-checked") === "true";
-        alert("Status do cardápio atualizado para: " + (isActive ? "ON" : "OFF"));
         $.ajax({
             url: `/api/menus/${menuId}/status`,
             method: "PATCH",
             success: function (response) {
-                console.log("Response ON/OFF:", response);
-                document.getElementById("modalMenuStatus").classList.add("hidden");
+                // console.log("Response ON/OFF:", response);
+                notifyStatusChanged.removeClass("hidden")
+                notifyStatusChangedMsg.text("Cardápio atualizado para: " + (isActive ? "ativado" : "desativado"))
+
+                setTimeout(() => {
+                    notifyStatusChanged.addClass("hidden")
+                }, 2500)
             },
             error: function (xhr) {
-                console.error("Error ON/OFF:", xhr.responseText);
+                // console.error("Error ON/OFF:", xhr.responseText);
             }
         });
 
     });
 });
 </script>
+{% endmacro %}
+
+{% macro opening_hours() %}
+    <div id="modalOpeningHours"
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white w-full max-w-lg rounded-2xl shadow-lg p-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Horários de Funcionamento</h2>
+
+            <form id="openingHoursForm" class="space-y-3">
+                {% set dias = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"] %}
+                {% for dia in dias %}
+                    <div class="flex items-center justify-between gap-3 border-b border-gray-200 pb-2">
+                        <span class="w-24 font-medium text-gray-700">{{ dia }}</span>
+                        <div class="flex gap-2">
+                            <input type="time" name="{{ dia|lower }}_open"
+                                   class="border rounded-lg p-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"/>
+                            <span class="text-gray-500">às</span>
+                            <input type="time" name="{{ dia|lower }}_close"
+                                   class="border rounded-lg p-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"/>
+                        </div>
+                    </div>
+                {% endfor %}
+            </form>
+
+            <div class="flex justify-end mt-6 gap-3">
+                <button type="button" id="cancelModalBtn"
+                        class="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition">
+                    Cancelar
+                </button>
+                <button type="submit" form="openingHoursForm"
+                        class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">
+                    Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const modal = document.getElementById('modalOpeningHours');
+        const cancelBtn = document.getElementById('cancelModalBtn');
+
+        function openOpeningHoursModal() {
+            modal.classList.remove('hidden');
+        }
+
+        function closeOpeningHoursModal() {
+            modal.classList.add('hidden');
+        }
+
+        cancelBtn.addEventListener('click', closeOpeningHoursModal);
+
+        document.getElementById('openingHoursForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const data = new FormData(this);
+            const entries = Object.fromEntries(data.entries());
+            console.log(entries);
+            closeOpeningHoursModal();
+        });
+    </script>
+{% endmacro %}
+
+
+{% macro modal_add_product() %}
+<div id="modalAddProduct" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+        <button id="closeModalAddProduct" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 font-bold" onclick="document.getElementById('modalAddProduct').classList.add('hidden')">
+            &times;
+        </button>
+
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Adicionar Produto</h2>
+
+        <form id="formAddProduct" class="space-y-4">
+            <div>
+                <label for="productName" class="block text-gray-700 font-medium mb-1">Nome do Produto</label>
+                <input
+                    type="text"
+                    id="productName"
+                    name="name"
+                    class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Digite o nome do produto"
+                    required
+                />
+            </div>
+
+            <div>
+                <label for="productPrice" class="block text-gray-700 font-medium mb-1">Preço (R$)</label>
+                <input
+                    type="number"
+                    step="0.01"
+                    id="productPrice"
+                    name="price"
+                    class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="0.00"
+                    required
+                />
+            </div>
+
+            <div>
+                <label for="productDescription" class="block text-gray-700 font-medium mb-1">Descrição</label>
+                <textarea
+                    id="productDescription"
+                    name="description"
+                    rows="3"
+                    class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Digite a descrição do produto"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="flex justify-end gap-3 mt-2">
+                <button type="button" id="cancelAddProduct" class="px-4 py-2 rounded-lg bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold" onclick="document.getElementById('modalAddProduct').classList.add('hidden')">
+                    Cancelar
+                </button>
+                <button id="btn-confirm-add-product" type="submit" class="px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-semibold">
+                    Adicionar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
 {% endmacro %}

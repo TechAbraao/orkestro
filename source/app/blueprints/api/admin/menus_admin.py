@@ -9,7 +9,7 @@ from werkzeug.exceptions import *
 logger = get_logger(__name__)
 menus_bp = Blueprint("menus_bp", __name__, url_prefix="/api/menus")
 
-""" 1. Criar um novo Menu. """
+""" 1. Criar um novo Menu (Cardápio). """
 @menus_bp.route("/", methods=["POST"])
 @authorization_required
 def create_menu():
@@ -53,7 +53,7 @@ def get_menus():
         all_menus_returned = menu_services.get_all_menus(include=include)
         return jsonify(all_menus_returned)
 
-""" 3. Deletar Menu. """
+""" 3. Deletar Menu (Cardápio). """
 @menus_bp.route("/<string:menu_id>", methods=["DELETE"])
 @authorization_required
 def delete_menu(menu_id: str):
@@ -67,7 +67,7 @@ def delete_menu(menu_id: str):
         status_code=200
     )
 
-""" 4. Atualizar Menu. """
+""" 4. Atualizar Menu (Cardápio). """
 @menus_bp.route("/<string:menu_id>", methods=["PUT"])
 @authorization_required
 def update_menu(menu_id: str):
@@ -87,7 +87,7 @@ def update_menu(menu_id: str):
     )
 
 
-""" 5. Atualizar status do cardápio (ativado/desativado). """
+""" 5. Atualizar status do Menu (Cardápio) (ativado/desativado). """
 @menus_bp.route("/<string:menu_id>/status", methods=["PATCH"])
 @authorization_required
 def change_status_menu(menu_id: str):
@@ -129,4 +129,20 @@ def get_status_menu(menu_id: str):
         data=menu.get("activated"),
         status_code=200
     )
+
+
+""" 7. Adicionar horário de funcionamento do Menu (Cardápio) """
+@menus_bp.route("/<string:menu_id>/opening-hours", methods=["POST"])
+def define_opening_hours(menu_id):
+    pass
+
+""" 8. Pegar o horário de funcionamento do Menu (Cardápio) """
+@menus_bp.route("/<string:menu_id>/opening-hours", methods=["GET"])
+def get_opening_hours(menu_id):
+    pass
+
+""" 9. Atualizar o horário de funcionamento do Menu (Cardápio) """
+@menus_bp.route("/<string:menu_id>/opening-hours", methods=["PUT"])
+def update_opening_hours(menu_id):
+    pass
 
