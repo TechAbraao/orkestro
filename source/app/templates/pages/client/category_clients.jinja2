@@ -1,0 +1,106 @@
+{% extends "layouts/categories.jinja2" %}
+
+{% block title %}
+    {{ strategy["menu_name"] }}
+{% endblock title %}
+
+{% block navbar %}
+    <header class="bg-gray-900 text-white py-6 h-[140px] shadow-md flex items-center justify-center">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="" alt="Store Logo"
+                     class="h-24 w-24 rounded-full border-2 border-gray-700">
+                <div>
+                    <h1 class="text-2xl font-bold">
+                        Cardápio |
+                        <span id="menu-name"></span>
+                    </h1>
+                    <p id="menu-description" class="text-sm text-gray-300">Descrição do Cardápio</p>
+                    <span title="O comércio está com o cardápio ativado."
+                          id="menu-status"
+                          class="inline-block px-4 py-1 mt-1 text-sm font-semibold text-green-700
+                            bg-green-100 border border-green-300 rounded-full shadow-sm">
+                        Aberto
+                    </span>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-6">
+                <a href="#" id="btn-about-store" class="hover:text-gray-300 transition">Sobre o Comércio</a>
+                <a href="#" id="btn-contact-menu" class="hover:text-gray-300 transition">Contato</a>
+            </nav>
+        </div>
+    </header>
+    <div class="w-full flex items-center justify-center bg-gray-50 border-gray-300 px-4 h-14">
+        <section class="w-[62%] h-full flex items-center justify-left border-b-[3.5px]">
+            <a href="#"
+               id="btn-back-menu"
+               class="flex items-center justify-center">
+                <img
+                        src="{{ url_for('static', filename='icons/left-arrow.png') }}"
+                        alt="Voltar" ,
+                        title="Voltar"
+                        class="w-8 h-7 hover:scale-110 transition-transform duration-200"
+                />
+            </a>
+            <p id="title-category-name" class="text-lg text-left font-semibold text-black pl-5">
+                {{ strategy['category_name'] | upper }}
+            </p>
+
+            <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Pesquisar"
+                    class="border h-9 pl-2 ml-5 rounded-xl w-full text-black text-sm"
+            />
+        </section>
+    </div>
+
+    <div id="navbar-status-option" class="w-full flex items-center justify-center hidden bg-white">
+        <p class="bg-red-100 text-base text-center flex
+        items-center justify-center w-full h-10 font-bold text-red-900">Loja Fechada</p>
+    </div>
+    <script>
+        const menuClient = "{{ url_for('menus_client.render_menu_with_slug', slug=strategy['menu_slug']) }}"
+        let aboutMeStore = "{{ url_for('about_auth.about_me_store') }}"
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slug = "{{ strategy['menu_slug'] }}"
+            const btnBack = document.getElementById("btn-back-menu")
+
+            btnBack.addEventListener("click", (e) => {
+                e.preventDefault()
+                window.location.href = `/menus/${slug}`
+            })
+
+            const searchInput = document.getElementById("searchInput");
+            searchInput.addEventListener("input", () => {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                const productItems = document.querySelectorAll(".product-item");
+
+                productItems.forEach(item => {
+                    const name = item.querySelector("h3")?.textContent.toLowerCase() || "";
+                    const description = item.querySelector("p")?.textContent.toLowerCase() || "";
+
+                    item.style.display = (name.includes(searchTerm) || description.includes(searchTerm)) ? "" : "none";
+                });
+            });
+        })
+    </script>
+    <script src="{{ url_for('static', filename='javascript/menus.js') }}" defer></script>
+{% endblock navbar %}
+
+{% block menu %}
+    <section id="" class="w-3/4 flex flex-col items-center justify-center gap-4 p-10">
+         <div id="productsSection" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 items-center justify-center gap-10">
+            {# As Categorias serão renderizadas aqui. #}
+        </div>
+    </section>
+    <script>
+        const categoryId = '{{ strategy["category_id"] }}'
+        const menuSlug = '{{ strategy["menu_slug"]  }}'
+    </script>
+    <script src="{{ url_for('static', filename='javascript/products_in_menu.js') }}" defer></script>
+{% endblock menu %}
+

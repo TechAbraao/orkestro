@@ -1,0 +1,117 @@
+{% extends "layouts/products.jinja2" %}
+
+{% block title %}
+    {{ strategy["menu_name"] }}
+{% endblock title %}
+
+{% block navbar %}
+    <header class="bg-gray-900 text-white py-6 h-[140px] shadow-md flex items-center justify-center">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="" alt="Store Logo"
+                     class="h-24 w-24 rounded-full border-2 border-gray-700">
+                <div>
+                    <h1 class="text-2xl font-bold">
+                        Cardápio |
+                        <span id="menu-name"></span>
+                    </h1>
+                    <p id="menu-description" class="text-sm text-gray-300">Descrição do Cardápio</p>
+                    <span   title="O comércio está com o cardápio ativado."
+                            id="menu-status"
+                            class="inline-block px-4 py-1 mt-1 text-sm font-semibold text-green-700
+                            bg-green-100 border border-green-300 rounded-full shadow-sm">
+                        Aberto
+                    </span>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-6">
+                <a href="#" id="btn-about-store" class="hover:text-gray-300 transition">Sobre o Comércio</a>
+                <a href="#" id="btn-contact-menu" class="hover:text-gray-300 transition">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="w-full flex items-center justify-center bg-gray-50 border-gray-300 px-4 h-14">
+        <section class="w-[62%] h-full flex items-center justify-left border-b-[3.5px]">
+            <a href="#"
+               id="btn-back-category"
+               class="flex items-center justify-center">
+                <img
+                        src="{{ url_for('static', filename='icons/left-arrow.png') }}"
+                        alt="Voltar" ,
+                        title="Voltar"
+                        class="w-8 h-7 hover:scale-110 transition-transform duration-200"
+                />
+            </a>
+            <p id="title-product-name" class="text-lg text-left font-semibold text-black pl-5">
+
+            </p>
+        </section>
+    </div>
+
+    <div id="navbar-status-option" class="w-full flex items-center justify-center hidden bg-white">
+        <p class="bg-red-100 text-base text-center flex rounded-2xl
+        items-center justify-center w-full h-10 font-bold text-red-900">Loja Fechada</p>
+    </div>
+
+    <script>
+        const menuClient = "{{ url_for('menus_client.render_menu_with_slug', slug=strategy['menu_slug']) }}"
+        let aboutMeStore = "{{ url_for('about_auth.about_me_store') }}"
+    </script>
+    <script src="{{ url_for('static', filename='javascript/menus.js') }}" defer></script>
+    <script>
+        const btnBackCategory = $("#btn-back-category")
+        const slug = '{{ strategy['menu_slug'] }}'
+        const productId = '{{ strategy['product_id']  }}'
+    </script>
+{% endblock navbar %}
+
+{% block menu %}
+<section id="menuSection" class="w-3/4 flex flex-col items-center justify-center gap-4 p-10">
+    <div id="produtsContainer" class="flex items-center justify-center">
+        {# O produto será renderizado aqui. #}
+    </div>
+</section>
+
+<script>
+    $(document).ready(async function () {
+        try {
+            const res = await fetch(`/api/products/${productId}`)
+            const data = await res.json()
+            console.log(data)
+
+            const categoryId = data.data.category_id;
+            const productDescription = data.data.description;
+            const productName = data.data.name;
+            const productImageURL = data.data.image_url;
+            const productPrice = data.data.price;
+
+            $("#title-product-name").text(productName.toUpperCase())
+
+            const productCard = `
+                <div class="bg-white shadow-lg rounded-2xl p-6 w-[600px] h-[650px] border border-gray-200 flex flex-col items-center
+                            text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="w-[90%] h-[350px] flex items-center justify-center bg-gray-100 rounded-xl
+                                overflow-hidden border border-gray-200 mb-4">
+                        <img src="${productImageURL}" alt="${productName}" class="object-cover w-full h-full">
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">${productName}</h2>
+                    <p class="text-gray-600 text-sm mb-4">${productDescription}</p>
+                    <p class="text-lg font-bold text-green-600 mb-6">R$ ${productPrice.toFixed(2)}</p>
+                </div>
+            `;
+
+            $("#produtsContainer").html(productCard);
+
+            $("#btn-back-category").on("click", (e) => {
+                e.preventDefault();
+                window.location.href = `/menus/${slug}/${categoryId}`;
+            });
+
+        } catch (err) {
+            console.error("Erro:", err);
+        }
+    });
+</script>
+{% endblock menu %}
+

@@ -1,11 +1,11 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from source.app.services import menu_services
+from source.app.services import menu_services, categories_services
 from source.app.settings.logging_settings import get_logger
 
 logger = get_logger()
 menus_client_frontend = Blueprint("menus_client_frontend", __name__, url_prefix="")
 
-""" 1. Aqui vai renderizar os cardápios """
+""" 1. Esta parte do código é responsável por renderizar todos os cardápios disponíveis na interface. """
 @menus_client_frontend.get("/menus/<string:slug>")
 def view_menu_by_slug(slug: str):
 
@@ -19,9 +19,40 @@ def view_menu_by_slug(slug: str):
 
     return render_template("pages/client/menu_clients.jinja2", strategy=rendering_strategy)
 
-""" 2. Aqui tem q renderizar os produtos associados às categorias dos cardápios """
-@menus_client_frontend.get("/menus/<string:slug>/products/<string:product_id>")
-def views_products_by_id():
-    rendering_strategy = {}
+""" 2. Aqui será feita a renderização dos produtos pertencentes às categorias dos cardápios. """
+@menus_client_frontend.get("/menus/<string:slug>/<string:category_id>")
+def views_category_by_id(slug: str, category_id: str):
 
-    return render_template("pages/client/products_clients.jinja2", strategy=rendering_strategy)
+    logger.info(f"Buscando menu através do slug '{slug}'")
+    menu_by_slug = menu_services.get_menu_by_slug(slug)
+    logger.info(f"Menu encontrado: {menu_by_slug}")
+
+
+    logger.info(f"Buscando informações da categoria")
+    category_info = categories_services.get_category_by_id(category_id)
+
+    rendering_strategy = {
+        "menu_slug": slug,
+        "menu_name": menu_by_slug.get("name"),
+        "category_id": category_id,
+        "category_name": category_info.get("name")
+    }
+
+    return render_template("pages/client/category_clients.jinja2", strategy=rendering_strategy)
+
+
+""" 3. Aqui será feito a renderização do produto em específico que pertence a categoria do cardápio.  """
+@menus_client_frontend.get("/menus/<string:slug>/products/<string:product_id>")
+def views_product_by_id(slug: str, product_id: str):
+    logger.info(f"Buscando menu através do slug '{slug}'")
+    menu_by_slug = menu_services.get_menu_by_slug(slug)
+    logger.info(f"Menu encontrado: {menu_by_slug}")
+
+    rendering_strategy = {
+        "menu_slug": slug,
+        "menu_name": menu_by_slug.get("name"),
+        # "category_id": menu_by_slug.get("id"),
+        "product_id": product_id
+    }
+
+    return render_template("pages/client/products_details_clients.jinja2", strategy=rendering_strategy)
