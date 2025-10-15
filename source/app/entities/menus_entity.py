@@ -44,6 +44,7 @@ class MenusEntity(database.Model):
 
     def serialize_client(self, include_categories: bool = True, include_products: bool = True):
         data = {
+            "id": str(self.id),
             "name": self.name,
             "description": self.description,
             "created_at": self.created_at.isoformat() if self.created_at else None,

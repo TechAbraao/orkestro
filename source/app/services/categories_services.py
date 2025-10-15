@@ -125,6 +125,17 @@ class CategoriesServices:
             logger.warning(f"Category whose id is '{category_id}' not found.")
             raise CategoryNotFoundException("Category not found.")
 
+        menu_id_by_category = self.categories_repository.get_category_by_id(category_id)
+        menu_id = menu_id_by_category.serialize.get("menu_id")
+        logger.info(f"Achou o Menu ID: '{menu_id}'")
+        menu = self.menus_repository.get(menu_id)
+        menu_slug = menu.slug
+        logger.info(f"Você encontrou o Slug '{menu_slug}' no Cardápio '{menu_id}'.")
+        cache_key_del = get_cache_key_by_slug(slug=menu_slug, include_products=False, include_categories=True)
+        delete_cache = self.redis_repository.delete(cache_key_del)
+
+        if delete_cache:
+            logger.info(f"Cache do Slug '{menu_slug}' deletado com sucesso. A chave do cache é '{cache_key_del}'.")
 
         changed_category = (
             self

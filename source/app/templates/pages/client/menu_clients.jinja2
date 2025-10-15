@@ -43,9 +43,15 @@
 
 {% block menu %}
     <section id="menuSection" class="w-3/4 flex flex-col items-center justify-center gap-4 p-10">
+    {% if strategy["has_category"] == True %}
         <div id="categoriesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 items-center justify-center gap-10">
             {# As Categorias serão renderizadas aqui. #}
         </div>
+    {% elif strategy["has_category"] == False %}
+        <div class="w-full h-[50vh] flex items-center justify-center">
+            {{ errors.not_found_category_client() }}
+        </div>
+    {% endif %}
     </section>
 {% endblock menu %}
 

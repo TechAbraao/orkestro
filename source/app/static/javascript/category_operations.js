@@ -38,6 +38,8 @@ $(document).ready(function () {
 
                                 <div class="flex justify-start gap-2 pb-3">
                                     <button
+                                        id="btn-edit-category"
+                                        data-id="${category.id}"
                                         class="px-5 py-3 bg-gray-900 text-base text-white rounded-3xl hover:bg-gray-800 font-bold"
                                     >
                                         Editar categoria
@@ -268,5 +270,81 @@ $(document).ready(function () {
             });
         });
 
+    })
+
+    categoriesContainer.on("click", "#btn-edit-category", function () {
+        const categoryId = $(this).data("id");
+        const modalEditCategory = $("#modalEditCategory");
+
+        modalEditCategory.data("category-id", categoryId);
+        modalEditCategory.removeClass("hidden");
+    });
+
+    categoriesContainer.on("click", "#btn-edit-product", function() {
+        const productId = $(this).data("id");
+        const modalEditProduct = $("#modalEditProduct");
+
+        modalEditProduct.data("product-id", productId);
+        modalEditProduct.removeClass("hidden")
+    })
+
+    $("#btnConfirmEditCategory").on("click", function (event) {
+        event.preventDefault();
+
+        const categoryId = $("#modalEditCategory").data("category-id");
+        const categoryName = $("#editCategoryName").val();
+        const categoryDescription = $("#editCategoryDescription").val();
+
+        console.log(`Category Name: ${categoryName}, Category Description: ${categoryDescription}, Category ID: ${categoryId}`);
+        $.ajax({
+            url: `/api/categories/${categoryId}`,
+            method: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify({
+                name: categoryName,
+                description: categoryDescription
+            }),
+            success: function (res) {
+                console.log("Categoria atualizada:", res);
+                loadCategories();
+            },
+            error: function (xhr) {
+                console.error("Erro ao atualizar categoria:", xhr.responseText);
+            }
+        });
+
+        $("#modalEditCategory").addClass("hidden");
+    });
+
+    $("#btnConfirmEditProduct").on("click", function (event) {
+        event.preventDefault()
+
+        const productId = $("#modalEditProduct").data("product-id");
+        console.log("Product ID: ", productId)
+        let newProductName = $("#editProductName").val();
+        let newProductPrice = $("#editProductPrice").val();
+        let newProductDescription = $("#editProductDescription").val();
+
+        $.ajax({
+            url: `/api/products/${productId}`,
+            method: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify({
+                name: newProductName,
+                description: newProductDescription,
+                price: parseFloat(newProductPrice),
+            }),
+            success: function(res) {
+                console.log("Produto atualizado com sucesso.");
+                loadCategories();
+                $("#editProductName").val("");
+                $("#editProductPrice").val("");
+                $("#editProductDescription").val("");
+                $("#modalEditProduct").addClass("hidden");
+            },
+            error: function(xhr) {
+                console.error("Erro ao atualizar produto:", xhr.responseText);
+            }
+        })
     })
 });

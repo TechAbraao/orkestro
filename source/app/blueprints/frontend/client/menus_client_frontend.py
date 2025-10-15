@@ -11,10 +11,21 @@ def view_menu_by_slug(slug: str):
 
     logger.info(f"Buscando menu através do slug '{slug}'")
     menu_by_slug = menu_services.get_menu_by_slug(slug)
+
+    menu_id = menu_by_slug["id"]
+    verify_category = categories_services.get_all_categories_by_menu(menu_id)
+    hasCategory = False
+    if verify_category:
+        hasCategory = True
+    else:
+        hasCategory = False
+
     logger.info(f"Menu encontrado: {menu_by_slug}")
+
     rendering_strategy = {
         "menu_slug": slug,
-        "menu_name": menu_by_slug.get("name")
+        "menu_name": menu_by_slug.get("name"),
+        "has_category": bool(hasCategory)
     }
 
     return render_template("pages/client/menu_clients.jinja2", strategy=rendering_strategy)

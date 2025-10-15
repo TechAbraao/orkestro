@@ -1,33 +1,144 @@
 {% macro menu_card(menu) %}
-<div class="bg-white rounded-2xl shadow-md p-6 w-full max-w-sm hover:shadow-xl transition-shadow duration-300">
+    <div class="bg-white rounded-2xl shadow-md p-6 w-full max-w-sm hover:shadow-xl transition-shadow duration-300">
 
-    {# Nome do cardápio #}
-    <h3 class="text-xl font-semibold text-gray-900 mb-2 capitalize">
-        {{ menu.name }}
-    </h3>
+        {# Nome do cardápio #}
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 capitalize">
+            {{ menu.name }}
+        </h3>
 
-    {# Slug (opcional, pode mostrar ou não) #}
-    <p class="text-sm text-indigo-600 mb-2">
-        {{ menu.slug }}
-    </p>
+        {# Slug (opcional, pode mostrar ou não) #}
+        <p class="text-sm text-indigo-600 mb-2">
+            {{ menu.slug }}
+        </p>
 
-    {# Descrição #}
-    <p class="text-gray-700 mb-4">
-        {{ menu.description }}
-    </p>
+        {# Descrição #}
+        <p class="text-gray-700 mb-4">
+            {{ menu.description }}
+        </p>
 
-    {# Data de criação #}
-    <p class="text-xs text-gray-400">
-        Criado em: {{ menu.created_at[:10] }}  {# Apenas YYYY-MM-DD #}
-    </p>
+        {# Data de criação #}
+        <p class="text-xs text-gray-400">
+            Criado em: {{ menu.created_at[:10] }} {# Apenas YYYY-MM-DD #}
+        </p>
 
-    {# Botão de ação, por exemplo "Ver Cardápio" #}
-    <div class="mt-4 flex justify-end">
-        <a href="/menus/{{ menu.slug }}"
-           class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium
+        {# Botão de ação, por exemplo "Ver Cardápio" #}
+        <div class="mt-4 flex justify-end">
+            <a href="/menus/{{ menu.slug }}"
+               class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium
                   hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
-            Ver Cardápio
-        </a>
+                Ver Cardápio
+            </a>
+        </div>
     </div>
-</div>
+{% endmacro %}
+
+
+{% macro category_card(category) %}
+    <div
+            class="bg-gradient-to-b from-white to-gray-50 rounded-2xl h-auto w-full shadow-lg hover:shadow-2xl p-6
+           flex flex-col justify-between transform transition-all duration-300 border border-gray-100"
+    >
+        <div>
+            <h3 class="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600
+                   bg-clip-text text-transparent mb-2">
+                {{ category.name }}
+            </h3>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+                {{ category.description }}
+            </p>
+        </div>
+
+        <div class="flex justify-start gap-2 pb-3">
+            <button
+                    id="btn-edit-category"
+                    data-id="{{ category.id }}"
+                    class="px-5 py-3 bg-gray-900 text-base text-white rounded-3xl hover:bg-gray-800 font-bold"
+            >
+                Editar categoria
+            </button>
+            <button
+                    id="btn-add-product"
+                    data-id="{{ category.id }}"
+                    class="px-5 py-3 bg-gray-900 text-base text-white rounded-3xl hover:bg-gray-800 font-bold"
+            >
+                Adicionar produto
+            </button>
+            <button
+                    class="delete-btn px-5 py-3 bg-red-500 text-base text-white rounded-3xl hover:bg-red-600 font-bold"
+                    data-id="{{ category.id }}"
+            >
+                Excluir categoria
+            </button>
+        </div>
+
+        <div class="relative mb-5">
+            <button
+                    class="w-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600
+                   hover:to-indigo-600 text-white px-5 py-2.5 rounded-lg font-semibold
+                   flex justify-between items-center shadow-md transition-all duration-300 hover:shadow-lg"
+                    onclick="toggleDropdown('{{ category.id }}')"
+            >
+                <span>Conferir produtos</span>
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 transform transition-transform duration-300"
+                        id="arrow-{{ category.id }}"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                >
+                    <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"
+                    />
+                </svg>
+            </button>
+
+            <div
+                    id="dropdown-{{ category.id }}"
+                    class="hidden bg-gray-50 mt-3 rounded-xl shadow-inner p-4 space-y-3
+                   border border-gray-200 transition-all duration-300"
+            >
+                <section class="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {% for product in category.products %}
+                        <div class="flex justify-between h-52 items-center bg-white rounded-lg px-4
+                            py-3 shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100">
+
+                            <div class="w-1/2 rounded-2xl h-full bg-green-100 overflow-hidden flex items-center justify-center">
+                                <img src="{{ product.image_url or '' }}" alt="{{ product.name }}"
+                                     class="object-cover h-full w-full rounded-2xl">
+                            </div>
+
+                            <div class="w-1/2 flex flex-col h-full p-2 justify-between">
+                                <div>
+                                    <span class="text-gray-800 font-medium text-lg block">{{ product.name }}</span>
+                                    <span class="text-sm text-gray-500 block">
+                                R$ {{ "%.2f"|format(product.price or 0) }}
+                            </span>
+                                    <span class="text-sm text-gray-500 block">{{ product.description }}</span>
+                                </div>
+
+                                <div class="flex justify-end gap-2 mt-3">
+                                    <button id="btn-edit-product" data-id="{{ product.id }}"
+                                            class="bg-blue-500 hover:bg-blue-600 text-white text-sm px-3 py-1 rounded-md transition-all">
+                                        Alterar
+                                    </button>
+                                    <button id="btn-delete-product" data-id="{{ product.id }}"
+                                            class="bg-red-500 hover:bg-red-600 text-white text-sm px-3 py-1 rounded-md transition-all">
+                                        Excluir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <p class="text-gray-500 italic text-sm col-span-full text-center">
+                            Nenhum produto cadastrado nesta categoria.
+                        </p>
+                    {% endfor %}
+                </section>
+            </div>
+        </div>
+    </div>
 {% endmacro %}

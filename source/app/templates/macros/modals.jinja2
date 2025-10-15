@@ -408,7 +408,6 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
     </script>
 {% endmacro %}
 
-
 {% macro modal_add_product() %}
 <div id="modalAddProduct" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
     <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
@@ -467,4 +466,145 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
         </form>
     </div>
 </div>
+{% endmacro %}
+
+{% macro modal_edit_category(modal_id="modalEditCategory") %}
+    <div id="{{ modal_id }}" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg p-6 relative">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h2 class="text-2xl font-semibold text-gray-800">Editar Categoria</h2>
+                <button
+                    type="button"
+                    class="text-gray-400 hover:text-gray-600 transition"
+                    onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')">
+                    ✕
+                </button>
+            </div>
+
+            <form id="formEditCategory" class="space-y-5">
+                <div>
+                    <label for="editCategoryName" class="block text-sm font-medium text-gray-700 mb-1">
+                        Nome da Categoria
+                    </label>
+                    <input
+                        type="text"
+                        id="editCategoryName"
+                        name="name"
+                        class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                        placeholder="Digite o nome da categoria"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="editCategoryDescription" class="block text-sm font-medium text-gray-700 mb-1">
+                        Descrição
+                    </label>
+                    <textarea
+                        id="editCategoryDescription"
+                        name="description"
+                        rows="3"
+                        class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none resize-none"
+                        placeholder="Digite a descrição da categoria"
+                    ></textarea>
+                </div>
+
+                <div class="flex justify-end gap-3 pt-4 border-t">
+                    <button
+                        type="button"
+                        class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
+                        onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        id="btnConfirmEditCategory"
+                        class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                    >
+                        Salvar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro modal_edit_product(modal_id="modalEditProduct") %}
+    <div id="{{ modal_id }}" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg p-6 relative">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h2 class="text-2xl font-semibold text-gray-800">Editar Produto</h2>
+                <button
+                        type="button"
+                        class="text-gray-400 hover:text-gray-600 transition"
+                        onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')">
+                    ✕
+                </button>
+            </div>
+
+            <form id="formEditProduct" class="space-y-5">
+                <div>
+                    <label for="editProductName" class="block text-sm font-medium text-gray-700 mb-1">
+                        Nome do Produto
+                    </label>
+                    <input
+                            type="text"
+                            id="editProductName"
+                            name="name"
+                            class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                            placeholder="Digite o nome do produto"
+                            required
+                    >
+                </div>
+
+                <div>
+                    <label for="editProductDescription" class="block text-sm font-medium text-gray-700 mb-1">
+                        Descrição
+                    </label>
+                    <textarea
+                            id="editProductDescription"
+                            name="description"
+                            rows="3"
+                            class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none resize-none"
+                            placeholder="Digite a descrição do produto"
+                    ></textarea>
+                </div>
+
+                <div>
+                    <label for="editProductPrice" class="block text-sm font-medium text-gray-700 mb-1">
+                        Preço
+                    </label>
+                    <input
+                            type="number"
+                            step="0.01"
+                            id="editProductPrice"
+                            name="price"
+                            class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                            placeholder="Digite o preço do produto"
+                            required
+                    >
+                </div>
+
+                <div class="flex justify-end gap-3 pt-4 border-t">
+                    <button
+                            type="button"
+                            class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
+                            onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                            type="submit"
+                            id="btnConfirmEditProduct"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                    >
+                        Salvar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 {% endmacro %}
