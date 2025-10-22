@@ -355,17 +355,16 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
          class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
         <div class="bg-white w-full max-w-lg rounded-2xl shadow-lg p-6">
             <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Horários de Funcionamento</h2>
-
             <form id="openingHoursForm" class="space-y-3">
-                {% set dias = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"] %}
-                {% for dia in dias %}
+                {% set days = ["Segunda", "Terca", "Quarta", "Quinta", "Sexta", "Sabado", "Domingo"] %}
+                {% for day in days %}
                     <div class="flex items-center justify-between gap-3 border-b border-gray-200 pb-2">
-                        <span class="w-24 font-medium text-gray-700">{{ dia }}</span>
+                        <span class="w-24 font-medium text-gray-700">{{ day }}</span>
                         <div class="flex gap-2">
-                            <input type="time" name="{{ dia|lower }}_open"
+                            <input id="{{ day | lower }}_open" type="time" name="{{ day|lower }}_open"
                                    class="border rounded-lg p-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"/>
                             <span class="text-gray-500">às</span>
-                            <input type="time" name="{{ dia|lower }}_close"
+                            <input id="{{ day | lower }}_close" type="time" name="{{ day|lower }}_close"
                                    class="border rounded-lg p-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"/>
                         </div>
                     </div>
@@ -375,7 +374,11 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
             <div class="flex justify-end mt-6 gap-3">
                 <button type="button" id="cancelModalBtn"
                         class="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition">
-                    Cancelar
+                    Fechar
+                </button>
+                <button type="submit" id="restoreHoursBtn"
+                        class="px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 transition">
+                    Restaurar
                 </button>
                 <button type="submit" form="openingHoursForm"
                         class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">
@@ -385,26 +388,28 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
         </div>
     </div>
     <script>
-        const modal = document.getElementById('modalOpeningHours');
-        const cancelBtn = document.getElementById('cancelModalBtn');
+        $(document).ready(function () {
+            const modal = document.getElementById('modalOpeningHours');
+            const cancelBtn = document.getElementById('cancelModalBtn');
 
-        function openOpeningHoursModal() {
-            modal.classList.remove('hidden');
-        }
+            function openOpeningHoursModal() {
+                modal.classList.remove('hidden');
+            }
 
-        function closeOpeningHoursModal() {
-            modal.classList.add('hidden');
-        }
+            function closeOpeningHoursModal() {
+                modal.classList.add('hidden');
+            }
 
-        cancelBtn.addEventListener('click', closeOpeningHoursModal);
+            cancelBtn.addEventListener('click', closeOpeningHoursModal);
 
-        document.getElementById('openingHoursForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const data = new FormData(this);
-            const entries = Object.fromEntries(data.entries());
-            console.log(entries);
-            closeOpeningHoursModal();
-        });
+            document.getElementById('openingHoursForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const data = new FormData(this);
+                const entries = Object.fromEntries(data.entries());
+                console.log(entries);
+                closeOpeningHoursModal();
+            });
+        })
     </script>
 {% endmacro %}
 
@@ -608,3 +613,88 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
         </div>
     </div>
 {% endmacro %}
+
+
+{% macro modal_about_store(modal_id="modalAboutStore", menuId="") %}
+    <div id="{{ modal_id }}" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg p-6 relative">
+            <button onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')"
+                    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                &times;
+            </button>
+
+            <section>
+                <h2>Sobre</h2>
+                <p class="text-sm pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-bold mb-4">Horários de Funcionamento</h2>
+                <ul id="hours-container-list" class="space-y-2 text-gray-800">
+                    {# Horários serão inseridos aqui dinamicamente via JS #}
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            function getAllHoursInMenu(menu_id) {
+                $.ajax({
+                    url: `/api/menus/${menu_id}/opening-hours`,
+                    method: "GET",
+                    success: function (res) {
+                        const hours = res.data;
+                        const list = $("#hours-container-list");
+                        list.empty();
+
+                        if (!hours || hours.length === 0) {
+                            list.append('<li class="text-red-500 italic">Nenhum horário cadastrado.</li>');
+                            return;
+                        }
+
+                        const orderedDays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+                        const daysInPortuguese = {
+                            monday: "Segunda-feira",
+                            tuesday: "Terça-feira",
+                            wednesday: "Quarta-feira",
+                            thursday: "Quinta-feira",
+                            friday: "Sexta-feira",
+                            saturday: "Sábado",
+                            sunday: "Domingo"
+                        };
+
+                        const sortedHours = hours.sort((a, b) => orderedDays.indexOf(a.day) - orderedDays.indexOf(b.day));
+
+                        sortedHours.forEach(hour => {
+                            const open = hour.open || "--:--";
+                            const close = hour.close || "--:--";
+                            const dayName = daysInPortuguese[hour.day] || hour.day;
+
+                            const li = `
+                        <li class="flex justify-between items-center bg-gray-100 p-2 rounded-md">
+                            <span class="font-medium">${dayName}</span>
+                            <span class="text-sm text-gray-600">${open} - ${close}</span>
+                        </li>
+                    `;
+                            list.append(li);
+                        });
+                    },
+                    error: function (xhr) {
+                        const responseError = xhr.responseText;
+                        alert("Erro ao carregar horários: " + responseError);
+                    }
+                });
+            }
+            getAllHoursInMenu("{{ menuId }}");
+        });
+    </script>
+{% endmacro %}
+

@@ -12,7 +12,6 @@ from pathlib import Path
 def create_app():
     app = Flask(__name__)
 
-
     app.config['SQLALCHEMY_DATABASE_URI'] = postgres_settings.get_uri()
 
     BASE_DIR = Path(__file__).resolve().parent
@@ -44,6 +43,7 @@ def create_app():
     from source.app.entities.orders_entity import OrderEntity
     from source.app.entities.orders_products_entity import OrderProductsEntity
     from source.app.entities.chat_history_entity import ChatHistory
+    from source.app.entities.opening_hours_entity import OpeningHoursEntity
 
     # Back-end (API Layer)
     app.register_blueprint(menus_bp)

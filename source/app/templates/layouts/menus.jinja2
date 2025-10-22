@@ -22,8 +22,6 @@
 
 </head>
 <body class="min-h-screen flex flex-col">
-    {# Global Pre Loader #}
-    {{ loaders.global_loader() }}
 
     {# Modals #}
     {{ modals.modal_contact_menu() }}
@@ -43,5 +41,14 @@
         {% endblock menu %}
     </main>
 <script src="{{ url_for('static', filename='javascript/global_preLoader.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        const modalAboutStore = $("#modalAboutStore")
+        const btnAboutStore = $("#btn-about-store")
+        btnAboutStore.on("click", function() {
+            modalAboutStore.removeClass("hidden")
+        })
+    })
+</script>
 </body>
 </html>

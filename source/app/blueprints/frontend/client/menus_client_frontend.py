@@ -24,6 +24,7 @@ def view_menu_by_slug(slug: str):
 
     rendering_strategy = {
         "menu_slug": slug,
+        "menu_id": menu_id,
         "menu_name": menu_by_slug.get("name"),
         "has_category": bool(hasCategory)
     }

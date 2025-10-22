@@ -9,6 +9,7 @@ $(document).ready(function () {
         method: "GET",
         success: function (res) {
             console.log("Response Menu: ", res)
+            console.log("Response Menu: ", res)
 
             let navbarStatusOption = $("#navbar-status-option")
             let menuDescription = res.data.description;

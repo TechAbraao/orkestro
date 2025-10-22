@@ -19,12 +19,8 @@
     {% import "macros/cards.jinja2" as cards %}
     {% import "macros/errors.jinja2" as errors %}
     {% import "macros/loaders.jinja2" as loaders %}
-
 </head>
 <body class="min-h-screen flex flex-col">
-    {# Global Pre Loader #}
-    {{ loaders.global_loader() }}
-
     {# Modals #}
     {{ modals.modal_contact_menu() }}
 

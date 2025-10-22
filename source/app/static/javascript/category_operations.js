@@ -10,7 +10,7 @@ $(document).ready(function () {
         dropdown.classList.toggle("hidden");
         arrow.classList.toggle("rotate-180");
     };
-
+    let categoriesData = [];
     function loadCategories() {
         $.ajax({
             url: getCategoriesURL,
@@ -21,6 +21,7 @@ $(document).ready(function () {
 
                 if (res.success && res.data.length > 0) {
                     res.data.forEach(category => {
+                        categoriesData = res.data;
                         const categoryCard = $(`
                             <div
                                 class="bg-gradient-to-b from-white to-gray-50 rounded-2xl h-auto w-full shadow-lg hover:shadow-2xl p-6
@@ -280,13 +281,33 @@ $(document).ready(function () {
         modalEditCategory.removeClass("hidden");
     });
 
-    categoriesContainer.on("click", "#btn-edit-product", function() {
+    categoriesContainer.on("click", "#btn-edit-product", function () {
         const productId = $(this).data("id");
         const modalEditProduct = $("#modalEditProduct");
 
+        let selectedProduct = null;
+        for (const category of categoriesData) {
+            const found = category.products.find(p => p.id === productId);
+            if (found) {
+                selectedProduct = found;
+                break;
+            }
+        }
+
+        if (!selectedProduct) {
+            alert("Produto não encontrado!");
+            return;
+        }
+
+        $("#editProductName").val(selectedProduct.name);
+        $("#editProductDescription").val(selectedProduct.description);
+        $("#editProductPrice").val(selectedProduct.price);
+
         modalEditProduct.data("product-id", productId);
-        modalEditProduct.removeClass("hidden")
-    })
+
+        modalEditProduct.removeClass("hidden");
+    });
+
 
     $("#btnConfirmEditCategory").on("click", function (event) {
         event.preventDefault();

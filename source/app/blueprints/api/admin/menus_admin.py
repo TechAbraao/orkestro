@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify, g
 from source.app.utils.responses import Response
-from source.app.schemas import menu_schema, uuid_schema
-from source.app.services import menu_services
+from source.app.schemas import menu_schema, uuid_schema, opening_hours_schemas
+from source.app.services import (menu_services, opening_hours_services)
 from source.app.settings.logging_settings import get_logger
 from source.app.utils.decorators.authorizations import authorization_required
 from werkzeug.exceptions import *
@@ -9,7 +9,7 @@ from werkzeug.exceptions import *
 logger = get_logger(__name__)
 menus_bp = Blueprint("menus_bp", __name__, url_prefix="/api/menus")
 
-""" 1. Criar um novo Menu (Cardápio). """
+""" 01. Criar um novo Menu (Cardápio). """
 @menus_bp.route("/", methods=["POST"])
 @authorization_required
 def create_menu():
@@ -28,7 +28,7 @@ def create_menu():
         data=None,
     )
 
-""" 2. Obter menus (do usuário autenticado ou todos). """
+""" 02. Obter menus (do usuário autenticado ou todos). """
 @menus_bp.route("/", methods=["GET"])
 @authorization_required
 def get_menus():
@@ -53,7 +53,7 @@ def get_menus():
         all_menus_returned = menu_services.get_all_menus(include=include)
         return jsonify(all_menus_returned)
 
-""" 3. Deletar Menu (Cardápio). """
+""" 03. Deletar Menu (Cardápio). """
 @menus_bp.route("/<string:menu_id>", methods=["DELETE"])
 @authorization_required
 def delete_menu(menu_id: str):
@@ -67,7 +67,7 @@ def delete_menu(menu_id: str):
         status_code=200
     )
 
-""" 4. Atualizar Menu (Cardápio). """
+""" 04. Atualizar Menu (Cardápio). """
 @menus_bp.route("/<string:menu_id>", methods=["PUT"])
 @authorization_required
 def update_menu(menu_id: str):
@@ -87,7 +87,7 @@ def update_menu(menu_id: str):
     )
 
 
-""" 5. Atualizar status do Menu (Cardápio) (ativado/desativado). """
+""" 05. Atualizar status do Menu (Cardápio) (ativado/desativado). """
 @menus_bp.route("/<string:menu_id>/status", methods=["PATCH"])
 @authorization_required
 def change_status_menu(menu_id: str):
@@ -110,7 +110,7 @@ def change_status_menu(menu_id: str):
     )
 
 
-""" 6. Ver o status atual do cardápio (ativado/desativado). """
+""" 06. Ver o status atual do cardápio (ativado/desativado). """
 @menus_bp.route("/<string:menu_id>/status", methods=["GET"])
 @authorization_required
 def get_status_menu(menu_id: str):
@@ -131,18 +131,71 @@ def get_status_menu(menu_id: str):
     )
 
 
-""" 7. Adicionar horário de funcionamento do Menu (Cardápio) """
+""" 07. Adicionar horário de funcionamento do Menu (Cardápio) """
 @menus_bp.route("/<string:menu_id>/opening-hours", methods=["POST"])
-def define_opening_hours(menu_id):
-    pass
+def save_opening_hours(menu_id):
+    logger.info(f"POST /api/menus/{menu_id}/opening-hours - Salvando todos os horários de funcionamento de um cardápio.")
 
-""" 8. Pegar o horário de funcionamento do Menu (Cardápio) """
+    DAYS_OF_WEEK = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+    data = request.get_json()
+
+    received_days = [item["day"].lower() for item in data]
+    missing_days = [day for day in DAYS_OF_WEEK if day not in received_days]
+    if missing_days:
+        return Response.error(
+            message=f"Missing days in request: {', '.join(missing_days)}",
+            status_code=400,
+            data=None
+        )
+
+    data_validated = opening_hours_schemas.load(data, many=True)
+    logger.info(f"Body da Request: {opening_hours_schemas.dump(data_validated, many=True)}")
+
+    saved = opening_hours_services.save_hours_in_menu(menu_id=menu_id, data=data)
+    logger.info(f"menu_id: '{menu_id}' - Horário de funcionamento adicionado: {saved}")
+
+    if not saved:
+        return Response.error(
+            message="Error saving opening hours.",
+            status_code=BadRequest.code
+        )
+    return Response.success(
+        message="Opening hours added successfully.",
+        status_code=201,
+        data=data
+    )
+
+""" 08. Pegar o horário de funcionamento do Menu (Cardápio) """
 @menus_bp.route("/<string:menu_id>/opening-hours", methods=["GET"])
 def get_opening_hours(menu_id):
-    pass
+    logger.info(f"GET /api/menus/{menu_id}/opening-hours - Obtendo todos os horários de funcionamento de um cardápio.")
 
-""" 9. Atualizar o horário de funcionamento do Menu (Cardápio) """
+    hours_opening = opening_hours_services.get_menu_opening_hours(menu_id)
+    logger.info(f"Horários do menu_id '{menu_id}' foram encontrados: {hours_opening}")
+
+    return Response.success(
+        message="All times returned successfully.",
+        status_code=200,
+        data=hours_opening
+    )
+
+""" 09. Atualizar o horário de funcionamento do Menu (Cardápio) """
 @menus_bp.route("/<string:menu_id>/opening-hours", methods=["PUT"])
 def update_opening_hours(menu_id):
     pass
 
+""" 10. Deletar o horário de funcionamento do Menu (Cardápio) """
+@menus_bp.route("/<string:menu_id>/opening-hours", methods=["DELETE"])
+def delete_opening_hours(menu_id):
+    logger.info(f"DELETE /api/menus/{menu_id}/opening-hours - Deletando TODOS os horários de funcionamento do cardápio.")
+
+    all_deleted = opening_hours_services.delete_all_hours(menu_id=menu_id)
+    if not all_deleted:
+        return Response.error(
+            message="Error deleting all menu times.",
+            status_code=NotFound.code
+        )
+    return Response.success(
+        message="All opening hours deleted successfully.",
+        status_code=200
+    )

@@ -5,7 +5,6 @@
 {% endblock title %}
 
 {% block sidenav %}
-    {# Dynamic rendering from the backend #}
     {% include "partials/sidebar.jinja2" %}
     <script>
         const logoutURL = "{{ url_for('sign_in_auth.end_session_store') }}"
@@ -76,7 +75,7 @@
 {% block navbar %}
     <aside class="w-full pl-10 text-lg font-extrabold">
         Editar Cardápio | <span id="menu-selected-edit"
-                                class="font-extralight"> Cardápio selecionado: {{ strategy["profile"]["menu_name"] }} | </span>
+                            class="font-extralight"> Cardápio selecionado: {{ strategy["profile"]["menu_name"] }} | </span>
         <span class="font-extralight" id="store-name-navbar">Company name</span>
     </aside>
 {% endblock navbar %}
