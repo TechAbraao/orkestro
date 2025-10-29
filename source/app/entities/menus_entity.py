@@ -75,3 +75,9 @@ from source.app.entities.products_entity import ProductsEntity
 MenusEntity.products = database.relationship(
     ProductsEntity, secondary=menu_product, back_populates="menus"
 )
+
+MenusEntity.orders = database.relationship(
+    "OrderEntity",
+    back_populates="menu",
+    cascade="all, delete-orphan"
+)

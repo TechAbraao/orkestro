@@ -1,6 +1,6 @@
 from source.app.settings.definitions_settings import db as database
-import uuid
 from datetime import datetime, timezone
+import uuid
 
 class OrderProductsEntity(database.Model):
     __tablename__ = "order_products"
@@ -15,9 +15,5 @@ class OrderProductsEntity(database.Model):
 from source.app.entities.orders_entity import OrderEntity
 from source.app.entities.products_entity import ProductsEntity
 
-OrderProductsEntity.order = database.relationship(
-    OrderEntity, back_populates="order_products"
-)
-OrderProductsEntity.product = database.relationship(
-    ProductsEntity, back_populates="order_products"
-)
+OrderProductsEntity.order = database.relationship(OrderEntity, back_populates="order_products")
+OrderProductsEntity.product = database.relationship(ProductsEntity, back_populates="order_products")

@@ -1,0 +1,59 @@
+{% extends "layouts/administrative.jinja2" %}
+
+{% block title %}
+    Todos os pedidos
+{% endblock title %}
+
+{% block sidenav %}
+    {% include "partials/sidebar.jinja2" %}
+    <script>
+        const logoutURL = "{{ url_for('sign_in_auth.end_session_store') }}"
+    </script>
+{% endblock sidenav %}
+
+{% block dashboard %}
+    <section
+            class="w-full h-full bg-gray-100 flex items-center p-10
+            gap-4 bg-gray-100 rounded-3xl border-2 border-gray-300">
+        <div class="h-full w-1/2 bg-red-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
+            <h2 class="text-xl text-left font-bold bg-red-600 border-gray-300 border-2
+            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl">Pedidos Realizados</h2>
+            <ul id="orders-list-new" class="w-[95%] max-w-4xl
+            space-y-3 overflow-y-auto h-[600px]">
+                {# Aqui renderizam os pedidos realizados #}
+            </ul>
+        </div>
+        <div class="h-full w-1/2 bg-green-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
+            <h2 class="text-xl text-left font-bold bg-red-600 border-gray-300 border-2
+            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl">Pedidos Pendentes</h2>
+            <ul id="orders-list-accepts" class="w-[95%] max-w-4xl
+                space-y-3 overflow-y-auto h-[600px]">
+                {# Aqui renderizam os pedidos pendentes #}
+            </ul>
+        </div>
+        <div class="h-full w-1/2 bg-orange-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
+            <h2 class="text-xl text-left font-bold bg-red-600 border-gray-300 border-2
+            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl">Pedidos Concluídos</h2>
+            <ul id="orders-list-finish" class="w-[95%] max-w-4xl
+                space-y-3 overflow-y-auto h-[600px]">
+                {# Aqui renderizam os pedidos concluídos #}
+            </ul>
+        </div>
+    </section>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='javascript/websocket_orders.js') }}" defer></script>
+{% endblock dashboard %}
+
+{% block navbar %}
+    <aside class="w-full pl-10 text-lg font-extrabold">
+        Todos os Pedidos | <span class="font-extralight">Acompanhe todos os pedidos realizados em tempo real | </span>
+        <span class="font-extralight"
+              id="store-name-navbar"></span>
+    </aside>
+{% endblock navbar %}
+
+{% block footer %}
+    <aside class="w-auto h-full">
+        Orkestro © 2025 | versão 1.0.0
+    </aside>
+{% endblock footer %}

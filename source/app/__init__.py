@@ -8,6 +8,7 @@ from flask_migrate import Migrate
 from flasgger import Swagger
 import yaml
 from pathlib import Path
+import os
 
 def create_app():
     app = Flask(__name__)
@@ -63,7 +64,11 @@ def create_app():
     app.register_blueprint(menus_client_frontend)
 
     register_error_handlers(app)
+    from source.app.settings.application_settings import application_settings as settings
+    debug_mode = settings.FLASK_DEBUG or os.environ.get("PYCHARM_HOSTED") == "1"
+    async_mode = "threading" if debug_mode else "eventlet"
+    socketio.init_app(app, async_mode=async_mode)
 
-    socketio.init_app(app)
+    from source.app.blueprints.api.client import orders_events_client
 
     return app

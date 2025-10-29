@@ -1,5 +1,3 @@
-from calendar import day_name
-
 from source.app.repository.products_repository import ProductsRepository
 from source.app.repository.menus_repository import MenusRepository
 from source.app.entities.menus_entity import MenusEntity

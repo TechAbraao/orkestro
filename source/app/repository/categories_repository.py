@@ -6,7 +6,6 @@ from source.app.settings.logging_settings import get_logger
 from sqlalchemy.orm import joinedload
 from sqlalchemy import func
 
-
 logger = get_logger(__name__)
 
 class CategoriesRepository:
@@ -65,7 +64,6 @@ class CategoriesRepository:
         if not category:
             logger.warning(f"Category '{category_id}' not found for menu '{slug}'")
         return category
-
 
     @transactional
     def update_category(self, category_id, name=None, description=None):

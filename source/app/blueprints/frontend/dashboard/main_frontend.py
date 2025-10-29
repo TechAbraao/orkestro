@@ -19,7 +19,7 @@ def views_profile_dashboard():
 @main_frontend.get("/orders")
 @authorization_required
 def views_orders_dashboard():
-    return render_template("pages/orders.jinja2")
+    return render_template("pages/admin/orders.jinja2")
 
 @main_frontend.get("/menus")
 @authorization_required
