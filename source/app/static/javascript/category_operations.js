@@ -308,7 +308,6 @@ $(document).ready(function () {
         modalEditProduct.removeClass("hidden");
     });
 
-
     $("#btnConfirmEditCategory").on("click", function (event) {
         event.preventDefault();
 

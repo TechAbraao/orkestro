@@ -17,3 +17,11 @@ def handle_join_menu(data):
 
     orders = orders_services.get_order_by_menu_id(menu_id)
     emit("all_orders", {"menu_id": menu_id, "orders": orders})
+
+
+def broadcast_order_update(menu_id, updated_order):
+    socketio.emit(
+        "order_status_update",
+        {"menu_id": menu_id, "order": updated_order},
+        room=menu_id
+    )

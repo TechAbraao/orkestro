@@ -1,4 +1,3 @@
-
 from source.app.schemas import uuid_schema
 from source.app.extesions.socket_io import socketio
 from source.app.settings.logging_settings import get_logger
@@ -8,6 +7,7 @@ from source.app.utils.decorators.authorizations import authorization_required
 from source.app.exceptions.menu_exceptions import *
 from source.app.services import menu_services, products_services, categories_services, customers_services, orders_services
 from source.app.schemas import orders_schemas, uuid_schema
+from source.app.blueprints.api.client.orders_events_client import broadcast_order_update
 
 logger = get_logger(__name__)
 orders_client = Blueprint("orders_client", __name__, url_prefix="/api")
@@ -80,7 +80,7 @@ def post_order():
         "user_id": user_id,
         "name": customer_infos["name"],
         "telephone": customer_infos["telephone"],
-        "status": "Done",
+        "status": "done",
     }
 
     """ Salvar pedido referente ao cardápio. """
@@ -110,14 +110,40 @@ def post_order():
     )
 
 """ 03. Delete order. """
-@orders_client.route("/orders", methods=["DELETE"])
-def delete_order():
+@orders_client.route("/orders/<string:order_id>", methods=["DELETE"])
+def delete_order(order_id: str):
     logger.info(f"DELETE /api/orders - Deletar um pedido através do cardápio")
 
-    data = request.get_json()
-    menu_id = data["menu_id"]
-    order_id = data["order_id"]
+    """ Query Params do ID do Cardápio. """
+    """ Nesse cenário, o 'menu_id' é obrigatório. """
+    menu_id = request.args.get("menu_id")
+    if not menu_id:
+        return Response.error(
+            message="Erro ao selecionar cardápio.",
+            status_code=400
+        )
+    if menu_id:
+        uuid_schema.load({"id": menu_id})
 
+    """ Validar UUID do Pedido e Cardápio. """
+    # validation_query_params_menu_id = uuid_schema.load({"id": menu_id})
+    validation_query_params_order_id = uuid_schema.load({"id": order_id})
+
+    order_deleted = orders_services.delete_order_by_id(order_id)
+    if not order_deleted:
+        return Response.error(
+            message="Erro ao deletar pedido.",
+            status_code=404
+        )
+
+    """ Notificar o WebSocket """
+    socketio.emit(
+        "new_order",
+        {"menu_id": menu_id, "orders": orders_services.get_order_by_menu_id(menu_id)},
+        room=menu_id
+    )
+
+    """ Resposta da API (Deletar). """
     return Response.success(
         message="Pedido deletado com sucesso.",
         status_code=200
@@ -145,8 +171,42 @@ def notify_order():
         status_code=200,
     )
 
-""" 05.  """
-@orders_client.route("/stores/<string:slug>/orders/<string:order_id>", methods=["GET"])
-def get_order_by_slug(): pass
+""" 06. Update order status """
+@orders_client.route("/orders/<string:order_id>/status", methods=["PUT"])
+def order_status(order_id):
+    logger.info(f"PUT /api/orders/{order_id}/status - Atualizar status do pedido")
 
+    body = request.get_json()
+    status = body.get("status")
 
+    status_accepts = ["done", "pending", "completed", "canceled"]
+    if status not in status_accepts:
+        return Response.error(
+            message="Status inválido. Os status permitidos são: done, pending, completed, canceled.",
+            status_code=400
+        )
+
+    menu_id = request.args.get("menu_id")
+    if not menu_id:
+        return Response.error(
+            message="Erro ao selecionar cardápio.",
+            status_code=400
+        )
+    if menu_id:
+        uuid_schema.load({"id": menu_id})
+
+    updated = orders_services.update_order_status(status, order_id)
+    if not updated:
+        return Response.error(
+            message="Erro ao atualizar status do pedido.",
+            status_code=400
+        )
+
+    """ Notificar o WebSocket da atualização do status. """
+    broadcast_order_update(menu_id, updated)
+
+    return Response.success(
+        message="Status atualizado com sucesso.",
+        status_code=200,
+        data=updated
+    )

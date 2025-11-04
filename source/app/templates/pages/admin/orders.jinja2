@@ -12,13 +12,18 @@
 {% endblock sidenav %}
 
 {% block dashboard %}
-    <section
-            class="w-full h-full bg-gray-100 flex items-center p-10
-            gap-4 bg-gray-100 rounded-3xl border-2 border-gray-300">
+    <section class="w-full h-full bg-gray-100 flex items-center p-10 gap-4 bg-gray-100 rounded-3xl border-2 border-gray-300">
+        {# Modals #}
+        {{ modals.modal_confirm_operation(
+            modal_id="modalConfirmDeleteOrder",
+            header_text="Confirmação",
+            description_text="Deseja realmente rejeitar o pedido?",
+            id_btn_confirm="btn-confirm-order-delete") }}
+
         <div class="h-full w-1/2 bg-red-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
             <h2 class="text-xl text-left font-bold bg-red-600 border-gray-300 border-2
             text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl">Pedidos Realizados</h2>
-            <ul id="orders-list-new" class="w-[95%] max-w-4xl
+            <ul id="orders-list-done" class="w-[95%] max-w-4xl
             space-y-3 overflow-y-auto h-[600px]">
                 {# Aqui renderizam os pedidos realizados #}
             </ul>

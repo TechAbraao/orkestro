@@ -12,7 +12,7 @@ class OrdersServices:
     def save_order_the_menu(self, data):
         order = OrderEntity(
             id=str(uuid4()),
-            status=data.get("status", "Done"),
+            status=data.get("status", "done"),
             user_id=data.get("user_id", None),
             menu_id=data.get("menu_id", None),
             total_value=data.get("total_value", None),
@@ -30,3 +30,17 @@ class OrdersServices:
         if not orders:
             return []
         return [order.serialize for order in orders]
+
+    @database_connection
+    def delete_order_by_id(self, order_id):
+        deleted = self.orders_repository.delete_by_order_id(order_id)
+        if not deleted:
+            return False
+        return True
+
+    @database_connection
+    def update_order_status(self, status, order_id):
+        updated = self.orders_repository.update_status_by_order_id(status, order_id)
+        if not updated:
+            return None
+        return updated.serialize

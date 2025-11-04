@@ -13,3 +13,5 @@ class OrdersSchema(ma.Schema):
         required=True,
         validate=validate.Length(min=1)
     )
+
+class OrdersStatus(ma.Schema): pass
