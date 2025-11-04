@@ -41,6 +41,9 @@
         </div>
     </section>
     <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script>
+        let menuId = '{{ strategy["profile"]["menu_id"] }}'
+    </script>
     <script src="{{ url_for('static', filename='javascript/websocket_orders.js') }}" defer></script>
 {% endblock dashboard %}
 

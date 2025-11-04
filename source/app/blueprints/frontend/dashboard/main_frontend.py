@@ -19,7 +19,16 @@ def views_profile_dashboard():
 @main_frontend.get("/orders")
 @authorization_required
 def views_orders_dashboard():
-    return render_template("pages/admin/orders.jinja2")
+    store_id = g.jwt_claims.get("sub")
+    logger.info(f"UUID da Loja: {store_id}.")
+
+    menu_id = 'f4f06fff-9196-418e-95ef-349a8b060082'
+    rendering_strategy = {
+        "profile": {
+            "menu_id": menu_id,
+        }
+    }
+    return render_template("pages/admin/orders.jinja2", strategy=rendering_strategy)
 
 @main_frontend.get("/menus")
 @authorization_required

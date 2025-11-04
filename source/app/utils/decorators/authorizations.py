@@ -7,8 +7,15 @@ def authorization_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):
         token = request.cookies.get("access_token")
+
+        if not token:
+            auth_header = request.headers.get("Authorization")
+            if auth_header and auth_header.startswith("Bearer "):
+                token = auth_header.split(" ")[1]
+
         if not token:
             return redirect(url_for("authorizations_frontend.views_login"))
+
         try:
             claims = decrypt_token(token)
         except ValueError:
@@ -16,9 +23,7 @@ def authorization_required(f):
 
         g.jwt_claims = claims
         return f(*args, **kwargs)
-
     return decorated
-
 
 def authorized_client(f):
     @wraps(f)

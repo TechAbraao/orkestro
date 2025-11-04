@@ -12,7 +12,21 @@ class OrderEntity(database.Model):
     status = database.Column(database.String(20), nullable=False)
     user_id = database.Column(database.UUID(as_uuid=True), database.ForeignKey("users.id"))
     menu_id = database.Column(database.UUID(as_uuid=True),database.ForeignKey("menus.id", ondelete="CASCADE"),nullable=False)
+    name = database.Column(database.String(), nullable=False)
+    telephone = database.Column(database.String(), nullable=False)
 
+    @property
+    def serialize(self):
+        return {
+            "id": str(self.id),
+            "created_at": self.created_at.isoformat() if self.created_at else None,
+            "total_value": float(self.total_value),
+            "status": self.status,
+            "user_id": str(self.user_id) if self.user_id else None,
+            "menu_id": str(self.menu_id) if self.menu_id else None,
+            "name": str(self.name),
+            "telephone": str(self.telephone)
+        }
 from source.app.entities.users_entity import UsersEntity
 from source.app.entities.orders_products_entity import OrderProductsEntity
 
