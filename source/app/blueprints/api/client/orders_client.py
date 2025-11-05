@@ -91,9 +91,21 @@ def post_order():
             status_code=404
         )
 
+    count_done_orders = orders_services.count_orders_done(menu_id, status="done")
+    count_pending_orders = orders_services.count_orders_done(menu_id, status="pending")
+    count_completed_orders = orders_services.count_orders_done(menu_id, status="completed")
+    count_canceled_orders = orders_services.count_orders_done(menu_id, status="canceled")
+
     socketio.emit(
         "new_order",
-        {"menu_id": menu_id, "orders": orders_services.get_order_by_menu_id(menu_id)},
+        {
+            "menu_id": menu_id,
+            "orders": orders_services.get_order_by_menu_id(menu_id),
+            "count_done_orders": orders_services.count_orders_done(menu_id),
+            "count_pending_orders": count_pending_orders,
+            "count_completed_orders": count_completed_orders,
+            "count_canceled_orders": count_canceled_orders
+        },
         room=menu_id
     )
 
@@ -105,7 +117,8 @@ def post_order():
             "menu_id": str(menu_id),
             "products": None,
             "status": "Done",
-            "total_value": total_value
+            "total_value": total_value,
+            "count_done_orders": count_done_orders
         }
     )
 

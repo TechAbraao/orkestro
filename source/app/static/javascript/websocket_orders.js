@@ -1,16 +1,22 @@
 $(function () {
     const socket = io();
+
     const $ordersListDone = $("#orders-list-done");
     const $ordersListPending = $("#orders-list-accepts");
     const $ordersListCompleted = $("#orders-list-finish");
+
+    const newOrderSound = new Audio("/static/sounds/notification-order-one.mp3");
+    newOrderSound.volume = 1;
 
     const lists = {
         done: $ordersListDone,
         pending: $ordersListPending,
         completed: $ordersListCompleted,
+        canceled: $ordersListCompleted,
     };
 
-    console.log("MenuId", menuId);
+    console.log("MenuId:", menuId);
+
 
     const $loading = $(`
         <div id="loading-spinner" class="flex flex-col items-center justify-center py-10 text-gray-700">
@@ -20,95 +26,230 @@ $(function () {
     `);
     Object.values(lists).forEach($list => $list.html($loading.clone()));
 
-
-    // Conexão inicial
+    // Conexão com o WebSocket
     socket.on("connect", function () {
         console.log("Conectado ao WebSocket!");
         socket.emit("join_menu", { menu_id: menuId });
     });
 
-    // Receber lista inicial de pedidos
+    // Receber todos os pedidos iniciais
     socket.on("all_orders", function (data) {
         console.log("Pedidos existentes:", data.orders);
         renderOrders(data.orders);
+
+        if (data.count_done_orders !== undefined) {
+            $("#orders-count").text(data.count_done_orders);
+        }
+        if (data.count_pending_orders !== undefined) {
+            $("#pending-count").text(data.count_pending_orders);
+        }
+        if (data.count_completed_orders !== undefined && data.count_canceled_orders !== undefined) {
+            let total = (data.count_completed_orders + data.count_canceled_orders);
+            $("#completed-count").text(total);
+        }
     });
 
-    // Atualização de pedidos (novo, editado, deletado)
+    // Atualização completa (novo pedido, exclusão etc.)
     socket.on("new_order", function (data) {
-        console.log("Atualizando TODOS os PEDIDOS:", data.orders);
+        console.log("Atualizando todos os pedidos:", data.orders);
+
+        try {
+            newOrderSound.currentTime = 0;
+            newOrderSound.play();
+        } catch (error) {
+            console.warn("Som bloqueado até o usuário interagir com a página:", error);
+        }
+
         renderOrders(data.orders);
+
+        if (data.count_done_orders !== undefined) {
+            $("#orders-count").text(data.count_done_orders);
+        }
+        if (data.count_pending_orders !== undefined) {
+            $("#pending-count").text(data.count_pending_orders);
+        }
+        if (data.count_completed_orders !== undefined && data.count_canceled_orders !== undefined) {
+            let total = (data.count_completed_orders + data.count_canceled_orders);
+            $("#completed-count").text(total);
+        }
     });
 
-    // de status de pedido (em tempo real)
+    // Atualização em tempo real de um pedido
     socket.on("order_status_update", function (data) {
-        console.log("Pedido específico ATUALIZADO:", data.order);
-        // updateSingleOrder(data.order);
+        console.log("🔄 Pedido atualizado:", data.order);
+        updateSingleOrder(data.order);
+
+        if (data.count_done_orders !== undefined) {
+            $("#orders-count").text(data.count_done_orders);
+        }
+        if (data.count_pending_orders !== undefined) {
+            $("#pending-count").text(data.count_pending_orders);
+        }
+        if (data.count_completed_orders !== undefined && data.count_canceled_orders !== undefined) {
+            let total = (data.count_completed_orders + data.count_canceled_orders);
+            $("#completed-count").text(total);
+        }
     });
 
-
-    // Renderização dos pedidos
+    // Renderiza todas as listas
     function renderOrders(orders) {
-        $ordersListDone.empty();
-
-
+        Object.values(lists).forEach($list => $list.empty());
         if (!orders || orders.length === 0) {
-            $ordersListDone.html(`
-                <div class="text-center text-gray-600 py-6">
-                    <p class="text-xl text-gray-900 font-bold">Nenhum pedido encontrado.</p>
-                </div>
-            `);
+            Object.values(lists).forEach($list => {
+                $list.html(`
+                    <div class="text-center text-gray-600 py-6">
+                        <p class="text-xl text-gray-900 font-bold">Nenhum pedido encontrado.</p>
+                    </div>
+                `);
+            });
             return;
         }
 
-
-        orders.forEach((order, index) => {
-            const now = new Date(order.created_at).toLocaleTimeString("pt-BR", {
-                timeZone: "America/Sao_Paulo",
-                hour: "2-digit",
-                minute: "2-digit",
-                second: "2-digit",
-            });
-
-            const $li = $(`
-                <li class="p-3 mb-2 w-full rounded-xl shadow-sm border-2 b
-                    bg-gradient-to-br from-green-50 via-white to-green-100 transition-all duration-300">
-                    <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <h3 class="font-bold text-gray-800 text-base tracking-tight">Pedido</h3>
-                            <span class="font-bold text-gray-800 text-base tracking-tight">#${index + 1}</span>
-                        </div>
-                        <div>
-                            <button class="text-xs font-semibold text-white bg-blue-500
-                                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-details-order"
-                                data-id='${order.id}'>
-                                Detalhes
-                            </button>
-                            <button class="text-xs font-semibold text-white bg-red-600 hover:bg-red-700 
-                                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-not-accept-order"
-                                data-id='${order.id}'>
-                                Rejeitar
-                            </button>
-                            <button class="text-xs font-semibold text-white bg-green-600 hover:bg-green-700 
-                                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-accept-order"
-                                data-id='${order.id}'>
-                                Aceitar
-                            </button>
-                        </div>
-                    </div>
-                    <hr class="border-t-1 border-green-200 mb-2">
-                    <div class="space-y-0.5">
-                        <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Status:</span> ${order.status}</p>
-                        <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Nome:</span> ${order.name}</p>
-                        <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Telefone:</span> ${order.telephone}</p>
-                        <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Total:</span> R$ ${order.total_value}</p>
-                        <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Horário:</span> ${now}</p>
-                    </div>
-                </li>
-            `);
-            $ordersListDone.prepend($li.hide().slideDown(300));
-        });
+        orders.forEach((order, index) => renderSingleOrder(order, index));
     }
 
+    // Renderiza um pedido individual
+    function renderSingleOrder(order, index) {
+        const $targetList = lists[order.status] || $ordersListDone;
+        const now = new Date(order.created_at).toLocaleTimeString("pt-BR", {
+            timeZone: "America/Sao_Paulo",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+        });
+
+        // Botões dinâmicos
+        let buttonsHTML = ""
+        if (order.status === "done") {
+        buttonsHTML = `
+            <button class="text-xs font-semibold text-white bg-blue-500
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-details-order"
+                title="Detalhes do pedido"
+                data-id='${order.id}'>
+                Detalhes
+            </button>
+            <button class="text-xs font-semibold text-white bg-red-600 hover:bg-red-700 
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-not-accept-order"
+                data-id='${order.id}'
+                title="Rejeitar pedido"
+                >
+                Rejeitar
+            </button>
+            <button class="text-xs font-semibold text-white bg-green-600 hover:bg-green-700 
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-accept-order"
+                data-id='${order.id}'
+                title="Aceitar pedido"
+                >
+                Aceitar
+            </button>
+        `;
+        } else if (order.status === "pending") {
+          buttonsHTML = `
+            <button class="text-xs font-semibold text-white bg-blue-500
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 "
+                data-id='${order.id}'
+                title="Detalhes do pedido"
+                >
+                Detalhes
+            </button>
+            <button class="text-xs font-semibold text-white bg-red-600 hover:bg-red-700 
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-cancel-order"
+                data-id='${order.id}'
+                title="Cancelar pedido"
+                >
+                Cancelar
+            </button>
+            <button class="text-xs font-semibold text-white bg-green-600 hover:bg-green-700 
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-conclude-order"
+                data-id='${order.id}'
+                title="Concluir pedido"
+                >
+                Concluir
+            </button>
+        `;
+        } else if (order.status === "completed") {
+              buttonsHTML = `
+            <button class="text-xs font-semibold text-white bg-blue-500
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 "
+                data-id='${order.id}'>
+                Detalhes
+            </button>
+            <button class="text-xs font-semibold text-white bg-red-600 hover:bg-red-700 
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 "
+                data-id='${order.id}'>
+                Rejeitar
+            </button>
+            <button class="text-xs font-semibold text-white bg-green-600 hover:bg-green-700 
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 "
+                data-id='${order.id}'>
+                Aceitar
+            </button>
+        `;
+        } else if (order.status === "canceled") {
+              buttonsHTML = `
+            <button class="text-xs font-semibold text-white bg-blue-500
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 "
+                data-id='${order.id}'
+                title="Detalhes do pedido"
+                >
+                Detalhes
+            </button>
+        `;
+        }
+
+        function formatStatus(status) {
+            switch (status) {
+                case "done":
+                    return `<span class="p-[2px] pl-[6px] pr-[6px] bg-emerald-300 text-emerald-900 rounded-3xl">Realizado</span>`;
+                case "pending":
+                    return `<span class="p-[2px] pl-[6px] pr-[6px] bg-amber-300 text-amber-900 rounded-3xl">Pendente</span>`;
+                case "canceled":
+                    return `<span class="p-[2px] pl-[6px] pr-[6px] bg-rose-300 text-rose-900 rounded-3xl">Cancelado</span>`;
+                case "completed":
+                    return `<span class="p-[2px] pl-[6px] pr-[6px] bg-indigo-300 text-indigo-900 rounded-3xl">Finalizado</span>`;
+                default:
+                    return `<span class="p-[2px] pl-[6px] pr-[6px] bg-gray-300 text-gray-800 rounded-3xl">${status}</span>`;
+            }
+        }
+        const statusText = formatStatus(order.status);
+        const $li = $(`
+            <li class="p-3 mb-2 w-full rounded-xl shadow-sm border-2
+                bg-gradient-to-br from-green-50 via-white to-green-100 transition-all duration-300"
+                data-id="${order.id}">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center gap-2">
+                        <h3 class="font-bold text-gray-800 text-base tracking-tight">Pedido</h3>
+                        <span class="font-bold text-gray-800 text-base tracking-tight">#1</span>
+                    </div>
+                    <div>
+                        ${buttonsHTML}
+                    </div>
+                </div>
+                <hr class="border-t-1 border-green-200 mb-2">
+                <div class="space-y-0.5">
+                    <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Status:</span> ${statusText} </p>
+                    <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Nome:</span> ${order.name}</p>
+                    <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Telefone:</span> ${order.telephone}</p>
+                    <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Total:</span> R$ ${order.total_value}</p>
+                    <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Horário:</span> ${now}</p>
+                </div>
+            </li>
+        `);
+
+        $targetList.prepend($li.hide().slideDown(300));
+    }
+
+    // Atualiza um pedido específico (em tempo real)
+    function updateSingleOrder(order) {
+        // Remove o pedido anterior de todas as listas
+        Object.values(lists).forEach($list => {
+            $list.find(`[data-id='${order.id}']`).remove();
+        });
+        // Adiciona o pedido com o novo status
+        renderSingleOrder(order, 0);
+    }
+    // ---- //
+    // Esteira dos 'Pedidos Realizados'
     $ordersListDone.on("click", ".btn-not-accept-order", function () {
         const orderId = $(this).data("id");
         const $modal = $("#modalConfirmDeleteOrder");
@@ -120,13 +261,69 @@ $(function () {
                 url: `/api/orders/${orderId}/status?menu_id=${menuId}`,
                 method: "PUT",
                 contentType: "application/json",
-                data: JSON.stringify({
-                    status: "canceled"
-                }),
+                data: JSON.stringify({ status: "canceled" }),
                 success: function (res) {
                     console.log(`PUT /api/orders/${orderId}?menu_id=${menuId}`, res);
                     if (res.success) {
                         $modal.addClass("hidden");
+                        const updatedOrder = res.data || { ...res.order, status: "canceled" };
+                        updateSingleOrder(updatedOrder);
+                    } else {
+                        alert("Erro ao atualizar pedido.");
+                    }
+                },
+                error: function (xhr) {
+                    console.error(`❌ Erro na requisição PUT (${xhr.status}): ${xhr.responseText}`);
+                },
+            });
+        });
+    });
+    $ordersListDone.on("click", ".btn-accept-order", function () {
+        const orderId = $(this).data("id");
+
+        $.ajax({
+            url: `/api/orders/${orderId}/status?menu_id=${menuId}`,
+            method: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify({ status: "pending" }),
+            success: function (res) {
+                console.log(`PUT /api/orders/${orderId}?menu_id=${menuId}`, res);
+                if (res.success) {
+                    const updatedOrder = res.data || { ...res.order, status: "pending" };
+                    updateSingleOrder(updatedOrder);
+                } else {
+                    alert("Erro ao atualizar pedido.");
+                }
+            },
+            error: function (xhr) {
+                console.error(`❌ Erro na requisição PUT (${xhr.status}): ${xhr.responseText}`);
+            },
+        });
+    });
+
+    // ---- //
+    // Esteira dos 'Pedidos Pendentes'
+    $ordersListPending.on("click", ".btn-conclude-order", function() {
+        window.alert("Hello, World!")
+    })
+    $ordersListPending.on("click", ".btn-cancel-order", function () {
+        const orderId = $(this).data("id");
+        const $modal = $("#modalConfirmCancelOrder");
+        const $btnConfirm = $("#btn-confirm-cancel-delete");
+        $modal.removeClass("hidden");
+
+        $btnConfirm.off("click").on("click", function () {
+            $.ajax({
+                url: `/api/orders/${orderId}/status?menu_id=${menuId}`,
+                method: "PUT",
+                contentType: "application/json",
+                data: JSON.stringify({ status: "canceled" }),
+                success: function (res) {
+                    console.log(`PUT /api/orders/${orderId}?menu_id=${menuId}`, res);
+                    if (res.success) {
+                        $modal.addClass("hidden");
+                        const updatedOrder = res.data || { ...res.order, status: "canceled" };
+                        updateSingleOrder(updatedOrder);
                     } else {
                         alert("Erro ao atualizar pedido.");
                     }
@@ -137,27 +334,8 @@ $(function () {
             });
         });
     });
-    $ordersListDone.on("click", ".btn-accept-order", function () {
-        const orderId = $(this).data("id");
-        console.warn("Hello, World!", orderId)
-        $.ajax({
-            url: `/api/orders/${orderId}/status?menu_id=${menuId}`,
-            method: "PUT",
-            contentType: "application/json",
-            data: JSON.stringify({
-                status: "pending"
-            }),
-            success: function (res) {
-                console.log(`PUT /api/orders/${orderId}?menu_id=${menuId}`, res);
-                if (res.success) {
-                    $modal.addClass("hidden");
-                } else {
-                    alert("Erro ao atualizar pedido.");
-                }
-            },
-            error: function (xhr) {
-                console.error(`Erro na requisição PUT (${xhr.status}): ${xhr.responseText}`);
-            },
-        });
-    })
+
+    // ---- //
+    // Esteira dos 'Pedidos Concluídos'
+
 });

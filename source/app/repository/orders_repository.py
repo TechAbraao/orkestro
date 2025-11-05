@@ -39,3 +39,6 @@ class OrdersRepository:
         except SQLAlchemyError as e:
             print(f"Erro ao atualizar status: {str(e)}")
             return None
+
+    def count_orders_by_status(self, menu_id, status):
+        return self.session.query(OrderEntity).filter_by(menu_id=menu_id, status=status).count()

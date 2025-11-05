@@ -44,3 +44,7 @@ class OrdersServices:
         if not updated:
             return None
         return updated.serialize
+
+    @database_connection
+    def count_orders_done(self, menu_id, status="done"):
+        return self.orders_repository.count_orders_by_status(menu_id=menu_id, status=status)

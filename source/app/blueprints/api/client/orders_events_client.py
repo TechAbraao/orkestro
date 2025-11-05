@@ -16,12 +16,37 @@ def handle_join_menu(data):
     logger.info(f"Cliente entrou na sala do menu {menu_id}")
 
     orders = orders_services.get_order_by_menu_id(menu_id)
-    emit("all_orders", {"menu_id": menu_id, "orders": orders})
+    count_done_orders = orders_services.count_orders_done(menu_id, status="done")
+    count_pending_orders = orders_services.count_orders_done(menu_id, status="pending")
+    count_completed_orders = orders_services.count_orders_done(menu_id, status="completed")
+    count_canceled_orders = orders_services.count_orders_done(menu_id, status="canceled")
 
+    emit("all_orders",
+         {
+        "menu_id": menu_id,
+        "orders": orders,
+        "count_done_orders": count_done_orders,
+        "count_pending_orders": count_pending_orders,
+        "count_completed_orders": count_completed_orders,
+        "count_canceled_orders": count_canceled_orders
+         })
 
 def broadcast_order_update(menu_id, updated_order):
+    count_done_orders = orders_services.count_orders_done(menu_id)
+    count_pending_orders = orders_services.count_orders_done(menu_id, status="pending")
+    count_completed_orders = orders_services.count_orders_done(menu_id, status="completed")
+    count_canceled_orders = orders_services.count_orders_done(menu_id, status="canceled")
+
+
     socketio.emit(
         "order_status_update",
-        {"menu_id": menu_id, "order": updated_order},
+        {"menu_id": menu_id,
+         "order": updated_order,
+         "count_done_orders": count_done_orders,
+         "count_pending_orders": count_pending_orders,
+         "count_completed_orders": count_completed_orders,
+         "count_canceled_orders": count_canceled_orders
+         },
         room=menu_id
     )
+

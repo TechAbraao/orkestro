@@ -20,27 +20,54 @@
             description_text="Deseja realmente rejeitar o pedido?",
             id_btn_confirm="btn-confirm-order-delete") }}
 
+        {{ modals.modal_confirm_operation(
+            modal_id="modalConfirmCancelOrder",
+            header_text="Confirmação",
+            description_text="Deseja realmente cancelar o pedido?",
+            id_btn_confirm="btn-confirm-cancel-delete") }}
+
         <div class="h-full w-1/2 bg-red-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
-            <h2 class="text-xl text-left font-bold bg-red-600 border-gray-300 border-2
-            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl">Pedidos Realizados</h2>
+            <div class="text-xl text-left font-bold border-gray-300 border-2
+            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white flex items-center justify-between rounded-2xl" id="orders-count-container">
+                <h2>Pedidos Realizados</h2>
+                <span id="orders-count"
+                      class="text-[20px] font-bold text-green-800 bg-gradient-to-r from-green-200 via-green-300 to-green-400
+                        rounded-3xl pl-[7.5px] pr-[7.5px] shadow-sm border transition-all duration-300">
+                    0
+            </span>
+            </div>
             <ul id="orders-list-done" class="w-[95%] max-w-4xl
-            space-y-3 overflow-y-auto h-[600px]">
+            space-y-3 overflow-y-auto h-[600px] no-scrollbar">
                 {# Aqui renderizam os pedidos realizados #}
             </ul>
         </div>
         <div class="h-full w-1/2 bg-green-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
-            <h2 class="text-xl text-left font-bold bg-red-600 border-gray-300 border-2
-            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl">Pedidos Pendentes</h2>
+            <div class="text-xl text-left font-bold border-gray-300 border-2 flex items-center justify-between
+            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl" id="pending-count-container">
+                <h2>Pedidos Pendentes</h2>
+                <span id="pending-count"
+                      class="text-[20px] font-bold text-green-800 bg-gradient-to-r from-green-200 via-green-300 to-green-400
+                        rounded-3xl pl-[7.5px] pr-[7.5px] shadow-sm border transition-all duration-300">
+                    0
+                </span>
+            </div>
             <ul id="orders-list-accepts" class="w-[95%] max-w-4xl
-                space-y-3 overflow-y-auto h-[600px]">
+                space-y-3 overflow-y-auto h-[600px] no-scrollbar">
                 {# Aqui renderizam os pedidos pendentes #}
             </ul>
         </div>
         <div class="h-full w-1/2 bg-orange-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
-            <h2 class="text-xl text-left font-bold bg-red-600 border-gray-300 border-2
-            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl">Pedidos Concluídos</h2>
+            <div class="text-xl text-left font-bold border-gray-300 border-2 flex items-center justify-between
+            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl" id="completed-count-container">
+                <h2>Pedidos Concluídos</h2>
+                <span id="completed-count"
+                      class="text-[20px] font-bold text-green-800 bg-gradient-to-r from-green-200 via-green-300 to-green-400
+                        rounded-3xl pl-[7.5px] pr-[7.5px] shadow-sm border transition-all duration-300">
+                    0
+                </span>
+            </div>
             <ul id="orders-list-finish" class="w-[95%] max-w-4xl
-                space-y-3 overflow-y-auto h-[600px]">
+                space-y-3 overflow-y-auto h-[600px] no-scrollbar">
                 {# Aqui renderizam os pedidos concluídos #}
             </ul>
         </div>
