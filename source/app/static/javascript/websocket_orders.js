@@ -76,7 +76,7 @@ $(function () {
 
     // Atualização em tempo real de um pedido
     socket.on("order_status_update", function (data) {
-        console.log("🔄 Pedido atualizado:", data.order);
+        console.log("Pedido atualizado:", data.order);
         updateSingleOrder(data.order);
 
         if (data.count_done_orders !== undefined) {
@@ -146,7 +146,7 @@ $(function () {
         } else if (order.status === "pending") {
           buttonsHTML = `
             <button class="text-xs font-semibold text-white bg-blue-500
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 "
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 .btn-details-order btn-details-order"
                 data-id='${order.id}'
                 title="Detalhes do pedido"
                 >
@@ -170,25 +170,15 @@ $(function () {
         } else if (order.status === "completed") {
               buttonsHTML = `
             <button class="text-xs font-semibold text-white bg-blue-500
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 "
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-details-order"
                 data-id='${order.id}'>
                 Detalhes
-            </button>
-            <button class="text-xs font-semibold text-white bg-red-600 hover:bg-red-700 
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 "
-                data-id='${order.id}'>
-                Rejeitar
-            </button>
-            <button class="text-xs font-semibold text-white bg-green-600 hover:bg-green-700 
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 "
-                data-id='${order.id}'>
-                Aceitar
             </button>
         `;
         } else if (order.status === "canceled") {
               buttonsHTML = `
             <button class="text-xs font-semibold text-white bg-blue-500
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 "
+                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-details-order"
                 data-id='${order.id}'
                 title="Detalhes do pedido"
                 >
@@ -214,18 +204,18 @@ $(function () {
         const statusText = formatStatus(order.status);
         const $li = $(`
             <li class="p-3 mb-2 w-full rounded-xl shadow-sm border-2
-                bg-gradient-to-br from-green-50 via-white to-green-100 transition-all duration-300"
+                bg-white via-white transition-all duration-300"
                 data-id="${order.id}">
                 <div class="flex items-center justify-between mb-2">
                     <div class="flex items-center gap-2">
-                        <h3 class="font-bold text-gray-800 text-base tracking-tight">Pedido</h3>
-                        <span class="font-bold text-gray-800 text-base tracking-tight">#1</span>
+                        <h3 class="font-bold text-gray-800 text-lg tracking-tight">Pedido</h3>
+                        <span class="font-bold text-gray-800 text-lg tracking-tight">#${order.order_number}</span>
                     </div>
                     <div>
                         ${buttonsHTML}
                     </div>
                 </div>
-                <hr class="border-t-1 border-green-200 mb-2">
+                <hr class="border-t-1 border-gray-200 mb-2">
                 <div class="space-y-0.5">
                     <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Status:</span> ${statusText} </p>
                     <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Nome:</span> ${order.name}</p>
@@ -235,7 +225,6 @@ $(function () {
                 </div>
             </li>
         `);
-
         $targetList.prepend($li.hide().slideDown(300));
     }
 
@@ -248,8 +237,6 @@ $(function () {
         // Adiciona o pedido com o novo status
         renderSingleOrder(order, 0);
     }
-    // ---- //
-    // Esteira dos 'Pedidos Realizados'
     $ordersListDone.on("click", ".btn-not-accept-order", function () {
         const orderId = $(this).data("id");
         const $modal = $("#modalConfirmDeleteOrder");
@@ -273,7 +260,7 @@ $(function () {
                     }
                 },
                 error: function (xhr) {
-                    console.error(`❌ Erro na requisição PUT (${xhr.status}): ${xhr.responseText}`);
+                    console.error(`Erro na requisição PUT (${xhr.status}): ${xhr.responseText}`);
                 },
             });
         });
@@ -296,15 +283,31 @@ $(function () {
                 }
             },
             error: function (xhr) {
-                console.error(`❌ Erro na requisição PUT (${xhr.status}): ${xhr.responseText}`);
+                console.error(`Erro na requisição PUT (${xhr.status}): ${xhr.responseText}`);
             },
         });
     });
-
-    // ---- //
-    // Esteira dos 'Pedidos Pendentes'
     $ordersListPending.on("click", ".btn-conclude-order", function() {
-        window.alert("Hello, World!")
+        const orderId = $(this).data("id");
+          $.ajax({
+                url: `/api/orders/${orderId}/status?menu_id=${menuId}`,
+                method: "PUT",
+                contentType: "application/json",
+                data: JSON.stringify({ status: "completed" }),
+                success: function (res) {
+                    console.log(`PUT /api/orders/${orderId}?menu_id=${menuId}`, res);
+                    if (res.success) {
+                        $modal.addClass("hidden");
+                        const updatedOrder = res.data || { ...res.order, status: "canceled" };
+                        updateSingleOrder(updatedOrder);
+                    } else {
+                        alert("Erro ao atualizar pedido.");
+                    }
+                },
+                error: function (xhr) {
+                    console.error(`Erro na requisição PUT (${xhr.status}): ${xhr.responseText}`);
+                },
+            });
     })
     $ordersListPending.on("click", ".btn-cancel-order", function () {
         const orderId = $(this).data("id");
@@ -335,7 +338,72 @@ $(function () {
         });
     });
 
-    // ---- //
-    // Esteira dos 'Pedidos Concluídos'
 
+     function getDetailsOrder() {
+        const orderId = $(this).data("id");
+        modalDetailsOrder.removeClass("hidden")
+        console.log(`ID do Pedido: ${orderId}`)
+        let URLGetProductsOrder = `/api/orders/${orderId}/products`
+        $.ajax({
+            url: URLGetProductsOrder,
+            method: "GET",
+            success: function (response) {
+                let containerProductsInfo = $("#modalDetailsOrder_order_items");
+                let containerProductsInfoTotal = $("#modalDetailsOrder_order_total")
+
+                // Informações do Cliente
+                let customerName = $("#modalDetailsOrder_client_name")
+                let customerPhone = $("#modalDetailsOrder_client_phone")
+                let customerAddress = $("#modalDetailsOrder_client_address")
+                let customerHouseNumber = $("#modalDetailsOrder_client_number")
+
+                let customerData = response.data.customer
+                console.log(`Dados do cliente: ${customerData}`)
+                customerName.text(customerData["name"])
+                customerPhone.text(customerData["telephone"])
+                customerAddress.text(customerData["address"])
+                customerHouseNumber.text(customerData["house_number"])
+
+
+                containerProductsInfo.html("");
+                let totalPrice = response.data.total
+
+
+                containerProductsInfoTotal.text(totalPrice)
+                console.log("Produtos vindo do backend: ", response.data)
+                response.data.items.forEach(item => {
+                    containerProductsInfo.append(`
+                    <li class="flex items-center gap-4 p-3 w-[330px] bg-white rounded-xl shadow-sm border transition">
+                        <img 
+                            src="${item.image_url}" 
+                            alt="Imagem do produto ${item.name}"
+                            class="w-16 h-16 object-cover rounded-lg border"
+                            onerror="this.src='/static/images/no-image.png';"
+                        />
+
+                    <div class="flex flex-col">
+                        <p class="text-base font-semibold text-gray-800 leading-none">
+                             ${item.name}
+                        </p>
+                        <p class="text-sm text-gray-600">
+                             R$ ${item.price.toFixed(2).replace('.', ',')}
+                        </p>
+                        <p class="text-sm text-gray-600">
+                            Quantidade: ${item.quantity}
+                        </p>
+                    </div>
+                    </li>
+                    `);
+                });
+
+            },
+            error: function (xhr) {
+
+            }
+        })
+    }
+
+    const modalDetailsOrder = $("#modalDetailsOrder")
+    $ordersListDone.on("click", '.btn-details-order', getDetailsOrder)
+    $ordersListPending.on("click", '.btn-details-order', getDetailsOrder)
 });

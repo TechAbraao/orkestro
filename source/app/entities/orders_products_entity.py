@@ -7,10 +7,25 @@ class OrderProductsEntity(database.Model):
 
     id = database.Column(database.UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     created_at = database.Column(database.DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
-    order_id = database.Column(database.UUID(as_uuid=True), database.ForeignKey("orders.id"))
+    order_id = database.Column(
+        database.UUID(as_uuid=True),
+        database.ForeignKey("orders.id", ondelete="CASCADE"),
+        nullable=False
+    )
     product_id = database.Column(database.UUID(as_uuid=True), database.ForeignKey("products.id"))
     quantity = database.Column(database.Integer, nullable=False)
     price = database.Column(database.Numeric, nullable=False)
+
+    @property
+    def serialize(self):
+        return {
+            "id": str(self.id),
+            "created_at": self.created_at,
+            "order_id": self.order_id,
+            "product_id": self.product_id,
+            "quantity": self.quantity,
+            "price": self.price
+        }
 
 from source.app.entities.orders_entity import OrderEntity
 from source.app.entities.products_entity import ProductsEntity

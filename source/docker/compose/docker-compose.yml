@@ -69,9 +69,28 @@ services:
     networks:
       - network-pizza-management-system
 
+  evolution:
+    container_name: evolution_api
+    image: evoapicloud/evolution-api:v2.3.0
+    restart: always
+    depends_on:
+      - redis
+      - postgres
+    ports:
+      - 8080:8080
+    volumes:
+      - evolution_instances:/evolution/instances
+    networks:
+      - network-pizza-management-system
+      - evolution-net
+    env_file:
+      - .env
+
 volumes:
   pgdata:
   n8n_data:
+  evolution_instances:
 
 networks:
   network-pizza-management-system:
+  evolution-net:

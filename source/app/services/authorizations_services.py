@@ -15,7 +15,6 @@ class AuthorizationsServices:
     def __init__(self):
         self.stores_repository = StoresRepository()
 
-
     def verify_store_credentials(self, email: str, password: str):
         logger.info(f"Checking if email '{email}' exists in the database.")
         store = self.stores_repository.find_by_email(email)

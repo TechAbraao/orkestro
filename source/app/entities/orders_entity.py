@@ -1,4 +1,5 @@
 from source.app.settings.definitions_settings import db as database
+from sqlalchemy import Sequence
 from source.app.entities.menus_entity import MenusEntity
 import uuid
 from datetime import datetime, timezone
@@ -14,6 +15,7 @@ class OrderEntity(database.Model):
     menu_id = database.Column(database.UUID(as_uuid=True),database.ForeignKey("menus.id", ondelete="CASCADE"),nullable=False)
     name = database.Column(database.String(), nullable=False)
     telephone = database.Column(database.String(), nullable=False)
+    order_number = database.Column(database.Integer, unique=True, nullable=False)
 
     @property
     def serialize(self):
@@ -25,7 +27,8 @@ class OrderEntity(database.Model):
             "user_id": str(self.user_id) if self.user_id else None,
             "menu_id": str(self.menu_id) if self.menu_id else None,
             "name": str(self.name),
-            "telephone": str(self.telephone)
+            "telephone": str(self.telephone),
+            "order_number": int(self.order_number)
         }
 from source.app.entities.users_entity import UsersEntity
 from source.app.entities.orders_products_entity import OrderProductsEntity
@@ -36,7 +39,9 @@ OrderEntity.user = database.relationship(
 )
 OrderEntity.order_products = database.relationship(
     OrderProductsEntity,
-    back_populates="order"
+    back_populates="order",
+    cascade="all, delete-orphan",
+    passive_deletes=True
 )
 
 OrderEntity.menu = database.relationship(

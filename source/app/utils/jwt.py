@@ -5,7 +5,7 @@ import zoneinfo
 
 SP_TZ = zoneinfo.ZoneInfo("America/Sao_Paulo")
 
-def generate_token(data: dict, expires_in_minutes: int = 60) -> str:
+def generate_token(data: dict, expires_in_minutes: int = (6 * 60)) -> str:
     payload = data.copy()
     payload["exp"] = datetime.now(SP_TZ) + timedelta(minutes=expires_in_minutes)
 

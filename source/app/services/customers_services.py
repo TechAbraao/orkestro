@@ -33,3 +33,7 @@ class CustomersServices:
         if not user:
             raise ValueError("Nenhum cliente encontrado.")
         return user.serialize
+
+    @database_connection
+    def find_by_order_id(self, order_id):
+        pass

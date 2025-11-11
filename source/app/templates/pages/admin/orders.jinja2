@@ -26,7 +26,10 @@
             description_text="Deseja realmente cancelar o pedido?",
             id_btn_confirm="btn-confirm-cancel-delete") }}
 
-        <div class="h-full w-1/2 bg-red-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
+        {{ modals.modal_order_details(modal_id="modalDetailsOrder") }}
+
+
+        <div class="h-full w-1/2  bg-orange-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
             <div class="text-xl text-left font-bold border-gray-300 border-2
             text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white flex items-center justify-between rounded-2xl" id="orders-count-container">
                 <h2>Pedidos Realizados</h2>
@@ -41,7 +44,7 @@
                 {# Aqui renderizam os pedidos realizados #}
             </ul>
         </div>
-        <div class="h-full w-1/2 bg-green-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
+        <div class="h-full w-1/2 bg-yellow-300 rounded-3xl border-2 flex items-center flex-col border-gray-300">
             <div class="text-xl text-left font-bold border-gray-300 border-2 flex items-center justify-between
             text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl" id="pending-count-container">
                 <h2>Pedidos Pendentes</h2>
@@ -56,7 +59,7 @@
                 {# Aqui renderizam os pedidos pendentes #}
             </ul>
         </div>
-        <div class="h-full w-1/2 bg-orange-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
+        <div class="h-full w-1/2 bg-green-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
             <div class="text-xl text-left font-bold border-gray-300 border-2 flex items-center justify-between
             text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl" id="completed-count-container">
                 <h2>Pedidos Concluídos</h2>
@@ -75,7 +78,29 @@
     <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
     <script>
         let menuId = '{{ strategy["profile"]["menu_id"] }}'
+        let orderId = "";
+        const URLGetProductsOrder = `/api/orders/${orderId}/products`
+        console.log(`ID do Pedido: ${orderId}`)
     </script>
+{#    <script>#}
+{#        window.openModal = function (id) {#}
+{#            const modal = document.getElementById(id);#}
+{#            if (!modal) {#}
+{#                console.error(`Modal com ID "${id}" não encontrado.`);#}
+{#                return;#}
+{#            }#}
+{#            modal.classList.remove("hidden");#}
+{#        }#}
+{##}
+{#        window.closeModal = function (id) {#}
+{#            const modal = document.getElementById(id);#}
+{#            if (!modal) {#}
+{#                console.error(`Modal com ID "${id}" não encontrado.`);#}
+{#                return;#}
+{#            }#}
+{#            modal.classList.add("hidden");#}
+{#        }#}
+{#    </script>#}
     <script src="{{ url_for('static', filename='javascript/websocket_orders.js') }}" defer></script>
 {% endblock dashboard %}
 

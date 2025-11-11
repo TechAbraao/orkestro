@@ -614,7 +614,6 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
     </div>
 {% endmacro %}
 
-
 {% macro modal_about_store(modal_id="modalAboutStore", menuId="") %}
     <div id="{{ modal_id }}" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
         <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg p-6 relative">
@@ -643,7 +642,6 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
             </section>
         </div>
     </div>
-
     <script>
         $(document).ready(function () {
             function getAllHoursInMenu(menu_id) {
@@ -698,3 +696,62 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
     </script>
 {% endmacro %}
 
+
+{% macro modal_order_details(modal_id="") %}
+    <div id="{{ modal_id }}" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <div class="bg-white rounded-2xl shadow-xl p-6 w-[750px] relative">
+
+            <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800"
+                    onclick="closeModal('{{ modal_id }}')">
+                ✕
+            </button>
+
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Detalhes do Pedido</h2>
+
+            <section class="mb-4 border-b pb-4">
+                <h3 class="text-lg font-medium text-gray-700 mb-2">Informações do Cliente</h3>
+                <p class="text-lg"><span class="font-semibold">Nome:</span> <span id="{{ modal_id }}_client_name"></span></p>
+                <p class="text-lg"><span class="font-semibold">Telefone:</span> +<span id="{{ modal_id }}_client_phone"></span></p>
+                <p class="text-lg"><span class="font-semibold">Endereço:</span> <span id="{{ modal_id }}_client_address"></span></p>
+                <p class="text-lg"><span class="font-semibold">Número:</span> <span id="{{ modal_id }}_client_number"></span></p>
+            </section>
+
+            <section class="mb-6">
+                <h3 class="text-lg font-medium text-gray-700 mb-2">Items do Pedido</h3>
+                <ul id="{{ modal_id }}_order_items" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3
+                flex items-center justify-center">
+                    {# Aqui será preenchido via JS #}
+                </ul>
+            </section>
+
+            <div class="flex items-center text-lg font-semibold text-gray-800">
+                <span>Total: R$</span>
+                <span id="{{ modal_id }}_order_total" class="pl-1"></span>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            window.openModal = function (id) {
+                document.getElementById(id).classList.remove("hidden");
+
+            }
+            window.closeModal = function (id) {
+                document.getElementById(id).classList.add("hidden");
+                {#let customerName = $("#modalDetailsOrder_client_name")#}
+                {#let customerPhone = $("#modalDetailsOrder_client_phone")#}
+                {#let customerAddress = $("#modalDetailsOrder_client_address")#}
+                {#let customerHouseNumber = $("#modalDetailsOrder_client_number")#}
+                {#let containerProductsInfo = $("#modalDetailsOrder_order_items");#}
+                {#let containerProductsInfoTotal = $("#modalDetailsOrder_order_total")#}
+                {#customerName.text("")#}
+                {#customerPhone.text("")#}
+                {#customerAddress.text("")#}
+                {#customerHouseNumber.text("")#}
+                {#containerProductsInfo.text("")#}
+                {#containerProductsInfoTotal.text("")#}
+            }
+        });
+    </script>
+{% endmacro %}

@@ -8,11 +8,12 @@ from source.app.exceptions.menu_exceptions import *
 from source.app.services import menu_services, products_services, categories_services, customers_services, orders_services
 from source.app.schemas import orders_schemas, uuid_schema
 from source.app.blueprints.api.client.orders_events_client import broadcast_order_update
+from source.app.repository.orders_products_repository import OrdersProductsRepository
 
 logger = get_logger(__name__)
 orders_client = Blueprint("orders_client", __name__, url_prefix="/api")
 
-""" 01. Capture orders from a specific Menu. """
+""" Capture orders from a specific Menu. """
 @orders_client.route("/orders/<string:menu_id>", methods=["GET"])
 def get_orders(menu_id: str):
     logger.info(f"GET /api/orders/{menu_id} - Capture orders from a specific Menu.")
@@ -25,7 +26,7 @@ def get_orders(menu_id: str):
         data=orders
     )
 
-""" 02. Add a new order in Menu. """
+""" Add a new order in Menu. """
 @orders_client.route("/orders", methods=["POST"])
 @authorization_required
 def post_order():
@@ -84,12 +85,25 @@ def post_order():
     }
 
     """ Salvar pedido referente ao cardápio. """
-    saved = orders_services.save_order_the_menu(data=data_order)
-    if not saved:
+    saved_order, order_identifier = orders_services.save_order_the_menu(data=data_order)
+    if not saved_order:
         return Response.error(
             message="Erro ao salvar pedido no cardápio.",
             status_code=404
         )
+
+    """ Salvar produtos associado ao pedido. """
+    products_saved = orders_services.save_products_in_order(
+        order_id=order_identifier,
+        products=products
+    )
+
+    if not products_saved:
+        return Response.error(
+            message="Erro ao salvar produtos do pedido.",
+            status_code=500
+        )
+
 
     count_done_orders = orders_services.count_orders_done(menu_id, status="done")
     count_pending_orders = orders_services.count_orders_done(menu_id, status="pending")
@@ -115,14 +129,57 @@ def post_order():
         data={
             "user": customer_infos,
             "menu_id": str(menu_id),
-            "products": None,
             "status": "Done",
             "total_value": total_value,
-            "count_done_orders": count_done_orders
         }
     )
 
-""" 03. Delete order. """
+""" Get order/products information  """
+@orders_client.route("/orders/<string:order_id>/products", methods=["GET"])
+def get_order_infos(order_id: str):
+    logger.info(f"GET /api/orders/{order_id}/products - Obter lista de produtos e informações úteis de um pedido.")
+
+    data = []
+    total_price = 0
+
+    products_list = orders_services.get_products_in_order(order_id)
+    logger.info(f"Lista de produtos retornados: {products_list}")
+
+    ### Para cada item que está no pedido ###
+    for item in products_list:
+        product_id = item["product_id"]
+        quantity = item["quantity"]
+        price = item["price"]
+
+        product_details = products_services.get_by_id(product_id)
+        product_details["quantity"] = quantity
+        subtotal = price * quantity
+        product_details["subtotal"] = subtotal
+        total_price += subtotal
+
+        data.append(product_details)
+
+    logger.info(f"Lista de produtos formatados: {data}")
+    logger.info(f"Total do pedido: R$ {total_price}")
+
+    """ Obter informações do Cliente, através do ID do Cliente """
+    order = orders_services.get_order_by_id(order_id)
+    user_id = order.get("user_id")
+    customer_infos = customers_services.find_by_id(customer_id=user_id)
+    logger.info(f"Informações do Cliente: {customer_infos}")
+
+    return Response.success(
+        message="Lista de produtos do pedido.",
+        status_code=200,
+        data={
+            "items": data,
+            "total": total_price,
+            "customer": customer_infos
+        }
+    )
+
+
+""" Delete order. """
 @orders_client.route("/orders/<string:order_id>", methods=["DELETE"])
 def delete_order(order_id: str):
     logger.info(f"DELETE /api/orders - Deletar um pedido através do cardápio")
@@ -162,29 +219,7 @@ def delete_order(order_id: str):
         status_code=200
     )
 
-""" 04. Update order. """
-@orders_client.route("/orders", methods=["PUT"])
-def put_order(): pass
-
-""" 05. Update order list on WebSocket. """
-@orders_client.route("/orders/notify", methods=["POST"])
-def notify_order():
-    data = request.get_json()
-    menu_id = data.get("menu_id")
-
-    validation_query_params = uuid_schema.load({"id": menu_id})
-    all_orders = orders_services.get_order_by_menu_id(menu_id=menu_id)
-    logger.info(f"Request stored in WebSocket whose id is '{menu_id}' successful.")
-    logger.info(f"Orders in Menu: {all_orders}")
-    socketio.emit("new_order", {"order_id": all_orders})
-
-    logger.info(f"Request received successfully at N8N, id is '{menu_id}'.")
-    return Response.success(
-        message=f"Request whose id '{menu_id}' received successfully",
-        status_code=200,
-    )
-
-""" 06. Update order status """
+""" Update order status """
 @orders_client.route("/orders/<string:order_id>/status", methods=["PUT"])
 def order_status(order_id):
     logger.info(f"PUT /api/orders/{order_id}/status - Atualizar status do pedido")

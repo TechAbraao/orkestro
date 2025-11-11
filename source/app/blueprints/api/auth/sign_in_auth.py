@@ -28,7 +28,7 @@ def enter_the_platform():
         httponly=True,
         samesite="Strict",
         secure=False,
-        max_age=60 * 60
+        max_age=120 * 60
     )
 
     return resp
