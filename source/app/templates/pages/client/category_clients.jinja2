@@ -92,14 +92,17 @@
 {% endblock navbar %}
 
 {% block menu %}
-    <section id="" class="w-3/4 flex flex-col items-center justify-center gap-4 p-10">
-         <div id="productsSection" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 items-center justify-center gap-10">
+    <section id="" class="no-scrollbar h-full w-3/4 flex flex-col items-center
+    justify-center gap-4 p-10  space-y-3 ">
+        <div id="productsSection" class="grid grid-cols-1 sm:grid-cols-2
+            md:grid-cols-2 items-start justify-center w-[97%] gap-5 h-full overflow-y-auto no-scrollbar">
             {# As Categorias serão renderizadas aqui. #}
         </div>
     </section>
     <script>
         const categoryId = '{{ strategy["category_id"] }}'
         const menuSlug = '{{ strategy["menu_slug"]  }}'
+        const menuId = "{{ strategy["menu_id"] }}"
     </script>
     <script src="{{ url_for('static', filename='javascript/products_in_menu.js') }}" defer></script>
 {% endblock menu %}

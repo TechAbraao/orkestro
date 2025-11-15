@@ -37,3 +37,8 @@ def authorized_client(f):
                 pass
         return f(*args, **kwargs)
     return decorated
+
+def cart_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        cart = None

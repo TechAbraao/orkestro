@@ -8,7 +8,6 @@ from source.app.blueprints.api.client.menus_client import menus_client
 from source.app.blueprints.api.client.orders_client import orders_client
 from source.app.blueprints.api.auth.sign_up_auth import sign_up_auth
 from source.app.blueprints.api.auth.sign_in_auth import sign_in_auth
-from source.app.blueprints.api.dashboard.analytics_dashboard import analytics_dashboard
 from source.app.blueprints.api.auth.me_auth import about_auth
 from source.app.blueprints.api.client.customers import customers
 

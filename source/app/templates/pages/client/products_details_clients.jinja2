@@ -67,28 +67,28 @@
 {% endblock navbar %}
 
 {% block menu %}
-<section id="menuSection" class="w-3/4 flex flex-col items-center justify-center gap-4 p-10">
-    <div id="produtsContainer" class="flex items-center justify-center">
-        {# O produto será renderizado aqui. #}
-    </div>
-</section>
+    <section id="menuSection" class="w-3/4 flex flex-col items-center justify-center gap-4 p-10">
+        <div id="produtsContainer" class="flex items-center justify-center">
+            {# O produto será renderizado aqui. #}
+        </div>
+    </section>
 
-<script>
-    $(document).ready(async function () {
-        try {
-            const res = await fetch(`/api/products/${productId}`)
-            const data = await res.json()
-            console.log(data)
+    <script>
+        $(document).ready(async function () {
+            try {
+                const res = await fetch(`/api/products/${productId}`)
+                const data = await res.json()
+                console.log(data)
 
-            const categoryId = data.data.category_id;
-            const productDescription = data.data.description;
-            const productName = data.data.name;
-            const productImageURL = data.data.image_url;
-            const productPrice = data.data.price;
+                const categoryId = data.data.category_id;
+                const productDescription = data.data.description;
+                const productName = data.data.name;
+                const productImageURL = data.data.image_url;
+                const productPrice = data.data.price;
 
-            $("#title-product-name").text(productName.toUpperCase())
+                $("#title-product-name").text(productName.toUpperCase())
 
-            const productCard = `
+                const productCard = `
                 <div class="bg-white shadow-lg rounded-2xl p-6 w-[600px] h-[650px] border border-gray-200 flex flex-col items-center
                             text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
                     <div class="w-[90%] h-[350px] flex items-center justify-center bg-gray-100 rounded-xl
@@ -101,17 +101,17 @@
                 </div>
             `;
 
-            $("#produtsContainer").html(productCard);
+                $("#produtsContainer").html(productCard);
 
-            $("#btn-back-category").on("click", (e) => {
-                e.preventDefault();
-                window.location.href = `/menus/${slug}/${categoryId}`;
-            });
+                $("#btn-back-category").on("click", (e) => {
+                    e.preventDefault();
+                    window.location.href = `/menus/${slug}/${categoryId}`;
+                });
 
-        } catch (err) {
-            console.error("Erro:", err);
-        }
-    });
-</script>
+            } catch (err) {
+                console.error("Erro:", err);
+            }
+        });
+    </script>
 {% endblock menu %}
 

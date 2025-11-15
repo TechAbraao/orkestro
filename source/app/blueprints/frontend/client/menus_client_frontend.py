@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, g, session
 from source.app.services import menu_services, categories_services
 from source.app.settings.logging_settings import get_logger
 
@@ -39,19 +39,19 @@ def views_category_by_id(slug: str, category_id: str):
     menu_by_slug = menu_services.get_menu_by_slug(slug)
     logger.info(f"Menu encontrado: {menu_by_slug}")
 
-
     logger.info(f"Buscando informações da categoria")
     category_info = categories_services.get_category_by_id(category_id)
 
+    ### MENUID ta hardcoded, preciso alterar isso no futuro
     rendering_strategy = {
         "menu_slug": slug,
         "menu_name": menu_by_slug.get("name"),
+        "menu_id": "f4f06fff-9196-418e-95ef-349a8b060082",
         "category_id": category_id,
         "category_name": category_info.get("name")
     }
 
     return render_template("pages/client/category_clients.jinja2", strategy=rendering_strategy)
-
 
 """ 3. Aqui será feito a renderização do produto em específico que pertence a categoria do cardápio.  """
 @menus_client_frontend.get("/menus/<string:slug>/products/<string:product_id>")
@@ -68,3 +68,14 @@ def views_product_by_id(slug: str, product_id: str):
     }
 
     return render_template("pages/client/products_details_clients.jinja2", strategy=rendering_strategy)
+
+@menus_client_frontend.route("/menus/<string:slug>/cart", methods=["GET"])
+def vws_payment_order(slug: str):
+    g.return_id = session.get("return_id", "N/A")
+    logger.info(f"Return UUID para retornar a categoria certa: {g.return_id}")
+    """ Return UUID identifica e avisa o front-end qual é o cardapio pra retornar """
+    rendering_strategy = {
+        "menu_slug": slug,
+        "return_id": g.return_id
+    }
+    return render_template("pages/cart.jinja2", strategy=rendering_strategy)

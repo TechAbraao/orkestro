@@ -2,6 +2,7 @@ from source.app.settings.database_settings import postgres_settings
 from source.app.settings.definitions_settings import db, ma
 from source.app.handlers.handlers_exceptions import register_error_handlers
 from source.app.blueprints.all import *
+from source.app.blueprints.routes import (vws, api)
 from flask import Flask
 from source.app.extesions.socket_io import socketio
 from flask_migrate import Migrate
@@ -14,6 +15,7 @@ def create_app():
     app = Flask(__name__)
 
     app.config['SQLALCHEMY_DATABASE_URI'] = postgres_settings.get_uri()
+    app.secret_key = "SecretKey"
 
     BASE_DIR = Path(__file__).resolve().parent
     SWAGGER_PATH = BASE_DIR / "swagger.yml"
@@ -54,7 +56,6 @@ def create_app():
     app.register_blueprint(orders_client)
     app.register_blueprint(sign_up_auth)
     app.register_blueprint(sign_in_auth)
-    app.register_blueprint(analytics_dashboard)
     app.register_blueprint(about_auth)
     app.register_blueprint(customers)
 
@@ -63,6 +64,8 @@ def create_app():
     app.register_blueprint(main_frontend)
     app.register_blueprint(homepage_frontend)
     app.register_blueprint(menus_client_frontend)
+    app.register_blueprint(vws)
+    app.register_blueprint(api)
 
     register_error_handlers(app)
     from source.app.settings.application_settings import application_settings as settings

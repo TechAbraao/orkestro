@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/transitions.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scrollbar.css') }}">
 
     {% block scripts %}
     {% endblock scripts %}
@@ -23,29 +24,36 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-    {# Modals #}
-    {{ modals.modal_contact_menu() }}
+{# Modals #}
+{{ modals.modal_contact_menu() }}
 
 
-    {# Navbar #}
-    <section class="text-white flex-shrink-0 bg-red-900 transition-all duration-300">
-        {% block navbar %}
+{# Navbar #}
+<section class="text-white flex-shrink-0 bg-red-900 transition-all duration-300">
+    {% block navbar %}
 
-        {% endblock navbar %}
-    </section>
+    {% endblock navbar %}
+</section>
 
-    {# Menus #}
-    <main class="flex items-center justify-center">
-        {% block menu %}
+{# Menus #}
+<main class="flex items-start justify-center h-[76vh]">
+    {% block menu %}
 
-        {% endblock menu %}
-    </main>
+    {% endblock menu %}
+</main>
+
+{# Shopping environment #}
+<section class="flex items-center justify-center">
+    {% block cart %}
+        {% include "partials/cart.jinja2" %}
+    {% endblock cart %}
+</section>
 <script src="{{ url_for('static', filename='javascript/global_preLoader.js') }}"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         const modalAboutStore = $("#modalAboutStore")
         const btnAboutStore = $("#btn-about-store")
-        btnAboutStore.on("click", function() {
+        btnAboutStore.on("click", function () {
             modalAboutStore.removeClass("hidden")
         })
     })

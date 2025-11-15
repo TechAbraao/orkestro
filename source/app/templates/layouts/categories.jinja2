@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/transitions.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scrollbar.css') }}">
 
     {% block scripts %}
     {% endblock scripts %}
@@ -35,11 +36,17 @@
     </section>
 
     {# Menus #}
-    <main class="flex items-center justify-center">
+    <main class="flex items-start justify-center h-[70vh]">
         {% block menu %}
 
         {% endblock menu %}
     </main>
+
+    <section class="flex items-center justify-center">
+        {% block cart %}
+            {% include "partials/cart.jinja2" %}
+        {% endblock cart %}
+    </section>
 <script src="{{ url_for('static', filename='javascript/global_preLoader.js') }}"></script>
 </body>
 </html>

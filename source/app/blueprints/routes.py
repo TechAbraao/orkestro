@@ -1,8 +1,12 @@
 from flask import Blueprint
 
 ### Implementação no futuro do projeto.
-api = Blueprint("api", __name__)
+api = Blueprint("api", __name__, url_prefix="/api")
 vws = Blueprint("vws", __name__)
 
-### Importações necessárias para os endpoints.
-from source.app.blueprints.frontend import *
+### Api
+from source.app.blueprints.api.cart import *
+
+### Front-end
+from source.app.blueprints.frontend.integrations import *
+from source.app.blueprints.frontend.statistics import *

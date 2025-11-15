@@ -38,6 +38,12 @@
 
         {% endblock menu %}
     </main>
-<script src="{{ url_for('static', filename='javascript/global_preLoader.js') }}"></script>
+
+    <section class="flex items-center justify-center">
+        {% block cart %}
+            {% include "partials/cart.jinja2" %}
+        {% endblock cart %}
+    </section>
+    <script src="{{ url_for('static', filename='javascript/global_preLoader.js') }}"></script>
 </body>
 </html>

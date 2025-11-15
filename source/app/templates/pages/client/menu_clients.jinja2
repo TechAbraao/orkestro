@@ -43,13 +43,14 @@
 {% endblock navbar %}
 
 {% block menu %}
-    <section id="menuSection" class="w-3/4 flex flex-col items-center justify-center gap-4 p-10">
-
+    <section id="menuSection" class="no-scrollbar h-full w-3/4 flex
+    flex-col items-center justify-center gap-4  p-10 space-y-3 ">
     {# Modals #}
     {{ modals.modal_about_store(menuId=strategy["menu_id"]) }}
 
     {% if strategy["has_category"] == True %}
-        <div id="categoriesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 items-center justify-center gap-10">
+        <div id="categoriesContainer" class="grid grid-cols-1 sm:grid-cols-2
+        md:grid-cols-2 items-center justify-center w-[97%] gap-5 h-full overflow-y-auto no-scrollbar">
             {# As Categorias serão renderizadas aqui. #}
         </div>
     {% elif strategy["has_category"] == False %}
@@ -59,5 +60,3 @@
     {% endif %}
     </section>
 {% endblock menu %}
-
-

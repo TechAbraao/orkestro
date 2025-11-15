@@ -57,7 +57,8 @@ $(document).ready(function () {
 
             categories.forEach(cat => {
                 let categoryHTML = `
-            <div class="relative bg-white cursor-pointer shadow-lg rounded-2xl p-6 w-[630px] h-[230px] rounded-3xl border-2 border-gray-300 flex items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
+            <div class="relative bg-white cursor-pointer rounded-2xl p-6 w-[630px] h-[230px] rounded-3xl 
+            border-2 border-gray-300 flex items-center text-center transform transition duration-300">
                 <div class="w-2/3 h-full flex items-center justify-center bg-gray-100 rounded-xl overflow-hidden border border-gray-200">
                     <img src="${cat.url_image}" alt="${cat.name}" class="w-full h-full object-cover">
                 </div>
