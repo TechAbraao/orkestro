@@ -4,7 +4,7 @@ let btnContactMenu = $("#btn-contact-menu")
 let menuStatusHTML = $("#menu-status")
 
 $(document).ready(function () {
-      $.ajax({
+    $.ajax({
         url: menuClient,
         method: "GET",
         success: function (res) {
@@ -30,7 +30,7 @@ $(document).ready(function () {
                     .removeClass("text-green-700 bg-green-100 border-green-300")
                     .addClass("text-red-700 bg-red-100 border-red-300");
 
-               navbarStatusOption.removeClass("hidden");
+                navbarStatusOption.removeClass("hidden");
 
             } else if (menuStatus === true) {
                 statusText = "Aberto";
@@ -73,10 +73,10 @@ $(document).ready(function () {
                 categoriesContainer.append(categoryHTML);
             });
         },
-          error: function (xhr) {
-              console.error("Erro ao buscar menu:", xhr);
-          }
-      });
+        error: function (xhr) {
+            console.error("Erro ao buscar menu:", xhr);
+        }
+    });
     $.ajax({
         url: aboutMeStore,
         method: "GET",
@@ -99,5 +99,11 @@ $(document).ready(function () {
 
     $("#modalContactMenuModal button").click(() => {
         $("#modalContactMenuModal").addClass("hidden");
+    });
+
+    // Redirecionar para o carrinho (nesse caso, o usuário encontra-se na página do cardápio). //
+    const btnFinishOrder = $(".btn-finish-order")
+    btnFinishOrder.on("click", function () {
+        window.location.href = `/menus/${menuSlug}/cart`;
     });
 })

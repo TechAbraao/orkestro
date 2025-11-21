@@ -14,13 +14,13 @@
         <a href="{{ url_for("main_frontend.views_main_dashboard") }}"
            title="Seção do Menu"
            class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-            <img src="{{ url_for('static', filename='icons/dashboard.png') }}" alt="Dashboard" class="w-6 h-6 mr-3">
+            <img src="{{ url_for('static', filename='icons/dashboard.png') }}" alt="Dashboard" class="w-6 h-6 mr-3 brightness-0 invert">
             <span class="text-sm font-medium sidebar-text">Geral</span>
         </a>
         <a href="#" id="statistics-btn"
            title="Seção da Estatística"
            class=" flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-            <img src="{{ url_for('static', filename='icons/graphics.png') }}" alt="Statistics" class="w-6 h-6 mr-3">
+            <img src="{{ url_for('static', filename='icons/graphics.png') }}" alt="Statistics" class="w-6 h-6 mr-3 brightness-0 invert">
             <span class="text-sm font-medium sidebar-text">Estatísticas</span>
 
             <svg class="ml-auto w-4 h-4 transition-transform duration-200" id="statistics-arrow"
@@ -42,16 +42,16 @@
         </div>
 
         <a href="{{ url_for("main_frontend.views_orders_dashboard") }}" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-            <img src="{{ url_for('static', filename='icons/bell.png') }}" alt="Orders" class="w-6 h-6 mr-3">
+            <img src="{{ url_for('static', filename='icons/bell.png') }}" alt="Orders" class="w-6 h-6 mr-3 brightness-0 invert">
             <span class="text-sm font-medium sidebar-text">Pedidos</span>
         </a>
         <a href="{{ url_for("main_frontend.views_menus_manager_dashboard") }}" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-            <img src="{{ url_for('static', filename='icons/menus.png') }}" alt="Menus" class="w-6 h-6 mr-3">
+            <img src="{{ url_for('static', filename='icons/menus.png') }}" alt="Menus" class="w-6 h-6 mr-3 brightness-0 invert">
             <span class="text-sm font-medium sidebar-text">Cardápios</span>
         </a>
         <a href="#" id="settings-btn"
            class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-            <img src="{{ url_for('static', filename='icons/settings.png') }}" alt="Settings" class="w-6 h-6 mr-3">
+            <img src="{{ url_for('static', filename='icons/settings.png') }}" alt="Settings" class="w-6 h-6 mr-3 brightness-0 invert">
             <span class="text-sm font-medium sidebar-text">Configurações</span>
             <svg class="ml-auto w-4 h-4 transition-transform duration-200" id="settings-arrow"
                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -67,18 +67,18 @@
 
         <a href="{{ url_for("main_frontend.views_profile_dashboard") }}"
            class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-            <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Profile" class="w-6 h-6 mr-3">
+            <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Profile" class="w-6 h-6 mr-3 brightness-0 invert">
             <span class="text-sm font-medium sidebar-text">Perfil da Loja</span>
         </a>
         <br>
         <div class="pt-7 border-t border-gray-700">
             <a href="#" id="btn-about-orkestro" class="flex items-center px-2 py-2 rounded-lg hover:bg-gray-700 transition group">
-                <img src="{{ url_for('static', filename='icons/infos.png') }}" alt="About" class="w-6 h-6 mr-3">
+                <img src="{{ url_for('static', filename='icons/infos.png') }}" alt="About" class="w-6 h-6 mr-3 brightness-0 invert">
                 <span class="text-sm font-medium sidebar-text px-1">Sobre a Orkestro</span>
             </a>
             <a href="#" id="btn-logout"
                class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
-                <img src="{{ url_for('static', filename='icons/logout.png') }}" alt="Logout" class="w-6 h-6 mr-3">
+                <img src="{{ url_for('static', filename='icons/logout.png') }}" alt="Logout" class="w-6 h-6 mr-3 brightness-0 invert">
                 <span class="text-sm font-medium sidebar-text">Sair</span>
             </a>
         </div>

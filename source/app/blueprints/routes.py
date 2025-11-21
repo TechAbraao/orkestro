@@ -6,6 +6,8 @@ vws = Blueprint("vws", __name__)
 
 ### Api
 from source.app.blueprints.api.cart import *
+from source.app.blueprints.api.customers import *
+from source.app.blueprints.api.customers import  *
 
 ### Front-end
 from source.app.blueprints.frontend.integrations import *

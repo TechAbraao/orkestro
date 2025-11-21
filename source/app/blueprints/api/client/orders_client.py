@@ -28,9 +28,8 @@ def get_orders(menu_id: str):
 
 """ Add a new order in Menu. """
 @orders_client.route("/orders", methods=["POST"])
-@authorization_required
 def post_order():
-    store_id = g.jwt_claims.get("sub")
+
     logger.info("POST /api/orders - creating new order in menu.")
     data = request.get_json()
 
@@ -38,6 +37,7 @@ def post_order():
     validating_data = orders_schemas.load(data)
 
     """ Campos necessários para realizar o pedido. """
+    store_id = data["store_id"]
     user_id = data["user_id"]
     menu_id = data["menu_id"]
     products = data["products"]
@@ -103,7 +103,6 @@ def post_order():
             message="Erro ao salvar produtos do pedido.",
             status_code=500
         )
-
 
     count_done_orders = orders_services.count_orders_done(menu_id, status="done")
     count_pending_orders = orders_services.count_orders_done(menu_id, status="pending")

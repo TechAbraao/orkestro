@@ -6,6 +6,7 @@ class ProductItemSchema(ma.Schema):
     quantity = ma.Integer(required=True)
 
 class OrdersSchema(ma.Schema):
+    store_id = ma.UUID(required=True)
     user_id = ma.UUID(required=True)
     menu_id = ma.UUID(required=True)
     products = ma.List(

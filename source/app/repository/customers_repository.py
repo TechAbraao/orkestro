@@ -17,3 +17,16 @@ class CustomersRepository:
             .query(UsersEntity)
             .filter(UsersEntity.id == customer_id)
         ).first()
+
+    def telephone_exists(self, telephone_number):
+        return self.session.query(UsersEntity).filter(
+            UsersEntity.telephone == telephone_number
+        ).first() is not None
+
+    def find_id_by_telephone(self, telephone):
+        return (
+            self.session
+            .query(UsersEntity.id)
+            .filter(UsersEntity.telephone == telephone)
+            .scalar()
+        )

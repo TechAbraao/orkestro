@@ -1,10 +1,8 @@
 $(function () {
     const socket = io();
-
     const $ordersListDone = $("#orders-list-done");
     const $ordersListPending = $("#orders-list-accepts");
     const $ordersListCompleted = $("#orders-list-finish");
-
     const newOrderSound = new Audio("/static/sounds/notification-order-one.mp3");
     newOrderSound.volume = 1;
 
@@ -14,10 +12,7 @@ $(function () {
         completed: $ordersListCompleted,
         canceled: $ordersListCompleted,
     };
-
     console.log("MenuId:", menuId);
-
-
     const $loading = $(`
         <div id="loading-spinner" class="flex flex-col items-center justify-center py-10 text-gray-700">
             <div class="animate-spin rounded-full h-10 w-10 border-b-4 border-green-500 mb-3"></div>

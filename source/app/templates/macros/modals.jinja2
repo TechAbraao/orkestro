@@ -714,6 +714,7 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
                 <p class="text-lg"><span class="font-semibold">Telefone:</span> +<span id="{{ modal_id }}_client_phone"></span></p>
                 <p class="text-lg"><span class="font-semibold">Endereço:</span> <span id="{{ modal_id }}_client_address"></span></p>
                 <p class="text-lg"><span class="font-semibold">Número:</span> <span id="{{ modal_id }}_client_number"></span></p>
+                <p class="text-lg"><span class="font-semibold">Método de Pagamento:</span> <span id="{{ modal_id }}_client_payment"></span> Crédito/Débito/Pix/Dinheiro</p>
             </section>
 
             <section class="mb-6">
@@ -739,19 +740,94 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
             }
             window.closeModal = function (id) {
                 document.getElementById(id).classList.add("hidden");
-                {#let customerName = $("#modalDetailsOrder_client_name")#}
-                {#let customerPhone = $("#modalDetailsOrder_client_phone")#}
-                {#let customerAddress = $("#modalDetailsOrder_client_address")#}
-                {#let customerHouseNumber = $("#modalDetailsOrder_client_number")#}
-                {#let containerProductsInfo = $("#modalDetailsOrder_order_items");#}
-                {#let containerProductsInfoTotal = $("#modalDetailsOrder_order_total")#}
-                {#customerName.text("")#}
-                {#customerPhone.text("")#}
-                {#customerAddress.text("")#}
-                {#customerHouseNumber.text("")#}
-                {#containerProductsInfo.text("")#}
-                {#containerProductsInfoTotal.text("")#}
             }
         });
     </script>
+{% endmacro %}
+
+{% macro modal_finish_order(modal_id="") %}
+<div id="{{ modal_id }}" class="fixed inset-0 bg-black bg-opacity-40 hidden z-50 flex items-center justify-center">
+
+    <div class="bg-white rounded-xl shadow-lg p-6 w-[420px] relative">
+
+        <button class="close-modal absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl">
+            &times;
+        </button>
+
+        <h2 class="text-xl font-semibold mb-5 text-center text-gray-800">
+            Informações do Cliente
+        </h2>
+
+        <div class="space-y-4">
+
+            <div class="flex flex-col">
+                <label class="text-gray-700 text-sm font-medium">Nome</label>
+                <input id="modalCustomerName" type="text"
+                       class="border rounded-lg p-2 mt-1 bg-gray-100 focus:ring-2 focus:ring-blue-300">
+            </div>
+
+            <div class="flex flex-col">
+                <label class="text-gray-700 text-sm font-medium">Telefone</label>
+                <input id="modalCustomerTelephone" type="text"
+                       class="border rounded-lg p-2 mt-1 bg-gray-100 focus:ring-2 focus:ring-blue-300">
+            </div>
+
+            <div class="flex flex-col">
+                <label class="text-gray-700 text-sm font-medium">Endereço</label>
+                <input id="modalCustomerAddress" type="text"
+                       class="border rounded-lg p-2 mt-1 bg-gray-100 focus:ring-2 focus:ring-blue-300">
+            </div>
+
+            <div class="flex flex-col">
+                <label class="text-gray-700 text-sm font-medium">Número</label>
+                <input id="modalCustomerNumber" type="number"
+                       class="border rounded-lg p-2 mt-1 bg-gray-100 focus:ring-2 focus:ring-blue-300">
+            </div>
+        </div>
+
+        <div class="flex justify-between mt-6">
+            <button class="close-modal bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg font-medium">
+                Cancelar
+            </button>
+
+            <button class="confirm-order bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-semibold">
+                Avançar
+            </button>
+        </div>
+
+    </div>
+</div>
+{% endmacro %}
+
+
+{% macro modal_order_placed(modal_id="") %}
+<div id="{{ modal_id }}" class="fixed inset-0 bg-black bg-opacity-40 hidden z-50 flex items-center justify-center">
+    <div class="bg-white rounded-2xl shadow-2xl p-8 w-[420px] relative animate-[fadeIn_0.25s_ease-out]">
+
+        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-green-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M5 13l4 4L19 7" />
+            </svg>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-center text-gray-800 mb-2">
+            Pedido Concluído!
+        </h2>
+
+        <p class="text-center text-gray-600 mb-6">
+            Seu pedido foi processado com sucesso. Em breve entraremos em contato para confirmar os detalhes.
+        </p>
+
+        <div class="flex justify-center">
+            <button
+                class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all btn-order-placed-finish"
+                onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')"
+            >
+                Ok, entendi
+            </button>
+        </div>
+    </div>
+</div>
 {% endmacro %}

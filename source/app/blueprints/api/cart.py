@@ -3,6 +3,7 @@ from source.app.blueprints.routes import api
 from source.app.settings.logging_settings import get_logger
 
 logger = get_logger(__name__)
+""" Aqui ficará o futuro módulo do carrinho. """
 
 """ Em construção -- IDEALIZANDO"""
 @api.route("/cart/validate-cart", methods=["POST"])

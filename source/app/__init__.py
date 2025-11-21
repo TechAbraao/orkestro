@@ -1,7 +1,6 @@
 from source.app.settings.database_settings import postgres_settings
 from source.app.settings.definitions_settings import db, ma
 from source.app.handlers.handlers_exceptions import register_error_handlers
-from source.app.blueprints.all import *
 from source.app.blueprints.routes import (vws, api)
 from flask import Flask
 from source.app.extesions.socket_io import socketio
@@ -48,6 +47,23 @@ def create_app():
     from source.app.entities.chat_history_entity import ChatHistory
     from source.app.entities.opening_hours_entity import OpeningHoursEntity
 
+    # All routes
+    ## Front-end
+    from source.app.blueprints.frontend.client.menus_client_frontend import menus_client_frontend
+    from source.app.blueprints.frontend.auth.authorizations_frontend import authorizations_frontend
+    # from source.app.blueprints.frontend.admin.home_frontend import *
+    from source.app.blueprints.frontend.dashboard.main_frontend import main_frontend
+    from source.app.blueprints.frontend.home.homepage_frontend import homepage_frontend
+    ## API
+    from source.app.blueprints.api.client.orders_client import orders_client
+    from source.app.blueprints.api.client.menus_client import menus_client
+    from source.app.blueprints.api.auth.me_auth import about_auth
+    from source.app.blueprints.api.auth.sign_in_auth import sign_in_auth
+    from source.app.blueprints.api.auth.sign_up_auth import sign_up_auth
+    from source.app.blueprints.api.admin.menus_admin import menus_bp
+    from source.app.blueprints.api.admin.products_admin import products_bp
+    from source.app.blueprints.api.admin.categories_admin import categories_bp
+
     # Back-end (API Layer)
     app.register_blueprint(menus_bp)
     app.register_blueprint(categories_bp)
@@ -57,7 +73,7 @@ def create_app():
     app.register_blueprint(sign_up_auth)
     app.register_blueprint(sign_in_auth)
     app.register_blueprint(about_auth)
-    app.register_blueprint(customers)
+
 
     # Front-end (Views)
     app.register_blueprint(authorizations_frontend)

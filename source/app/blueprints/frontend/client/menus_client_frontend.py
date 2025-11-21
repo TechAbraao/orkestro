@@ -79,3 +79,10 @@ def vws_payment_order(slug: str):
         "return_id": g.return_id
     }
     return render_template("pages/cart.jinja2", strategy=rendering_strategy)
+
+@menus_client_frontend.route("/menus/<string:slug>/payment", methods=["GET"])
+def vws_finalize_order(slug: str):
+    rendering_strategy = {
+        "menu_slug": slug,
+    }
+    return render_template("pages/finalize_order.jinja2", strategy=rendering_strategy)

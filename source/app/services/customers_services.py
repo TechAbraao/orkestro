@@ -19,7 +19,10 @@ class CustomersServices:
             address=body.get("address", "N/A"),
             house_number=body.get("number", 0)
         )
-
+        exists = self.customers_repository.telephone_exists(body["telephone"])
+        logger.info(f"Telefone existe: ${exists}")
+        if exists:
+            return False
         created_user = self.customers_repository.save(user)
         if not created_user:
             return False
@@ -33,6 +36,13 @@ class CustomersServices:
         if not user:
             raise ValueError("Nenhum cliente encontrado.")
         return user.serialize
+
+    @database_connection
+    def find_user_id_by_telephone(self, telephone):
+        user_id = self.customers_repository.find_id_by_telephone(telephone)
+        if not user_id:
+            raise ValueError("Nenhum cliente encontrado.")
+        return user_id
 
     @database_connection
     def find_by_order_id(self, order_id):

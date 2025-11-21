@@ -22,6 +22,11 @@ class UsersEntity(database.Model):
             "house_number": self.house_number,
             "created_at": self.created_at
         }
+    @property
+    def serialize_id(self):
+        return {
+            "id": self.id,
+        }
 
 from source.app.entities.orders_entity import OrderEntity
 
