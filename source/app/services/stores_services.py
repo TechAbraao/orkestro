@@ -12,6 +12,7 @@ class StoresServices:
     def __init__(self):
         self.stores_repository = StoresRepository()
 
+
     def create_new_account(self, account_data) -> bool:
         email = account_data.get("email")
         if not email or not account_data.get("password") or not account_data.get("telephone"):
@@ -56,4 +57,3 @@ class StoresServices:
     def about_me_store_account(self, store_id: str):
         store = self.stores_repository.find_by_id(store_id)
         return store.serialize_frontend
-

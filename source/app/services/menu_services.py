@@ -208,3 +208,24 @@ class MenuServices:
         self.menu_repository.update_status(menu_id, new_status)
 
         return new_status
+
+    @database_connection
+    def get_menu_id_by_store_id(self, store_id: str) -> str:
+        """
+        Retorna o menu_id associado a um store_id.
+        Cada loja/comércio possui apenas um cardápio.
+        """
+        logger.info(f"Procurando 'menu_id' pelo 'store_id' = '{store_id}'")
+
+        menu = self.menu_repository.get_by_store_id(store_id)
+
+        if not menu:
+            logger.warning(f"Nenhum menu encontrado para store_id '{store_id}'")
+            raise MenuNotFoundException("No menu found for this store.")
+
+        if isinstance(menu, list):
+            menu = menu[0]
+
+        logger.info(f"Menu encontrado. ID: '{menu.id}' para o store_id '{store_id}'")
+
+        return str(menu.id)

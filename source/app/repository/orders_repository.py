@@ -2,6 +2,7 @@ from source.app.settings.definitions_settings import db as database
 from source.app.utils.decorators.database import transactional
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import func
+from datetime import datetime, timedelta
 from source.app.entities.orders_entity import OrderEntity
 from source.app.entities.menus_entity import MenusEntity
 
@@ -60,3 +61,36 @@ class OrdersRepository:
 
     def get(self, order_id):
         return self.session.query(OrderEntity).filter_by(id=order_id).first()
+
+    def get_orders_between_dates_any_status(self, menu_id, start_date, end_date):
+        return (
+            self.session.query(OrderEntity)
+            .filter(
+                OrderEntity.menu_id == menu_id,
+                OrderEntity.created_at >= start_date,
+                OrderEntity.created_at <= end_date
+            )
+            .all()
+        )
+
+    def number_of_orders_placed(self, menu_id):
+        """Retorna o maior número de pedidos (order_number) de um cardápio."""
+        max_value = (
+            self.session.query(func.max(OrderEntity.order_number))
+            .filter(OrderEntity.menu_id == menu_id)
+            .scalar()
+        )
+        return max_value
+
+    def get_total_sales_last_24h(self, menu_id):
+        now = datetime.utcnow()
+        last_24h = now - timedelta(hours=24)
+
+        total = (
+            self.session.query(func.sum(OrderEntity.total_value))
+            .filter(OrderEntity.created_at >= last_24h)
+            .filter(OrderEntity.menu_id == menu_id)
+            .scalar()
+        )
+
+        return total or 0

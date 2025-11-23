@@ -1,7 +1,7 @@
 {% extends "layouts/administrative.jinja2" %}
 
 {% block title %}
-    Overview
+    Visão Geral
 {% endblock title %}
 
 {% block sidenav %}
@@ -13,15 +13,67 @@
 {% endblock sidenav %}
 
 {% block dashboard %}
-    <section class="w-full h-full bg-red-50 flex flex-col items-center justify-center">
-        Overview
+    <section class="w-full h-full bg-gray-100 flex items-center justify-around border-gray-300 border-2 rounded-2xl">
+        <div class="w-1/2 h-full flex flex-col items-center justify-center">
+            <aside class="flex w-full h-2/4 items-center justify-center gap-5">
+                <div class="w-[46%] gap-2 h-[220px] flex items-center justify-center flex-col gap-2">
+                    <h2 class="text-xl font-semibold border-gray-300 border-2 w-[100%]
+            p-3 rounded-2xl bg-white">Receita Total Diária (R$)</h2>
+                    <div class="w-[100%] h-[150px] bg-white border-gray-300 border-2 rounded-2xl flex items-center justify-start">
+                        <div class="w-28 h-28 ml-4 flex bg-gray-200
+                        items-center justify-center rounded-2xl">
+                            <img src="{{ url_for('static', filename='icons/dolar.png') }}"
+                                 alt="Dollar"
+                                 class="w-[60px] h-[60px]">
+                        </div>
+                        <p class="text-4xl ml-2 w-[56%] h-28 ml-4 flex bg-gray-200
+                        items-center justify-center rounded-2xl"><span class="total-daily-recipe"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="w-[46%] gap-2 h-[220px] flex items-center justify-center flex-col gap-2">
+                    <h2 class="text-xl font-semibold border-gray-300 border-2 w-[100%]
+                        p-3 rounded-2xl bg-white">Total de Pedidos Realizados</h2>
+                    <div class="w-[100%] h-[150px] bg-white border-gray-300 border-2 rounded-2xl flex items-center justify-start">
+                        <div class="w-28 h-28 ml-4 flex bg-gray-200
+                        items-center justify-center rounded-2xl">
+                            <img src="{{ url_for('static', filename='icons/right-arrow-up.png') }}"
+                                 alt="Seta Superior"
+                                 class="w-[60px] h-[60px]">
+                        </div>
+
+                        <p class="text-4xl ml-2 w-[56%] h-28 ml-4 flex bg-gray-200
+                        items-center justify-center rounded-2xl"><span class="total-sales-quantity"></span>
+                        </p>
+                    </div>
+                </div>
+            </aside>
+            <aside class="h-full w-full flex items-center justify-center flex-col gap-2">
+                <h2 class="text-xl border-gray-300 border-2 w-[95%] p-3 rounded-2xl bg-white font-semibold">Pedidos por
+                    Semana</h2>
+                <div class="bg-white p-5 rounded-2xl flex flex-col items-center justify-center w-[95%] h-2/3 border-gray-300 border-2">
+                    <canvas id="mySalesPerWeek" width="1400" height="600"></canvas>
+                </div>
+            </aside>
+        </div>
+        <div class="w-1/2 h-full flex flex-col items-center justify-center gap-2">
+            <h2 class="text-xl font-semibold border-gray-300 border-2 w-[75%]
+            p-3 rounded-2xl bg-white">Indicador de Conclusão dos Pedidos</h2>
+            <aside class="bg-white p-5 rounded-2xl flex flex-col items-center w-[75%] justify-center border-gray-300 border-2">
+                <canvas id="myGeneralSalesStatus" width="500" height="400"></canvas>
+            </aside>
+            <button class="w-[75%] h-22 bg-red-300 pt-4 pb-4 rounded-2xl btn-update-indicator
+            text-black-800 font-bold border-2 border-red-400">Atualizar Indicadores</button>
+        </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='javascript/analysisOverview.js') }}" defer></script>
 {% endblock dashboard %}
 
 {% block navbar %}
     <aside class="w-full pl-10 text-lg font-extrabold">
-        Dashboard | <span class="font-extralight">Seja bem-vindo novamente | </span> <span class="font-extralight"
-                                                                             id="store-name-navbar">Company name</span>
+        Visão Geral | <span class="font-extralight">Tenha uma visão geral dos principais indicadores | </span> <span class="font-extralight"
+                                                                                                          id="store-name-navbar">Company name</span>
     </aside>
 {% endblock navbar %}
 

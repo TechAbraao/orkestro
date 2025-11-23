@@ -6,6 +6,7 @@ from source.app.services.authorizations_services import AuthorizationsServices
 from source.app.services.opening_hours_services import OpeningHoursServices
 from source.app.services.customers_services import CustomersServices
 from source.app.services.orders_services import OrdersServices
+from source.app.services.analysis_services import AnalysisServices
 
 # Initialize service instances
 menu_services = MenuServices()
@@ -16,3 +17,4 @@ authorizations_services = AuthorizationsServices()
 opening_hours_services = OpeningHoursServices()
 customers_services = CustomersServices()
 orders_services = OrdersServices()
+analysis_services = AnalysisServices()

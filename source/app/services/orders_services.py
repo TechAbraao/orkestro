@@ -2,6 +2,7 @@ from source.app.repository.orders_repository import OrdersRepository
 from source.app.repository.orders_products_repository import OrdersProductsRepository
 from source.app.utils.decorators.database import database_connection
 from source.app.entities.orders_entity import OrderEntity
+from datetime import datetime, timedelta
 
 from uuid import uuid4
 
@@ -92,3 +93,31 @@ class OrdersServices:
     def get_order_by_id(self, order_id: str):
         order = self.orders_repository.get(order_id=order_id)
         return order.serialize
+
+    @database_connection
+    def get_sales_per_week(self, menu_id: str):
+        """
+        Retorna a quantidade TOTAL de pedidos por dia da semana (Seg–Dom),
+        filtrando somente a semana atual.
+        """
+
+        today = datetime.now().date()
+        start_of_week = today - timedelta(days=today.weekday())  ## segunda-feira
+        end_of_week = start_of_week + timedelta(days=6)  ## domingo
+
+        orders = self.orders_repository.get_orders_between_dates_any_status(
+            menu_id=menu_id,
+            start_date=start_of_week,
+            end_date=end_of_week
+        )
+
+        if not orders:
+            return [0, 0, 0, 0, 0, 0, 0]
+
+        week_map = {d: 0 for d in range(7)}
+
+        for order in orders:
+            weekday = order.created_at.weekday()
+            week_map[weekday] += 1
+
+        return [week_map[d] for d in range(7)]

@@ -4,11 +4,12 @@ from flask import Blueprint
 api = Blueprint("api", __name__, url_prefix="/api")
 vws = Blueprint("vws", __name__)
 
-### Api
+### Camada da API
 from source.app.blueprints.api.cart import *
 from source.app.blueprints.api.customers import *
 from source.app.blueprints.api.customers import  *
+from source.app.blueprints.api.analysis import *
 
-### Front-end
+### Camada da UI
 from source.app.blueprints.frontend.integrations import *
 from source.app.blueprints.frontend.statistics import *
