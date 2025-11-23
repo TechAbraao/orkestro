@@ -11,7 +11,11 @@ class OrderEntity(database.Model):
     created_at = database.Column(database.DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
     total_value = database.Column(database.Numeric, nullable=False)
     status = database.Column(database.String(20), nullable=False)
-    user_id = database.Column(database.UUID(as_uuid=True), database.ForeignKey("users.id"))
+    user_id = database.Column(
+        database.UUID(as_uuid=True),
+        database.ForeignKey("users.id", ondelete="SET NULL"),
+        nullable=True
+    )
     menu_id = database.Column(database.UUID(as_uuid=True),database.ForeignKey("menus.id", ondelete="CASCADE"),nullable=False)
     name = database.Column(database.String(), nullable=False)
     telephone = database.Column(database.String(), nullable=False)

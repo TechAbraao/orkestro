@@ -96,6 +96,9 @@ $(document).ready(function () {
 
     btnOpen.on("click", function () {
         modal.removeClass("hidden");
+        setTimeout(() => {
+            document.getElementById('modalCustomerName').focus();
+        }, 50);
     });
 
     closeBtn.on("click", function () {

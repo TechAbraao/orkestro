@@ -754,44 +754,53 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
             &times;
         </button>
 
-        <h2 class="text-xl font-semibold mb-5 text-center text-gray-800">
-            Informações do Cliente
-        </h2>
-
         <div class="space-y-4">
-
+            <h2 class="text-xl font-semibold mb-1 text-left text-gray-800">
+                Informações do Cliente
+            </h2>
             <div class="flex flex-col">
-                <label class="text-gray-700 text-sm font-medium">Nome</label>
-                <input id="modalCustomerName" type="text"
-                       class="border rounded-lg p-2 mt-1 bg-gray-100 focus:ring-2 focus:ring-blue-300">
+                <label class="text-gray-700 text-sm font-medium">Seu nome completo
+                    <small id="" class="text-[15px] text-red-500 pb-2">*</small>
+                </label>
+                <input id="modalCustomerName" type="text" autofocus placeholder="Escreva seu nome completo"
+                       class="border rounded-lg h-[50px] p-2 mt-1 bg-white focus:ring-2 focus:ring-blue-300 pl-3 text-base">
             </div>
 
             <div class="flex flex-col">
-                <label class="text-gray-700 text-sm font-medium">Telefone</label>
-                <input id="modalCustomerTelephone" type="text"
-                       class="border rounded-lg p-2 mt-1 bg-gray-100 focus:ring-2 focus:ring-blue-300">
+                <label class="text-gray-700 text-sm font-medium">Número de telefone
+                    <small id="" class="text-[15px] text-red-500 pb-2">*</small>
+                </label>
+                <input id="modalCustomerTelephone" type="text" placeholder="(xx) xxxxx-xxxx"
+                       class="border rounded-lg h-[50px] p-2 mt-1 bg-white focus:ring-2 focus:ring-blue-300 pl-3 text-base">
+            </div>
+
+            <h2 class="text-xl font-semibold mb-1 text-left text-gray-800">
+                Informações de Entrega
+            </h2>
+            <div class="flex flex-col">
+                <label class="text-gray-700 text-sm font-medium">Endereço de entrega
+                    <small id="" class="text-[15px] text-red-500 pb-2">*</small>
+                </label>
+                <input id="modalCustomerAddress" type="text" placeholder="Seu endereço"
+                       class="border rounded-lg h-[50px] p-2 mt-1 bg-white focus:ring-2 focus:ring-blue-300 pl-3 text-base">
             </div>
 
             <div class="flex flex-col">
-                <label class="text-gray-700 text-sm font-medium">Endereço</label>
-                <input id="modalCustomerAddress" type="text"
-                       class="border rounded-lg p-2 mt-1 bg-gray-100 focus:ring-2 focus:ring-blue-300">
-            </div>
+                <label class="text-gray-700 text-sm font-medium">Número da residência
+                    <small id="" class="text-[15px] text-red-500 pb-2">*</small>
+                </label>
+                <input id="modalCustomerNumber" type="number" placeholder="Número da sua residência"
+                       class="border rounded-lg h-[50px] p-2 mt-1 bg-white focus:ring-2 focus:ring-blue-300 pl-3 text-base">
 
-            <div class="flex flex-col">
-                <label class="text-gray-700 text-sm font-medium">Número</label>
-                <input id="modalCustomerNumber" type="number"
-                       class="border rounded-lg p-2 mt-1 bg-gray-100 focus:ring-2 focus:ring-blue-300">
             </div>
         </div>
 
-        <div class="flex justify-between mt-6">
-            <button class="close-modal bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg font-medium">
-                Cancelar
-            </button>
-
+        <div class="flex justify-between flex-col mt-4 gap-1">
             <button class="confirm-order bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-semibold">
                 Avançar
+            </button>
+            <button class="close-modal bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg font-medium">
+                Cancelar
             </button>
         </div>
 
@@ -799,6 +808,15 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
 </div>
 {% endmacro %}
 
+{% macro modal_confirm_address(modal_id="") %}
+<div id="modalConfirmAddress" class="fixed inset-0 bg-black bg-opacity-40 hidden z-50 flex items-center justify-center">
+     <div class="bg-white rounded-xl shadow-lg p-6 w-[420px] relative">
+          <button class="close-modal absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl">
+            &times;
+        </button>
+     </div>
+</div>
+{% endmacro %}
 
 {% macro modal_order_placed(modal_id="") %}
 <div id="{{ modal_id }}" class="fixed inset-0 bg-black bg-opacity-40 hidden z-50 flex items-center justify-center">

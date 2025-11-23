@@ -1,14 +1,18 @@
 from source.app.settings.definitions_settings import db as database
 from source.app.utils.decorators.database import transactional
+from source.app.settings.logging_settings import get_logger
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import func
 from datetime import datetime, timedelta
 from source.app.entities.orders_entity import OrderEntity
 from source.app.entities.menus_entity import MenusEntity
 
+logger = get_logger(__name__)
+
 class OrdersRepository:
     def __init__(self):
         self.session = database.session
+        self.dir_name = 'orders_repository.py'
 
     @transactional
     def create_order(self, data: OrderEntity) -> bool:
@@ -63,7 +67,7 @@ class OrdersRepository:
         return self.session.query(OrderEntity).filter_by(id=order_id).first()
 
     def get_orders_between_dates_any_status(self, menu_id, start_date, end_date):
-        return (
+        orders = (
             self.session.query(OrderEntity)
             .filter(
                 OrderEntity.menu_id == menu_id,
@@ -72,6 +76,8 @@ class OrdersRepository:
             )
             .all()
         )
+        logger.info(f"[{self.dir_name}] Através do banco de dados, obtém-se: {orders}")
+        return orders
 
     def number_of_orders_placed(self, menu_id):
         """Retorna o maior número de pedidos (order_number) de um cardápio."""
@@ -84,7 +90,10 @@ class OrdersRepository:
 
     def get_total_sales_last_24h(self, menu_id):
         now = datetime.utcnow()
+        logger.info(f"Horário atual: '{now}'")
+
         last_24h = now - timedelta(hours=24)
+        logger.info(f"Cálculo do período de 24h: '{last_24h}'")
 
         total = (
             self.session.query(func.sum(OrderEntity.total_value))

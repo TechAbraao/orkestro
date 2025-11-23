@@ -1,20 +1,34 @@
-$(document).ready(function () {
-    console.log("Hello, World!")
-    // Capturando valores dos Inputs (dados do Cliente). //
+$(document).ready(async function () {
     let customerName = $("#modalCustomerName");
     let customerTelephone = $("#modalCustomerTelephone");
     let customerAddress = $("#modalCustomerAddress");
     let customerNumber = $("#modalCustomerNumber");
 
-    // Botão para enviar os dados do cliente. //
     const btnConfirmOrder = $(".confirm-order");
-    btnConfirmOrder.on("click", function() {
-        // Pegando os dados atuais do Input. //
+    btnConfirmOrder.on("click", async function() {
+        let storage = window.localStorage
+
         let name = customerName.val();
         let address = customerAddress.val();
         let telephone = customerTelephone.val();
         let number = customerNumber.val();
-        console.log(`Nome: ${name} - Endereço: ${address} - Telefone: ${telephone} - Número: ${number}`)
+
+        const exists = await fetch(`/api/customers?telephone=${telephone}`)
+        const dataExists = await exists.json()
+        if (dataExists.success == true) {
+            const customer_id = dataExists.data.user_id
+            const userDetails = await fetch(`/api/customers?id=${customer_id}`)
+            const userDetailsData = await userDetails.json()
+            let dataUser = userDetailsData.data
+
+            storage.setItem("customerCredentials", JSON.stringify({
+                "name": dataUser.name,
+                "address": dataUser.address,
+                "telephone": dataUser.telephone,
+                "number": dataUser.house_number
+            }))
+            window.location.href = `/menus/${menuSlug}/payment`;
+        }
 
         const url = `/api/customers`;
         $.ajax({
@@ -28,18 +42,18 @@ $(document).ready(function () {
                 number: number
             }),
             success: function (res) {
-                // Verificando caso dê sucesso. //
                 console.log("Mensagem de sucesso: ", res)
-                let hasRedirect = res.data.success
-                console.log(`Sucesso no redirecionamento: ${hasRedirect}.`)
-                if (hasRedirect) {
-                    window.location.href = `/menus/${menuSlug}/confirm`;
-                }
+                storage.setItem("customerCredentials", JSON.stringify({
+                    "name": name,
+                    "address": address,
+                    "telephone": telephone,
+                    "number": number
+                }))
+                window.location.href = `/menus/${menuSlug}/payment`;
             },
             error: function (xhr, status, errorThrown) {
                 console.group("ERRO NA REQUISIÇÃO AJAX");
 
-                // Tentando pegar o JSON enviado pelo backend. //
                 let errorResponse = null;
                 try {
                     errorResponse = JSON.parse(xhr.responseText);
@@ -54,7 +68,6 @@ $(document).ready(function () {
                 console.error("Status:", status);
                 console.error("Detalhes do jQuery:", errorThrown);
 
-                // Caso o back-end envie flag de sucesso. //
                 let hasRedirect = errorResponse?.success ?? false;
                 console.log("Sucesso no redirecionamento:", hasRedirect);
                 if (hasRedirect == false) {
@@ -62,15 +75,6 @@ $(document).ready(function () {
                 }
                 console.groupEnd();
             },
-            complete: function () {
-                let storage = window.localStorage
-                storage.setItem("customerCredentials", JSON.stringify({
-                    "name": name,
-                    "address": address,
-                    "telephone": telephone,
-                    "number": number
-                }))
-            }
         })
     })
 })

@@ -5,6 +5,7 @@ from source.app.settings.logging_settings import get_logger
 from source.app.blueprints.routes import api
 
 logger = get_logger(__name__)
+dir_name: str = 'analysis.py'
 
 """
     * Exibirá as vendas por semana, isto é:
@@ -20,13 +21,13 @@ logger = get_logger(__name__)
 @authorization_required
 def api_sales_per_week():
     store_id = g.jwt_claims.get("sub")
-    logger.info(f"[Vendas por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = {store_id}")
+    logger.info(f"[{dir_name}] Acessou o ambiente de análises da loja cujo 'store_id' = {store_id}")
 
     menu_id = menu_services.get_menu_id_by_store_id(store_id)
-    logger.info(f"Através do 'store_id', encontrou o 'menu_id' = '{menu_id}'")
+    logger.info(f"[{dir_name}] Através do 'store_id', encontrou o 'menu_id' = '{menu_id}'")
 
     values = orders_services.get_sales_per_week(menu_id=menu_id)
-    logger.info(f"Valores dos pedidos realizados na semana: {values}")
+    logger.info(f"[{dir_name}] Valores dos pedidos realizados na semana: {values}")
 
     return jsonify({
         "data": values

@@ -1,15 +1,19 @@
 from source.app.repository.orders_repository import OrdersRepository
 from source.app.repository.orders_products_repository import OrdersProductsRepository
+from source.app.services import orders_services
 from source.app.utils.decorators.database import database_connection
 from source.app.entities.orders_entity import OrderEntity
-from datetime import datetime, timedelta
-
+from datetime import datetime, timedelta, timezone
+from source.app.settings.logging_settings import get_logger
 from uuid import uuid4
+
+logger = get_logger(__name__)
 
 class OrdersServices:
     def __init__(self):
         self.orders_repository = OrdersRepository()
         self.orders_products_repository = OrdersProductsRepository()
+        self.dir_name = 'orders_services.py'
 
     @database_connection
     def save_order_the_menu(self, data):
@@ -97,24 +101,42 @@ class OrdersServices:
     @database_connection
     def get_sales_per_week(self, menu_id: str):
         """
-        Retorna a quantidade TOTAL de pedidos por dia da semana (Seg–Dom),
-        filtrando somente a semana atual.
+            [*] Início: segunda-feira, 00:00:00+00
+            [*] Fim: domingo, 23:59:59.99999+00
+            [*] Exemplo:
+                [*] segunda-feira: 2025-11-17 00:00:00+00
+                [*] domingo: 2025-11-23 23:59:59.999999+00
         """
 
-        today = datetime.now().date()
-        start_of_week = today - timedelta(days=today.weekday())  ## segunda-feira
-        end_of_week = start_of_week + timedelta(days=6)  ## domingo
+        today = datetime.now(timezone.utc).date()
+        logger.info(f"[{self.dir_name}] Data de hoje: {today}")
+
+        start_of_week = datetime.combine(
+            today - timedelta(days=today.weekday()),
+            datetime.min.time(),
+            tzinfo=timezone.utc
+        )
+        logger.info(f"[{self.dir_name}] Início da semana (segunda-feira): {start_of_week}")
+
+        end_of_week = datetime.combine(
+            start_of_week.date() + timedelta(days=6),
+            datetime.max.time(),
+            tzinfo=timezone.utc
+        )
+        logger.info(f"[{self.dir_name}] Último dia da semana (domingo): {end_of_week}")
 
         orders = self.orders_repository.get_orders_between_dates_any_status(
             menu_id=menu_id,
             start_date=start_of_week,
             end_date=end_of_week
         )
+        logger.info(f"[{self.dir_name}] Pedidos no período (segunda-feira até domingo): {orders}")
 
         if not orders:
             return [0, 0, 0, 0, 0, 0, 0]
 
         week_map = {d: 0 for d in range(7)}
+        logger.info(f"[{self.dir_name}] Pedidos organizados pela semana: {week_map}")
 
         for order in orders:
             weekday = order.created_at.weekday()

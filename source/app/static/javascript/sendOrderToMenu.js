@@ -1,4 +1,12 @@
 $(document).ready(function() {
+    let storage = window.localStorage
+
+    // Caso não existe 'cartOrder' e 'customerCredentials', o JavaScript redireciona para /menus/slug
+    console.log(storage.getItem("customer"));
+    if (storage.getItem("cartOrder") === null || storage.getItem("customerCredentials") == null) {
+        window.location.href = `/menus/${menuSlug}`
+    }
+
     const btnPlaceOrder = $(".btn-place-order")
     const modalOrderPlaced = $("#modalOrderPlaced")
     const btnFinishOrderPlaced = $(".btn-order-placed-finish")

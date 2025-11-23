@@ -22,9 +22,3 @@ def create_new_account():
         message="Loja criada com sucesso.",
         status_code=200
     )
-
-""" 2. Search all accounts """
-
-""" 3. Delete an account """
-
-""" 4. Change an existing account """
