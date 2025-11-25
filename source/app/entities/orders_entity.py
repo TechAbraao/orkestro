@@ -7,6 +7,10 @@ from datetime import datetime, timezone
 class OrderEntity(database.Model):
     __tablename__ = "orders"
 
+    __table_args__ = (
+        database.UniqueConstraint("menu_id", "order_number", name="uq_menu_order_number"),
+    )
+
     id = database.Column(database.UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     created_at = database.Column(database.DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
     total_value = database.Column(database.Numeric, nullable=False)
@@ -19,7 +23,7 @@ class OrderEntity(database.Model):
     menu_id = database.Column(database.UUID(as_uuid=True),database.ForeignKey("menus.id", ondelete="CASCADE"),nullable=False)
     name = database.Column(database.String(), nullable=False)
     telephone = database.Column(database.String(), nullable=False)
-    order_number = database.Column(database.Integer, unique=True, nullable=False)
+    order_number = database.Column(database.Integer, nullable=False)
 
     @property
     def serialize(self):

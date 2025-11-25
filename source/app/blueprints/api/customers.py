@@ -7,6 +7,7 @@ from source.app.services import customers_services
 from werkzeug.exceptions import *
 
 logger = get_logger(__name__)
+dir_name = 'customers.py'
 
 """ 1. Criar um novo Cliente/Comprador no banco de dados. """
 @api.route("/customers", methods=["POST"])

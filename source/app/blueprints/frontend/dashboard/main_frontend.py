@@ -22,8 +22,8 @@ def views_orders_dashboard():
     store_id = g.jwt_claims.get("sub")
     logger.info(f"UUID da Loja: {store_id}.")
 
-    ### HARDCODED - Preciso corrigir, ficar ciente
-    menu_id = 'f4f06fff-9196-418e-95ef-349a8b060082'
+    ### Será se Arrumou?
+    menu_id = g.jwt_claims.get("menu_id")
     rendering_strategy = {
         "profile": {
             "menu_id": menu_id,

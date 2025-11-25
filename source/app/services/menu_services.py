@@ -173,6 +173,14 @@ class MenuServices:
         return result
 
     @database_connection
+    def get_menu_details_by_slug(self, slug):
+        menu = self.menu_repository.get_by_slug(slug)
+        if not menu:
+            logger.warning(f"Menu com Slug {slug} não encontrado.")
+            raise MenuNotFoundException("Menu not found.")
+        return menu.serialize
+
+    @database_connection
     def get_menu_by_id(self, menu_id):
         menu = self.menu_repository.get(menu_id)
         return menu.serialize
@@ -221,7 +229,7 @@ class MenuServices:
 
         if not menu:
             logger.warning(f"Nenhum menu encontrado para store_id '{store_id}'")
-            raise MenuNotFoundException("No menu found for this store.")
+            return ""
 
         if isinstance(menu, list):
             menu = menu[0]

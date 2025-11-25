@@ -28,7 +28,7 @@ $(document).ready(function() {
         try {
             const res = await $.ajax({
                 method: "GET",
-                url: `/api/stores/me`
+                url: `/api/stores?slug=${menuSlug}`
             })
             return res.data
         } catch (error) {
@@ -49,9 +49,14 @@ $(document).ready(function() {
         let orderProducts = cartData.products
         const newCart = orderProducts.map(({ productImg, productName, price, ...rest }) => rest);
 
+        const resStores = await fetch(`/api/stores/${menuSlug}/details`);
+        const dataStores = await resStores.json();
+
+        console.log("MENUID",dataStores.data)
+        console.log("STOREID", store_id)
         let order = {
-            "menu_id": cartData.menu_id,
-            "store_id": "8fa6b451-3a17-4c51-b03c-b41f8501b540", // HARDCODED
+            "menu_id": dataStores.data.id,
+            "store_id": store_id.id,
             "user_id": user_id,
             "products": newCart
         }
@@ -79,13 +84,26 @@ $(document).ready(function() {
                 setTimeout(() => {
                     window.location.href = `/menus/${menuSlug}`
                     modalOrderPlaced.addClass("hidden")
-                }, 5000)
+                }, 11115000)
             },
-            error: function(xhr) {
-                // Erro ao realizar pedido. //
-                console.error("ERROR: ", xhr)
+            error: function (xhr, status, error) {
+                console.group("❌ ERRO AJAX");
+
+                console.log("Status HTTP:", xhr.status);
+                console.log("Status Text:", xhr.statusText);
+
+                console.log("Response Text:", xhr.responseText);
+                console.log("Response JSON:", xhr.responseJSON);
+
+                console.log("ReadyState:", xhr.readyState);
+                console.log("jQuery Status:", status);
+                console.log("Error Thrown:", error);
+                console.log("Headers:", xhr.getAllResponseHeaders());
+
+                console.groupEnd();
             }
         })
     }
+
     btnPlaceOrder.on("click", finalizeOrderSend)
 })

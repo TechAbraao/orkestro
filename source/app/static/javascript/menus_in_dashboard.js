@@ -1,7 +1,6 @@
 function createMenuCard(menu) {
     return `
     <div class="menu-card bg-white rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col justify-between h-80 w-[360px] p-6">
-        
         <div class="flex justify-between items-start mb-4">
             <h3 class="text-xl font-bold text-gray-900 capitalize">${menu.name}</h3>
             <button 
@@ -23,7 +22,7 @@ function createMenuCard(menu) {
                 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
                 Editar Cardápio
             </a>
-            <a href="/menus/${menu.slug}" 
+            <a href="/menus/${menu.slug}" target="_blank"
                class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium text-center
                       hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
                 Ver Cardápio
@@ -80,6 +79,5 @@ $(document).on("click", ".btn-delete-menu", function () {
             }
         });
     })
-
 });
 

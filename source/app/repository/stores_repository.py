@@ -1,6 +1,7 @@
 from source.app.settings.definitions_settings import db as database
 from source.app.utils.decorators.database import transactional
 from source.app.entities.stores_entity import StoresEntity
+from source.app.entities.menus_entity import MenusEntity
 
 class StoresRepository:
     def __init__(self):
@@ -45,3 +46,11 @@ class StoresRepository:
     @transactional
     def delete(self, store: StoresEntity) -> None:
         self.session.delete(store)
+
+    def find_store_by_menu_slug(self, slug: str):
+        return (
+            self.session.query(StoresEntity)
+            .join(MenusEntity, StoresEntity.id == MenusEntity.store_id)
+            .filter(MenusEntity.slug == slug)
+            .first()
+        )

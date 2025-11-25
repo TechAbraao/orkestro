@@ -12,13 +12,21 @@ menus_client = Blueprint("menus_client", __name__, url_prefix="/api")
 """ 01. X """
 @menus_client.route("/stores/<string:slug>", methods=["GET"])
 def render_menu_with_slug(slug: str):
-
     menu = menu_services.get_menu_by_slug(slug)
     logger.info(f"Status do menu: {menu.get("activated")}")
 
     return Response.success(
         message="Menu returned successfully.",
         data=menu,
+        status_code=200
+    )
+
+@menus_client.route("/stores/<string:slug>/details", methods=["GET"])
+def menu_with_slug_details(slug: str):
+    menu_details = menu_services.get_menu_details_by_slug(slug)
+    return Response.success(
+        message="Detalhes do menu retornado com sucesso.",
+        data=menu_details,
         status_code=200
     )
 

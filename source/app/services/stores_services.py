@@ -1,6 +1,7 @@
 from source.app.repository.stores_repository import StoresRepository
 from source.app.entities.stores_entity import StoresEntity
 from source.app.settings.logging_settings import get_logger
+from source.app.utils.decorators.database import database_connection
 from source.app.exceptions.stores_exceptions import *
 from source.app.utils.passwords import *
 from flask import url_for, current_app
@@ -12,7 +13,7 @@ class StoresServices:
     def __init__(self):
         self.stores_repository = StoresRepository()
 
-
+    @database_connection
     def create_new_account(self, account_data) -> bool:
         email = account_data.get("email")
         if not email or not account_data.get("password") or not account_data.get("telephone"):
@@ -54,6 +55,14 @@ class StoresServices:
         self.stores_repository.save(account)
         return True
 
+    @database_connection
     def about_me_store_account(self, store_id: str):
         store = self.stores_repository.find_by_id(store_id)
         return store.serialize_frontend
+
+    @database_connection
+    def get_store_by_slug(self, slug: str):
+        store_by_slug = self.stores_repository.find_store_by_menu_slug(slug)
+        if store_by_slug:
+            return store_by_slug.serialize
+        return None

@@ -43,10 +43,11 @@ def post_order():
     products = data["products"]
 
     """ Verificar se o menu realmente existe - através do 'menu_id' """
-    logger.info(f"Verificando se o cardápio existe através do 'menu_id' = '{menu_id}'.")
-    menu_exists = menu_services.exists_menu_by_store_and_id(menu_id=menu_id, store_id=store_id)
-    if not menu_exists:
-        return MenuFoundException("Cardápio inexistente e/ou não encontrado.")
+
+    # logger.info(f"Verificando se o cardápio existe através do 'menu_id' = '{menu_id}'.")
+    # menu_exists = menu_services.exists_menu_by_store_and_id(menu_id=menu_id, store_id=store_id)
+    # if not menu_exists:
+    #     return MenuFoundException("Cardápio inexistente e/ou não encontrado.")
 
     """ Obter informações do Cliente. """
     customer_infos = customers_services.find_by_id(customer_id=user_id)

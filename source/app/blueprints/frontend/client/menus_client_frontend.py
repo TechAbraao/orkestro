@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for, g, session
-from source.app.services import menu_services, categories_services
+from source.app.services import menu_services, categories_services, stores_services
 from source.app.settings.logging_settings import get_logger
 
 logger = get_logger()
@@ -42,11 +42,13 @@ def views_category_by_id(slug: str, category_id: str):
     logger.info(f"Buscando informações da categoria")
     category_info = categories_services.get_category_by_id(category_id)
 
-    ### MENUID ta hardcoded, preciso alterar isso no futuro
+    store = stores_services.get_store_by_slug(slug)
+    menu_id = store.get("id")
+
     rendering_strategy = {
         "menu_slug": slug,
         "menu_name": menu_by_slug.get("name"),
-        "menu_id": "f4f06fff-9196-418e-95ef-349a8b060082",
+        "menu_id": menu_id,
         "category_id": category_id,
         "category_name": category_info.get("name")
     }
