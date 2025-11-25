@@ -52,8 +52,6 @@ $(document).ready(function() {
         const resStores = await fetch(`/api/stores/${menuSlug}/details`);
         const dataStores = await resStores.json();
 
-        console.log("MENUID",dataStores.data)
-        console.log("STOREID", store_id)
         let order = {
             "menu_id": dataStores.data.id,
             "store_id": store_id.id,

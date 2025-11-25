@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, g, abort, redirect, url_for
 from source.app.utils.decorators.authorizations import authorization_required
 from source.app.settings.logging_settings import get_logger
-from source.app.services import menu_services, categories_services
+from source.app.services import menu_services, categories_services, stores_services
 
 main_frontend = Blueprint("main_frontend", __name__, url_prefix="")
 logger = get_logger(__name__)
@@ -20,13 +20,12 @@ def views_profile_dashboard():
 @authorization_required
 def views_orders_dashboard():
     store_id = g.jwt_claims.get("sub")
-    logger.info(f"UUID da Loja: {store_id}.")
 
-    ### Será se Arrumou?
-    menu_id = g.jwt_claims.get("menu_id")
+    menu_id = stores_services.get_menu_by_store_id(store_id)
+
     rendering_strategy = {
         "profile": {
-            "menu_id": menu_id,
+            "menu_id": menu_id.get("id", ""),
         }
     }
     return render_template("pages/admin/orders.jinja2", strategy=rendering_strategy)

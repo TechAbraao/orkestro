@@ -1,4 +1,5 @@
 from source.app.repository.stores_repository import StoresRepository
+from source.app.repository.menus_repository import MenusRepository
 from source.app.entities.stores_entity import StoresEntity
 from source.app.settings.logging_settings import get_logger
 from source.app.utils.decorators.database import database_connection
@@ -12,6 +13,7 @@ logger = get_logger(__name__)
 class StoresServices:
     def __init__(self):
         self.stores_repository = StoresRepository()
+        self.menus_services = MenusRepository()
 
     @database_connection
     def create_new_account(self, account_data) -> bool:
@@ -66,3 +68,10 @@ class StoresServices:
         if store_by_slug:
             return store_by_slug.serialize
         return None
+
+    @database_connection
+    def get_menu_by_store_id(self, store_id):
+        menu_by_store_id = self.menus_services.get_specific_menu_by_store_id(store_id)
+        if not menu_by_store_id:
+            return {"id": ""}
+        return menu_by_store_id.serialize

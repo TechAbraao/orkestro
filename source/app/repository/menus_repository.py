@@ -49,6 +49,11 @@ class MenusRepository:
                 .filter(MenusEntity.store_id == store_id)
                 .all())
 
+    def get_specific_menu_by_store_id(self, store_id):
+        return (self.session.query(MenusEntity)
+                .filter(MenusEntity.store_id == store_id)
+                .first())
+
     @transactional
     def exists_by_store_and_id(self, store_id: str, menu_id: str) -> bool:
         return (
