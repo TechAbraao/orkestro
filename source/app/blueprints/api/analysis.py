@@ -26,11 +26,15 @@ def api_sales_per_week():
     menu_id = menu_services.get_menu_id_by_store_id(store_id)
     logger.info(f"[{dir_name}] Através do 'store_id', encontrou o 'menu_id' = '{menu_id}'")
 
-    values = orders_services.get_sales_per_week(menu_id=menu_id)
+    values, total_values = orders_services.get_sales_per_week(menu_id=menu_id)
     logger.info(f"[{dir_name}] Valores dos pedidos realizados na semana: {values}")
+    logger.info(f"[{dir_name}] Valores totais dos pedidos realizados na semana: {str(total_values)}")
+
+    total_values_float = [float(v) for v in total_values]
 
     return jsonify({
-        "data": values
+        "data": values,
+        "total": total_values_float
     })
 
 """

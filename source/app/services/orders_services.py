@@ -116,6 +116,7 @@ class OrdersServices:
             datetime.min.time(),
             tzinfo=timezone.utc
         )
+
         logger.info(f"[{self.dir_name}] Início da semana (segunda-feira): {start_of_week}")
 
         end_of_week = datetime.combine(
@@ -130,16 +131,21 @@ class OrdersServices:
             start_date=start_of_week,
             end_date=end_of_week
         )
+
         logger.info(f"[{self.dir_name}] Pedidos no período (segunda-feira até domingo): {orders}")
 
-        if not orders:
-            return [0, 0, 0, 0, 0, 0, 0]
+        week_map_count = {d: 0 for d in range(7)}
+        week_map_total_values = {d: 0 for d in range(7)}
 
-        week_map = {d: 0 for d in range(7)}
-        logger.info(f"[{self.dir_name}] Pedidos organizados pela semana: {week_map}")
+        if not orders:
+            return [0] * 7, [0] * 7
+
+        logger.info(f"[{self.dir_name}] Pedidos organizados pela semana: {week_map_count}")
+        logger.info(f"[{self.dir_name}] Valores totais organizados pela semana: {week_map_count}")
 
         for order in orders:
             weekday = order.created_at.weekday()
-            week_map[weekday] += 1
+            week_map_count[weekday] += 1
+            week_map_total_values[weekday] += order.total_value
 
-        return [week_map[d] for d in range(7)]
+        return [week_map_count[d] for d in range(7)], [week_map_total_values[d] for d in range(7)]

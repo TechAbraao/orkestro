@@ -49,8 +49,13 @@
                 </div>
             </aside>
             <aside class="h-full w-full flex items-center justify-center flex-col gap-2">
-                <h2 class="text-xl border-gray-300 border-2 w-[95%] p-3 rounded-2xl bg-white font-semibold">Pedidos por
-                    Semana</h2>
+                <div class="w-[95%] flex items-center justify-between">
+                    <h2 class="text-xl border-gray-300 border-2 w-[86%] p-3 rounded-2xl bg-white font-semibold">Pedidos
+                        por Semana</h2>
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition btn-generate-report">
+                        Relatório
+                    </button>
+                </div>
                 <div class="bg-white p-5 rounded-2xl flex flex-col items-center justify-center w-[95%] h-2/3 border-gray-300 border-2">
                     <canvas id="mySalesPerWeek" width="1400" height="600"></canvas>
                 </div>
@@ -68,6 +73,55 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{{ url_for('static', filename='javascript/analysisOverview.js') }}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <script>
+        const doc = new jspdf.jsPDF();
+        const btnGenerateReport = $(".btn-generate-report");
+
+        btnGenerateReport.on("click", async function () {
+            const res = await fetch("/api/analysis/sales-per-week");
+            const dataSalesPerWeek = await res.json();
+
+            const dias = [
+                "Segunda-feira",
+                "Terça-feira",
+                "Quarta-feira",
+                "Quinta-feira",
+                "Sexta-feira",
+                "Sábado",
+                "Domingo"
+            ];
+
+            const quantidades = dataSalesPerWeek.data;
+            const totais = dataSalesPerWeek.total;
+
+            const linhas = dias.map((dia, index) => [
+                dia,
+                quantidades[index],
+                `R$ ${totais[index].toFixed(2)}`
+            ]);
+
+            doc.setFontSize(32);
+            doc.text("Relatório de Vendas por Semana", 10, 15);
+
+            doc.autoTable({
+                startY: 25,
+                head: [["Dia da Semana", "Quantidade de Pedidos", "Total Vendido em R$"]],
+                body: linhas
+            });
+
+            const pageCount = doc.internal.getNumberOfPages();
+            doc.setFontSize(10);
+            doc.text(`Gerado em ${new Date().toLocaleDateString()}`, 10, 290);
+            doc.text(`Página ${pageCount}`, 180, 290);
+
+            doc.save(`relatorio-${new Date().toLocaleDateString()}.pdf`);
+        });
+    </script>
+
+
+
 {% endblock dashboard %}
 
 {% block navbar %}
