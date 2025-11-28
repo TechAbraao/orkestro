@@ -210,6 +210,7 @@ $(document).ready(function () {
         const categoryId = $(this).data("id");
         modalAddProduct.removeClass("hidden");
 
+        $("#productName").focus();
         $("#btn-confirm-add-product").off("click").on("click", function (e) {
             e.preventDefault();
 

@@ -1,15 +1,16 @@
 from flask import Blueprint, request
-from source.app.utils.responses import Response
 from source.app.settings.logging_settings import get_logger
+from source.app.utils.responses import Response
 from source.app.schemas import categories_schema, uuid_schema
 from source.app.services import categories_services
 from werkzeug.exceptions import *
+from source.app.blueprints.routes import api
 
 logger = get_logger(__name__)
-categories_bp = Blueprint("categories_bp", __name__, url_prefix="/api")
+dir_name = ''
 
 """ 01. Create Category in a Menu """
-@categories_bp.route("/menus/<string:menu_id>/categories", methods=["POST"])
+@api.route("/menus/<string:menu_id>/categories", methods=["POST"])
 def create_category_in_menu(menu_id: str):
     logger.info("POST /menus/{menu_id}/categories - creating a new category for a menu")
 
@@ -38,7 +39,7 @@ def create_category_in_menu(menu_id: str):
     ), 201
 
 """ 02. Get Categories from a Menu """
-@categories_bp.route("/menus/<string:menu_id>/categories", methods=["GET"])
+@api.route("/menus/<string:menu_id>/categories", methods=["GET"])
 def categories_by_menu(menu_id: str):
     logger.info("GET /menus/{menu_id}/categories - retrieving categories for a menu.")
 
@@ -55,7 +56,7 @@ def categories_by_menu(menu_id: str):
     )
 
 """ 03. Get Specific Category """
-@categories_bp.route("/categories/<string:category_id>", methods=["GET"])
+@api.route("/categories/<string:category_id>", methods=["GET"])
 def get_category_by_id(category_id: str):
     logger.info("GET /categories/{category_id} - fetch category by ID.")
 
@@ -69,7 +70,7 @@ def get_category_by_id(category_id: str):
     )
 
 """ 04. Delete specific Category """
-@categories_bp.route("/categories/<string:category_id>", methods=["DELETE"])
+@api.route("/categories/<string:category_id>", methods=["DELETE"])
 def delete_category_by_id(category_id: str):
     logger.info("DELETE /categories/{category_id} - delete category by ID.")
 
@@ -89,7 +90,7 @@ def delete_category_by_id(category_id: str):
     )
 
 """ 05. Update Specific Category """
-@categories_bp.route("/categories/<string:category_id>", methods=["PUT"])
+@api.route("/categories/<string:category_id>", methods=["PUT"])
 def put_category_by_id(category_id: str):
     logger.info("PUT /categories/{category_id} - change category by ID.")
 

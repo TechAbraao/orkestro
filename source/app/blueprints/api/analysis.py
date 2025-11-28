@@ -3,9 +3,10 @@ from source.app.utils.decorators.authorizations import authorization_required
 from source.app.services import stores_services, menu_services, orders_services, analysis_services
 from source.app.settings.logging_settings import get_logger
 from source.app.blueprints.routes import api
+import os
 
 logger = get_logger(__name__)
-dir_name: str = 'analysis.py'
+dir_name = os.path.basename(__file__)
 
 """
     * Exibirá as vendas por semana, isto é:

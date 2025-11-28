@@ -1,6 +1,7 @@
 from source.app.settings.database_settings import postgres_settings
 from source.app.settings.definitions_settings import db, ma
 from source.app.handlers.handlers_exceptions import register_error_handlers
+from source.app.settings.logging_settings import get_logger
 from source.app.blueprints.routes import (vws, api)
 from flask import Flask
 from source.app.extesions.socket_io import socketio
@@ -10,10 +11,20 @@ import yaml
 from pathlib import Path
 import os
 
+logger = get_logger(__name__)
+
 def create_app():
     app = Flask(__name__)
 
     app.config['SQLALCHEMY_DATABASE_URI'] = postgres_settings.get_uri()
+
+    setup_file = Path(__file__).resolve().parent.parent.parent / "setup.yml"
+    with open(setup_file, "r", encoding="utf-8") as f:
+        config = yaml.safe_load(f)
+
+    app.config["APPLICATION_VERSION"] = config.get("version")
+    logger.info(f"Inicializando a application. Versão: {app.config['APPLICATION_VERSION']}")
+
     app.secret_key = "SecretKey"
 
     BASE_DIR = Path(__file__).resolve().parent
@@ -60,14 +71,8 @@ def create_app():
     from source.app.blueprints.api.auth.me_auth import about_auth
     from source.app.blueprints.api.auth.sign_in_auth import sign_in_auth
     from source.app.blueprints.api.auth.sign_up_auth import sign_up_auth
-    from source.app.blueprints.api.admin.menus_admin import menus_bp
-    from source.app.blueprints.api.admin.products_admin import products_bp
-    from source.app.blueprints.api.admin.categories_admin import categories_bp
 
     # Back-end (API Layer)
-    app.register_blueprint(menus_bp)
-    app.register_blueprint(categories_bp)
-    app.register_blueprint(products_bp)
     app.register_blueprint(menus_client)
     app.register_blueprint(orders_client)
     app.register_blueprint(sign_up_auth)
@@ -80,6 +85,8 @@ def create_app():
     app.register_blueprint(main_frontend)
     app.register_blueprint(homepage_frontend)
     app.register_blueprint(menus_client_frontend)
+
+    #
     app.register_blueprint(vws)
     app.register_blueprint(api)
 

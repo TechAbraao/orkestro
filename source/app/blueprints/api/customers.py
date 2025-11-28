@@ -5,9 +5,10 @@ from source.app.blueprints.routes import api
 from source.app.schemas import customers_schemas
 from source.app.services import customers_services
 from werkzeug.exceptions import *
+import os
 
 logger = get_logger(__name__)
-dir_name = 'customers.py'
+dir_name = os.path.basename(__file__)
 
 """ 1. Criar um novo Cliente/Comprador no banco de dados. """
 @api.route("/customers", methods=["POST"])

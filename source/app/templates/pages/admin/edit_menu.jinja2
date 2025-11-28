@@ -67,7 +67,7 @@
         const menuId = "{{ strategy.get('profile')['menu_id'] }}"
         const getCategoriesURL = `/api/menus/${menuId}/categories`
     </script>
-    <script src="{{ url_for('static', filename='javascript/category_operations.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='javascript/categoryOperations.js') }}" defer></script>
     <script src="{{ url_for('static', filename='javascript/status_menu.js') }}" defer></script>
     <script src="{{ url_for('static', filename='javascript/hours_configs.js') }}" defer></script>
 {% endblock dashboard %}

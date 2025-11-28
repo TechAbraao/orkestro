@@ -5,14 +5,14 @@ from source.app.services import products_services
 from source.app.utils.decorators.validations import *
 from source.app.schemas.products_schemas import ProductUpdateSchema
 from flask import Blueprint, request
+from source.app.blueprints.routes import api
+import os
 
-
-logger = get_logger()
-products_bp = Blueprint("products_bp", __name__, url_prefix="/api")
-dir_name = 'products_admin.py'
+logger = get_logger(__name__)
+dir_name = os.path.basename(__file__)
 
 """ 1. Create Product in a Category. """
-@products_bp.route("/categories/<string:category_id>/products", methods=["POST"])
+@api.route("/categories/<string:category_id>/products", methods=["POST"])
 def post_products_in_category(category_id: str):
     logger.info("POST /categories/{categoryId}/products - creating new product in category")
 
@@ -33,7 +33,7 @@ def post_products_in_category(category_id: str):
     )
 
 """ 2. List all Products in a Category. """
-@products_bp.route("/categories/<string:category_id>/products", methods=["GET"])
+@api.route("/categories/<string:category_id>/products", methods=["GET"])
 def get_products_in_category(category_id: str):
     logger.info("GET /categories/{categoryId}/products - get all products in category.")
 
@@ -52,7 +52,7 @@ def get_products_in_category(category_id: str):
     )
 
 """ 3. Get Specific Product """
-@products_bp.route("/products/<string:product_id>", methods=["GET"])
+@api.route("/products/<string:product_id>", methods=["GET"])
 def get_product(product_id: str):
     logger.info("GET /products/{productId} - get a specific product.")
 
@@ -67,7 +67,7 @@ def get_product(product_id: str):
     )
 
 """ 4. Update Specific Product. """
-@products_bp.route("/products/<string:product_id>", methods=["PUT"])
+@api.route("/products/<string:product_id>", methods=["PUT"])
 # @validate_request(ProductUpdateSchema())
 def put_product(product_id: str):
     logger.info("GET /products/{productId} - Changing a specific product.")
@@ -88,7 +88,7 @@ def put_product(product_id: str):
     )
 
 """ 5. Deleting Specific Product. """
-@products_bp.route("/products/<string:product_id>", methods=["DELETE"])
+@api.route("/products/<string:product_id>", methods=["DELETE"])
 def delete_product(product_id: str):
     logger.info(f"[{dir_name}] DELETE /products/{product_id} - Deletando um produto específico.")
 
@@ -110,6 +110,6 @@ def delete_product(product_id: str):
     )
 
 """ 6. List all Products in a Menu (associated categories). """
-@products_bp.route("/menus/<string:menu_id>/products", methods=["GET"])
+@api.route("/menus/<string:menu_id>/products", methods=["GET"])
 def get_products_in_menu(menu_id: str):
     pass
