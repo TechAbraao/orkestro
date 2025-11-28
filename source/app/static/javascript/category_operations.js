@@ -24,7 +24,7 @@ $(document).ready(function () {
                         categoriesData = res.data;
                         const categoryCard = $(`
                             <div
-                                class="bg-gradient-to-b from-white to-gray-50 rounded-2xl h-auto w-full shadow-lg hover:shadow-2xl p-6
+                                class="bg-gradient-to-b from-white to-gray-50 rounded-2xl h-auto w-full p-6
                                 flex flex-col justify-between transform transition-all duration-300 border border-gray-100"
                             >
                                 <div>
@@ -32,9 +32,11 @@ $(document).ready(function () {
                                     bg-clip-text text-transparent mb-2">
                                         ${category.name}
                                     </h3>
+                                    <!--
                                     <p class="text-gray-700 mb-4 leading-relaxed">
                                         ${category.description}
                                     </p>
+                                    -->
                                 </div>
 
                                 <div class="flex justify-start gap-2 pb-3">
@@ -148,15 +150,14 @@ $(document).ready(function () {
         confirmDeleteModal.removeClass("hidden");
         const btnConfirmDeleteCategory = $("#btn-confirm-category-delete");
 
-        btnConfirmDeleteCategory.on("click", () => {
+        btnConfirmDeleteCategory.off("click").on("click", () => {
             $.ajax({
                 url: deleteCategoryURL,
                 method: "DELETE",
                 success: function (res) {
                     if (res.success) {
-                        alert("Categoria excluída com sucesso!");
                         loadCategories();
-                        window.location.reload();
+                        confirmDeleteModal.addClass("hidden")
                     } else {
                         alert("Erro ao excluir categoria: " + res.message);
                     }
@@ -247,7 +248,7 @@ $(document).ready(function () {
         modalConfirmOperationDeleteProduct.removeClass("hidden")
 
 
-        btnConfirmDeleteProduct.on("click", () => {
+        btnConfirmDeleteProduct.off("click").on("click", () => {
             console.log(`Deletando produto com ID: ${productId}`);
 
             $.ajax({
@@ -255,8 +256,6 @@ $(document).ready(function () {
                 method: "DELETE",
                 success: function (res) {
                     if (res.success) {
-                        console.log(`Produto ${productId} excluído com sucesso.`);
-                        alert("Produto excluído com sucesso!");
                         modalConfirmOperationDeleteProduct.addClass("hidden")
                         loadCategories();
                     } else {
@@ -306,6 +305,7 @@ $(document).ready(function () {
         modalEditProduct.data("product-id", productId);
 
         modalEditProduct.removeClass("hidden");
+        $("#editProductName").focus();
     });
 
     $("#btnConfirmEditCategory").on("click", function (event) {

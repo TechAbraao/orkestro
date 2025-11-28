@@ -9,6 +9,7 @@ from flask import Blueprint, request
 
 logger = get_logger()
 products_bp = Blueprint("products_bp", __name__, url_prefix="/api")
+dir_name = 'products_admin.py'
 
 """ 1. Create Product in a Category. """
 @products_bp.route("/categories/<string:category_id>/products", methods=["POST"])
@@ -89,12 +90,19 @@ def put_product(product_id: str):
 """ 5. Deleting Specific Product. """
 @products_bp.route("/products/<string:product_id>", methods=["DELETE"])
 def delete_product(product_id: str):
-    logger.info("GET /products/{productId} - Delete a specific product.")
+    logger.info(f"[{dir_name}] DELETE /products/{product_id} - Deletando um produto específico.")
 
-    logger.info("Validating the UUID.")
+    logger.info(f"[{dir_name}] Validando o UUID do Produto.")
     uuid_validated = uuid_schema.load({"id": product_id})
 
-    deleted = products_services.delete(product_id=product_id)
+    try:
+        deleted = products_services.delete(product_id=product_id)
+    except ValueError as err:
+        logger.error(f"[{dir_name}] Erro ao deletar produto: {err}")
+        return Response.error(
+            message="Erro ao deletar produto.",
+            status_code=400
+        )
 
     return Response.success(
         message="Product deleted successfully.",

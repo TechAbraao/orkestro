@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} Default {% endblock title %} | Orkestro </title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    {# Carregando as dependências (/libs) #}
+    <script src="{{ url_for('static', filename='libs/tailwindcss.js') }}"></script>
+    <script src="{{ url_for('static', filename='libs/jquery-3.7.1.min.js') }}"></script>
+
     <script src="{{ url_for('static', filename='javascript/toggle_sidenav.js') }}" defer></script>
     <script src="{{ url_for('static', filename='javascript/logout.js') }}" defer></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/transitions.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/scrollbar.css') }}">
 
+    {# Carregamento dinâmico de Scripts #}
     {% block scripts %}
     {% endblock scripts %}
 

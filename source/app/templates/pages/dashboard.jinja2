@@ -1,5 +1,12 @@
 {% extends "layouts/administrative.jinja2" %}
 
+{% block scripts %}
+    <script src="{{ url_for('static', filename='libs/jspdf.umd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='libs/jspdf.plugin.autotable.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='libs/chart.js') }}"></script>
+{% endblock scripts %}
+
+
 {% block title %}
     Visão Geral
 {% endblock title %}
@@ -71,10 +78,7 @@
             text-black-800 text-2xl font-bold border-2 border-red-400">Atualizar Indicadores</button>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{{ url_for('static', filename='javascript/analysisOverview.js') }}" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
     <script>
         const doc = new jspdf.jsPDF();
         const btnGenerateReport = $(".btn-generate-report");

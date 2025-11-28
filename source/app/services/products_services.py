@@ -9,6 +9,7 @@ from source.app.exceptions.category_exceptions import *
 import uuid
 
 logger = get_logger()
+dir_name = 'products_services.py'
 
 class ProductsServices:
     def __init__(self):
@@ -105,7 +106,8 @@ class ProductsServices:
             .delete(
             product_id=product_id
         ))
+        logger.info(f"[{dir_name}] Verificando se o produto foi deletado: {deleted}")
         if not deleted:
-            logger.warning(f"Product with ID '{product_id}' not found.")
-            raise ProductNotFoundException("Product not found.")
+            logger.warning(f"[{dir_name}] Produto com UUI = '{product_id}' não encontrado.")
+            raise ProductNotFoundException("Produto não encontrado.")
         return True

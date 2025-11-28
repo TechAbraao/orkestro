@@ -1,5 +1,9 @@
 {% extends "layouts/administrative.jinja2" %}
 
+{% block scripts %}
+    <script src="{{ url_for('static', filename='libs/socket.io.min.js') }}"></script>
+{% endblock scripts %}
+
 {% block title %}
     Todos os pedidos
 {% endblock title %}
@@ -75,7 +79,6 @@
             </ul>
         </div>
     </section>
-    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
     <script>
         let menuId = '{{ strategy["profile"]["menu_id"] }}'
         let orderId = "";

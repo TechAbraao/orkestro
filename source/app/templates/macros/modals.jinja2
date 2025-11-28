@@ -192,9 +192,15 @@
         <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
             {# Headers #}
             <div class="flex justify-between items-center mb-4">
-                <h3 class="text-lg font-semibold text-gray-800">{{ header_text }}</h3>
-                <button onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')"
-                        class="text-gray-400 hover:text-gray-600">&times;
+                <h3 class="text-2xl font-semibold text-gray-800">{{ header_text }}</h3>
+                <button
+                        type="button"
+                        title="Fechar"
+                        class="flex items-center justify-center hover:text-gray-600 rounded-full
+                        w-[45px] h-[45px] transition hover:bg-gray-100"
+                        onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')">
+                    <img src="{{ url_for('static', filename='icons/close-2.png') }}" alt="Statistics" class="w-5 h-5 flex
+                    items-center justify-center">
                 </button>
             </div>
 
@@ -543,9 +549,12 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
                 <h2 class="text-2xl font-semibold text-gray-800">Editar Produto</h2>
                 <button
                         type="button"
-                        class="text-gray-400 hover:text-gray-600 transition"
+                        title="Fechar"
+                        class="flex items-center justify-center hover:text-gray-600 rounded-full
+                        w-[45px] h-[45px] transition hover:bg-gray-100"
                         onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')">
-                    ✕
+                    <img src="{{ url_for('static', filename='icons/close-2.png') }}" alt="Statistics" class="w-5 h-5 flex
+                    items-center justify-center">
                 </button>
             </div>
 
@@ -592,21 +601,20 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
                     >
                 </div>
 
-                <div class="flex justify-end gap-3 pt-4 border-t">
-                    <button
-                            type="button"
-                            class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
-                            onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')"
-                    >
-                        Cancelar
-                    </button>
-
+                <div class="flex flex-col gap-1 pt-4 border-t">
                     <button
                             type="submit"
                             id="btnConfirmEditProduct"
                             class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
                     >
                         Salvar
+                    </button>
+                    <button
+                            type="button"
+                            class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
+                            onclick="document.getElementById('{{ modal_id }}').classList.add('hidden')"
+                    >
+                        Cancelar
                     </button>
                 </div>
             </form>

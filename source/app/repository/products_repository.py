@@ -8,6 +8,7 @@ from source.app.utils.contracts.crud_interface import CRUDInterface
 from source.app.entities.associations_tables_entity import menu_product
 
 logger = get_logger()
+dir_name = 'products_repository.py'
 
 class ProductsRepository(CRUDInterface):
     def __init__(self):
@@ -93,12 +94,6 @@ class ProductsRepository(CRUDInterface):
 
     @transactional
     def delete(self, product_id: str) -> bool:
-        """
-        Deletes a product from the database by its ID.
-        """
-
-        logger.info(f"Attempting to delete product with ID '{product_id}'")
-
         product = (
             self.session.query(ProductsEntity)
             .filter(ProductsEntity.id == product_id)
@@ -106,13 +101,12 @@ class ProductsRepository(CRUDInterface):
         )
 
         if not product:
-            logger.warning(f"Product with ID '{product_id}' not found.")
+            logger.warning(f"[{dir_name}] Produto com UUI = '{product_id}' não encontrado.")
             return False
-
         self.session.delete(product)
-
-        logger.info(f"Product with ID '{product_id}' deleted successfully.")
+        logger.info(f"Produto com UUID = '{product_id}' deletado com sucesso.")
         return True
+
     def find_by_menu_id(self, menu_id: str) -> List[ProductsEntity]:
         return (
             self.session.query(ProductsEntity)
