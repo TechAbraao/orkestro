@@ -14,7 +14,7 @@
         {% include "partials/forms_login_store.jinja2" %}
     </section>
     <script>
-        const loginURL = "{{ url_for('sign_in_auth.enter_the_platform') }}";
+        const loginURL = "{{ url_for('api.enter_the_platform') }}";
     </script>
     <script src="{{ url_for('static', filename='javascript/login_account_store.js') }}" defer></script>
 {% endblock content %}

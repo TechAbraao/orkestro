@@ -1,9 +1,10 @@
+# source/app/factory.py  (ou onde você já tem o create_app)
+from flask import Flask
 from source.app.settings.database_settings import postgres_settings
 from source.app.settings.definitions_settings import db, ma
 from source.app.handlers.handlers_exceptions import register_error_handlers
 from source.app.settings.logging_settings import get_logger
 from source.app.blueprints.routes import (vws, api)
-from flask import Flask
 from source.app.extesions.socket_io import socketio
 from flask_migrate import Migrate
 from flasgger import Swagger
@@ -13,41 +14,61 @@ import os
 
 logger = get_logger(__name__)
 
-def create_app():
+def create_app(config_name: str = "default"):
+    """
+    Create and configure the Flask app.
+    config_name:
+      - "default" (ou "development"/"production") -> usa Postgres definido em postgres_settings
+      - "testing" -> testa usando sqlite:///:memory: e configurações de teste
+    """
     app = Flask(__name__)
-
-    app.config['SQLALCHEMY_DATABASE_URI'] = postgres_settings.get_uri()
 
     setup_file = Path(__file__).resolve().parent.parent.parent / "setup.yml"
     with open(setup_file, "r", encoding="utf-8") as f:
         config = yaml.safe_load(f)
-
+# sign_up_auth
     app.config["APPLICATION_VERSION"] = config.get("version")
-    logger.info(f"Inicializando a application. Versão: {app.config['APPLICATION_VERSION']}")
+    logger.info(f"Inicializando o Servidor. Versão: {app.config['APPLICATION_VERSION']}")
 
-    app.secret_key = "SecretKey"
+    if config_name == "testing":
+        # Ambiente de testes: DB em memória, TESTING True e sem CSRF
+        app.config["TESTING"] = True
+        app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///:memory:"
+        app.config["WTF_CSRF_ENABLED"] = False
+        app.config["PROPAGATE_EXCEPTIONS"] = True
+    else:
+        # Comportamento normal (dev/prod) - usa Postgres configurado
+        app.config['SQLALCHEMY_DATABASE_URI'] = postgres_settings.get_uri()
+
+    app.secret_key = os.environ.get("FLASK_SECRET_KEY", "SecretKey")
 
     BASE_DIR = Path(__file__).resolve().parent
     SWAGGER_PATH = BASE_DIR / "swagger.yml"
 
     db.init_app(app)
     ma.init_app(app)
-    Migrate(app, db, directory="source/migrations")
 
-    swagger = Swagger(app, template_file=str(SWAGGER_PATH))
+    if config_name != "testing":
+        Migrate(app, db, directory="source/migrations")
+    else:
+        logger.debug("Testing mode: skipping Flask-Migrate initialization")
 
-    def load_template():
-        with open(SWAGGER_PATH, "r") as f:
-            return yaml.safe_load(f)
+    if config_name != "testing":
+        swagger = Swagger(app, template_file=str(SWAGGER_PATH))
 
-    @app.before_request
-    def reload_swagger():
-        app.config['SWAGGER'] = load_template()
-        swagger.template = app.config['SWAGGER']
+        def load_template():
+            with open(SWAGGER_PATH, "r") as f:
+                return yaml.safe_load(f)
+
+        @app.before_request
+        def reload_swagger():
+            app.config['SWAGGER'] = load_template()
+            swagger.template = app.config['SWAGGER']
+    else:
+        logger.debug("Testing mode: skipping Swagger initialization")
 
     from source.app.entities.associations_tables_entity import menu_product
 
-    # Entities
     from source.app.entities.stores_entity import StoresEntity
     from source.app.entities.users_entity import UsersEntity
     from source.app.entities.menus_entity import MenusEntity
@@ -58,44 +79,25 @@ def create_app():
     from source.app.entities.chat_history_entity import ChatHistory
     from source.app.entities.opening_hours_entity import OpeningHoursEntity
 
-    # All routes
-    ## Front-end
-    from source.app.blueprints.frontend.client.menus_client_frontend import menus_client_frontend
-    from source.app.blueprints.frontend.auth.authorizations_frontend import authorizations_frontend
-    # from source.app.blueprints.frontend.admin.home_frontend import *
-    from source.app.blueprints.frontend.dashboard.main_frontend import main_frontend
-    from source.app.blueprints.frontend.home.homepage_frontend import homepage_frontend
-    ## API
-    from source.app.blueprints.api.client.orders_client import orders_client
-    from source.app.blueprints.api.client.menus_client import menus_client
     from source.app.blueprints.api.auth.me_auth import about_auth
-    from source.app.blueprints.api.auth.sign_in_auth import sign_in_auth
-    from source.app.blueprints.api.auth.sign_up_auth import sign_up_auth
 
-    # Back-end (API Layer)
-    app.register_blueprint(menus_client)
-    app.register_blueprint(orders_client)
-    app.register_blueprint(sign_up_auth)
-    app.register_blueprint(sign_in_auth)
     app.register_blueprint(about_auth)
 
-
-    # Front-end (Views)
-    app.register_blueprint(authorizations_frontend)
-    app.register_blueprint(main_frontend)
-    app.register_blueprint(homepage_frontend)
-    app.register_blueprint(menus_client_frontend)
-
-    #
     app.register_blueprint(vws)
     app.register_blueprint(api)
 
     register_error_handlers(app)
-    from source.app.settings.application_settings import application_settings as settings
-    debug_mode = settings.FLASK_DEBUG or os.environ.get("PYCHARM_HOSTED") == "1"
-    async_mode = "threading" if debug_mode else "eventlet"
-    socketio.init_app(app, async_mode=async_mode)
 
-    from source.app.blueprints.api.client import orders_events_client
+    debug_mode = os.environ.get("FLASK_DEBUG") == "1"
+    async_mode = "threading" if debug_mode else "eventlet"
+    if config_name != "testing":
+        socketio.init_app(app, async_mode=async_mode)
+    else:
+        logger.debug("Testing mode: skipping socketio initialization")
+
+    try:
+        from source.app.blueprints.api import orders_events
+    except Exception:
+        logger.debug("Could not import orders_events during testing setup (ignoring)")
 
     return app

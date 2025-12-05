@@ -7,14 +7,16 @@ from source.app.utils.decorators.authorizations import authorization_required
 from source.app.exceptions.menu_exceptions import *
 from source.app.services import menu_services, products_services, categories_services, customers_services, orders_services
 from source.app.schemas import orders_schemas, uuid_schema
-from source.app.blueprints.api.client.orders_events_client import broadcast_order_update
+from source.app.blueprints.api.orders_events import broadcast_order_update
 from source.app.repository.orders_products_repository import OrdersProductsRepository
+from source.app.blueprints.routes import api
+import os
 
 logger = get_logger(__name__)
-orders_client = Blueprint("orders_client", __name__, url_prefix="/api")
+dir_name = os.path.basename(__file__)
 
 """ Capture orders from a specific Menu. """
-@orders_client.route("/orders/<string:menu_id>", methods=["GET"])
+@api.route("/orders/<string:menu_id>", methods=["GET"])
 def get_orders(menu_id: str):
     logger.info(f"GET /api/orders/{menu_id} - Capture orders from a specific Menu.")
 
@@ -27,7 +29,7 @@ def get_orders(menu_id: str):
     )
 
 """ Add a new order in Menu. """
-@orders_client.route("/orders", methods=["POST"])
+@api.route("/orders", methods=["POST"])
 def post_order():
 
     logger.info("POST /api/orders - creating new order in menu.")
@@ -135,7 +137,7 @@ def post_order():
     )
 
 """ Get order/products information  """
-@orders_client.route("/orders/<string:order_id>/products", methods=["GET"])
+@api.route("/orders/<string:order_id>/products", methods=["GET"])
 def get_order_infos(order_id: str):
     logger.info(f"GET /api/orders/{order_id}/products - Obter lista de produtos e informações úteis de um pedido.")
 
@@ -145,7 +147,6 @@ def get_order_infos(order_id: str):
     products_list = orders_services.get_products_in_order(order_id)
     logger.info(f"Lista de produtos retornados: {products_list}")
 
-    ### Para cada item que está no pedido ###
     for item in products_list:
         product_id = item["product_id"]
         quantity = item["quantity"]
@@ -178,9 +179,8 @@ def get_order_infos(order_id: str):
         }
     )
 
-
 """ Delete order. """
-@orders_client.route("/orders/<string:order_id>", methods=["DELETE"])
+@api.route("/orders/<string:order_id>", methods=["DELETE"])
 def delete_order(order_id: str):
     logger.info(f"DELETE /api/orders - Deletar um pedido através do cardápio")
 
@@ -220,7 +220,7 @@ def delete_order(order_id: str):
     )
 
 """ Update order status """
-@orders_client.route("/orders/<string:order_id>/status", methods=["PUT"])
+@api.route("/orders/<string:order_id>/status", methods=["PUT"])
 def order_status(order_id):
     logger.info(f"PUT /api/orders/{order_id}/status - Atualizar status do pedido")
 

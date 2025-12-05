@@ -10,7 +10,7 @@ from source.app.blueprints.routes import vws
 """
 @vws.route("/integrations")
 def vws_integrations():
-    redirect_uri = url_for("main_frontend.views_main_dashboard")
+    redirect_uri = url_for("vws.views_main_dashboard")
     tab = request.args.get("tab")
     if tab == "whatsapp":
         return render_template("/pages/integration_whatsapp.jinja2")

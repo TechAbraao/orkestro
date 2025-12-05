@@ -7,7 +7,7 @@
 {% block sidenav %}
     {% include "partials/sidebar.jinja2" %}
     <script>
-        const logoutURL = "{{ url_for('sign_in_auth.end_session_store') }}"
+        const logoutURL = "{{ url_for('api.end_session_store') }}"
     </script>
 {% endblock sidenav %}
 
@@ -33,7 +33,7 @@
 
         {# Menu de Opções #}
         <aside class="w-full h-[90px] pl-5 flex items-center justify-start bg-gray-100 gap-3 rounded-3xl border-2 border-gray-300">
-            {{ buttons.button_redirect(endpoint="main_frontend.views_menus_manager_dashboard", text="Voltar") }}
+            {{ buttons.button_redirect(endpoint="vws.views_menus_manager_dashboard", text="Voltar") }}
             <button id="btn-create-category"
                     class="px-5 py-3 bg-gray-900 text-base
                     text-white rounded-3xl hover:bg-gray-800 font-bold">
@@ -51,7 +51,7 @@
         </aside>
         <section
                 class="gap-6 p-6 bg-gray-100 w-full rounded-3xl flex
-                items-center justify-center border-2 border-gray-300">
+                items-center justify-center border-2 border-gray-300 ">
             {% if strategy.get("profile")["hasCategories"] == True %}
                 <section id="categoriesContainer" class="grid sm:grid-cols-2 lg:grid-cols-1 gap-6
                             p-6 bg-gray-200 w-full max-h-[65vh]

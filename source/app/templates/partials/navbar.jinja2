@@ -2,33 +2,33 @@
     <ul class="flex gap-8 justify-end items-center pr-16 py-4 h-28">
         {% if strategy["url"] == "/signin" %}
             <li>
-                {{ buttons.button_redirect(endpoint="homepage_frontend.views_homepage", text="Início") }}
+                {{ buttons.button_redirect(endpoint="vws.views_homepage", text="Início") }}
             </li>
             <li>
-                {{ buttons.button_redirect(endpoint="authorizations_frontend.views_login", text="Entrar") }}
+                {{ buttons.button_redirect(endpoint="vws.views_login", text="Entrar") }}
             </li>
             <li>
-                {{ buttons.button_redirect(endpoint="authorizations_frontend.views_register", text="Criar Conta") }}
+                {{ buttons.button_redirect(endpoint="vws.views_register", text="Criar Conta") }}
             </li>
         {% elif strategy["url"] == "/signup" %}
             <li>
-                {{ buttons.button_redirect(endpoint="homepage_frontend.views_homepage", text="Início") }}
+                {{ buttons.button_redirect(endpoint="vws.views_homepage", text="Início") }}
             </li>
             <li>
-                {{ buttons.button_redirect(endpoint="authorizations_frontend.views_login", text="Entrar") }}
+                {{ buttons.button_redirect(endpoint="vws.views_login", text="Entrar") }}
             </li>
             <li>
-                {{ buttons.button_redirect(endpoint="authorizations_frontend.views_register", text="Criar Conta") }}
+                {{ buttons.button_redirect(endpoint="vws.views_register", text="Criar Conta") }}
             </li>
         {% elif strategy["url"] == "/home" %}
             <li>
-                {{ buttons.button_redirect(endpoint="homepage_frontend.views_homepage", text="Início") }}
+                {{ buttons.button_redirect(endpoint="vws.views_homepage", text="Início") }}
             </li>
             <li>
-                {{ buttons.button_redirect(endpoint="authorizations_frontend.views_login", text="Entrar") }}
+                {{ buttons.button_redirect(endpoint="vws.views_login", text="Entrar") }}
             </li>
             <li>
-                {{ buttons.button_redirect(endpoint="authorizations_frontend.views_register", text="Criar Conta") }}
+                {{ buttons.button_redirect(endpoint="vws.views_register", text="Criar Conta") }}
             </li>
         {% endif %}
     </ul>

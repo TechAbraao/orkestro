@@ -11,7 +11,7 @@
         </button>
     </div>
     <nav class="flex-1 px-2 py-6 space-y-1">
-        <a href="{{ url_for("main_frontend.views_main_dashboard") }}"
+        <a href="{{ url_for("vws.views_main_dashboard") }}"
            title="Seção do Menu"
            class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
             <img src="{{ url_for('static', filename='icons/dashboard.png') }}" alt="Dashboard" class="w-6 h-6 mr-3 brightness-0 invert">
@@ -41,11 +41,11 @@
             </a>
         </div>
 
-        <a href="{{ url_for("main_frontend.views_orders_dashboard") }}" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+        <a href="{{ url_for("vws.views_orders_dashboard") }}" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
             <img src="{{ url_for('static', filename='icons/bell.png') }}" alt="Orders" class="w-6 h-6 mr-3 brightness-0 invert">
             <span class="text-sm font-medium sidebar-text">Pedidos</span>
         </a>
-        <a href="{{ url_for("main_frontend.views_menus_manager_dashboard") }}" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
+        <a href="{{ url_for("vws.views_menus_manager_dashboard") }}" class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
             <img src="{{ url_for('static', filename='icons/menus.png') }}" alt="Menus" class="w-6 h-6 mr-3 brightness-0 invert">
             <span class="text-sm font-medium sidebar-text">Cardápios</span>
         </a>
@@ -65,7 +65,7 @@
             </a>
         </div>
 
-        <a href="{{ url_for("main_frontend.views_profile_dashboard") }}"
+        <a href="{{ url_for("vws.views_profile_dashboard") }}"
            class="flex items-center px-3 py-2 rounded-lg hover:bg-gray-700 transition group">
             <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Profile" class="w-6 h-6 mr-3 brightness-0 invert">
             <span class="text-sm font-medium sidebar-text">Perfil da Loja</span>
@@ -84,3 +84,4 @@
         </div>
     </nav>
 </aside>
+

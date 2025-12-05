@@ -60,7 +60,7 @@
         items-center justify-center w-full h-10 font-bold text-red-900">Loja Fechada</p>
     </div>
     <script>
-        const menuClient = "{{ url_for('menus_client.render_menu_with_slug', slug=strategy['menu_slug']) }}"
+        const menuClient = "{{ url_for('api.render_menu_with_slug', slug=strategy['menu_slug']) }}"
         let aboutMeStore = "{{ url_for('about_auth.about_me_store') }}"
     </script>
     <script>

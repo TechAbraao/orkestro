@@ -8,7 +8,7 @@
     {# Dynamic rendering from the backend #}
     {% include "partials/sidebar.jinja2" %}
     <script>
-        const logoutURL = "{{ url_for('sign_in_auth.end_session_store') }}"
+        const logoutURL = "{{ url_for('api.end_session_store') }}"
     </script>
 {% endblock sidenav %}
 

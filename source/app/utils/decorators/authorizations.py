@@ -32,7 +32,7 @@ def authorized_client(f):
         if token:
             try:
                 decrypt_token(token)
-                return redirect(url_for("main_frontend.views_main_dashboard"))
+                return redirect(url_for("vws.views_main_dashboard"))
             except ValueError:
                 pass
         return f(*args, **kwargs)

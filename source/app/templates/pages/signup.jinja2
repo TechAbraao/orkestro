@@ -5,7 +5,6 @@
 {% endblock title %}
 
 {% block sidenav %}
-    {# Dynamic rendering from the backend #}
     {% include "partials/navbar.jinja2" %}
 {% endblock sidenav %}
 
@@ -14,7 +13,7 @@
         {% include "partials/forms_register_store.jinja2" %}
     </section>
     <script>
-        const createAccountStoreURL = "{{ url_for('sign_up_auth.create_new_account') }}"
+        const createAccountStoreURL = "{{ url_for('api.create_new_account') }}"
     </script>
     <script src="{{ url_for('static', filename='javascript/create_account_store.js') }}" defer></script>
 {% endblock content %}

@@ -9,7 +9,7 @@ from source.app.blueprints.routes import vws
 """
 @vws.route("/statistics")
 def vws_statistics():
-    redirect_uri = url_for("main_frontend.views_main_dashboard")
+    redirect_uri = url_for("vws.views_main_dashboard")
     tab = request.args.get("tab")
     if tab == "reports":
         return "<h1>Relatórios</h1>"

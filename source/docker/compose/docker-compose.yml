@@ -22,7 +22,7 @@ services:
     build:
       context: ./../../../
       dockerfile: source/docker/dockerfiles/Dockerfile
-    container_name: pizza-web
+    container_name: application-orkestro
     command: flask run --host=0.0.0.0 --port=5000
     ports:
       - "5000:5000"
@@ -34,9 +34,10 @@ services:
       - PYTHONPATH=/app
     networks:
       - network-pizza-management-system
+
   postgres:
     image: postgres:16.3
-    container_name: postgres-pizza-management-system
+    container_name: postgres-orkestro
     ports:
       - "${DATABASE_PORT}:5432"
     environment:
@@ -48,9 +49,23 @@ services:
     networks:
       - network-pizza-management-system
 
+  postgres_test:
+    image: postgres:16.3
+    container_name: postgres-tests-orkestro
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: orkestro_test
+    volumes:
+      - pgdata_test:/var/lib/postgresql/data
+    networks:
+      - network-pizza-management-system
+
   pgadmin:
     image: dpage/pgadmin4
-    container_name: pgadmin-pizza-management-system
+    container_name: pgadmin-orkestro
     ports:
       - "${PGADMIN_HOST}:${PGADMIN_PORT}"
     environment:
@@ -63,7 +78,7 @@ services:
 
   redis:
     image: redis:7.2
-    container_name: redis-pizza-management-system
+    container_name: redis-orkestro
     ports:
       - "6381:6379"
     networks:
@@ -88,6 +103,7 @@ services:
 
 volumes:
   pgdata:
+  pgdata_test:
   n8n_data:
   evolution_instances:
 

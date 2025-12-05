@@ -25,6 +25,7 @@ greenlet==3.2.4
 gunicorn==23.0.0
 h11==0.16.0
 idna==3.10
+iniconfig==2.3.0
 itsdangerous==2.2.0
 Jinja2==3.1.6
 jsonschema==4.25.0
@@ -39,8 +40,11 @@ mysqlclient==2.2.7
 packaging==25.0
 parse==1.20.2
 parse_type==0.6.4
+pluggy==1.6.0
 psycopg2==2.9.10
+Pygments==2.19.2
 PyJWT==2.10.1
+pytest==9.0.1
 python-dotenv==1.1.0
 python-engineio==4.12.2
 python-socketio==5.13.0

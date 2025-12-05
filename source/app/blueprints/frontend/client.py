@@ -1,12 +1,12 @@
 from flask import Blueprint, render_template, request, redirect, url_for, g, session
 from source.app.services import menu_services, categories_services, stores_services
 from source.app.settings.logging_settings import get_logger
+from source.app.blueprints.routes import vws
 
 logger = get_logger()
-menus_client_frontend = Blueprint("menus_client_frontend", __name__, url_prefix="")
 
 """ 1. Esta parte do código é responsável por renderizar todos os cardápios disponíveis na interface. """
-@menus_client_frontend.get("/menus/<string:slug>")
+@vws.get("/menus/<string:slug>")
 def view_menu_by_slug(slug: str):
 
     logger.info(f"Buscando menu através do slug '{slug}'")
@@ -29,10 +29,10 @@ def view_menu_by_slug(slug: str):
         "has_category": bool(hasCategory)
     }
 
-    return render_template("pages/client/menu_clients.jinja2", strategy=rendering_strategy)
+    return render_template("pages/menu_clients.jinja2", strategy=rendering_strategy)
 
 """ 2. Aqui será feita a renderização dos produtos pertencentes às categorias dos cardápios. """
-@menus_client_frontend.get("/menus/<string:slug>/<string:category_id>")
+@vws.get("/menus/<string:slug>/<string:category_id>")
 def views_category_by_id(slug: str, category_id: str):
 
     logger.info(f"Buscando menu através do slug '{slug}'")
@@ -53,10 +53,10 @@ def views_category_by_id(slug: str, category_id: str):
         "category_name": category_info.get("name")
     }
 
-    return render_template("pages/client/category_clients.jinja2", strategy=rendering_strategy)
+    return render_template("pages/category_clients.jinja2", strategy=rendering_strategy)
 
 """ 3. Aqui será feito a renderização do produto em específico que pertence a categoria do cardápio.  """
-@menus_client_frontend.get("/menus/<string:slug>/products/<string:product_id>")
+@vws.get("/menus/<string:slug>/products/<string:product_id>")
 def views_product_by_id(slug: str, product_id: str):
     logger.info(f"Buscando menu através do slug '{slug}'")
     menu_by_slug = menu_services.get_menu_by_slug(slug)
@@ -69,9 +69,9 @@ def views_product_by_id(slug: str, product_id: str):
         "product_id": product_id
     }
 
-    return render_template("pages/client/products_details_clients.jinja2", strategy=rendering_strategy)
+    return render_template("pages/products_details_clients.jinja2", strategy=rendering_strategy)
 
-@menus_client_frontend.route("/menus/<string:slug>/cart", methods=["GET"])
+@vws.route("/menus/<string:slug>/cart", methods=["GET"])
 def vws_payment_order(slug: str):
     g.return_id = session.get("return_id", "N/A")
     logger.info(f"Return UUID para retornar a categoria certa: {g.return_id}")
@@ -82,9 +82,10 @@ def vws_payment_order(slug: str):
     }
     return render_template("pages/cart.jinja2", strategy=rendering_strategy)
 
-@menus_client_frontend.route("/menus/<string:slug>/payment", methods=["GET"])
+@vws.route("/menus/<string:slug>/payment", methods=["GET"])
 def vws_finalize_order(slug: str):
     rendering_strategy = {
         "menu_slug": slug,
     }
     return render_template("pages/finalize_order.jinja2", strategy=rendering_strategy)
+

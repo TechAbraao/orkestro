@@ -11,7 +11,7 @@
 {% block sidenav %}
     {% include "partials/sidebar.jinja2" %}
     <script>
-        const logoutURL = "{{ url_for('sign_in_auth.end_session_store') }}"
+        const logoutURL = "{{ url_for('api.end_session_store') }}"
     </script>
 {% endblock sidenav %}
 
@@ -85,7 +85,7 @@
         const URLGetProductsOrder = `/api/orders/${orderId}/products`
         console.log(`ID do Pedido: ${orderId}`)
     </script>
-    <script src="{{ url_for('static', filename='javascript/websocket_orders.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='javascript/websocketOrders.js') }}" defer></script>
 {% endblock dashboard %}
 
 {% block navbar %}

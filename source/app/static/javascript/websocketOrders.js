@@ -334,7 +334,7 @@ $(function () {
     });
 
 
-     function getDetailsOrder() {
+    function getDetailsOrder() {
         const orderId = $(this).data("id");
         modalDetailsOrder.removeClass("hidden")
         console.log(`ID do Pedido: ${orderId}`)
@@ -393,7 +393,14 @@ $(function () {
 
             },
             error: function (xhr) {
-
+                console.error("➡ Status HTTP:", xhr.status);
+                console.error("➡ Status Text:", xhr.statusText);
+                try {
+                    const json = xhr.responseJSON || JSON.parse(xhr.responseText);
+                    console.error("➡ Resposta JSON do Backend:", json);
+                } catch (_) {
+                    console.warn("➡ Não foi possível converter responseText para JSON.");
+                }
             }
         })
     }
