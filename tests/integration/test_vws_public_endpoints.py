@@ -1,5 +1,7 @@
 import logging
+from pytest import mark
 
+@mark.vws
 class TestVwsPublicEndpoints:
     @classmethod
     def setup_class(cls):

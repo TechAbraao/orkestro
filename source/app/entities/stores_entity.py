@@ -21,7 +21,7 @@ class StoresEntity(database.Model):
     @property
     def serialize(self):
         return {
-            "id": str(self.id),
+            "id": self.id,
             "name": self.name,
             "email": self.email,
             "telephone": self.telephone,

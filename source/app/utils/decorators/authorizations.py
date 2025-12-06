@@ -14,12 +14,12 @@ def authorization_required(f):
                 token = auth_header.split(" ")[1]
 
         if not token:
-            return redirect(url_for("authorizations_frontend.views_login"))
+            return redirect(url_for("vws.views_login"))
 
         try:
             claims = decrypt_token(token)
         except ValueError:
-            return redirect(url_for("authorizations_frontend.views_login"))
+            return redirect(url_for("vws.views_login"))
 
         g.jwt_claims = claims
         return f(*args, **kwargs)

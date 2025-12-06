@@ -283,8 +283,6 @@ const notifyStatusChangedMsg = $(".notify-status-changed-msg")
         method: "GET",
         success: function (response) {
             const statusMenu = Boolean(response.data);
-            // console.log("Atualmente ON/OFF:", statusMenu);
-
             toggleBtn.setAttribute("aria-checked", statusMenu);
 
             if (statusMenu) {

@@ -1,7 +1,7 @@
-# tests/conftest.py
 import pytest
 from source.app import create_app
 from source.app.settings.definitions_settings import db as _db
+from faker import Faker
 from pathlib import Path
 
 """ App de Testes. """
@@ -9,11 +9,6 @@ from pathlib import Path
 def app():
     app = create_app("testing")
     return app
-
-""" Client pos Teste. """
-@pytest.fixture(scope="function")
-def client(app):
-    return app.test_client()
 
 """ Schema para cada teste de derruba depois, garantindo o isolamento. """
 @pytest.fixture(scope="function")
@@ -25,3 +20,9 @@ def db(app):
         finally:
             _db.session.remove()
             _db.drop_all()
+
+""" Client pos Teste. """
+@pytest.fixture(scope="function")
+def client(app):
+    return app.test_client()
+

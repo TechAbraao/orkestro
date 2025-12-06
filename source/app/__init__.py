@@ -1,4 +1,3 @@
-# source/app/factory.py  (ou onde você já tem o create_app)
 from flask import Flask
 from source.app.settings.database_settings import postgres_settings
 from source.app.settings.definitions_settings import db, ma
@@ -26,7 +25,7 @@ def create_app(config_name: str = "default"):
     setup_file = Path(__file__).resolve().parent.parent.parent / "setup.yml"
     with open(setup_file, "r", encoding="utf-8") as f:
         config = yaml.safe_load(f)
-# sign_up_auth
+
     app.config["APPLICATION_VERSION"] = config.get("version")
     logger.info(f"Inicializando o Servidor. Versão: {app.config['APPLICATION_VERSION']}")
 

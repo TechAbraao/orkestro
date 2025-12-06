@@ -39,7 +39,7 @@ class AuthorizationsServices:
 
         claims = {
             "iss": token_issuer,
-            "sub": store.serialize["id"],
+            "sub": str(store.serialize["id"]),
             "menu_id": menu_id if menu_id is not None else "",
             "role": "COMMON",
             "exp": exp_timestamp

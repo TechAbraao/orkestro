@@ -9,12 +9,27 @@ logger = get_logger(__name__)
 @vws.get("/dashboard")
 @authorization_required
 def views_main_dashboard():
-    return render_template("pages/dashboard.jinja2")
+    store_id = g.jwt_claims.get("sub")
+    menu_id = stores_services.get_menu_by_store_id(store_id)
+    rendering_strategy = {
+        "profile": {
+            "menu_id": menu_id.get("id", ""),
+        }
+    }
+    return render_template("pages/dashboard.jinja2", strategy=rendering_strategy)
 
 @vws.get("/profile")
 @authorization_required
 def views_profile_dashboard():
-    return render_template("pages/store_profile.jinja2")
+    store_id = g.jwt_claims.get("sub")
+    menu_id = stores_services.get_menu_by_store_id(store_id)
+    rendering_strategy = {
+        "profile": {
+            "menu_id": menu_id.get("id", ""),
+        }
+    }
+
+    return render_template("pages/store_profile.jinja2", strategy=rendering_strategy)
 
 @vws.get("/orders")
 @authorization_required
@@ -38,12 +53,14 @@ def views_menus_manager_dashboard():
 
     """ Verificar se a Loja possui um cardápio ativo para renderizar no template. """
     hasMenu = menu_services.exists_menu_by_store_id(store_id)
+    menu_id = stores_services.get_menu_by_store_id(store_id)
 
     rendering_strategy = {
         "url": f"{request.path}",
         "profile": {
             "roles": f"",
-            "hasMenu": hasMenu
+            "hasMenu": hasMenu,
+            "menu_id": menu_id
         },
         "logged": False
     }
