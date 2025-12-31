@@ -60,7 +60,7 @@ def views_menus_manager_dashboard():
         "profile": {
             "roles": f"",
             "hasMenu": hasMenu,
-            "menu_id": menu_id
+            "menu_id": menu_id.get("id")
         },
         "logged": False
     }

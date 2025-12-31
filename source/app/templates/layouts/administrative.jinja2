@@ -8,8 +8,9 @@
     {# Carregando as dependências (/libs) #}
     <script src="{{ url_for('static', filename='libs/tailwindcss.js') }}"></script>
     <script src="{{ url_for('static', filename='libs/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='libs/socket.io.min.js') }}"></script>
 
-    <script src="{{ url_for('static', filename='javascript/toggle_sidenav.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='javascript/toggleSidenav.js') }}" defer></script>
     <script src="{{ url_for('static', filename='javascript/logout.js') }}" defer></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/transitions.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/scrollbar.css') }}">
@@ -34,7 +35,7 @@
 
     {# Modals #}
     {{ modals.modal_logout(
-    header_text="Confirmar saída",
+    header_text="Confirmar Saída",
     description_text="Tem certeza de que deseja sair da sua conta?"
             ) }}
 

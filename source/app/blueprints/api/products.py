@@ -2,9 +2,7 @@ from source.app.settings.logging_settings import get_logger
 from source.app.utils.responses import Response
 from source.app.schemas import uuid_schema, products_schemas
 from source.app.services import products_services
-from source.app.utils.decorators.validations import *
-from source.app.schemas.products_schemas import ProductUpdateSchema
-from flask import Blueprint, request
+from flask import Blueprint, request, jsonify
 from source.app.blueprints.routes import api
 import os
 
@@ -68,7 +66,6 @@ def get_product(product_id: str):
 
 """ 4. Update Specific Product. """
 @api.route("/products/<string:product_id>", methods=["PUT"])
-# @validate_request(ProductUpdateSchema())
 def put_product(product_id: str):
     logger.info("GET /products/{productId} - Changing a specific product.")
 
@@ -109,7 +106,25 @@ def delete_product(product_id: str):
         status_code=200
     )
 
-""" 6. List all Products in a Menu (associated categories). """
+""" 6. Alterar status do produto. """
+@api.route("/products/<string:product_id>/status", methods=["PATCH"])
+def patch_product_status(product_id: str):
+    logger.info(f"[{dir_name}] Validando o UUID do Produto.")
+
+    uuid_schema.load({"id": product_id})
+
+    new_status = products_services.update_by_id(product_id=product_id)
+
+    if new_status is None:
+        return jsonify({"message": "Produto não encontrado"}), 404
+
+    return jsonify({
+        "message": f"Status alterado para '{new_status}'",
+        "activated": new_status
+    }), 200
+
+
+""" 7. List all Products in a Menu (associated categories). """
 @api.route("/menus/<string:menu_id>/products", methods=["GET"])
 def get_products_in_menu(menu_id: str):
     pass

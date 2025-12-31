@@ -1,26 +1,28 @@
-<aside id="sidebar" class="h-screen w-64 bg-[#F4F2EE] flex items-center justify-start
- flex flex-col shadow-lg transition-all duration-300 text-white">
+<aside id="sidebar" class="h-screen w-64 bg-[#F4F2EE] flex items-center justify-start flex flex-col shadow-lg transition-all duration-300 text-white">
     <div class="h-[100%] w-[100%] bg-[#18191B] flex flex-col items-center">
-        <div class="flex items-center justify-between h-16  px-4 w-full bg-[#353535]">
+        <div class="flex items-center justify-between h-16  px-4 w-full bg-[#353535] container-img-profile">
             <span id="sidebar-title" class="text-[23px] font-bold tracking-wide">Orkestro</span>
-            <button id="toggle-btn-sidenav" class="text-[#191919] hover:text-white focus:outline-none">
+            <button id="toggle-btn-sidenav"
+                    class="text-[#191919] hover:text-white focus:outline-none border-gray-600
+                    flex items-center justify-center w-[45px] h-[40px]">
                 <img
                         src="{{ url_for('static', filename='icons/left-arrow.png') }}"
                         alt="Dashboard"
-                        class="w-6 h-6 mr-3 brightness-0 invert"
+                        class="w-6 h-6 brightness-0 invert"
                         id="toggle-btn-sidenav-icon"
                 >
             </button>
         </div>
         <div class="w-[85%] h-[110px] mt-3
         rounded-2xl flex items-center  justify-center">
-            <aside class="w-[50%] flex items-center justify-center ml-2 flex-col">
+            <aside class="w-[50%] flex items-center justify-center ml-2 flex-col container-account-photo">
                 <img src="{{ url_for('static', filename='images/default-store-logo.png') }}" alt="Account Photo"
-                     class="w-[75px] h-[75px] rounded-full">
-                <p class="text-[16px] font-bold text-center pl-2 pr-2 mt-2 bg-red-300 w-[90%] rounded-full">Aberto</p>
+                     class="w-[75px] h-[75px] rounded-full container-account-photo-img">
+                <p class="text-[16px] font-bold text-center pl-2 pr-2 mt-2 w-[90%] rounded-full menu-status-in-sidebar"></p>
             </aside>
         </div>
         <div class="mt-4 border-t border-gray-700">
+            <br>
         <nav class="flex-1 px-2 py-3 space-y-1">
             <a href="{{ url_for("vws.views_main_dashboard") }}"
                title="Seção do Menu"
@@ -34,7 +36,7 @@
                class=" flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
                 <img src="{{ url_for('static', filename='icons/graphics.png') }}" alt="Statistics"
                      class="w-6 h-6 mr-3 brightness-0 invert">
-                <span class="text-[16px] font-medium sidebar-text">Estatísticas</span>
+                <span class="text-[16px] font-medium sidebar-text">Históricos</span>
 
                 <svg class="ml-auto w-4 h-4 transition-transform duration-200" id="statistics-arrow"
                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -43,25 +45,24 @@
             </a>
 
             <div id="statistics-submenu" class="submenu ml-8 mt-2 space-y-1">
-                <a href="/statistics?tab=reports"
-                   class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                    <span class="text-[16px] font-medium sidebar-text">Relatórios Gráficos</span>
-                </a>
                 <a href="/statistics?tab=orders"
                    class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                    <span class="text-[16px] font-medium sidebar-text">Histórico de Pedidos</span>
+                    <span class="text-[16px] font-medium sidebar-text">Pedidos</span>
                 </a>
                 <a href="/statistics?tab=customers"
                    class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                    <span class="text-[16px] font-medium sidebar-text">Histórico Clientes</span>
+                    <span class="text-[16px] font-medium sidebar-text">Clientes</span>
                 </a>
             </div>
 
-            <a href="{{ url_for("vws.views_orders_dashboard") }}"
-               class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                <img src="{{ url_for('static', filename='icons/bell.png') }}" alt="Orders"
-                     class="w-6 h-6 mr-3 brightness-0 invert">
-                <span class="text-[16px] font-medium sidebar-text">Pedidos</span>
+            <a href="{{ url_for("vws.views_orders_dashboard") }}" class="flex items-center px-3 py-2 justify-between rounded-lg hover:bg-[#222327] transition group">
+                <div class="flex justify-center flex-items">
+                       <img src="{{ url_for('static', filename='icons/bell.png') }}" alt="Orders" class="w-6 h-6 mr-3 brightness-0 invert">
+                        <span class="text-[16px] font-medium sidebar-text">Pedidos</span>
+                </div>
+                <span class="w-[25px] h-[25px] bg-red-600 rounded-full flex items-center justify-center border-2 border-red-700 container-text-count-orders-sidenav">
+                    <p class="font-bold text-count-orders-sidenav text-white-100 text-[14px]">0</p>
+                </span>
             </a>
             <a href="{{ url_for("vws.views_menus_manager_dashboard") }}"
                class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
@@ -87,11 +88,11 @@
                 </a>
             </div>
 
-            <a href="{{ url_for("vws.views_profile_dashboard") }}"
+            <a href="/apidocs"
                class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Profile"
+                <img src="{{ url_for('static', filename='icons/documentation.png') }}" alt="Documentation"
                      class="w-6 h-6 mr-3 brightness-0 invert">
-                <span class="text-[16px] font-medium sidebar-text">Perfil da Loja</span>
+                <span class="text-[16px] font-medium sidebar-text">Documentação</span>
             </a>
             <br>
             <div class="pt-7 border-t border-gray-700">
@@ -99,7 +100,13 @@
                    class="flex items-center px-2 py-2 rounded-lg hover:bg-[#222327] transition group">
                     <img src="{{ url_for('static', filename='icons/infos.png') }}" alt="About"
                          class="w-6 h-6 mr-3 brightness-0 invert">
-                    <span class="text-[16px] font-medium sidebar-text px-1">Sobre a Orkestro</span>
+                    <span class="text-[16px] font-medium sidebar-text px-1">Sobre</span>
+                </a>
+                <a href="{{ url_for("vws.views_profile_dashboard") }}"
+                   class="flex items-center px-2 py-2 rounded-lg hover:bg-[#222327] transition group">
+                    <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Profile"
+                         class="w-6 h-6 mr-3 brightness-0 invert">
+                    <span class="text-[16px] font-medium sidebar-text">Perfil</span>
                 </a>
                 <a href="#" id="btn-logout"
                    class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
@@ -113,14 +120,49 @@
 </aside>
 <script>
     $(document).ready(function () {
+        const accessToken = ``;
+        let menuId = '{{ strategy["profile"]["menu_id"] }}'
+        const sidenavCountText = $(".text-count-orders-sidenav")
+        const menuStatusSidebar = $(".menu-status-in-sidebar")
         $.ajax({
             url: `/api/menus/${menuId}/status`,
             method: "GET",
-            success: function(res) {
-                console.log(res)
+            success: function (res) {
+                if (res.data) {
+                    menuStatusSidebar.text("Aberto");
+                    menuStatusSidebar.addClass("text-[16px] font-bold text-center bg-green-300 text-green-800 pl-2 pr-2 mt-2 w-[90%] rounded-full");
+                } else {
+                    menuStatusSidebar.text("Fechado");
+                    menuStatusSidebar.addClass("text-[16px] font-bold text-center bg-red-300 text-red-700 pl-2 pr-2 mt-2 w-[90%] rounded-full");
+                }
             },
             error: function (xhr) {
                 console.error(xhr)
+            }
+        });
+
+        const newOrderSound = new Audio("/static/sounds/notification-order-one.mp3");
+        newOrderSound.volume = 1;
+
+        const socket = io();
+        socket.on("connect", function () {
+            console.log("Conectado ao WebSocket!");
+            socket.emit("join_menu", {menu_id: menuId});
+        });
+
+        socket.on("all_orders", function (data) {
+            sidenavCountText.text(data.count_done_orders)
+        })
+        socket.on("order_status_update", function (data) {
+            sidenavCountText.text(data.count_done_orders)
+        })
+        socket.on("new_order", function (data) {
+            sidenavCountText.text(data.count_done_orders)
+            try {
+                newOrderSound.currentTime = 0;
+                newOrderSound.play();
+            } catch (error) {
+                console.warn("Som bloqueado até o usuário interagir com a página:", error);
             }
         })
     })

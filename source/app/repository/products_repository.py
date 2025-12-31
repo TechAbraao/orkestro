@@ -33,7 +33,10 @@ class ProductsRepository(CRUDInterface):
         """
         return (
             self.session.query(ProductsEntity)
-            .filter(ProductsEntity.category_id == category_id)
+            .filter(
+                ProductsEntity.category_id == category_id,
+                ProductsEntity.activated == True
+            )
             .all()
         )
 
@@ -66,7 +69,6 @@ class ProductsRepository(CRUDInterface):
 
         return True
 
-
     @transactional
     def update(self, entity_id: str, data: dict) -> bool:
         """
@@ -91,6 +93,20 @@ class ProductsRepository(CRUDInterface):
         logger.info(f"Product with ID '{entity_id}' updated successfully.")
         return True
 
+    @transactional
+    def update_status_by_id(self, product_id: str) -> bool:
+        product = (
+            self.session
+            .query(ProductsEntity)
+            .filter(ProductsEntity.id == product_id)
+            .first()
+        )
+
+        if not product:
+            return None
+
+        product.activated = not product.activated
+        return product.activated
 
     @transactional
     def delete(self, product_id: str) -> bool:

@@ -1,36 +1,42 @@
 {% import "macros/alerts.jinja2" as alerts %}
 
 {% macro modal_logout(header_text="", description_text="") %}
-    <div id="logoutModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-        <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
+    <div id="logoutModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-2xl shadow-lg max-w-md w-full p-6">
             {# Headers #}
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-lg font-semibold text-gray-800">{{ header_text }}</h3>
-                <button onclick="document.getElementById('logoutModal').classList.add('hidden')"
-                        class="text-gray-400 hover:text-gray-600">&times;
-                </button>
+            <div class="w-full h-[130px] flex items-center justify-center">
+                <aside class="w-[100px] h-[100px] bg-gray-200 flex items-center justify-center rounded-full">
+                     <img src="{{ url_for('static', filename='icons/exit-2.png') }}"
+                    class="w-[45px] h-[45px]"
+                />
+                </aside>
+            </div>
+
+
+            <div class="flex justify-center items-center mb-4">
+                <h3 class="text-2xl font-semibold text-gray-800">{{ header_text }}</h3>
             </div>
 
             {# Content #}
-            <p class="text-gray-600 mb-6">
+            <p class="text-gray-600 text-[16px] mb-6 flex justify-center items-center">
                 {{ description_text }}
             </p>
 
             {# Buttons #}
-            <div class="flex justify-end gap-3">
+            <div class="flex justify-center gap-3">
                 <button
                         onclick="document.getElementById('logoutModal').classList.add('hidden')"
-                        class="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 text-gray-700 transition-colors">
-                    Cancelar
+                        class="px-4 py-2 rounded-xl bg-gray-200 hover:bg-gray-300
+                        text-gray-700 transition-colors w-1/2 h-[50px] font-semibold">
+                    Continuar aqui
                 </button>
-                <form method="#">
-                    <button
-                            type="submit"
-                            id="btn-confirm-logout"
-                            class="px-4 py-2 rounded bg-red-600 hover:bg-red-700 text-white transition-colors">
-                        Desejo sair
-                    </button>
-                </form>
+                <button
+                        type="submit"
+                        id="btn-confirm-logout"
+                        class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-700
+                        text-white transition-colors w-1/2 h-[50px] font-semibold">
+                    Sim, desejo sair
+                </button>
             </div>
         </div>
     </div>
@@ -229,129 +235,144 @@
 {% endmacro %}
 
 {% macro modal_menu_status() %}
-<div id="modalMenuStatus" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-    <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
+    <div id="modalMenuStatus" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
 
-        <h2 class="text-xl font-bold text-gray-800 mb-4">Status do Cardápio</h2>
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Status do Cardápio</h2>
 
-        {# Switch ON/OFF #}
-        <div class="flex items-center space-x-3">
-            <button
-                id="menuToggle"
-                type="button"
-                class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-300 transition-colors focus:outline-none"
-                role="switch"
-                aria-checked="false"
-            >
-                <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform"></span>
-            </button>
+            {# Switch ON/OFF #}
+            <div class="flex items-center space-x-3">
+                <button
+                        id="menuToggle"
+                        type="button"
+                        class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-300 transition-colors focus:outline-none"
+                        role="switch"
+                        aria-checked="false"
+                >
+                    <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform"></span>
+                </button>
 
-            <span id="menuStatusText" class="text-red-600 font-medium">
+                <span id="menuStatusText" class="text-red-600 font-medium">
                 Cardápio Desativado
             </span>
-        </div>
+            </div>
 
-        <div>
-            {{ alerts.alert_forms(
+            <div>
+                {{ alerts.alert_forms(
             type="info", alert_base_class="notify-status-changed",
             alert_message_class="notify-status-changed-msg") }}
-        </div>
+            </div>
 
-        <div class="flex justify-end gap-4 mt-6">
-            <button
-                    id="btnCancelStatus"
-                    class="px-4 py-2 rounded-xl bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
-                Fechar
-            </button>
-            <button
-                id="btnConfirmStatus"
-                class="px-4 py-2 rounded-xl bg-green-500 text-white hover:bg-green-600 transition">
-                Salvar
-            </button>
+            <div class="flex justify-end gap-4 mt-6">
+                <button
+                        id="btnCancelStatus"
+                        class="px-4 py-2 rounded-xl bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
+                    Fechar
+                </button>
+                <button
+                        id="btnConfirmStatus"
+                        class="px-4 py-2 rounded-xl bg-green-500 text-white hover:bg-green-600 transition">
+                    Salvar
+                </button>
+            </div>
         </div>
     </div>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtn = document.getElementById("menuToggle");
-    const statusText = document.getElementById("menuStatusText");
-    const notifyStatusChanged = $(".notify-status-changed")
-const notifyStatusChangedMsg = $(".notify-status-changed-msg")
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleBtn = document.getElementById("menuToggle");
+            const statusText = document.getElementById("menuStatusText");
+            const notifyStatusChanged = $(".notify-status-changed")
+            const notifyStatusChangedMsg = $(".notify-status-changed-msg")
+            const menuStatusSidebar = $(".menu-status-in-sidebar")
 
-    $.ajax({
-        url: `/api/menus/${menuId}/status`,
-        method: "GET",
-        success: function (response) {
-            const statusMenu = Boolean(response.data);
-            toggleBtn.setAttribute("aria-checked", statusMenu);
+            $.ajax({
+                url: `/api/menus/${menuId}/status`,
+                method: "GET",
+                success: function (response) {
+                    const statusMenu = Boolean(response.data);
+                    toggleBtn.setAttribute("aria-checked", statusMenu);
 
-            if (statusMenu) {
-                toggleBtn.classList.add("bg-green-500");
-                toggleBtn.querySelector("span").classList.add("translate-x-5");
-                statusText.textContent = "Cardápio Ativado";
-                statusText.classList.add("text-green-600");
-            } else {
-                toggleBtn.classList.add("bg-gray-300");
-                toggleBtn.querySelector("span").classList.add("translate-x-0");
-                statusText.textContent = "Cardápio OFF";
-                statusText.classList.add("text-red-600");
-            }
+                    if (statusMenu) {
+                        toggleBtn.classList.add("bg-green-500");
+                        toggleBtn.querySelector("span").classList.add("translate-x-5");
+                        statusText.textContent = "Cardápio Ativado";
+                        statusText.classList.add("text-green-600");
+                    } else {
+                        toggleBtn.classList.add("bg-gray-300");
+                        toggleBtn.querySelector("span").classList.add("translate-x-0");
+                        statusText.textContent = "Cardápio OFF";
+                        statusText.classList.add("text-red-600");
+                    }
 
-            toggleBtn.addEventListener("click", () => {
-                const isActive = toggleBtn.getAttribute("aria-checked") === "true";
+                    toggleBtn.addEventListener("click", () => {
+                        const isActive = toggleBtn.getAttribute("aria-checked") === "true";
 
-                if (isActive) {
-                    toggleBtn.setAttribute("aria-checked", "false");
-                    toggleBtn.classList.remove("bg-green-500");
-                    toggleBtn.classList.add("bg-gray-300");
-                    toggleBtn.querySelector("span").classList.remove("translate-x-5");
-                    toggleBtn.querySelector("span").classList.add("translate-x-0");
-                    statusText.textContent = "Cardápio OFF";
-                    statusText.classList.remove("text-green-600");
-                    statusText.classList.add("text-red-600");
-                } else {
-                    toggleBtn.setAttribute("aria-checked", "true");
-                    toggleBtn.classList.remove("bg-gray-300");
-                    toggleBtn.classList.add("bg-green-500");
-                    toggleBtn.querySelector("span").classList.remove("translate-x-0");
-                    toggleBtn.querySelector("span").classList.add("translate-x-5");
-                    statusText.textContent = "Cardápio Ativado";
-                    statusText.classList.remove("text-red-600");
-                    statusText.classList.add("text-green-600");
+                        if (isActive) {
+                            toggleBtn.setAttribute("aria-checked", "false");
+                            toggleBtn.classList.remove("bg-green-500");
+                            toggleBtn.classList.add("bg-gray-300");
+                            toggleBtn.querySelector("span").classList.remove("translate-x-5");
+                            toggleBtn.querySelector("span").classList.add("translate-x-0");
+                            statusText.textContent = "Cardápio OFF";
+                            statusText.classList.remove("text-green-600");
+                            statusText.classList.add("text-red-600");
+                            // menuStatusSidebar.text("Fechado");
+                            // menuStatusSidebar.addClass("text-[16px] font-bold text-center bg-red-300 text-red-700 pl-2 pr-2 mt-2 w-[90%] rounded-full");
+                        } else {
+                            toggleBtn.setAttribute("aria-checked", "true");
+                            toggleBtn.classList.remove("bg-gray-300");
+                            toggleBtn.classList.add("bg-green-500");
+                            toggleBtn.querySelector("span").classList.remove("translate-x-0");
+                            toggleBtn.querySelector("span").classList.add("translate-x-5");
+                            statusText.textContent = "Cardápio Ativado";
+                            statusText.classList.remove("text-red-600");
+                            statusText.classList.add("text-green-600");
+                            // menuStatusSidebar.text("Aberto");
+                            // menuStatusSidebar.addClass("text-[16px] font-bold text-center bg-green-300 text-green-800 pl-2 pr-2 mt-2 w-[90%] rounded-full");
+                        }
+                    });
+                },
+                error: function (xhr) {
+                    // console.error("Error ON/OFF:", xhr.responseText);
                 }
             });
-        },
-        error: function (xhr) {
-            // console.error("Error ON/OFF:", xhr.responseText);
-        }
-    });
 
-    document.getElementById("btnCancelStatus").addEventListener("click", () => {
-        document.getElementById("modalMenuStatus").classList.add("hidden");
-    });
+            document.getElementById("btnCancelStatus").addEventListener("click", () => {
+                document.getElementById("modalMenuStatus").classList.add("hidden");
+            });
 
-    document.getElementById("btnConfirmStatus").addEventListener("click", () => {
-        const isActive = toggleBtn.getAttribute("aria-checked") === "true";
-        $.ajax({
-            url: `/api/menus/${menuId}/status`,
-            method: "PATCH",
-            success: function (response) {
-                // console.log("Response ON/OFF:", response);
-                notifyStatusChanged.removeClass("hidden")
-                notifyStatusChangedMsg.text("Cardápio atualizado para: " + (isActive ? "ativado" : "desativado"))
+            document.getElementById("btnConfirmStatus").addEventListener("click", () => {
+                const isActive = toggleBtn.getAttribute("aria-checked") === "true";
+                console.log(isActive)
+                $.ajax({
+                    url: `/api/menus/${menuId}/status`,
+                    method: "PATCH",
+                    success: function (response) {
+                        // console.log("Response ON/OFF:", response);
+                        notifyStatusChanged.removeClass("hidden")
+                        notifyStatusChangedMsg.text("Cardápio atualizado para: " + (isActive ? "ativado" : "desativado"))
 
-                setTimeout(() => {
-                    notifyStatusChanged.addClass("hidden")
-                }, 2500)
-            },
-            error: function (xhr) {
-                // console.error("Error ON/OFF:", xhr.responseText);
-            }
+                        menuStatusSidebar.removeClass("bg-green-300 text-green-800 bg-red-300 text-red-700");
+                        if (isActive) {
+                            menuStatusSidebar.text("Aberto");
+                            menuStatusSidebar.addClass("bg-green-300 text-green-800");
+                        } else {
+                            menuStatusSidebar.text("Fechado");
+                            menuStatusSidebar.addClass("bg-red-300 text-red-700");
+                        }
+
+                        setTimeout(() => {
+                            notifyStatusChanged.addClass("hidden")
+                        }, 2500)
+                    },
+                    error: function (xhr) {
+                        // console.error("Error ON/OFF:", xhr.responseText);
+                    }
+                });
+
+            });
         });
-
-    });
-});
-</script>
+    </script>
 {% endmacro %}
 
 {% macro opening_hours() %}

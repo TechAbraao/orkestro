@@ -12,7 +12,7 @@ $(function () {
         completed: $ordersListCompleted,
         canceled: $ordersListCompleted,
     };
-    console.log("MenuId:", menuId);
+
     const $loading = $(`
         <div id="loading-spinner" class="flex flex-col items-center justify-center py-10 text-gray-700">
             <div class="animate-spin rounded-full h-10 w-10 border-b-4 border-green-500 mb-3"></div>
@@ -166,6 +166,7 @@ $(function () {
               buttonsHTML = `
             <button class="text-xs font-semibold text-white bg-blue-500
                 px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-details-order"
+                title="Detalhes do pedido"
                 data-id='${order.id}'>
                 Detalhes
             </button>
@@ -408,4 +409,29 @@ $(function () {
     const modalDetailsOrder = $("#modalDetailsOrder")
     $ordersListDone.on("click", '.btn-details-order', getDetailsOrder)
     $ordersListPending.on("click", '.btn-details-order', getDetailsOrder)
+    $ordersListCompleted.on("click", '.btn-details-order', getDetailsOrder)
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

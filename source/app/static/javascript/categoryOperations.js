@@ -1,3 +1,18 @@
+function copyProductId(id) {
+    const input = document.createElement("input");
+    input.value = id;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand("copy");
+    document.body.removeChild(input);
+
+    console.log("ID copiado:", id);
+}
+
+const activatedColors = "bg-green-500 border-2 border-green-600"
+const disabledColors = "bg-gray-300 border-2 border-gray-400"
+
+
 $(document).ready(function () {
     const categoriesContainer = $("#categoriesContainer");
     const btnCreateCategory = $("#btn-create-category");
@@ -12,6 +27,14 @@ $(document).ready(function () {
     };
     let categoriesData = [];
     function loadCategories() {
+        function copyText() {
+            const text = document.getElementById("copyText").innerText;
+            navigator.clipboard.writeText(text)
+                .then(() => alert("Copiado!"))
+                .catch(() => alert("Erro ao copiar"));
+        }
+
+
         $.ajax({
             url: getCategoriesURL,
             method: "GET",
@@ -24,12 +47,12 @@ $(document).ready(function () {
                         categoriesData = res.data;
                         const categoryCard = $(`
                             <div
-                                class="bg-gradient-to-b from-white to-gray-50 rounded-2xl h-auto w-full p-6
+                                class="bg-gradient-to-b from-white to-gray-50 rounded-2xl h-auto w-full p-6 border-4 border-gray-100
                                 flex flex-col justify-between transform transition-all duration-300 border border-gray-100"
                             >
                                 <div>
-                                    <h3 class="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 
-                                    bg-clip-text text-transparent mb-2">
+                                    <h3 class="text-3xl font-[#111111] font-semibold mb-5
+                                     mb-2">
                                         ${category.name}
                                     </h3>
                                     <!--
@@ -38,7 +61,7 @@ $(document).ready(function () {
                                     </p>
                                     -->
                                 </div>
-
+                            
                                 <div class="flex justify-start gap-2 pb-3">
                                     <button
                                         id="btn-edit-category"
@@ -61,7 +84,7 @@ $(document).ready(function () {
                                         Excluir categoria
                                     </button>
                                 </div>
-
+                                <div class="w-full bg-gray-200 h-[3px] mt-1 mb-4 rounded-full"></div>
                                 <div class="relative mb-5">
                                     <button
                                         class="w-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 
@@ -89,40 +112,85 @@ $(document).ready(function () {
 
                                     <div
                                         id="dropdown-${category.id}"
-                                        class="hidden bg-gray-50 mt-3 rounded-xl shadow-inner p-4 space-y-3 
-                                        border border-gray-200 transition-all duration-300"
+                                        class="hidden bg-gray-50 mt-3 rounded-xl  p-4 space-y-3 
+                                        border-2 border-gray-200 transition-all duration-300"
                                     >
                                         <section class="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                                             ${(category.products || [])
                                                 .map(
-                                                    product => `
-                                                        <div class="flex justify-between h-52 items-center bg-white rounded-lg px-4 
-                                                        py-3 shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100">
-
-                                                            <div class="w-1/2 rounded-2xl h-full bg-green-100 overflow-hidden flex items-center justify-center">
-                                                                <img src="${product.image_url || ''}" alt="${product.name}" class="object-cover h-full w-full rounded-2xl">
+                                                    product => {
+                                                        const isActive = product.activated
+                                                        console.log(`
+                                                            ProductID: ${product.id},
+                                                            Activated: ${product.activated}
+                                                        `)
+                                                        
+                                                        
+                                                        const toggleBgClass = isActive ? `${activatedColors}` : `${disabledColors}`;
+                                                        const toggleTranslateClass = isActive ? "translate-x-5" : "translate-x-0";
+                                                        const ariaChecked = isActive ? "true" : "false";
+                                                        
+                                                        return `
+                                                        <div class="flex justify-center gap-1 h-[250px] items-center bg-white rounded-lg px-4 
+                                                        py-3 shadow-sm hover:shadow-md transition-all duration-200 border-2 border-gray-200 flex flex-col">
+                                                            <div class="h-[35px] w-full flex justify-between items-center">
+                                                                <p class="flex justify-center items-center gap-1">
+                                                                  
+                                                                        <img
+                                                                            src="${copyIdIcon}"
+                                                                            class="w-5 h-5 cursor-pointer"
+                                                                            alt="Copy ID"
+                                                                            title="Copiar ID"
+                                                                         onclick="copyProductId('${product.id}')"
+                                                                         >
+                                                               
+                                                                      <span
+                                                                          class="cursor-pointer text-[14px] font-semibold"
+                                                                          onclick="copyProductId('${product.id}')"
+                                                                            title="${product.id}"
+                                                                      >
+                                                                         ${product.id.length > 8 ? product.id.slice(0, 12) + " ..." : product.id}
+                                                                        </span>
+                                                                    </p>
+                                                                <button
+                                                                        data-id="${product.id}"
+                                                                        type="button"
+                                                                        class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-300 transition-colors focus:outline-none productToggleStatus ${toggleBgClass}"
+                                                                        role="switch"
+                                                                        aria-checked="${ariaChecked}"
+                                                                    >
+                                                                        <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${toggleTranslateClass}"></span>
+                                                                        <span id="menuStatusText" class="text-red-600 font-medium">
+                                                                </button>
                                                             </div>
-
-                                                            <div class="w-1/2 flex flex-col h-full w-full p-2 justify-between">
-                                                                <div>
+                                                            <div class="w-full bg-gray-200 h-[2px] mt-[2px] mb-[3px] rounded-full"></div>
+                                                            <div class="w-full h-[60%] flex justify-between">
+                                                                <div class="w-[50%] rounded-2xl h-full bg-green-100 overflow-hidden flex items-center justify-center">
+                                                                    <img src="${product.image_url || ''}" alt="${product.name}" class="object-cover h-full w-full rounded-2xl">
+                                                                </div>
+                                                                <div class="w-full p-2">
                                                                     <span class="text-gray-800 font-medium text-lg block">${product.name}</span>
                                                                     <span class="text-sm text-gray-500 block">R$ ${product.price ? product.price.toFixed(2) : "0.00"}</span>
-                                                                    <span class="text-sm text-gray-500 block">${product.description}</span>
+                                                                    <span 
+                                                                    class="text-sm text-gray-500 w-[240px] break-words block"
+                                                                    title="${product.description}"
+                                                                    >${product.description.length > 65 ? product.description.slice(0, 65) + " ..." : product.description}</span>
                                                                 </div>
-
-                                                                <div class="flex justify-end gap-2 mt-3">
-                                                                    <button id="btn-edit-product" data-id="${product.id}"
-                                                                        class="bg-blue-500 hover:bg-blue-600 text-white text-sm px-3 py-1 rounded-md transition-all">
+                                                            </div>
+                                                            <div class="w-full bg-gray-200 h-[2px] mt-1 rounded-full"></div>
+                                                            <div class="flex justify-end gap-2 mt-1 w-full h-[50px]">
+                                                                <button id="btn-edit-product" data-id="${product.id}"
+                                                                        class="bg-gray-200 hover:bg-gray-300 font-semibold text-gray-700 px-3 py-1 rounded-xl transition-colors w-1/2 h-full">
                                                                         Alterar
-                                                                    </button>
-                                                                    <button id="btn-delete-product" data-id="${product.id}"
-                                                                        class="bg-red-500 hover:bg-red-600 text-white text-sm px-3 py-1 rounded-md transition-all">
+                                                                </button>
+                                                                <button id="btn-delete-product" data-id="${product.id}"
+                                                                        class="bg-[#111111] hover:bg-[#050505] text-white transition-colors font-semibold px-3 py-1 rounded-xl transition-all w-1/2">
                                                                         Excluir
-                                                                    </button>
-                                                                </div>
+                                                                </button>
                                                             </div>
                                                         </div>
                                                     `
+                                                    }
                                                 )
                                                 .join("")}
                                         </section>
@@ -206,6 +274,7 @@ $(document).ready(function () {
     });
 
     const modalAddProduct = $("#modalAddProduct");
+
     categoriesContainer.on("click", "#btn-add-product", function () {
         const categoryId = $(this).data("id");
         modalAddProduct.removeClass("hidden");
@@ -247,7 +316,6 @@ $(document).ready(function () {
         const modalConfirmOperationDeleteProduct = $("#modalConfirmProduct")
         const btnConfirmDeleteProduct = $("#btn-confirm-product-delete")
         modalConfirmOperationDeleteProduct.removeClass("hidden")
-
 
         btnConfirmDeleteProduct.off("click").on("click", () => {
             console.log(`Deletando produto com ID: ${productId}`);
@@ -308,6 +376,35 @@ $(document).ready(function () {
         modalEditProduct.removeClass("hidden");
         $("#editProductName").focus();
     });
+
+    categoriesContainer.on("click", ".productToggleStatus", function () {
+    const $button = $(this);
+
+    const isActive = $button.attr("aria-checked") === "true";
+    const productId = $button.data("id");
+
+    $.ajax({
+        method: "PATCH",
+        url: `/api/products/${productId}/status`,
+        success: function () {
+
+            const newState = !isActive;
+            $button.attr("aria-checked", newState.toString());
+
+            $button
+              .removeClass(`${activatedColors} ${disabledColors}`)
+              .addClass(newState ? activatedColors : disabledColors);
+
+            $button.find("span")
+              .removeClass("translate-x-5 translate-x-0")
+              .addClass(newState ? "translate-x-5" : "translate-x-0");
+        },
+        error: function (xhr) {
+            console.error(xhr);
+        }
+    });
+});
+
 
     $("#btnConfirmEditCategory").on("click", function (event) {
         event.preventDefault();

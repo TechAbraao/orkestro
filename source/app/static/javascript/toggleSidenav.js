@@ -3,9 +3,19 @@ const toggleBtn = document.getElementById("toggle-btn-sidenav");
 const sidebarTexts = document.querySelectorAll(".sidebar-text");
 const sidebarTitle = document.getElementById("sidebar-title");
 const toggleBtnIcon = document.getElementById('toggle-btn-sidenav-icon');
+const containerPhoto = $(".container-account-photo")
+const containerTextCount = $(".container-text-count-orders-sidenav")
 
 function toggleSidebar(expand) {
     const isExpanded = expand ?? !sidebar.classList.contains("w-64");
+
+    if (!isExpanded) {
+        containerPhoto.hide();
+        containerTextCount.hide();
+    } else {
+        containerPhoto.show();
+        containerTextCount.show();
+    }
 
     sidebar.classList.toggle("w-64", isExpanded);
     sidebar.classList.toggle("w-16", !isExpanded);
@@ -47,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     statisticsBtn.addEventListener("click", (e) => {
         e.preventDefault();
+
         handleMenuClick(statisticsSubmenu, statisticsArrow);
     });
 });

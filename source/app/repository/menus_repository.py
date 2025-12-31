@@ -17,14 +17,22 @@ class MenusRepository:
             .query(MenusEntity)
             # I was supposed to ignore the products!
             .options(raiseload(MenusEntity.products))
-            .filter(MenusEntity.slug == slug)
+            .filter(
+                MenusEntity.slug == slug,
+            )
             .first()
         )
-
         if not menu:
             return False
-
         return menu
+
+    def get_all_slugs(self) -> list[str]:
+        result = (
+            self.session
+            .query(MenusEntity.slug)
+            .all()
+        )
+        return [row[0] for row in result]
 
     @transactional
     def save(self, menu: MenusEntity) -> None:

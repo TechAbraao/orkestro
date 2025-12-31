@@ -3,6 +3,7 @@ from source.app.repository.menus_repository import MenusRepository
 from source.app.entities.menus_entity import MenusEntity
 from source.app.utils.decorators.database import database_connection
 from uuid import uuid4
+import os
 from source.app.exceptions.menu_exceptions import *
 from datetime import datetime
 from zoneinfo import ZoneInfo
@@ -13,6 +14,7 @@ from source.app.repository.redis_repository import RedisRepository
 from source.app.utils.cache_keys import get_cache_key_by_slug
 
 logger = get_logger(__name__)
+dir_name = os.path.basename(__file__)
 
 class MenuServices:
     def __init__(self):
@@ -150,6 +152,12 @@ class MenuServices:
     def get_menu_by_slug(self, slug: str):
         EXPIRE: int = (10 * 60)
 
+        menu = self.menu_repository.get_by_slug(slug)
+        if not menu:
+            logger.warning(f"Menu com Slug {slug} não encontrado.")
+            raise MenuNotFoundException("Menu not found.")
+
+
         cache_key = get_cache_key_by_slug(slug=slug, include_products=False, include_categories=True)
         logger.info(f"Chave de cacheamento criado, a chave é '{cache_key}'.")
 
@@ -158,12 +166,6 @@ class MenuServices:
             logger.info(f"Chave de Cache encontrada: {cache_key}.")
             logger.info(f"Sucesso do cache no método 'get_menu_by_slug'.")
             return cached_data
-
-
-        menu = self.menu_repository.get_by_slug(slug)
-        if not menu:
-            logger.warning(f"Menu com Slug {slug} não encontrado.")
-            raise MenuNotFoundException("Menu not found.")
 
         result = menu.serialize_client(include_categories=True, include_products=False)
         self.redis_repository.set(cache_key, result, expire=EXPIRE)
@@ -183,6 +185,7 @@ class MenuServices:
     @database_connection
     def get_menu_by_id(self, menu_id):
         menu = self.menu_repository.get(menu_id)
+        logger.info(f"[{dir_name}] | Menu encontrado: '{menu}'.")
         return menu.serialize
 
     @database_connection
@@ -237,3 +240,7 @@ class MenuServices:
         logger.info(f"Menu encontrado. ID: '{menu.id}' para o store_id '{store_id}'")
 
         return str(menu.id)
+
+    @database_connection
+    def get_all_menu_slugs(self):
+        return self.menu_repository.get_all_slugs()

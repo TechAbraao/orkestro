@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify, g
 from source.app.utils.responses import Response
 from source.app.schemas import menu_schema, uuid_schema, opening_hours_schemas
-from source.app.services import (menu_services, opening_hours_services)
+from source.app.services import (menu_services, opening_hours_services, categories_services)
 from source.app.settings.logging_settings import get_logger
 from source.app.utils.decorators.authorizations import authorization_required
 from werkzeug.exceptions import *
@@ -117,12 +117,8 @@ def get_status_menu(menu_id: str):
     store_id = g.jwt_claims.get("sub")
     logger.info(f"GET /menus/{menu_id}/status - Obtendo estado atual do cardápio (ativado/desativado).")
 
-    # logger.info(f"Verificando se o menu_id = '{menu_id}' existe no store_id = '{store_id}'.")
-    # menu_exists_in_store = menu_services.exists_menu_by_store_and_id(menu_id=menu_id, store_id=store_id)
-
     menu = menu_services.get_menu_by_id(menu_id=menu_id)
     logger.info(f"menu_id = {menu_id} encontrado: {menu}")
-
 
     return Response.success(
         message="Status atual do cardápio retornado.",
@@ -202,6 +198,7 @@ def delete_opening_hours(menu_id):
 @api.route("/stores/<string:slug>", methods=["GET"])
 def render_menu_with_slug(slug: str):
     menu = menu_services.get_menu_by_slug(slug)
+
     logger.info(f"Status do menu: {menu.get("activated")}")
 
     return Response.success(

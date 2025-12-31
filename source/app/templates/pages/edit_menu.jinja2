@@ -65,6 +65,7 @@
     </section>
     <script>
         const menuId = "{{ strategy.get('profile')['menu_id'] }}"
+        const copyIdIcon = "{{ url_for('static', filename='icons/copy-alt-1.png') }}"
         const getCategoriesURL = `/api/menus/${menuId}/categories`
     </script>
     <script src="{{ url_for('static', filename='javascript/categoryOperations.js') }}" defer></script>

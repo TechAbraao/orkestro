@@ -38,7 +38,8 @@ class ProductsServices:
             description=product_body.get("description"),
             price=product_body.get("price"),
             category_id=category_id,
-            image_url=image_url
+            image_url=image_url,
+            activated=True
         )
 
         saved_product = self.products_repository.create(
@@ -69,9 +70,6 @@ class ProductsServices:
 
     @database_connection
     def find_all_by_category_id(self, category_id):
-        """
-
-        """
         products = self.products_repository.find_by_category_id(category_id)
 
         if not products:
@@ -97,6 +95,10 @@ class ProductsServices:
             raise ProductNotFoundException("Product not found.")
 
         return product.serialize
+
+    @database_connection
+    def update_by_id(self, product_id: str) -> bool:
+        return self.products_repository.update_status_by_id(product_id)
 
     @database_connection
     def delete(self, product_id: str):

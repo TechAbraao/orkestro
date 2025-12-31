@@ -1,16 +1,30 @@
-from flask import Blueprint, render_template, request, redirect, url_for, g, session
+from flask import render_template, url_for, g, session, abort
+from source.app.exceptions.menu_exceptions import MenuNotFoundException
+from source.app.utils.fallbacks import find_similar_menu_slug
 from source.app.services import menu_services, categories_services, stores_services
 from source.app.settings.logging_settings import get_logger
 from source.app.blueprints.routes import vws
+import os
 
 logger = get_logger()
+dir_name = os.path.basename(__file__)
 
 """ 1. Esta parte do código é responsável por renderizar todos os cardápios disponíveis na interface. """
 @vws.get("/menus/<string:slug>")
 def view_menu_by_slug(slug: str):
+    logger.info(f"[{dir_name}] Buscando menu pelo slug: {slug}")
 
-    logger.info(f"Buscando menu através do slug '{slug}'")
-    menu_by_slug = menu_services.get_menu_by_slug(slug)
+    try:
+        menu_by_slug = menu_services.get_menu_by_slug(slug)
+    except MenuNotFoundException as e:
+        all_slugs = menu_services.get_all_menu_slugs()
+        logger.info(f"[{dir_name}] | Todos os slugs encontrados: {all_slugs}")
+        suggestion = find_similar_menu_slug(
+            slug,
+            all_slugs
+        )
+        logger.info(f"[{dir_name}] | Menu não encontrado. Sugestão gerada: '{suggestion}'")
+        return render_template("/pages/errors/menu_not_found.jinja2", suggestion=suggestion), 404
 
     menu_id = menu_by_slug["id"]
     verify_category = categories_services.get_all_categories_by_menu(menu_id)
@@ -19,8 +33,6 @@ def view_menu_by_slug(slug: str):
         hasCategory = True
     else:
         hasCategory = False
-
-    logger.info(f"Menu encontrado: {menu_by_slug}")
 
     rendering_strategy = {
         "menu_slug": slug,
