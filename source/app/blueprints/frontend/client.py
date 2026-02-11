@@ -24,10 +24,11 @@ def view_menu_by_slug(slug: str):
             all_slugs
         )
         logger.info(f"[{dir_name}] | Menu não encontrado. Sugestão gerada: '{suggestion}'")
-        return render_template("/pages/errors/menu_not_found.jinja2", suggestion=suggestion), 404
+        return render_template("errors/menu_not_found.jinja2", suggestion=suggestion), 404
 
     menu_id = menu_by_slug["id"]
     verify_category = categories_services.get_all_categories_by_menu(menu_id)
+
     hasCategory = False
     if verify_category:
         hasCategory = True

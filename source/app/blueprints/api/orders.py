@@ -1,14 +1,10 @@
-from source.app.schemas import uuid_schema
 from source.app.extesions.socket_io import socketio
 from source.app.settings.logging_settings import get_logger
 from flask import Blueprint, request, g
 from source.app.utils.responses import Response
-from source.app.utils.decorators.authorizations import authorization_required
-from source.app.exceptions.menu_exceptions import *
 from source.app.services import menu_services, products_services, categories_services, customers_services, orders_services
 from source.app.schemas import orders_schemas, uuid_schema
 from source.app.blueprints.api.orders_events import broadcast_order_update
-from source.app.repository.orders_products_repository import OrdersProductsRepository
 from source.app.blueprints.routes import api
 import os
 

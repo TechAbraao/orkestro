@@ -13,39 +13,39 @@ PROJECT_NAME := pizza-management-system
 # Docker Compose Commands
 # ============================
 up:
-	@echo "🚀 Starting containers..."
+	@echo "Starting containers..."
 	docker compose -p $(PROJECT_NAME) --env-file $(ENV_FILE) -f $(COMPOSE_FILE) up -d
 
 down:
-	@echo "🛑 Stopping and removing containers..."
+	@echo "Stopping and removing containers..."
 	docker compose -p $(PROJECT_NAME) --env-file $(ENV_FILE) -f $(COMPOSE_FILE) down
 
 stop:
-	@echo "🛑 Stopping containers (without removing)..."
+	@echo "Stopping containers (without removing)..."
 	docker compose -p $(PROJECT_NAME) --env-file $(ENV_FILE) -f $(COMPOSE_FILE) stop
 
 start:
-	@echo "🚀 Starting stopped containers..."
+	@echo "Starting stopped containers..."
 	docker compose -p $(PROJECT_NAME) --env-file $(ENV_FILE) -f $(COMPOSE_FILE) start
 
 restart: down up
 
 logs:
-	@echo "📜 Showing service logs..."
+	@echo "Showing service logs..."
 	docker compose -p $(PROJECT_NAME) --env-file $(ENV_FILE) -f $(COMPOSE_FILE) logs -f
 
 ps:
 	docker compose -p $(PROJECT_NAME) --env-file $(ENV_FILE) -f $(COMPOSE_FILE) ps
 
 build:
-	@echo "🏗️ Building images..."
+	@echo "Building images..."
 	docker compose -p $(PROJECT_NAME) --env-file $(ENV_FILE) -f $(COMPOSE_FILE) build
 
 # ============================
 # Cleanup
 # ============================
 clean:
-	@echo "🧹 Cleaning containers, volumes, and orphan images..."
+	@echo "Cleaning containers, volumes, and orphan images..."
 	docker compose -p $(PROJECT_NAME) --env-file $(ENV_FILE) -f $(COMPOSE_FILE) down -v --remove-orphans
 	docker system prune -f
 

@@ -17,6 +17,6 @@ from source.app.blueprints.api.authorizations import *
 
 from source.app.blueprints.frontend.dashboard import *
 from source.app.blueprints.frontend.integrations import *
-from source.app.blueprints.frontend.statistics import *
+from source.app.blueprints.frontend.historic import *
 from source.app.blueprints.frontend.client import *
 from source.app.blueprints.frontend.home import *

@@ -17,8 +17,6 @@ $(document).ready(function () {
             let categories = res.data.categories;
             let menuStatus = res.data.activated
             let menuSlug = res.data.slug
-            console.log(`Status do menu: ${menuStatus}`)
-            console.log(`Slug: ${menuSlug}`)
 
             let statusText = "";
             if (menuStatus === false) {

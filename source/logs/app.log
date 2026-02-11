@@ -1,0 +1,1127 @@
+2026-02-10 20:19:55,901 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 20:20:03,893 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-10 20:20:03,900 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 20:20:03,900 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 20:20:03,900 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,900 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,901 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 20:20:03,901 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 20:20:03,904 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,904 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,909 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 20:20:03,893 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-10 20:20:03,909 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 20:20:03,909 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 20:20:03,909 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 20:20:03,910 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,910 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,910 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,911 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,910 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,911 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,912 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 20:20:03,912 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 20:20:03,922 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-10
+2026-02-10 20:20:03,927 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImMxYmRlMjdhLWVjODItNGYxYy1hNDIwLTdjZWRmNDU2M2ExNSIsIm1lbnVfaWQiOiJkOGFjMzFlOS04NmQzLTQ2YmQtOTA2Zi1mM2YxNmUwMTQ2N2MiLCJyb2xlIjoiQ09NTU9OIiwiZXhwIjoxNzcwNzg2Njc5fQ.Giy3t4b8nDVnOz-I_mgMMGKSDu2VVDgRc-HPhoLGIQw'
+2026-02-10 20:20:03,930 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,922 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-10
+2026-02-10 20:20:03,932 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,932 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-10 20:20:03,932 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,927 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImMxYmRlMjdhLWVjODItNGYxYy1hNDIwLTdjZWRmNDU2M2ExNSIsIm1lbnVfaWQiOiJkOGFjMzFlOS04NmQzLTQ2YmQtOTA2Zi1mM2YxNmUwMTQ2N2MiLCJyb2xlIjoiQ09NTU9OIiwiZXhwIjoxNzcwNzg2Njc5fQ.Giy3t4b8nDVnOz-I_mgMMGKSDu2VVDgRc-HPhoLGIQw'
+2026-02-10 20:20:03,933 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'c1bde27a-ec82-4f1c-a420-7cedf4563a15', 'menu_id': 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', 'role': 'COMMON', 'exp': 1770786679}'
+2026-02-10 20:20:03,930 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,933 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 20:20:03,932 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-10 20:20:03,932 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,932 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 20:20:03,934 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-10 20:20:03,933 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'c1bde27a-ec82-4f1c-a420-7cedf4563a15', 'menu_id': 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', 'role': 'COMMON', 'exp': 1770786679}'
+2026-02-10 20:20:03,933 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 20:20:03,934 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 20:20:03,934 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-10 20:20:03,934 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 20:20:03,935 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 20:20:03,935 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 20:20:03,936 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-10 23:20:03.936902'
+2026-02-10 20:20:03,936 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-10 23:20:03.936902'
+2026-02-10 20:20:03,950 - INFO - source.app.repository.orders_repository - [orders_repository.py] Através do banco de dados, obtém-se: []
+2026-02-10 20:20:03,950 - INFO - source.app.repository.orders_repository - [orders_repository.py] Através do banco de dados, obtém-se: []
+2026-02-10 20:20:03,955 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-09 23:20:03.936902'
+2026-02-10 20:20:03,957 - INFO - source.app.services.orders_services - [orders_services.py] Pedidos no período (segunda-feira até domingo): []
+2026-02-10 20:20:03,955 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-09 23:20:03.936902'
+2026-02-10 20:20:03,958 - INFO - source.app.blueprints.api.analysis - Através do 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', obtém-se os seguintes status: Pedidos Cancelados: '0' - Pedidos Completos: '0'
+2026-02-10 20:20:03,957 - INFO - source.app.services.orders_services - [orders_services.py] Pedidos no período (segunda-feira até domingo): []
+2026-02-10 20:20:03,961 - INFO - source.app.blueprints.api.analysis - [analysis.py] Valores dos pedidos realizados na semana: [0, 0, 0, 0, 0, 0, 0]
+2026-02-10 20:20:03,962 - INFO - source.app.blueprints.api.analysis - Através do 'menu_id', a soma de TODOS os pedidos (nas últimas 24h) resultou em: R$ '0'
+2026-02-10 20:20:03,958 - INFO - source.app.blueprints.api.analysis - Através do 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', obtém-se os seguintes status: Pedidos Cancelados: '0' - Pedidos Completos: '0'
+2026-02-10 20:20:03,961 - INFO - source.app.blueprints.api.analysis - [analysis.py] Valores dos pedidos realizados na semana: [0, 0, 0, 0, 0, 0, 0]
+2026-02-10 20:20:03,962 - INFO - source.app.blueprints.api.analysis - Através do 'menu_id', a soma de TODOS os pedidos (nas últimas 24h) resultou em: R$ '0'
+2026-02-10 20:20:03,962 - INFO - source.app.blueprints.api.analysis - [analysis.py] Valores totais dos pedidos realizados na semana: [0, 0, 0, 0, 0, 0, 0]
+2026-02-10 20:20:03,962 - INFO - source.app.blueprints.api.analysis - [analysis.py] Valores totais dos pedidos realizados na semana: [0, 0, 0, 0, 0, 0, 0]
+2026-02-10 20:39:40,813 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 20:44:21,031 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 20:44:40,976 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 20:44:49,181 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 20:44:49,181 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 20:44:49,181 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 20:44:49,181 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 20:44:49,270 - WARNING - source.app.services.authorizations_services - [authorizations_services.py] Nenhum e-mail: 'admin@admin.com' encontrado.
+2026-02-10 20:44:49,270 - WARNING - source.app.services.authorizations_services - [authorizations_services.py] Nenhum e-mail: 'admin@admin.com' encontrado.
+2026-02-10 20:44:49,271 - WARNING - source.app.handlers.handlers_exceptions - Store not found: Comércio não encontrado.
+2026-02-10 20:44:49,271 - WARNING - source.app.handlers.handlers_exceptions - Store not found: Comércio não encontrado.
+2026-02-10 20:44:56,874 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 20:44:56,874 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 20:44:56,878 - WARNING - source.app.services.authorizations_services - [authorizations_services.py] Nenhum e-mail: 'admin@admin.com' encontrado.
+2026-02-10 20:44:56,878 - WARNING - source.app.services.authorizations_services - [authorizations_services.py] Nenhum e-mail: 'admin@admin.com' encontrado.
+2026-02-10 20:44:56,878 - WARNING - source.app.handlers.handlers_exceptions - Store not found: Comércio não encontrado.
+2026-02-10 20:44:56,878 - WARNING - source.app.handlers.handlers_exceptions - Store not found: Comércio não encontrado.
+2026-02-10 20:52:16,116 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 20:52:26,818 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 20:52:26,818 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 20:52:26,818 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 20:52:26,818 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 20:52:26,874 - WARNING - source.app.services.authorizations_services - [authorizations_services.py] Nenhum e-mail: 'admin@admin.com' encontrado.
+2026-02-10 20:52:26,874 - WARNING - source.app.services.authorizations_services - [authorizations_services.py] Nenhum e-mail: 'admin@admin.com' encontrado.
+2026-02-10 20:52:26,874 - WARNING - source.app.handlers.handlers_exceptions - Store not found: Comércio não encontrado.
+2026-02-10 20:52:26,874 - WARNING - source.app.handlers.handlers_exceptions - Store not found: Comércio não encontrado.
+2026-02-10 20:54:37,167 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 20:54:43,217 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 20:54:43,217 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 20:54:43,218 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 20:54:43,218 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 20:54:43,238 - WARNING - source.app.services.authorizations_services - [authorizations_services.py] Nenhum e-mail: 'admin@admin.com' encontrado.
+2026-02-10 20:54:43,238 - WARNING - source.app.services.authorizations_services - [authorizations_services.py] Nenhum e-mail: 'admin@admin.com' encontrado.
+2026-02-10 20:54:43,238 - WARNING - source.app.handlers.handlers_exceptions - Store not found: Comércio não encontrado.
+2026-02-10 20:54:43,238 - WARNING - source.app.handlers.handlers_exceptions - Store not found: Comércio não encontrado.
+2026-02-10 20:55:21,080 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 20:55:22,940 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 20:55:22,940 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 20:55:22,940 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 20:55:22,940 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 20:55:22,962 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 'NoneType' object has no attribute 'serialize'
+2026-02-10 20:55:22,962 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 'NoneType' object has no attribute 'serialize'
+2026-02-10 20:57:01,403 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 20:57:02,775 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 20:57:02,775 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 20:57:02,775 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 20:57:02,775 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 20:57:12,023 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 'NoneType' object has no attribute 'serialize'
+2026-02-10 20:57:12,023 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 'NoneType' object has no attribute 'serialize'
+2026-02-10 23:21:29,579 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 23:21:31,848 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-02-10 23:21:31,848 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-02-10 23:21:31,855 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-02-10 23:21:31,855 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-02-10 23:33:33,109 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 23:33:47,262 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'pizzariaroyal@hotmail.com'.
+2026-02-10 23:33:47,262 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'pizzariaroyal@hotmail.com'.
+2026-02-10 23:33:47,630 - INFO - source.app.services.authorizations_services - [authorizations_services.py] O comércio têm 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'.
+2026-02-10 23:33:47,630 - INFO - source.app.services.authorizations_services - [authorizations_services.py] O comércio têm 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'.
+2026-02-10 23:33:47,631 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:47,631 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:47,642 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:47,642 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:47,642 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'.
+2026-02-10 23:33:47,642 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'.
+2026-02-10 23:33:47,642 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Token de acesso criado com sucesso: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImMxYmRlMjdhLWVjODItNGYxYy1hNDIwLTdjZWRmNDU2M2ExNSIsIm1lbnVfaWQiOiJkOGFjMzFlOS04NmQzLTQ2YmQtOTA2Zi1mM2YxNmUwMTQ2N2MiLCJyb2xlIjoiVVNFUiIsImV4cCI6MTc3MDc5ODgyN30.3qn5I4ave-vHddhqbHlkqAh_lfj3ErJmHGNbCtvQREk
+2026-02-10 23:33:47,642 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Token de acesso criado com sucesso: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImMxYmRlMjdhLWVjODItNGYxYy1hNDIwLTdjZWRmNDU2M2ExNSIsIm1lbnVfaWQiOiJkOGFjMzFlOS04NmQzLTQ2YmQtOTA2Zi1mM2YxNmUwMTQ2N2MiLCJyb2xlIjoiVVNFUiIsImV4cCI6MTc3MDc5ODgyN30.3qn5I4ave-vHddhqbHlkqAh_lfj3ErJmHGNbCtvQREk
+2026-02-10 23:33:49,054 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-10 23:33:49,054 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-10 23:33:49,060 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:49,060 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:49,064 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:49,064 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,067 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:49,064 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:49,068 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,064 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,067 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:49,074 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:49,074 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,068 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,074 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:49,076 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,082 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImMxYmRlMjdhLWVjODItNGYxYy1hNDIwLTdjZWRmNDU2M2ExNSIsIm1lbnVfaWQiOiJkOGFjMzFlOS04NmQzLTQ2YmQtOTA2Zi1mM2YxNmUwMTQ2N2MiLCJyb2xlIjoiVVNFUiIsImV4cCI6MTc3MDc5ODgyN30.3qn5I4ave-vHddhqbHlkqAh_lfj3ErJmHGNbCtvQREk'
+2026-02-10 23:33:49,074 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,086 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,076 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,088 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:49,082 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImMxYmRlMjdhLWVjODItNGYxYy1hNDIwLTdjZWRmNDU2M2ExNSIsIm1lbnVfaWQiOiJkOGFjMzFlOS04NmQzLTQ2YmQtOTA2Zi1mM2YxNmUwMTQ2N2MiLCJyb2xlIjoiVVNFUiIsImV4cCI6MTc3MDc5ODgyN30.3qn5I4ave-vHddhqbHlkqAh_lfj3ErJmHGNbCtvQREk'
+2026-02-10 23:33:49,089 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'c1bde27a-ec82-4f1c-a420-7cedf4563a15', 'menu_id': 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', 'role': 'USER', 'exp': 1770798827}'
+2026-02-10 23:33:49,086 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,089 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,088 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:49,089 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'c1bde27a-ec82-4f1c-a420-7cedf4563a15', 'menu_id': 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', 'role': 'USER', 'exp': 1770798827}'
+2026-02-10 23:33:49,089 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,100 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:49,100 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:49,106 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,106 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,106 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:49,106 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:49,106 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-10 23:33:49,106 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-10 23:33:49,106 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-10 23:33:49,106 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-10 23:33:49,106 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-10 23:33:49,106 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-10 23:33:49,107 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,107 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:49,107 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:49,107 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:49,107 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 02:33:49.107902'
+2026-02-10 23:33:49,107 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 02:33:49.107902'
+2026-02-10 23:33:49,107 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 02:33:49.107902'
+2026-02-10 23:33:49,107 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 02:33:49.107902'
+2026-02-10 23:33:49,120 - INFO - source.app.repository.orders_repository - [orders_repository.py] Através do banco de dados, obtém-se: []
+2026-02-10 23:33:49,123 - INFO - source.app.blueprints.api.analysis - Através do 'menu_id', a soma de TODOS os pedidos (nas últimas 24h) resultou em: R$ '0'
+2026-02-10 23:33:49,120 - INFO - source.app.repository.orders_repository - [orders_repository.py] Através do banco de dados, obtém-se: []
+2026-02-10 23:33:49,125 - INFO - source.app.services.orders_services - [orders_services.py] Pedidos no período (segunda-feira até domingo): []
+2026-02-10 23:33:49,124 - INFO - source.app.blueprints.api.analysis - Através do 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', obtém-se os seguintes status: Pedidos Cancelados: '0' - Pedidos Completos: '0'
+2026-02-10 23:33:49,123 - INFO - source.app.blueprints.api.analysis - Através do 'menu_id', a soma de TODOS os pedidos (nas últimas 24h) resultou em: R$ '0'
+2026-02-10 23:33:49,125 - INFO - source.app.services.orders_services - [orders_services.py] Pedidos no período (segunda-feira até domingo): []
+2026-02-10 23:33:49,126 - INFO - source.app.blueprints.api.analysis - [analysis.py] Valores dos pedidos realizados na semana: [0, 0, 0, 0, 0, 0, 0]
+2026-02-10 23:33:49,124 - INFO - source.app.blueprints.api.analysis - Através do 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', obtém-se os seguintes status: Pedidos Cancelados: '0' - Pedidos Completos: '0'
+2026-02-10 23:33:49,126 - INFO - source.app.blueprints.api.analysis - [analysis.py] Valores dos pedidos realizados na semana: [0, 0, 0, 0, 0, 0, 0]
+2026-02-10 23:33:49,127 - INFO - source.app.blueprints.api.analysis - [analysis.py] Valores totais dos pedidos realizados na semana: [0, 0, 0, 0, 0, 0, 0]
+2026-02-10 23:33:49,127 - INFO - source.app.blueprints.api.analysis - [analysis.py] Valores totais dos pedidos realizados na semana: [0, 0, 0, 0, 0, 0, 0]
+2026-02-10 23:33:51,155 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-10 23:33:51,155 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-10 23:33:51,162 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:51,162 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:51,162 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,162 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,164 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,164 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,171 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:51,171 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:51,173 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:51,173 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-10 23:33:51,173 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-10 23:33:51,173 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-10 23:33:51,173 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-10 23:33:51,173 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-10 23:33:51,173 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-10 23:33:51,173 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:51,175 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,175 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,180 - INFO - source.app.repository.orders_repository - [orders_repository.py] Através do banco de dados, obtém-se: []
+2026-02-10 23:33:51,180 - INFO - source.app.repository.orders_repository - [orders_repository.py] Através do banco de dados, obtém-se: []
+2026-02-10 23:33:51,182 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:51,182 - INFO - source.app.services.orders_services - [orders_services.py] Pedidos no período (segunda-feira até domingo): []
+2026-02-10 23:33:51,182 - INFO - source.app.services.orders_services - [orders_services.py] Pedidos no período (segunda-feira até domingo): []
+2026-02-10 23:33:51,182 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:51,182 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,182 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,191 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,191 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,202 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,182 - INFO - source.app.blueprints.api.analysis - [analysis.py] Valores dos pedidos realizados na semana: [0, 0, 0, 0, 0, 0, 0]
+2026-02-10 23:33:51,202 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,191 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:51,213 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImMxYmRlMjdhLWVjODItNGYxYy1hNDIwLTdjZWRmNDU2M2ExNSIsIm1lbnVfaWQiOiJkOGFjMzFlOS04NmQzLTQ2YmQtOTA2Zi1mM2YxNmUwMTQ2N2MiLCJyb2xlIjoiVVNFUiIsImV4cCI6MTc3MDc5ODgyN30.3qn5I4ave-vHddhqbHlkqAh_lfj3ErJmHGNbCtvQREk'
+2026-02-10 23:33:51,182 - INFO - source.app.blueprints.api.analysis - [analysis.py] Valores dos pedidos realizados na semana: [0, 0, 0, 0, 0, 0, 0]
+2026-02-10 23:33:51,211 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:51,213 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:51,213 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImMxYmRlMjdhLWVjODItNGYxYy1hNDIwLTdjZWRmNDU2M2ExNSIsIm1lbnVfaWQiOiJkOGFjMzFlOS04NmQzLTQ2YmQtOTA2Zi1mM2YxNmUwMTQ2N2MiLCJyb2xlIjoiVVNFUiIsImV4cCI6MTc3MDc5ODgyN30.3qn5I4ave-vHddhqbHlkqAh_lfj3ErJmHGNbCtvQREk'
+2026-02-10 23:33:51,215 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'c1bde27a-ec82-4f1c-a420-7cedf4563a15', 'menu_id': 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', 'role': 'USER', 'exp': 1770798827}'
+2026-02-10 23:33:51,215 - INFO - source.app.blueprints.api.analysis - [analysis.py] Valores totais dos pedidos realizados na semana: [0, 0, 0, 0, 0, 0, 0]
+2026-02-10 23:33:51,191 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:51,211 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = c1bde27a-ec82-4f1c-a420-7cedf4563a15
+2026-02-10 23:33:51,218 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,213 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:51,215 - INFO - source.app.blueprints.api.analysis - [analysis.py] Valores totais dos pedidos realizados na semana: [0, 0, 0, 0, 0, 0, 0]
+2026-02-10 23:33:51,215 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'c1bde27a-ec82-4f1c-a420-7cedf4563a15', 'menu_id': 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', 'role': 'USER', 'exp': 1770798827}'
+2026-02-10 23:33:51,218 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,225 - INFO - source.app.blueprints.api.analysis - Através do 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', obtém-se os seguintes status: Pedidos Cancelados: '0' - Pedidos Completos: '0'
+2026-02-10 23:33:51,225 - INFO - source.app.blueprints.api.analysis - Através do 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', obtém-se os seguintes status: Pedidos Cancelados: '0' - Pedidos Completos: '0'
+2026-02-10 23:33:51,230 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,230 - INFO - source.app.services.menu_services - Menu encontrado. ID: 'd8ac31e9-86d3-46bd-906f-f3f16e01467c' para o store_id 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:51,233 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:51,233 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = 'd8ac31e9-86d3-46bd-906f-f3f16e01467c'
+2026-02-10 23:33:51,234 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 02:33:51.234818'
+2026-02-10 23:33:51,234 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 02:33:51.234818'
+2026-02-10 23:33:51,235 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 02:33:51.234818'
+2026-02-10 23:33:51,235 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 02:33:51.234818'
+2026-02-10 23:33:51,240 - INFO - source.app.blueprints.api.analysis - Através do 'menu_id', a soma de TODOS os pedidos (nas últimas 24h) resultou em: R$ '0'
+2026-02-10 23:33:51,240 - INFO - source.app.blueprints.api.analysis - Através do 'menu_id', a soma de TODOS os pedidos (nas últimas 24h) resultou em: R$ '0'
+2026-02-10 23:33:52,134 - INFO - source.app.blueprints.frontend.dashboard - GET /menus - View Menu with store_id: 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:52,134 - INFO - source.app.blueprints.frontend.dashboard - GET /menus - View Menu with store_id: 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'
+2026-02-10 23:33:52,356 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-10 23:33:52,356 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-10 23:33:52,371 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImMxYmRlMjdhLWVjODItNGYxYy1hNDIwLTdjZWRmNDU2M2ExNSIsIm1lbnVfaWQiOiJkOGFjMzFlOS04NmQzLTQ2YmQtOTA2Zi1mM2YxNmUwMTQ2N2MiLCJyb2xlIjoiVVNFUiIsImV4cCI6MTc3MDc5ODgyN30.3qn5I4ave-vHddhqbHlkqAh_lfj3ErJmHGNbCtvQREk'
+2026-02-10 23:33:52,371 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImMxYmRlMjdhLWVjODItNGYxYy1hNDIwLTdjZWRmNDU2M2ExNSIsIm1lbnVfaWQiOiJkOGFjMzFlOS04NmQzLTQ2YmQtOTA2Zi1mM2YxNmUwMTQ2N2MiLCJyb2xlIjoiVVNFUiIsImV4cCI6MTc3MDc5ODgyN30.3qn5I4ave-vHddhqbHlkqAh_lfj3ErJmHGNbCtvQREk'
+2026-02-10 23:33:52,373 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'c1bde27a-ec82-4f1c-a420-7cedf4563a15', 'menu_id': 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', 'role': 'USER', 'exp': 1770798827}'
+2026-02-10 23:33:52,373 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'c1bde27a-ec82-4f1c-a420-7cedf4563a15', 'menu_id': 'd8ac31e9-86d3-46bd-906f-f3f16e01467c', 'role': 'USER', 'exp': 1770798827}'
+2026-02-10 23:33:52,381 - INFO - source.app.blueprints.api.menus - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2026-02-10 23:33:52,381 - INFO - source.app.blueprints.api.menus - GET /menus ou /menus?mine=true - Retornando todos os menus.
+2026-02-10 23:33:52,383 - INFO - source.app.blueprints.api.menus - Retornando os menus da loja autenticada. UUID da loja: 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'. 
+2026-02-10 23:33:52,383 - INFO - source.app.blueprints.api.menus - Retornando os menus da loja autenticada. UUID da loja: 'c1bde27a-ec82-4f1c-a420-7cedf4563a15'. 
+2026-02-10 23:38:17,351 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 23:38:22,818 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:38:22,818 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:38:22,818 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:38:22,818 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:38:22,834 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:38:22,834 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:38:22,834 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 23:38:22,834 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-10 23:38:22,835 - WARNING - source.app.services.authorizations_services - [authorizations_services.py] Nenhum e-mail: 'admin@admin.com' encontrado.
+2026-02-10 23:38:22,835 - WARNING - source.app.services.authorizations_services - [authorizations_services.py] Nenhum e-mail: 'admin@admin.com' encontrado.
+2026-02-10 23:38:22,835 - WARNING - source.app.handlers.handlers_exceptions - Store not found: Comércio não encontrado.
+2026-02-10 23:38:22,835 - WARNING - source.app.handlers.handlers_exceptions - Store not found: Comércio não encontrado.
+2026-02-10 23:49:38,969 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 23:49:46,700 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:49:46,700 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:49:46,700 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:49:46,700 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:49:46,718 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:49:46,718 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:49:46,718 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:49:46,718 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:49:46,718 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: StoresServices.create_new_account() missing 1 required positional argument: 'account_data'
+2026-02-10 23:49:46,718 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: StoresServices.create_new_account() missing 1 required positional argument: 'account_data'
+2026-02-10 23:49:58,238 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 23:51:28,333 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 23:51:33,330 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:51:33,330 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:51:33,331 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:51:33,331 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:51:33,352 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:51:33,352 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:51:33,352 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:51:33,352 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:51:33,353 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:51:33,353 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:51:55,253 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:51:55,253 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:51:55,253 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:51:55,253 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:51:55,255 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:51:55,255 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:51:55,255 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:51:55,255 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:51:55,255 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:51:55,255 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:52:50,410 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 23:52:51,927 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:52:51,927 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:52:51,927 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:52:51,927 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:52:51,946 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:52:51,946 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:52:51,946 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:52:51,946 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:52:51,946 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:52:51,946 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:53:25,339 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:53:25,339 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:53:25,340 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:53:25,340 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:53:25,342 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:53:25,342 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:53:25,342 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:53:25,342 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:53:25,342 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:53:25,342 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:55:29,854 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 23:55:30,910 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:55:30,910 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:55:30,911 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:55:30,911 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:55:30,941 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:55:30,941 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:55:30,941 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:55:30,941 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:55:30,941 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:55:30,941 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:57:21,896 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 23:57:23,594 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:57:23,594 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:57:23,594 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:57:23,594 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:57:23,620 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:57:23,620 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:57:23,620 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:57:23,620 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:57:23,620 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:57:23,620 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:58:17,043 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-10 23:58:31,165 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:58:31,165 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:58:40,263 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:58:40,263 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:58:42,471 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:58:42,471 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:58:44,728 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:58:44,728 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:58:50,994 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:58:50,994 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:59:11,626 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:59:11,626 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-10 23:59:15,658 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:59:15,658 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-10 23:59:17,578 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:59:17,578 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-10 23:59:19,393 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:59:19,393 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-10 23:59:33,804 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-10 23:59:33,804 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-11 00:00:07,146 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-11 00:00:07,450 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:00:07,450 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:00:07,450 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:00:07,450 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:00:07,471 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-11 00:00:07,471 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-11 00:00:07,471 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-11 00:00:07,471 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-11 00:00:10,127 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:00:10,127 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:00:10,127 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:00:10,127 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:00:10,136 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-11 00:00:10,136 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-11 00:00:10,136 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-11 00:00:10,136 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-11 00:00:11,811 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:00:11,811 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:00:11,811 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:00:11,811 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:00:11,819 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-11 00:00:11,819 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-11 00:00:11,819 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-11 00:00:11,819 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-11 00:01:15,678 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-11 00:01:15,678 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-11 00:01:15,682 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-11 00:01:15,682 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-11 00:01:15,684 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-11 00:01:15,684 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: E-mail, telefone e senha são campos obrigatórios.
+2026-02-11 00:01:18,489 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-11 00:01:45,573 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-11 00:01:49,129 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:01:49,129 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:01:49,129 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:01:49,129 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:01:49,150 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-11 00:01:49,150 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: None
+2026-02-11 00:01:49,150 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-11 00:01:49,150 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Nenhuma credencial do adm encontrada, ou seja, salvando credencial do administrador
+2026-02-11 00:01:49,151 - INFO - source.app.services.stores_services - Hashing the password
+2026-02-11 00:01:49,151 - INFO - source.app.services.stores_services - Hashing the password
+2026-02-11 00:01:49,375 - INFO - source.app.services.stores_services - Checking for conflicts with store name, phone number and email
+2026-02-11 00:01:49,375 - INFO - source.app.services.stores_services - Checking for conflicts with store name, phone number and email
+2026-02-11 00:01:49,375 - WARNING - source.app.services.stores_services - No logoo image URL provided, using default image URL.
+2026-02-11 00:01:49,375 - WARNING - source.app.services.stores_services - No logoo image URL provided, using default image URL.
+2026-02-11 00:01:49,375 - INFO - source.app.services.stores_services - Saving new store with email admin@admin.com
+2026-02-11 00:01:49,375 - INFO - source.app.services.stores_services - Saving new store with email admin@admin.com
+2026-02-11 00:01:49,388 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Usuário administrado criado com sucesso.
+2026-02-11 00:01:49,388 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Usuário administrado criado com sucesso.
+2026-02-11 00:01:49,388 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-11 00:01:49,388 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-11 00:01:49,613 - INFO - source.app.services.authorizations_services - [authorizations_services.py] O comércio têm 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'.
+2026-02-11 00:01:49,613 - INFO - source.app.services.authorizations_services - [authorizations_services.py] O comércio têm 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'.
+2026-02-11 00:01:49,613 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:49,613 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:49,615 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:49,615 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:49,615 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Através do 'store_id', encontrou o 'menu_id' = ''.
+2026-02-11 00:01:49,615 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Através do 'store_id', encontrou o 'menu_id' = ''.
+2026-02-11 00:01:49,615 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Token de acesso criado com sucesso: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDA1MDl9.9w1hrAui4t3mfoDruJ2awEOnMyMEVOj98wRheYSdD_E
+2026-02-11 00:01:49,615 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Token de acesso criado com sucesso: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDA1MDl9.9w1hrAui4t3mfoDruJ2awEOnMyMEVOj98wRheYSdD_E
+2026-02-11 00:01:51,009 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:01:51,016 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:01:51,016 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:01:51,009 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:01:51,026 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,012 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:01:51,026 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,012 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:01:51,025 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:01:51,027 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,025 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:01:51,025 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:01:51,028 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,027 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,025 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:01:51,029 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,029 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,036 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDA1MDl9.9w1hrAui4t3mfoDruJ2awEOnMyMEVOj98wRheYSdD_E'
+2026-02-11 00:01:51,028 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,029 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,039 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:01:51,029 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,052 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,036 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDA1MDl9.9w1hrAui4t3mfoDruJ2awEOnMyMEVOj98wRheYSdD_E'
+2026-02-11 00:01:51,053 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770800509}'
+2026-02-11 00:01:51,039 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:01:51,052 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,058 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:01:51,053 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770800509}'
+2026-02-11 00:01:51,058 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:01:51,058 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-11 00:01:51,058 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-11 00:01:51,058 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-11 00:01:51,058 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-11 00:01:51,058 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-11 00:01:51,058 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-11 00:01:51,072 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID
+                               ^
+
+[SQL: SELECT max(orders.order_number) AS max_1 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:01:51,072 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,072 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID
+                               ^
+
+[SQL: SELECT max(orders.order_number) AS max_1 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:01:51,073 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID AND orders.created_at >= '20...
+                               ^
+
+[SQL: SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.created_at >= %(created_at_1)s AND orders.created_at <= %(created_at_2)s]
+[parameters: {'menu_id_1': '', 'created_at_1': datetime.datetime(2026, 2, 9, 0, 0, tzinfo=datetime.timezone.utc), 'created_at_2': datetime.datetime(2026, 2, 15, 23, 59, 59, 999999, tzinfo=datetime.timezone.utc)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:01:51,072 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,074 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:01:51,073 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID AND orders.created_at >= '20...
+                               ^
+
+[SQL: SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.created_at >= %(created_at_1)s AND orders.created_at <= %(created_at_2)s]
+[parameters: {'menu_id_1': '', 'created_at_1': datetime.datetime(2026, 2, 9, 0, 0, tzinfo=datetime.timezone.utc), 'created_at_2': datetime.datetime(2026, 2, 15, 23, 59, 59, 999999, tzinfo=datetime.timezone.utc)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:01:51,075 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,074 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:01:51,075 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 03:01:51.075945'
+2026-02-11 00:01:51,075 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 03:01:51.075945'
+2026-02-11 00:01:51,076 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 03:01:51.075945'
+2026-02-11 00:01:51,075 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:01:51,077 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:01:51,076 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 03:01:51.075945'
+2026-02-11 00:01:51,077 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:01:51,093 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: ...10T03:01:51.075945'::timestamp AND orders.menu_id = ''::UUID
+                                                               ^
+
+[SQL: SELECT sum(orders.total_value) AS sum_1 
+FROM orders 
+WHERE orders.created_at >= %(created_at_1)s AND orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'created_at_1': datetime.datetime(2026, 2, 10, 3, 1, 51, 75945), 'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:01:51,093 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 4: WHERE orders.menu_id = ''::UUID AND orders.status = 'cancele...
+                               ^
+
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.status = %(status_1)s) AS anon_1]
+[parameters: {'menu_id_1': '', 'status_1': 'canceled'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:01:51,093 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: ...10T03:01:51.075945'::timestamp AND orders.menu_id = ''::UUID
+                                                               ^
+
+[SQL: SELECT sum(orders.total_value) AS sum_1 
+FROM orders 
+WHERE orders.created_at >= %(created_at_1)s AND orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'created_at_1': datetime.datetime(2026, 2, 10, 3, 1, 51, 75945), 'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:01:51,093 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 4: WHERE orders.menu_id = ''::UUID AND orders.status = 'cancele...
+                               ^
+
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.status = %(status_1)s) AS anon_1]
+[parameters: {'menu_id_1': '', 'status_1': 'canceled'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:07:47,429 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:07:47,429 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:07:47,430 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:07:47,430 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:07:47,432 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: <StoresEntity d592e9e9-f4b1-4fca-9f6a-943758d3b4d0>
+2026-02-11 00:07:47,432 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: <StoresEntity d592e9e9-f4b1-4fca-9f6a-943758d3b4d0>
+2026-02-11 00:07:47,432 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: cannot access local variable 'saved_admin' where it is not associated with a value
+2026-02-11 00:07:47,432 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: cannot access local variable 'saved_admin' where it is not associated with a value
+2026-02-11 00:11:02,123 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-11 00:11:03,298 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:11:03,298 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:11:03,298 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:11:03,298 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:11:03,310 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: <StoresEntity d592e9e9-f4b1-4fca-9f6a-943758d3b4d0>
+2026-02-11 00:11:03,310 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: <StoresEntity d592e9e9-f4b1-4fca-9f6a-943758d3b4d0>
+2026-02-11 00:11:03,310 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: cannot access local variable 'saved_admin' where it is not associated with a value
+2026-02-11 00:11:03,310 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: cannot access local variable 'saved_admin' where it is not associated with a value
+2026-02-11 00:11:08,105 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:11:08,105 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:11:08,105 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:11:08,105 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:11:08,107 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: <StoresEntity d592e9e9-f4b1-4fca-9f6a-943758d3b4d0>
+2026-02-11 00:11:08,107 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: <StoresEntity d592e9e9-f4b1-4fca-9f6a-943758d3b4d0>
+2026-02-11 00:11:08,107 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: cannot access local variable 'saved_admin' where it is not associated with a value
+2026-02-11 00:11:08,107 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: cannot access local variable 'saved_admin' where it is not associated with a value
+2026-02-11 00:11:58,234 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:11:58,234 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:11:58,235 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:11:58,235 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:11:58,237 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: <StoresEntity d592e9e9-f4b1-4fca-9f6a-943758d3b4d0>
+2026-02-11 00:11:58,237 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: <StoresEntity d592e9e9-f4b1-4fca-9f6a-943758d3b4d0>
+2026-02-11 00:11:58,237 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: cannot access local variable 'saved_admin' where it is not associated with a value
+2026-02-11 00:11:58,237 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: cannot access local variable 'saved_admin' where it is not associated with a value
+2026-02-11 00:12:00,248 - INFO - source.app - Inicializando o Servidor. Versão: 1.1.0
+2026-02-11 00:12:06,280 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:12:06,280 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:12:06,280 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:12:06,280 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:12:06,298 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: <StoresEntity d592e9e9-f4b1-4fca-9f6a-943758d3b4d0>
+2026-02-11 00:12:06,298 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: <StoresEntity d592e9e9-f4b1-4fca-9f6a-943758d3b4d0>
+2026-02-11 00:12:06,527 - INFO - source.app.services.authorizations_services - [authorizations_services.py] O comércio têm 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'.
+2026-02-11 00:12:06,527 - INFO - source.app.services.authorizations_services - [authorizations_services.py] O comércio têm 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'.
+2026-02-11 00:12:06,527 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:06,527 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:06,528 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:06,528 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:06,528 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Através do 'store_id', encontrou o 'menu_id' = ''.
+2026-02-11 00:12:06,528 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Através do 'store_id', encontrou o 'menu_id' = ''.
+2026-02-11 00:12:06,529 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Token de acesso criado com sucesso: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExMjZ9.IZhAcQzVQEPVOnmAUmYiRGYeqlAx7SOXIlVgQ-d_4fA
+2026-02-11 00:12:06,529 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Token de acesso criado com sucesso: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExMjZ9.IZhAcQzVQEPVOnmAUmYiRGYeqlAx7SOXIlVgQ-d_4fA
+2026-02-11 00:12:07,858 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:07,865 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:12:07,858 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:07,865 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,865 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:12:07,862 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:07,868 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:07,865 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,871 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:07,862 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:07,872 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,868 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:07,872 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,871 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:07,872 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,872 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,872 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,872 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,873 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,873 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,874 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:07,874 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:07,874 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-11 00:12:07,874 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-11 00:12:07,874 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-11 00:12:07,874 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-11 00:12:07,874 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-11 00:12:07,874 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-11 00:12:07,881 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID AND orders.created_at >= '20...
+                               ^
+
+[SQL: SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.created_at >= %(created_at_1)s AND orders.created_at <= %(created_at_2)s]
+[parameters: {'menu_id_1': '', 'created_at_1': datetime.datetime(2026, 2, 9, 0, 0, tzinfo=datetime.timezone.utc), 'created_at_2': datetime.datetime(2026, 2, 15, 23, 59, 59, 999999, tzinfo=datetime.timezone.utc)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:07,881 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID AND orders.created_at >= '20...
+                               ^
+
+[SQL: SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.created_at >= %(created_at_1)s AND orders.created_at <= %(created_at_2)s]
+[parameters: {'menu_id_1': '', 'created_at_1': datetime.datetime(2026, 2, 9, 0, 0, tzinfo=datetime.timezone.utc), 'created_at_2': datetime.datetime(2026, 2, 15, 23, 59, 59, 999999, tzinfo=datetime.timezone.utc)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:07,887 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExMjZ9.IZhAcQzVQEPVOnmAUmYiRGYeqlAx7SOXIlVgQ-d_4fA'
+2026-02-11 00:12:07,887 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExMjZ9.IZhAcQzVQEPVOnmAUmYiRGYeqlAx7SOXIlVgQ-d_4fA'
+2026-02-11 00:12:07,891 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770801126}'
+2026-02-11 00:12:07,891 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770801126}'
+2026-02-11 00:12:07,894 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,894 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,894 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:07,894 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:07,894 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,894 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,896 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID
+                               ^
+
+[SQL: SELECT max(orders.order_number) AS max_1 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:07,896 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:07,896 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:07,896 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID
+                               ^
+
+[SQL: SELECT max(orders.order_number) AS max_1 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:07,896 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,896 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 03:12:07.896765'
+2026-02-11 00:12:07,896 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 03:12:07.896765'
+2026-02-11 00:12:07,896 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:07,897 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 03:12:07.896765'
+2026-02-11 00:12:07,897 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 03:12:07.896765'
+2026-02-11 00:12:07,897 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:07,897 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:07,905 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: ...10T03:12:07.896765'::timestamp AND orders.menu_id = ''::UUID
+                                                               ^
+
+[SQL: SELECT sum(orders.total_value) AS sum_1 
+FROM orders 
+WHERE orders.created_at >= %(created_at_1)s AND orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'created_at_1': datetime.datetime(2026, 2, 10, 3, 12, 7, 896765), 'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:07,906 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 4: WHERE orders.menu_id = ''::UUID AND orders.status = 'cancele...
+                               ^
+
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.status = %(status_1)s) AS anon_1]
+[parameters: {'menu_id_1': '', 'status_1': 'canceled'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:07,905 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: ...10T03:12:07.896765'::timestamp AND orders.menu_id = ''::UUID
+                                                               ^
+
+[SQL: SELECT sum(orders.total_value) AS sum_1 
+FROM orders 
+WHERE orders.created_at >= %(created_at_1)s AND orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'created_at_1': datetime.datetime(2026, 2, 10, 3, 12, 7, 896765), 'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:07,906 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 4: WHERE orders.menu_id = ''::UUID AND orders.status = 'cancele...
+                               ^
+
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.status = %(status_1)s) AS anon_1]
+[parameters: {'menu_id_1': '', 'status_1': 'canceled'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:13,903 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:12:13,903 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:12:13,909 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExMjZ9.IZhAcQzVQEPVOnmAUmYiRGYeqlAx7SOXIlVgQ-d_4fA'
+2026-02-11 00:12:13,909 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExMjZ9.IZhAcQzVQEPVOnmAUmYiRGYeqlAx7SOXIlVgQ-d_4fA'
+2026-02-11 00:12:13,910 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770801126}'
+2026-02-11 00:12:13,910 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770801126}'
+2026-02-11 00:12:19,840 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:12:19,840 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:12:19,850 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExMjZ9.IZhAcQzVQEPVOnmAUmYiRGYeqlAx7SOXIlVgQ-d_4fA'
+2026-02-11 00:12:19,850 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExMjZ9.IZhAcQzVQEPVOnmAUmYiRGYeqlAx7SOXIlVgQ-d_4fA'
+2026-02-11 00:12:19,850 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770801126}'
+2026-02-11 00:12:19,850 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770801126}'
+2026-02-11 00:12:21,218 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:21,221 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:12:21,221 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:12:21,218 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:21,225 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:21,233 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,225 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:21,233 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,234 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,229 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:21,229 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:21,234 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,233 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:21,235 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,235 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,236 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,233 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:21,239 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,236 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,247 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:21,248 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExMjZ9.IZhAcQzVQEPVOnmAUmYiRGYeqlAx7SOXIlVgQ-d_4fA'
+2026-02-11 00:12:21,239 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,248 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:21,247 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:21,254 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID
+                               ^
+
+[SQL: SELECT max(orders.order_number) AS max_1 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:21,248 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:21,239 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,255 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 03:12:21.255242'
+2026-02-11 00:12:21,254 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID
+                               ^
+
+[SQL: SELECT max(orders.order_number) AS max_1 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:21,246 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,248 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExMjZ9.IZhAcQzVQEPVOnmAUmYiRGYeqlAx7SOXIlVgQ-d_4fA'
+2026-02-11 00:12:21,256 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770801126}'
+2026-02-11 00:12:21,239 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,255 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 03:12:21.255242'
+2026-02-11 00:12:21,259 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 03:12:21.255242'
+2026-02-11 00:12:21,260 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,246 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,260 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:21,256 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770801126}'
+2026-02-11 00:12:21,260 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:21,260 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:21,268 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:21,259 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 03:12:21.255242'
+2026-02-11 00:12:21,268 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:21,270 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 4: WHERE orders.menu_id = ''::UUID AND orders.status = 'cancele...
+                               ^
+
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.status = %(status_1)s) AS anon_1]
+[parameters: {'menu_id_1': '', 'status_1': 'canceled'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:21,271 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-11 00:12:21,270 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 4: WHERE orders.menu_id = ''::UUID AND orders.status = 'cancele...
+                               ^
+
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.status = %(status_1)s) AS anon_1]
+[parameters: {'menu_id_1': '', 'status_1': 'canceled'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:21,274 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: ...10T03:12:21.255242'::timestamp AND orders.menu_id = ''::UUID
+                                                               ^
+
+[SQL: SELECT sum(orders.total_value) AS sum_1 
+FROM orders 
+WHERE orders.created_at >= %(created_at_1)s AND orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'created_at_1': datetime.datetime(2026, 2, 10, 3, 12, 21, 255242), 'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:21,271 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-11 00:12:21,275 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-11 00:12:21,275 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-11 00:12:21,275 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-11 00:12:21,274 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: ...10T03:12:21.255242'::timestamp AND orders.menu_id = ''::UUID
+                                                               ^
+
+[SQL: SELECT sum(orders.total_value) AS sum_1 
+FROM orders 
+WHERE orders.created_at >= %(created_at_1)s AND orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'created_at_1': datetime.datetime(2026, 2, 10, 3, 12, 21, 255242), 'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:21,275 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-11 00:12:21,281 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID AND orders.created_at >= '20...
+                               ^
+
+[SQL: SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.created_at >= %(created_at_1)s AND orders.created_at <= %(created_at_2)s]
+[parameters: {'menu_id_1': '', 'created_at_1': datetime.datetime(2026, 2, 9, 0, 0, tzinfo=datetime.timezone.utc), 'created_at_2': datetime.datetime(2026, 2, 15, 23, 59, 59, 999999, tzinfo=datetime.timezone.utc)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:21,281 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID AND orders.created_at >= '20...
+                               ^
+
+[SQL: SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.created_at >= %(created_at_1)s AND orders.created_at <= %(created_at_2)s]
+[parameters: {'menu_id_1': '', 'created_at_1': datetime.datetime(2026, 2, 9, 0, 0, tzinfo=datetime.timezone.utc), 'created_at_2': datetime.datetime(2026, 2, 15, 23, 59, 59, 999999, tzinfo=datetime.timezone.utc)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:30,706 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-11 00:12:30,706 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Verificando e-mail já está cadastrado: 'admin@admin.com'.
+2026-02-11 00:12:30,936 - WARNING - source.app.services.authorizations_services - [authorizations_services.py] As senhas do 'admin@admin.com' não correspondem.
+2026-02-11 00:12:30,936 - WARNING - source.app.services.authorizations_services - [authorizations_services.py] As senhas do 'admin@admin.com' não correspondem.
+2026-02-11 00:12:30,936 - WARNING - source.app.handlers.handlers_exceptions - Invalid passwords: Erro ao autenticar comércio.
+2026-02-11 00:12:30,936 - WARNING - source.app.handlers.handlers_exceptions - Invalid passwords: Erro ao autenticar comércio.
+2026-02-11 00:12:38,042 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:12:38,042 - INFO - source.app.blueprints.api.authorizations - [authorizations.py] | Acessando através do administrador: True
+2026-02-11 00:12:38,042 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:12:38,042 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Credencial de administrador: email=admin@admin.com e password=admin314!
+2026-02-11 00:12:38,045 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: <StoresEntity d592e9e9-f4b1-4fca-9f6a-943758d3b4d0>
+2026-02-11 00:12:38,045 - INFO - source.app.services.authorizations_services - [authorizations_services.py] | Encontrou credencial de administrador: <StoresEntity d592e9e9-f4b1-4fca-9f6a-943758d3b4d0>
+2026-02-11 00:12:38,272 - INFO - source.app.services.authorizations_services - [authorizations_services.py] O comércio têm 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'.
+2026-02-11 00:12:38,272 - INFO - source.app.services.authorizations_services - [authorizations_services.py] O comércio têm 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'.
+2026-02-11 00:12:38,272 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:38,272 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:38,273 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:38,273 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:38,273 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Através do 'store_id', encontrou o 'menu_id' = ''.
+2026-02-11 00:12:38,273 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Através do 'store_id', encontrou o 'menu_id' = ''.
+2026-02-11 00:12:38,273 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Token de acesso criado com sucesso: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExNTh9.EoW0hIUdBHtJb9irZR1NnHgFD-QM13JW-7CCSPOL8WA
+2026-02-11 00:12:38,273 - INFO - source.app.services.authorizations_services - [authorizations_services.py] Token de acesso criado com sucesso: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExNTh9.EoW0hIUdBHtJb9irZR1NnHgFD-QM13JW-7CCSPOL8WA
+2026-02-11 00:12:39,641 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:12:39,641 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:12:39,648 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:39,648 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:39,648 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,648 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,652 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:39,652 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:39,655 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:39,656 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,657 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,655 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:39,661 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,661 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:39,656 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,657 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,661 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:39,661 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,668 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExNTh9.EoW0hIUdBHtJb9irZR1NnHgFD-QM13JW-7CCSPOL8WA'
+2026-02-11 00:12:39,661 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:39,669 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,669 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,661 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:39,668 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExNTh9.EoW0hIUdBHtJb9irZR1NnHgFD-QM13JW-7CCSPOL8WA'
+2026-02-11 00:12:39,677 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-11 00:12:39,678 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,678 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770801158}'
+2026-02-11 00:12:39,669 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,669 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,682 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:39,678 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,678 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770801158}'
+2026-02-11 00:12:39,682 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:39,677 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-11 00:12:39,684 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,684 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-11 00:12:39,682 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:39,682 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:39,690 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID
+                               ^
+
+[SQL: SELECT max(orders.order_number) AS max_1 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:39,684 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:39,693 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:39,684 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-11 00:12:39,694 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 4: WHERE orders.menu_id = ''::UUID AND orders.status = 'cancele...
+                               ^
+
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.status = %(status_1)s) AS anon_1]
+[parameters: {'menu_id_1': '', 'status_1': 'canceled'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:39,694 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-11 00:12:39,690 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID
+                               ^
+
+[SQL: SELECT max(orders.order_number) AS max_1 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:39,694 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-11 00:12:39,694 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 4: WHERE orders.menu_id = ''::UUID AND orders.status = 'cancele...
+                               ^
+
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.status = %(status_1)s) AS anon_1]
+[parameters: {'menu_id_1': '', 'status_1': 'canceled'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:39,701 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID AND orders.created_at >= '20...
+                               ^
+
+[SQL: SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.created_at >= %(created_at_1)s AND orders.created_at <= %(created_at_2)s]
+[parameters: {'menu_id_1': '', 'created_at_1': datetime.datetime(2026, 2, 9, 0, 0, tzinfo=datetime.timezone.utc), 'created_at_2': datetime.datetime(2026, 2, 15, 23, 59, 59, 999999, tzinfo=datetime.timezone.utc)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:39,693 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:39,701 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID AND orders.created_at >= '20...
+                               ^
+
+[SQL: SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.created_at >= %(created_at_1)s AND orders.created_at <= %(created_at_2)s]
+[parameters: {'menu_id_1': '', 'created_at_1': datetime.datetime(2026, 2, 9, 0, 0, tzinfo=datetime.timezone.utc), 'created_at_2': datetime.datetime(2026, 2, 15, 23, 59, 59, 999999, tzinfo=datetime.timezone.utc)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:39,704 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 03:12:39.703982'
+2026-02-11 00:12:39,704 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 03:12:39.703982'
+2026-02-11 00:12:39,707 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 03:12:39.703982'
+2026-02-11 00:12:39,707 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 03:12:39.703982'
+2026-02-11 00:12:39,710 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: ...10T03:12:39.703982'::timestamp AND orders.menu_id = ''::UUID
+                                                               ^
+
+[SQL: SELECT sum(orders.total_value) AS sum_1 
+FROM orders 
+WHERE orders.created_at >= %(created_at_1)s AND orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'created_at_1': datetime.datetime(2026, 2, 10, 3, 12, 39, 703982), 'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:39,710 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: ...10T03:12:39.703982'::timestamp AND orders.menu_id = ''::UUID
+                                                               ^
+
+[SQL: SELECT sum(orders.total_value) AS sum_1 
+FROM orders 
+WHERE orders.created_at >= %(created_at_1)s AND orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'created_at_1': datetime.datetime(2026, 2, 10, 3, 12, 39, 703982), 'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:41,999 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:12:41,999 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-02-11 00:12:42,005 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:42,005 - INFO - source.app.blueprints.api.analysis - [analysis.py] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:42,008 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:42,008 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,008 - INFO - source.app.blueprints.api.analysis - [Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:42,008 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,008 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,008 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,010 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,014 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:42,014 - INFO - source.app.blueprints.api.analysis - [Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:42,010 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,011 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,014 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:42,014 - INFO - source.app.blueprints.api.analysis - [analysis.py] Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:42,014 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-11 00:12:42,014 - INFO - source.app.services.orders_services - [orders_services.py] Data de hoje: 2026-02-11
+2026-02-11 00:12:42,014 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-11 00:12:42,014 - INFO - source.app.services.orders_services - [orders_services.py] Início da semana (segunda-feira): 2026-02-09 00:00:00+00:00
+2026-02-11 00:12:42,014 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-11 00:12:42,014 - INFO - source.app.services.orders_services - [orders_services.py] Último dia da semana (domingo): 2026-02-15 23:59:59.999999+00:00
+2026-02-11 00:12:42,011 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,020 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID AND orders.created_at >= '20...
+                               ^
+
+[SQL: SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.created_at >= %(created_at_1)s AND orders.created_at <= %(created_at_2)s]
+[parameters: {'menu_id_1': '', 'created_at_1': datetime.datetime(2026, 2, 9, 0, 0, tzinfo=datetime.timezone.utc), 'created_at_2': datetime.datetime(2026, 2, 15, 23, 59, 59, 999999, tzinfo=datetime.timezone.utc)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:42,014 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,021 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:42,022 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:42,014 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,026 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExNTh9.EoW0hIUdBHtJb9irZR1NnHgFD-QM13JW-7CCSPOL8WA'
+2026-02-11 00:12:42,020 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID AND orders.created_at >= '20...
+                               ^
+
+[SQL: SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.created_at >= %(created_at_1)s AND orders.created_at <= %(created_at_2)s]
+[parameters: {'menu_id_1': '', 'created_at_1': datetime.datetime(2026, 2, 9, 0, 0, tzinfo=datetime.timezone.utc), 'created_at_2': datetime.datetime(2026, 2, 15, 23, 59, 59, 999999, tzinfo=datetime.timezone.utc)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:42,021 - INFO - source.app.blueprints.api.analysis - [Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = d592e9e9-f4b1-4fca-9f6a-943758d3b4d0
+2026-02-11 00:12:42,028 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,022 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:42,028 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,026 - INFO - source.app.blueprints.api.auth.me_auth - Your about me token is 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJPcmtlc3RybyIsInN1YiI6ImQ1OTJlOWU5LWY0YjEtNGZjYS05ZjZhLTk0Mzc1OGQzYjRkMCIsIm1lbnVfaWQiOiIiLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NzA4MDExNTh9.EoW0hIUdBHtJb9irZR1NnHgFD-QM13JW-7CCSPOL8WA'
+2026-02-11 00:12:42,030 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770801158}'
+2026-02-11 00:12:42,028 - INFO - source.app.services.menu_services - Procurando 'menu_id' pelo 'store_id' = 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,030 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 4: WHERE orders.menu_id = ''::UUID AND orders.status = 'cancele...
+                               ^
+
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.status = %(status_1)s) AS anon_1]
+[parameters: {'menu_id_1': '', 'status_1': 'canceled'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:42,028 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,032 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:42,030 - INFO - source.app.blueprints.api.auth.me_auth - Decrypted token: '{'iss': 'Orkestro', 'sub': 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0', 'menu_id': '', 'role': 'ADMIN', 'exp': 1770801158}'
+2026-02-11 00:12:42,033 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,030 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 4: WHERE orders.menu_id = ''::UUID AND orders.status = 'cancele...
+                               ^
+
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT orders.id AS orders_id, orders.created_at AS orders_created_at, orders.total_value AS orders_total_value, orders.status AS orders_status, orders.user_id AS orders_user_id, orders.menu_id AS orders_menu_id, orders.name AS orders_name, orders.telephone AS orders_telephone, orders.order_number AS orders_order_number 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID AND orders.status = %(status_1)s) AS anon_1]
+[parameters: {'menu_id_1': '', 'status_1': 'canceled'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:42,032 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:42,039 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 03:12:42.039134'
+2026-02-11 00:12:42,033 - WARNING - source.app.services.menu_services - Nenhum menu encontrado para store_id 'd592e9e9-f4b1-4fca-9f6a-943758d3b4d0'
+2026-02-11 00:12:42,039 - INFO - source.app.repository.orders_repository - Horário atual: '2026-02-11 03:12:42.039134'
+2026-02-11 00:12:42,041 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:42,041 - INFO - source.app.blueprints.api.analysis - Através do 'store_id', encontrou o 'menu_id' = ''
+2026-02-11 00:12:42,041 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 03:12:42.039134'
+2026-02-11 00:12:42,041 - INFO - source.app.repository.orders_repository - Cálculo do período de 24h: '2026-02-10 03:12:42.039134'
+2026-02-11 00:12:42,043 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID
+                               ^
+
+[SQL: SELECT max(orders.order_number) AS max_1 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:42,043 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: WHERE orders.menu_id = ''::UUID
+                               ^
+
+[SQL: SELECT max(orders.order_number) AS max_1 
+FROM orders 
+WHERE orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:42,044 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: ...10T03:12:42.039134'::timestamp AND orders.menu_id = ''::UUID
+                                                               ^
+
+[SQL: SELECT sum(orders.total_value) AS sum_1 
+FROM orders 
+WHERE orders.created_at >= %(created_at_1)s AND orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'created_at_1': datetime.datetime(2026, 2, 10, 3, 12, 42, 39134), 'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-02-11 00:12:42,044 - ERROR - source.app.handlers.handlers_exceptions - An error occurred: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type uuid: ""
+LINE 3: ...10T03:12:42.039134'::timestamp AND orders.menu_id = ''::UUID
+                                                               ^
+
+[SQL: SELECT sum(orders.total_value) AS sum_1 
+FROM orders 
+WHERE orders.created_at >= %(created_at_1)s AND orders.menu_id = %(menu_id_1)s::UUID]
+[parameters: {'created_at_1': datetime.datetime(2026, 2, 10, 3, 12, 42, 39134), 'menu_id_1': ''}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)

@@ -28,7 +28,6 @@ class StoresServices:
         logger.info("Hashing the password")
         hashed_password = hash_password(account_data["password"])
 
-
         logger.info("Checking for conflicts with store name, phone number and email")
         if existing_store:
             conflict_fields = []

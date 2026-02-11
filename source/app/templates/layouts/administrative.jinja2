@@ -7,13 +7,19 @@
 
     {# Carregando as dependências (/libs) #}
     <script src="{{ url_for('static', filename='libs/tailwindcss.js') }}"></script>
-    <script src="{{ url_for('static', filename='libs/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='libs/socket.io.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='libs/jquery-3.7.1.min.js') }}"></script>
 
     <script src="{{ url_for('static', filename='javascript/toggleSidenav.js') }}" defer></script>
     <script src="{{ url_for('static', filename='javascript/logout.js') }}" defer></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/transitions.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/scrollbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dataTables.css') }}">
+
+    <link
+            href="https://cdn.datatables.net/2.3.6/css/dataTables.bootstrap5.min.css"
+            rel="stylesheet"
+    >
 
     {# Carregamento dinâmico de Scripts #}
     {% block scripts %}

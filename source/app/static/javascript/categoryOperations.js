@@ -120,11 +120,12 @@ $(document).ready(function () {
                                                 .map(
                                                     product => {
                                                         const isActive = product.activated
+                                                        /*
                                                         console.log(`
                                                             ProductID: ${product.id},
                                                             Activated: ${product.activated}
                                                         `)
-                                                        
+                                                        */
                                                         
                                                         const toggleBgClass = isActive ? `${activatedColors}` : `${disabledColors}`;
                                                         const toggleTranslateClass = isActive ? "translate-x-5" : "translate-x-0";

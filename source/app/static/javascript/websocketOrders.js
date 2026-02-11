@@ -216,8 +216,13 @@ $(function () {
                     <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Status:</span> ${statusText} </p>
                     <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Nome:</span> ${order.name}</p>
                     <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Telefone:</span> ${order.telephone}</p>
-                    <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Total:</span> R$ ${order.total_value}</p>
+                    <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Total:</span> R$ ${order.total_value.toFixed(2)}</p>
                     <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Horário:</span> ${now}</p>
+                </div>
+                <hr class="border-t-1 border-gray-200 mb-2">
+                <div class="flex">
+                    <button class="bg-gray-200 hover:bg-gray-300 font-semibold text-gray-700 px-3 py-1 rounded-xl transition-colors w-1/2 h-full">Rejeitar pedido</button>
+                    <button class="bg-[#111111] hover:bg-[#050505] text-white transition-colors font-semibold px-3 py-1 rounded-xl transition-all w-1/2">Aceitar pedido</button>
                 </div>
             </li>
         `);

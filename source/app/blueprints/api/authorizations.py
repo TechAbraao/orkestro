@@ -6,6 +6,7 @@ from source.app.schemas import login_stores_schemas
 from source.app.utils.responses import Response
 from source.app.settings.logging_settings import get_logger
 from source.app.services import authorizations_services
+from source.app.settings.application_settings import application_settings as app_setiings
 from source.app.utils.decorators.authorizations import *
 import os
 
@@ -19,6 +20,7 @@ def create_new_account():
     body_validated = stores_schemas.load(body)
 
     created = stores_services.create_new_account(body)
+
     if not created:
         return Response.error(
             message="Erro ao criar loja.",
@@ -35,22 +37,23 @@ def enter_the_platform():
     body = request.get_json()
     body_validated = login_stores_schemas.load(body)
 
-    access_token = authorizations_services.verify_store_credentials(
-        email=body["email"], password=body["password"]
-    )
+    # TODO: Adicionando recurso de acessar a plataforma pelo administrador
+    # TODO: Por hora, a validação se as credenciais de admin serão feitas direto no Endpoint /API/SIGNIN
+    if body["email"] == app_setiings.ADMIN_EMAIL and body["password"] == app_setiings.ADMIN_PASSWORD:
+        logger.info(f"[{dir_name}] | Acessando através do administrador: {True}")
 
-    resp = make_response(jsonify({
-        "message": "User authenticated successfully"
-    }))
+        access_token = authorizations_services.verify_store_credentials(
+            email=body["email"], password=body["password"], role="ADMIN", hasAdmin=True
+        )
 
-    resp.set_cookie(
-        "access_token",
-        access_token,
-        httponly=True,
-        samesite="Strict",
-        secure=False,
-        max_age=120 * 60
-    )
+        resp = make_response(jsonify({"message": "User authenticated successfully"}))
+        resp.set_cookie("access_token", access_token, httponly=True, samesite="Strict", secure=False, max_age=120 * 60)
+        return resp
+
+    access_token = authorizations_services.verify_store_credentials(email=body["email"], password=body["password"], role="USER")
+
+    resp = make_response(jsonify({"message": "User authenticated successfully"}))
+    resp.set_cookie("access_token", access_token, httponly=True, samesite="Strict", secure=False, max_age=120 * 60)
 
     return resp
 

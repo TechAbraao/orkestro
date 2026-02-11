@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from source.app.utils.decorators.authorizations import authorized_client
+from source.app.utils.decorators.authorizations import authorized_client, authorization_required
 
 from source.app.blueprints.routes import vws
 
@@ -34,7 +34,7 @@ def views_login():
     return render_template("pages/signin.jinja2", strategy=rendering_strategy)
 
 @vws.get("/signup")
-@authorized_client
+@authorization_required
 def views_register():
     rendering_strategy = {
         "url": f"{request.path}",

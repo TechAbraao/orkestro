@@ -1,0 +1,46 @@
+#historicOrdersTable thead {
+    background-color: #343a40;
+    color: #fff;
+}
+
+#historicOrdersTable thead th {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: left;
+    width: 300px;
+    font-weight: 900;
+}
+
+#historicOrdersTable tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#historicOrdersTable tbody tr:nth-child(even) {
+    background-color: #f9fafb
+}
+
+#historicOrdersTable td:nth-child(2),
+#historicOrdersTable td:nth-child(7) {
+    text-align: center;
+}
+
+#historicOrdersTable tbody tr:hover {
+    background-color: #e5e7eb;
+}
+
+
+#historicOrdersTable td {
+    padding: 10px 12px;
+    color: #374151; /* gray-700 */
+}
+
+#historicOrdersTable td, #historicOrdersTable th {
+    padding: 0.75rem 0.5rem;
+
+}
+
+.table-responsive {
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+

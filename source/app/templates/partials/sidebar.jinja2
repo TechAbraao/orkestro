@@ -31,6 +31,17 @@
                      class="w-6 h-6 mr-3 brightness-0 invert">
                 <span class="text-[16px] font-medium sidebar-text font-semibold">Visão Geral</span>
             </a>
+
+            <a href="{{ url_for("vws.views_orders_dashboard") }}" class="flex items-center px-3 py-2 justify-between rounded-lg hover:bg-[#222327] transition group">
+                <div class="flex justify-center flex-items">
+                       <img src="{{ url_for('static', filename='icons/bell.png') }}" alt="Orders" class="w-6 h-6 mr-3 brightness-0 invert">
+                        <span class="text-[16px] font-medium sidebar-text">Pedidos</span>
+                </div>
+                <span class="w-[25px] h-[25px] bg-red-600 rounded-full flex items-center justify-center border-2 border-red-700 container-text-count-orders-sidenav">
+                    <p class="font-bold text-count-orders-sidenav text-white-100 text-[14px]">0</p>
+                </span>
+            </a>
+
             <a href="#" id="statistics-btn"
                title="Seção da Estatística"
                class=" flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
@@ -45,25 +56,18 @@
             </a>
 
             <div id="statistics-submenu" class="submenu ml-8 mt-2 space-y-1">
-                <a href="/statistics?tab=orders"
+                <a href="/historic?tab=orders"
                    class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
                     <span class="text-[16px] font-medium sidebar-text">Pedidos</span>
                 </a>
-                <a href="/statistics?tab=customers"
+                <!--
+                <a href="/historic?tab=customers"
                    class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
                     <span class="text-[16px] font-medium sidebar-text">Clientes</span>
                 </a>
+                -->
             </div>
 
-            <a href="{{ url_for("vws.views_orders_dashboard") }}" class="flex items-center px-3 py-2 justify-between rounded-lg hover:bg-[#222327] transition group">
-                <div class="flex justify-center flex-items">
-                       <img src="{{ url_for('static', filename='icons/bell.png') }}" alt="Orders" class="w-6 h-6 mr-3 brightness-0 invert">
-                        <span class="text-[16px] font-medium sidebar-text">Pedidos</span>
-                </div>
-                <span class="w-[25px] h-[25px] bg-red-600 rounded-full flex items-center justify-center border-2 border-red-700 container-text-count-orders-sidenav">
-                    <p class="font-bold text-count-orders-sidenav text-white-100 text-[14px]">0</p>
-                </span>
-            </a>
             <a href="{{ url_for("vws.views_menus_manager_dashboard") }}"
                class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
                 <img src="{{ url_for('static', filename='icons/menus.png') }}" alt="Menus"
@@ -85,6 +89,10 @@
                 <a href="/integrations?tab=whatsapp"
                    class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
                     <span class="text-[16px] font-medium sidebar-text">Integração com WhatsApp</span>
+                </a>
+                <a href="/integrations?tab=blocked"
+                   class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
+                    <span class="text-[16px] font-medium sidebar-text">Controle de Acesso</span>
                 </a>
             </div>
 
@@ -121,7 +129,7 @@
 <script>
     $(document).ready(function () {
         const accessToken = ``;
-        let menuId = '{{ strategy["profile"]["menu_id"] }}'
+        let menuId = '{{ strategy["profile"]["menu_id"]["id"] }}'
         const sidenavCountText = $(".text-count-orders-sidenav")
         const menuStatusSidebar = $(".menu-status-in-sidebar")
         $.ajax({

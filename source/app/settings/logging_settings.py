@@ -4,7 +4,7 @@ import os
 loggers = {}
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-logging_dir = os.path.join(BASE_DIR, "..", "logs")
+logging_dir = os.path.join(BASE_DIR, "..", "..", "logs")
 log_level = logging.INFO
 
 os.makedirs(logging_dir, exist_ok=True)

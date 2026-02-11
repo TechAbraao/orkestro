@@ -11,5 +11,7 @@ class ApplicationSettings:
     FLASK_DEBUG: bool = bool(int(os.getenv("FLASK_DEBUG", 0)))
     SECRET_KEY: str = os.getenv("SECRET_KEY")
     FLASK_ENV: str = os.getenv("FLASK_ENV")
+    ADMIN_EMAIL: str = os.getenv("ADMIN_EMAIL")
+    ADMIN_PASSWORD: str = os.getenv("ADMIN_PASSWORD")
 
 application_settings = ApplicationSettings()
