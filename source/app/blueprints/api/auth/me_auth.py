@@ -9,7 +9,7 @@ logger = get_logger(__name__)
 about_auth = Blueprint("about_auth", __name__, url_prefix="/api/stores")
 
 @about_auth.route("/me", methods=["GET"])
-@authorization_required
+@authorization_required(roles_required=["USER", "ADMIN"])
 def about_me_store():
     token = request.cookies.get("access_token")
     logger.info(f"Your about me token is '{token}'")

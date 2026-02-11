@@ -21,6 +21,28 @@ class AuthorizationsServices:
         self.menu_services = MenuServices()
         self.dir_name = 'authorizations_services.py'
 
+    """ Método privado para criar tokens de acesso """
+    # TODO: implementar futuramente para melhorar o fluxo do método verify_store_credentials
+    def _generate_access_token(self, store, role: str, exp_timestamp: int, token_issuer: str):
+        store_id = store.serialize["id"]
+        logger.info(f"[{self.dir_name}] O comércio tem 'store_id' = '{store_id}'.")
+
+        menu_id = self.menu_services.get_menu_id_by_store_id(store_id)
+        logger.info(f"[{self.dir_name}] Através do 'store_id', encontrou o 'menu_id' = '{menu_id}'.")
+
+        claims = {
+            "iss": token_issuer,
+            "sub": str(store_id),
+            "menu_id": menu_id if menu_id is not None else "",
+            "roles": [role],
+            "exp": exp_timestamp
+        }
+
+        access_token = generate_token(claims)
+        logger.info(f"[{self.dir_name}] Token de acesso criado com sucesso.")
+
+        return access_token
+
     def verify_store_credentials(self, email: str, password: str, role: str, hasAdmin: bool = False):
         expiration_time = datetime.now(ZoneInfo("America/Sao_Paulo")) + timedelta(minutes=60)
         exp_timestamp = int(expiration_time.timestamp())
@@ -56,11 +78,13 @@ class AuthorizationsServices:
             menu_id = self.menu_services.get_menu_id_by_store_id(store_admin.serialize["id"])
             logger.info(f"[{self.dir_name}] Através do 'store_id', encontrou o 'menu_id' = '{menu_id}'.")
 
+            roles_credential = []
+            roles_credential.append(role)
             claims = {
                 "iss": token_issuer,
                 "sub": str(store_admin.serialize["id"]),
                 "menu_id": menu_id if menu_id is not None else "",
-                "role": f"{role}",
+                "roles": roles_credential,
                 "exp": exp_timestamp
             }
 
@@ -85,11 +109,13 @@ class AuthorizationsServices:
         menu_id = self.menu_services.get_menu_id_by_store_id(store.serialize["id"])
         logger.info(f"[{self.dir_name}] Através do 'store_id', encontrou o 'menu_id' = '{menu_id}'.")
 
+        roles_credential = []
+        roles_credential.append(role)
         claims = {
             "iss": token_issuer,
             "sub": str(store.serialize["id"]),
             "menu_id": menu_id if menu_id is not None else "",
-            "role": f"{role}",
+            "roles": roles_credential,
             "exp": exp_timestamp
         }
 
@@ -97,3 +123,4 @@ class AuthorizationsServices:
         logger.info(f"[{self.dir_name}] Token de acesso criado com sucesso: {access_token}")
 
         return access_token
+

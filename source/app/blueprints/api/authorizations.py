@@ -58,7 +58,7 @@ def enter_the_platform():
     return resp
 
 @api.route("/logout", methods=["GET"])
-@authorization_required
+@authorization_required(roles_required=["USER", "ADMIN"])
 def end_session_store():
     resp = make_response(jsonify({"message": "User logged out successfully"}))
     resp.set_cookie(

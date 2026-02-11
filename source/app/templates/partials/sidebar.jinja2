@@ -95,13 +95,14 @@
                     <span class="text-[16px] font-medium sidebar-text">Controle de Acesso</span>
                 </a>
             </div>
-
-            <a href="/apidocs"
+            {% if "ADMIN" in strategy.get("profile")["roles"] %}
+            <a href="/apidocs" target="_blank"
                class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
                 <img src="{{ url_for('static', filename='icons/documentation.png') }}" alt="Documentation"
                      class="w-6 h-6 mr-3 brightness-0 invert">
-                <span class="text-[16px] font-medium sidebar-text">Documentação</span>
+                <span class="text-[16px] font-medium sidebar-text">API Docs</span>
             </a>
+            {% endif %}
             <br>
             <div class="pt-7 border-t border-gray-700">
                 <a href="#" id="btn-about-orkestro"

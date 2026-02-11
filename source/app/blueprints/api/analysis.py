@@ -19,7 +19,7 @@ dir_name = os.path.basename(__file__)
     - Domingo
 """
 @api.route("/analysis/sales-per-week", methods=["GET"])
-@authorization_required
+@authorization_required(roles_required=["USER", "ADMIN"])
 def api_sales_per_week():
     store_id = g.jwt_claims.get("sub")
     logger.info(f"[{dir_name}] Acessou o ambiente de análises da loja cujo 'store_id' = {store_id}")
@@ -45,7 +45,7 @@ def api_sales_per_week():
     - Exibirá de forma geral? exibirá por semana? 
 """
 @api.route("/analysis/status-per-week", methods=["GET"])
-@authorization_required
+@authorization_required(roles_required=["USER", "ADMIN"])
 def api_general_sales_status():
     store_id = g.jwt_claims.get("sub")
     logger.info(f"[Status por Semana] Acessou o ambiente de análises da loja cujo 'store_id' = {store_id}")
@@ -65,7 +65,7 @@ def api_general_sales_status():
     * Exibirá a quantidade de pedidos totais realizadas no cardápio. 
 """
 @api.route("/analysis/total-orders", methods=["GET"])
-@authorization_required
+@authorization_required(roles_required=["USER", "ADMIN"])
 def api_total_orders():
     store_id = g.jwt_claims.get("sub")
     logger.info(f"[Pedidos Totais] Acessou o ambiente de análises da loja cujo 'store_id' = {store_id}")
@@ -83,7 +83,7 @@ def api_total_orders():
     * Exibirá a receita total diária. (24h)
 """
 @api.route("/analysis/daily-recipe", methods=["GET"])
-@authorization_required
+@authorization_required(roles_required=["USER", "ADMIN"])
 def api_daily_recipe():
     store_id = g.jwt_claims.get("sub")
     logger.info(f"[Receita Total Diária] Acessou o ambiente de análises da loja cujo 'store_id' = {store_id}")

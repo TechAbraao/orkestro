@@ -9,7 +9,7 @@ from source.app.blueprints.routes import vws
     2. Histórico de Clientes
 """
 @vws.route("/historic")
-@authorization_required
+@authorization_required(roles_required=["USER", "ADMIN"])
 def vws_historic():
     redirect_uri = url_for("vws.views_main_dashboard")
     tab = request.args.get("tab")

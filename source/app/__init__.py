@@ -10,15 +10,18 @@ from flasgger import Swagger
 import yaml
 from pathlib import Path
 import os
+from flask import request, redirect, url_for, g
+from source.app.utils.jwt import decrypt_token
 
 logger = get_logger(__name__)
 
 def create_app(config_name: str = "default"):
+
     """
-    Create and configure the Flask app.
-    config_name:
-      - "default" (ou "development"/"production") -> usa Postgres definido em postgres_settings
-      - "testing" -> testa usando sqlite:///:memory: e configurações de teste
+        Create and configure the Flask app.
+        config_name:
+            - "default" (ou "development"/"production") -> usa Postgres definido em postgres_settings
+            - "testing" -> testa usando sqlite:///:memory: e configurações de teste
     """
     app = Flask(__name__)
 
@@ -58,7 +61,6 @@ def create_app(config_name: str = "default"):
         def load_template():
             with open(SWAGGER_PATH, "r") as f:
                 return yaml.safe_load(f)
-
         @app.before_request
         def reload_swagger():
             app.config['SWAGGER'] = load_template()
@@ -98,5 +100,32 @@ def create_app(config_name: str = "default"):
         from source.app.blueprints.api import orders_events
     except Exception:
         logger.debug("Could not import orders_events during testing setup (ignoring)")
+
+    @app.before_request
+    def apidocs_swagger():
+        if request.path.startswith("/apidocs"):
+
+            token = request.cookies.get("access_token")
+
+            if not token:
+                auth_header = request.headers.get("Authorization")
+                if auth_header and auth_header.startswith("Bearer "):
+                    token = auth_header.split(" ")[1]
+
+            if not token:
+                return redirect(url_for("vws.views_login"))
+
+            try:
+                claims = decrypt_token(token)
+            except ValueError:
+                return redirect(url_for("vws.views_login"))
+
+            g.jwt_claims = claims
+
+            roles = claims.get("roles", [])
+            print("Bora verificar: ", roles)
+
+            if "ADMIN" not in roles:
+                return redirect(url_for("vws.views_login"))
 
     return app

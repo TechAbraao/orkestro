@@ -7,48 +7,58 @@ from source.app.blueprints.routes import vws
 logger = get_logger(__name__)
 
 @vws.get("/dashboard")
-@authorization_required
+@authorization_required(roles_required=["USER", "ADMIN"])
 def views_main_dashboard():
     store_id = g.jwt_claims.get("sub")
+    roles = g.jwt_claims.get("roles")
     menu_id = stores_services.get_menu_by_store_id(store_id)
+
     rendering_strategy = {
         "profile": {
             "menu_id": menu_id.get("id", ""),
+            "roles": roles
         }
     }
     return render_template("pages/dashboard.jinja2", strategy=rendering_strategy)
 
 @vws.get("/profile")
-@authorization_required
+@authorization_required(roles_required=["USER", "ADMIN"])
 def views_profile_dashboard():
     store_id = g.jwt_claims.get("sub")
+    roles = g.jwt_claims.get("roles")
+
     menu_id = stores_services.get_menu_by_store_id(store_id)
     rendering_strategy = {
         "profile": {
             "menu_id": menu_id.get("id", ""),
+            "roles": roles
         }
     }
 
     return render_template("pages/store_profile.jinja2", strategy=rendering_strategy)
 
 @vws.get("/orders")
-@authorization_required
+@authorization_required(roles_required=["USER", "ADMIN"])
 def views_orders_dashboard():
     store_id = g.jwt_claims.get("sub")
+    roles = g.jwt_claims.get("roles")
 
     menu_id = stores_services.get_menu_by_store_id(store_id)
 
     rendering_strategy = {
         "profile": {
             "menu_id": menu_id.get("id", ""),
+            "roles": roles
         }
     }
     return render_template("pages/orders.jinja2", strategy=rendering_strategy)
 
 @vws.get("/menus")
-@authorization_required
+@authorization_required(roles_required=["USER", "ADMIN"])
 def views_menus_manager_dashboard():
     store_id = g.jwt_claims.get("sub")
+    roles = g.jwt_claims.get("roles")
+
     logger.info(f"GET /menus - View Menu with store_id: '{store_id}'")
 
     """ Verificar se a Loja possui um cardápio ativo para renderizar no template. """
@@ -58,7 +68,7 @@ def views_menus_manager_dashboard():
     rendering_strategy = {
         "url": f"{request.path}",
         "profile": {
-            "roles": f"",
+            "roles": roles,
             "hasMenu": hasMenu,
             "menu_id": menu_id.get("id")
         },
@@ -67,11 +77,12 @@ def views_menus_manager_dashboard():
     return render_template("pages/manage_menu.jinja2", strategy=rendering_strategy)
 
 @vws.get("/menus/<string:menu_id>/categories")
-@authorization_required
+@authorization_required(roles_required=["USER", "ADMIN"])
 def views_edit_menu_dashboard(menu_id: str):
     store_id = g.jwt_claims.get("sub")
     logger.info(f"GET /menus/{menu_id}/edit - Visualizar categorias no menu_id: '{menu_id}'.")
     logger.info(f"UUID da Loja: {store_id}.")
+    roles = g.jwt_claims.get("roles")
 
     """ Verificar se o Menu/Cardápio (menu_id) existe a partir da Loja (store_id). """
     logger.info(f"Verificando se o Menu: '{menu_id}' pertence à Loja: '{store_id}'.")
@@ -96,7 +107,8 @@ def views_edit_menu_dashboard(menu_id: str):
         "profile": {
             "menu_id": menu_id,
             "menu_name": menu_info["name"],
-            "hasCategories": has_categories
+            "hasCategories": has_categories,
+            "roles": roles
         }
     }
 

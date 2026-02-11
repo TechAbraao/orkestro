@@ -34,7 +34,7 @@ def views_login():
     return render_template("pages/signin.jinja2", strategy=rendering_strategy)
 
 @vws.get("/signup")
-@authorization_required
+@authorization_required()
 def views_register():
     rendering_strategy = {
         "url": f"{request.path}",
