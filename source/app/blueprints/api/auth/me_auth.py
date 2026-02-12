@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from source.app.utils.decorators.authorizations import authorization_required
+from source.app.utils.decorators.authorizations import permissions
 from source.app.settings.logging_settings import get_logger
 from source.app.services import stores_services
 from source.app.utils.responses import Response
@@ -9,7 +9,7 @@ logger = get_logger(__name__)
 about_auth = Blueprint("about_auth", __name__, url_prefix="/api/stores")
 
 @about_auth.route("/me", methods=["GET"])
-@authorization_required(roles_required=["USER", "ADMIN"])
+@permissions(roles=["USER", "ADMIN"])
 def about_me_store():
     token = request.cookies.get("access_token")
     logger.info(f"Your about me token is '{token}'")

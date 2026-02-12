@@ -1,5 +1,5 @@
 from flask import render_template, request, abort, redirect, url_for, g
-from source.app.utils.decorators.authorizations import authorization_required
+from source.app.utils.decorators.authorizations import permissions
 from source.app.services import stores_services
 from source.app.blueprints.routes import vws
 
@@ -9,7 +9,7 @@ from source.app.blueprints.routes import vws
     2. Histórico de Clientes
 """
 @vws.route("/historic")
-@authorization_required(roles_required=["USER", "ADMIN"])
+@permissions(roles=["USER", "ADMIN"])
 def vws_historic():
     redirect_uri = url_for("vws.views_main_dashboard")
     tab = request.args.get("tab")

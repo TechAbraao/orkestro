@@ -23,6 +23,7 @@ class AuthorizationsServices:
 
     """ Método privado para criar tokens de acesso """
     # TODO: implementar futuramente para melhorar o fluxo do método verify_store_credentials
+    ## Parâmetros: store (a loja), roles do token, tempo de expiração, quem assinou o token)
     def _generate_access_token(self, store, role: str, exp_timestamp: int, token_issuer: str):
         store_id = store.serialize["id"]
         logger.info(f"[{self.dir_name}] O comércio tem 'store_id' = '{store_id}'.")
@@ -30,11 +31,14 @@ class AuthorizationsServices:
         menu_id = self.menu_services.get_menu_id_by_store_id(store_id)
         logger.info(f"[{self.dir_name}] Através do 'store_id', encontrou o 'menu_id' = '{menu_id}'.")
 
+        roles_credentials = []
+        roles_credentials.append(role)
+
         claims = {
             "iss": token_issuer,
             "sub": str(store_id),
             "menu_id": menu_id if menu_id is not None else "",
-            "roles": [role],
+            "roles": roles_credentials,
             "exp": exp_timestamp
         }
 

@@ -7,28 +7,14 @@
             <li>
                 {{ buttons.button_redirect(endpoint="vws.views_login", text="Entrar") }}
             </li>
-            <li>
-                {{ buttons.button_redirect(endpoint="vws.views_register", text="Criar Conta") }}
-            </li>
         {% elif strategy["url"] == "/signup" %}
-            <li>
-                {{ buttons.button_redirect(endpoint="vws.views_homepage", text="Início") }}
-            </li>
-            <li>
-                {{ buttons.button_redirect(endpoint="vws.views_login", text="Entrar") }}
-            </li>
-            <li>
-                {{ buttons.button_redirect(endpoint="vws.views_register", text="Criar Conta") }}
-            </li>
+            <li>Default</li>
         {% elif strategy["url"] == "/home" %}
             <li>
                 {{ buttons.button_redirect(endpoint="vws.views_homepage", text="Início") }}
             </li>
             <li>
                 {{ buttons.button_redirect(endpoint="vws.views_login", text="Entrar") }}
-            </li>
-            <li>
-                {{ buttons.button_redirect(endpoint="vws.views_register", text="Criar Conta") }}
             </li>
         {% endif %}
     </ul>

@@ -88,12 +88,18 @@
             <div id="settings-submenu" class="submenu ml-8 mt-2 space-y-1">
                 <a href="/integrations?tab=whatsapp"
                    class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                    <span class="text-[16px] font-medium sidebar-text">Integração com WhatsApp</span>
+                    <span class="text-[16px] font-medium sidebar-text">Integrações</span>
                 </a>
                 <a href="/integrations?tab=blocked"
                    class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
                     <span class="text-[16px] font-medium sidebar-text">Controle de Acesso</span>
                 </a>
+                {% if "ADMIN" in strategy.get("profile")["roles"] %}
+                <a href="/accounts"
+                   class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
+                    <span class="text-[16px] font-medium sidebar-text">Gerenciar Contas</span>
+                </a>
+                {% endif %}
             </div>
             {% if "ADMIN" in strategy.get("profile")["roles"] %}
             <a href="/apidocs" target="_blank"
@@ -130,7 +136,7 @@
 <script>
     $(document).ready(function () {
         const accessToken = ``;
-        let menuId = '{{ strategy["profile"]["menu_id"]["id"] }}'
+        let menuId = '{{ strategy.get("profile")["menu_id"] }}'
         const sidenavCountText = $(".text-count-orders-sidenav")
         const menuStatusSidebar = $(".menu-status-in-sidebar")
         $.ajax({

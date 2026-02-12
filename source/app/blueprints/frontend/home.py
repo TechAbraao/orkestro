@@ -1,5 +1,6 @@
-from flask import Blueprint, render_template, request, redirect, url_for
-from source.app.utils.decorators.authorizations import authorized_client, authorization_required
+from flask import Blueprint, render_template, request, redirect, url_for, g
+from source.app.utils.decorators.authorizations import authorized_client, permissions
+from source.app.services import stores_services
 
 from source.app.blueprints.routes import vws
 
@@ -23,6 +24,7 @@ def views_homepage():
 @vws.get("/signin")
 @authorized_client
 def views_login():
+
     rendering_strategy = {
         "url": f"{request.path}",
         "profile": {
@@ -33,16 +35,20 @@ def views_login():
 
     return render_template("pages/signin.jinja2", strategy=rendering_strategy)
 
-@vws.get("/signup")
-@authorization_required()
+@vws.get("/accounts")
+@permissions(roles=["ADMIN"])
 def views_register():
+    store_id = g.jwt_claims.get("sub")
+    roles = g.jwt_claims.get("roles")
+    menu_id = stores_services.get_menu_by_store_id(store_id)
+
     rendering_strategy = {
         "url": f"{request.path}",
         "profile": {
-            "roles": f""
+            "roles": roles,
+            "menu_id": menu_id.get("id"),
         },
-        "logged": False
+        "logged": False,
     }
 
-    return render_template("pages/signup.jinja2", strategy=rendering_strategy)
-
+    return render_template("pages/accounts.jinja2", strategy=rendering_strategy)

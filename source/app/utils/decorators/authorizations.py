@@ -3,7 +3,7 @@ from flask import request, redirect, url_for, abort
 from source.app.utils.jwt import decrypt_token
 from flask import g
 
-def authorization_required(roles_required=None):
+def permissions(roles=None):
     def decorator(f):
         @wraps(f)
         def decorated(*args, **kwargs):
@@ -25,11 +25,11 @@ def authorization_required(roles_required=None):
                 return redirect(url_for("vws.views_login"))
 
             g.jwt_claims = claims
-            roles = claims.get("roles", [])
+            user_roles = claims.get("roles", [])
 
             # Só valida roles se foi passado algo
-            if roles_required:
-                if not any(role in roles for role in roles_required):
+            if roles:
+                if not any(role in user_roles for role in roles):
                     abort(403)
 
             return f(*args, **kwargs)

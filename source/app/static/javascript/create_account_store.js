@@ -17,6 +17,7 @@ $(document).ready(function () {
                 password: password,
                 telephone: telephone
             }),
+
             success: function (response) {
                 console.log("Success:", response);
 
@@ -27,10 +28,6 @@ $(document).ready(function () {
                 setTimeout(() => {
                     $("aside .alert_base_register_success").addClass("hidden");
                 }, 4000);
-
-                setTimeout(function () {
-                    window.location.href = "/signin";
-                }, 2300)
             },
             error: function (xhr) {
                 let errorMessage = "";

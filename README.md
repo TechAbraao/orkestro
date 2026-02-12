@@ -96,24 +96,3 @@ http://localhost:port
 
 ### Web Docs
 
-## Product Maintainers
-
-<table style="width: 100%; text-align: center;">
-  <tr>
-    <td align="center">
-      <img src="public/images/maintainer-abraao.jpeg" width="150px" alt="AS" /><br/>
-      <b>Abraão Santos</b><br>
-      <b>Software Engineer</b>
-    </td>
-    <td align="center">
-      <img src="public/images/maintainer-anthony.png" width="150px" alt="AC" /><br/>
-      <b>Anthony Chukwudi</b><br>
-      <b>Software Engineer</b>    
-    </td>
-    <td align="center">
-      <img src="public/images/maintainer-isak.jpeg" width="150px" alt="IF" /><br/>
-      <b>Isak Freitas</b><br>
-      <b>Product Owner</b>    
-    </td>
-  </tr>
-</table>
