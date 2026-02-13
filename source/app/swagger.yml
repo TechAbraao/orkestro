@@ -1,23 +1,54 @@
-info: 
+openapi: 2.0
+
+info:
   version: "1.1.0"
-  title: "Orkestro"
+  title: "Orkestro | Documentação dos Endpoints (Swagger)"
+
+consumes:
+  - application/json
+
+produces:
+  - application/json
+
+tags:
+  - name: "Autorizações"
+    description: "Endpoints responsáveis por autenticação e geração de tokens de acesso."
+  - name: "Lojas"
+    description: "Operações relacionadas ao gerenciamento de lojas."
+  - name: "Cardápios"
+    description: "Operações relacionadas ao gerenciamento de cardápios."
+  - name: "Categorias"
+    description: "Operações relacionadas ao gerenciamento de categorias."
+  - name: "Produtos"
+    description: "Operações relacionadas ao gerenciamento de produtos."
+  - name: "Pedidos"
+    description: "Operações relacionadas ao gerenciamento de pedidos."
+  - name: "Clientes"
+    description: "Operações relacionadas ao gerenciamento de clientes."
+  - name: "Horários"
+    description: "Operações relacionadas ao gerenciamento de horários de funcionamento do cardápio."
+  - name: "Status"
+    description: "Operações relacionadas aos status de atividade (ativo ou inativo)."
 
 paths:
-  # Menus Endpoints
+  /api/tokens:
+    post:
+      tags:
+        - "Autorizações"
   /api/menus:
     get:
       tags:
-        - "Menus"
-      summary: "Retrieve all menus"
+        - "Cardápios"
+      summary: "Todos os Cardápios"
       description: "Fetch a list of all available menus."
       responses:
         '200':
           description: "A list of menus"
     post:
       tags:
-        - "Menus"
-      summary: "Create a new menu"
-      description: "Add a new menu to the system."
+        - "Cardápios"
+      summary: "Criar Cardápio"
+      description: "Criar um novo cardápio"
       parameters:
         - in: body
           name: menu
@@ -33,21 +64,66 @@ paths:
       responses:
         '201':
           description: "Menu created successfully"
-
-  # Categories Endpoints
-  /api/categories:
+  /api/menus/{menu_id}:
+    delete:
+      tags:
+        - "Cardápios"
+      summary: "Deletar Cardápio"
+      description: "Deletar cardápio através do identificador (UUID)"
+      parameters:
+        - in: body
+    put:
+      tags:
+        - "Cardápios"
+      summary: "Atualizar Cardápio"
+      description: "Atualizar cardápios através do identificador (UUID)"
+      parameters:
+        - in: body
+  /api/menus/{menu_id}/status:
     get:
       tags:
-        - "Categories"
-      summary: "Retrieve all categories"
+        - "Status"
+      summary: ""
+      description: ""
+    patch:
+      tags:
+        - "Cardápios"
+      summary: ""
+      description: ""
+  /api/menus/{menu_id}/opening-hours:
+    get:
+      tags:
+        - "Horários"
+      summary: ""
+      description: ""
+    post:
+      tags:
+        - "Horários"
+      summary: ""
+      description: ""
+    put:
+      tags:
+        - "Horários"
+      summary: ""
+      description: ""
+    delete:
+      tags:
+        - "Horários"
+      summary: ""
+      description: ""
+  /api/menus/{menu_id}/categories:
+    get:
+      tags:
+        - "Categorias"
+      summary: "Todas as Categorias"
       description: "Fetch a list of all available categories."
       responses:
         '200':
           description: "A list of categories"
     post:
       tags:
-        - "Categories"
-      summary: "Create a new category"
+        - "Categorias"
+      summary: "Criar Categoria"
       description: "Add a new category to the system."
       parameters:
         - in: body
@@ -64,3 +140,127 @@ paths:
       responses:
         '201':
           description: "Category created successfully"
+  /api/categories/{category_id}:
+    delete:
+      tags:
+        - "Categorias"
+      summary: "Deletar Categoria"
+      description: "Deletar categoria através do identificador (UUID)"
+    put:
+      tags:
+        - "Categorias"
+      summary: "Alterar Categoria"
+      description: "Alterar categoria através do identificador (UUID)"
+  /api/customers:
+    post:
+      tags:
+        - "Clientes"
+    get:
+      tags:
+        - "Clientes"
+  /api/customers/{customer_id}:
+    delete:
+      tags:
+        - "Clientes"
+    put:
+      tags:
+        - "Clientes"
+  /api/stores:
+    get:
+      tags:
+        - "Lojas"
+      responses:
+        '200':
+          description: "Lista de lojas"
+    post:
+      tags:
+        - "Lojas"
+      summary: "Criar loja"
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            required:
+              - name
+              - email
+              - password
+              - telephone
+              - roles
+            properties:
+              name:
+                type: string
+                example: ""
+              email:
+                type: string
+                format: email
+                example: ""
+              password:
+                type: string
+                example: ""
+              telephone:
+                type: string
+                example: ""
+              roles:
+                type: array
+                items:
+                  type: string
+                  enum:
+                    - COMMON
+                    - PRIVILEGED
+      responses:
+        201:
+          description: "Loja criada com sucesso"
+        409:
+          description: "Conflito de dados"
+        422:
+          description: "Erro de validação"
+  /api/stores/{store_id}:
+    put:
+      tags:
+        - "Lojas"
+    delete:
+      tags:
+        - "Lojas"
+  /api/categories/{category_id}/products:
+    post:
+      tags:
+        - "Produtos"
+    get:
+      tags:
+        - "Produtos"
+  /api/products/{product_id}:
+    get:
+      tags:
+        - "Produtos"
+    put:
+      tags:
+        - "Produtos"
+    delete:
+      tags:
+        - "Produtos"
+  /api/products/{product_id}/status:
+    patch:
+      tags:
+        - "Status"
+  /api/orders:
+    post:
+      tags:
+        - "Pedidos"
+  /api/orders/{menu_id}:
+    get:
+      tags:
+        - "Pedidos"
+  /api/orders/{order_id}:
+    delete:
+      tags:
+        - "Pedidos"
+  /api/orders/{order_id}/products:
+    delete:
+      tags:
+        - "Pedidos"
+  /api/orders/{order_id}/status:
+    put:
+      tags:
+        - "Status"

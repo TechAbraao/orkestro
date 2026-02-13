@@ -7,7 +7,7 @@ from source.app.blueprints.routes import vws
 logger = get_logger(__name__)
 
 @vws.get("/dashboard")
-@permissions(roles=["USER", "ADMIN"])
+@permissions(strategy="jwt", roles=["USER", "ADMIN"])
 def views_main_dashboard():
     store_id = g.jwt_claims.get("sub")
     roles = g.jwt_claims.get("roles")
@@ -22,7 +22,7 @@ def views_main_dashboard():
     return render_template("pages/dashboard.jinja2", strategy=rendering_strategy)
 
 @vws.get("/profile")
-@permissions(roles=["USER", "ADMIN"])
+@permissions(strategy="jwt", roles=["USER", "ADMIN"])
 def views_profile_dashboard():
     store_id = g.jwt_claims.get("sub")
     roles = g.jwt_claims.get("roles")
@@ -38,7 +38,7 @@ def views_profile_dashboard():
     return render_template("pages/store_profile.jinja2", strategy=rendering_strategy)
 
 @vws.get("/orders")
-@permissions(roles=["USER", "ADMIN"])
+@permissions(strategy="jwt", roles=["USER", "ADMIN"])
 def views_orders_dashboard():
     store_id = g.jwt_claims.get("sub")
     roles = g.jwt_claims.get("roles")
@@ -54,7 +54,7 @@ def views_orders_dashboard():
     return render_template("pages/orders.jinja2", strategy=rendering_strategy)
 
 @vws.get("/menus")
-@permissions(roles=["USER", "ADMIN"])
+@permissions(strategy="jwt", roles=["USER", "ADMIN"])
 def views_menus_manager_dashboard():
     store_id = g.jwt_claims.get("sub")
     roles = g.jwt_claims.get("roles")
@@ -77,7 +77,7 @@ def views_menus_manager_dashboard():
     return render_template("pages/manage_menu.jinja2", strategy=rendering_strategy)
 
 @vws.get("/menus/<string:menu_id>/categories")
-@permissions(roles=["USER", "ADMIN"])
+@permissions(strategy="jwt", roles=["USER", "ADMIN"])
 def views_edit_menu_dashboard(menu_id: str):
     store_id = g.jwt_claims.get("sub")
     logger.info(f"GET /menus/{menu_id}/edit - Visualizar categorias no menu_id: '{menu_id}'.")

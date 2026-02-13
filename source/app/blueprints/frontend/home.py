@@ -1,16 +1,16 @@
 from flask import Blueprint, render_template, request, redirect, url_for, g
-from source.app.utils.decorators.authorizations import authorized_client, permissions
+from source.app.utils.decorators.authorizations import authenticated, permissions
 from source.app.services import stores_services
 
 from source.app.blueprints.routes import vws
 
 @vws.get("/")
-@authorized_client
+@authenticated
 def views_root():
     return redirect(url_for("vws.views_homepage"))
 
 @vws.get("/home")
-@authorized_client
+@authenticated
 def views_homepage():
     rendering_strategy = {
         "url": f"{request.path}",
@@ -22,7 +22,7 @@ def views_homepage():
     return render_template("/pages/homepage.jinja2", strategy=rendering_strategy)
 
 @vws.get("/signin")
-@authorized_client
+@authenticated
 def views_login():
 
     rendering_strategy = {
@@ -36,7 +36,7 @@ def views_login():
     return render_template("pages/signin.jinja2", strategy=rendering_strategy)
 
 @vws.get("/accounts")
-@permissions(roles=["ADMIN"])
+@permissions(strategy="jwt", roles=["ADMIN"])
 def views_register():
     store_id = g.jwt_claims.get("sub")
     roles = g.jwt_claims.get("roles")

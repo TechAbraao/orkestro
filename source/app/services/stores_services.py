@@ -49,12 +49,48 @@ class StoresServices:
             email=email,
             password=hashed_password,
             telephone=account_data.get("telephone", "Undefined"),
-            logo_url=f"{logo_url}"
+            logo_url=f"{logo_url}",
+            roles=account_data.get("roles")
         )
 
         logger.info(f"Saving new store with email {email}")
         self.stores_repository.save(account)
         return True
+
+    @database_connection
+    def create_store(self, account):
+        email = account.get("email")
+        if not email or not account.get("password") or not account.get("telephone"):
+            raise ValueError("E-mail, telefone e senha são campos obrigatórios.")
+
+        existing_store = self.stores_repository.find_by_unique_fields(email, account.get("name"), account.get("telephone"))
+        hashed_password = hash_password(account["password"])
+
+        if existing_store:
+            conflict_fields = []
+            if existing_store.email == email:
+                conflict_fields.append("email")
+            if existing_store.name == account.get("name"):
+                conflict_fields.append("name")
+            if existing_store.telephone == account.get("telephone"):
+                conflict_fields.append("telephone")
+            raise StoresDuplicateException(f"Conflito com os campos: {', '.join(conflict_fields)}")
+
+        with current_app.app_context():
+            logo_url = url_for('static', filename='images/default-store-logo.png', _external=False)
+
+        account = StoresEntity(
+            id=uuid.uuid4(),
+            name=account.get("name", "N/A"),
+            email=email,
+            password=hashed_password,
+            telephone=account.get("telephone", "Undefined"),
+            logo_url=f"{logo_url}",
+            roles=account.get("roles")
+        )
+
+        store_saved = self.stores_repository.save(account)
+        return store_saved.serialize
 
     @database_connection
     def about_me_store_account(self, store_id: str):

@@ -123,7 +123,6 @@ def patch_product_status(product_id: str):
         "activated": new_status
     }), 200
 
-
 """ 7. List all Products in a Menu (associated categories). """
 @api.route("/menus/<string:menu_id>/products", methods=["GET"])
 def get_products_in_menu(menu_id: str):

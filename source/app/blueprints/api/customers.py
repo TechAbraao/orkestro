@@ -78,4 +78,3 @@ def get_customer():
             status_code=400
         )
 
-""" 3. Atualizar  """

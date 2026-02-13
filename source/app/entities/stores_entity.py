@@ -1,6 +1,6 @@
 from uuid import uuid4
 from source.app.settings.definitions_settings import db as database
-
+from sqlalchemy.dialects.postgresql import ARRAY
 
 class StoresEntity(database.Model):
     __tablename__ = "stores"
@@ -11,6 +11,7 @@ class StoresEntity(database.Model):
     password = database.Column(database.String(255), nullable=False)
     logo_url = database.Column(database.String(255), nullable=True)
     telephone = database.Column(database.String(20), nullable=True)
+    roles = database.Column(ARRAY(database.String), nullable=False)
 
     menus = database.relationship(
         "MenusEntity",
@@ -25,7 +26,8 @@ class StoresEntity(database.Model):
             "name": self.name,
             "email": self.email,
             "telephone": self.telephone,
-            "logo_url": self.logo_url
+            "logo_url": self.logo_url,
+            "roles": self.roles
         }
 
     @property
@@ -34,5 +36,6 @@ class StoresEntity(database.Model):
             "name": self.name,
             "email": self.email,
             "telephone": self.telephone,
-            "logo_url": str(self.logo_url)
+            "logo_url": str(self.logo_url),
+            "roles": self.roles
         }

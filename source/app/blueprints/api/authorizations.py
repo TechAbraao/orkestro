@@ -37,20 +37,16 @@ def enter_the_platform():
     body = request.get_json()
     body_validated = login_stores_schemas.load(body)
 
-    # TODO: Adicionando recurso de acessar a plataforma pelo administrador
-    # TODO: Por hora, a validação se as credenciais de admin serão feitas direto no Endpoint /API/SIGNIN
     if body["email"] == app_setiings.ADMIN_EMAIL and body["password"] == app_setiings.ADMIN_PASSWORD:
         logger.info(f"[{dir_name}] | Acessando através do administrador: {True}")
 
-        access_token = authorizations_services.verify_store_credentials(
-            email=body["email"], password=body["password"], role="ADMIN", hasAdmin=True
-        )
+        access_token = authorizations_services.verify_store_credentials(email=body["email"], password=body["password"], role="ADMIN", hasAdmin=True)
 
         resp = make_response(jsonify({"message": "User authenticated successfully"}))
         resp.set_cookie("access_token", access_token, httponly=True, samesite="Strict", secure=False, max_age=120 * 60)
         return resp
 
-    access_token = authorizations_services.verify_store_credentials(email=body["email"], password=body["password"], role="USER")
+    access_token = authorizations_services.verify_store_credentials(email=body["email"], password=body["password"], role="COMMON")
 
     resp = make_response(jsonify({"message": "User authenticated successfully"}))
     resp.set_cookie("access_token", access_token, httponly=True, samesite="Strict", secure=False, max_age=120 * 60)
@@ -58,11 +54,10 @@ def enter_the_platform():
     return resp
 
 @api.route("/logout", methods=["GET"])
-@permissions(roles=["USER", "ADMIN"])
+@permissions(strategy="jwt", roles=["USER", "ADMIN"])
 def end_session_store():
     resp = make_response(jsonify({"message": "User logged out successfully"}))
-    resp.set_cookie(
-        "access_token",
+    resp.set_cookie("access_token",
         "",
         httponly=True,
         samesite="Strict",

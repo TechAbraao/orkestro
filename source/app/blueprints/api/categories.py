@@ -7,7 +7,7 @@ from werkzeug.exceptions import *
 from source.app.blueprints.routes import api
 
 logger = get_logger(__name__)
-dir_name = ''
+dir_name = 'categories.py'
 
 """ 01. Create Category in a Menu """
 @api.route("/menus/<string:menu_id>/categories", methods=["POST"])
