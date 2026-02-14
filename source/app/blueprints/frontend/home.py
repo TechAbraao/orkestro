@@ -52,3 +52,4 @@ def views_register():
     }
 
     return render_template("pages/accounts.jinja2", strategy=rendering_strategy)
+

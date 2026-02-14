@@ -123,9 +123,8 @@ def create_app(config_name: str = "default"):
             g.jwt_claims = claims
 
             roles = claims.get("roles", [])
-            print("Bora verificar: ", roles)
 
             if "ADMIN" not in roles:
-                return redirect(url_for("vws.views_login"))
+                return redirect(url_for("vws.redirect_by_role"))
 
     return app

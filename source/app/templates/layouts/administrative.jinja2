@@ -76,6 +76,7 @@
     </div>
 </div>
 <script>
+    let currentUserRoles = {{ strategy.get("profile")["roles"] }}
     let aboutMeStore = "{{ url_for('about_auth.about_me_store') }}"
 </script>
 <script src="{{ url_for('static', filename='javascript/global_preLoader.js') }}"></script>

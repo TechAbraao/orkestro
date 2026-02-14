@@ -77,12 +77,24 @@ $(document).ready(function () {
                                     >
                                         Adicionar produto
                                     </button>
+                                    ${ currentUserRoles.includes("ADMIN") || currentUserRoles.includes("PRIVILEGED") ? `
                                     <button
                                         class="delete-btn px-5 py-3 bg-red-500 text-base text-white rounded-3xl hover:bg-red-600 font-bold"
                                         data-id="${category.id}"
                                     >
                                         Excluir categoria
-                                    </button>
+                                    </button> ` : `
+                                    <button
+                                        title="Permissão insuficiente"
+                                        disabled
+                                        class="px-5 py-3 rounded-full bg-gray-300 text-gray-500 text-sm font-semibold
+                                        cursor-not-allowed opacity-70"
+                                        data-id=""
+                                    >
+                                        Excluir categoria
+                                    </button> 
+                        
+                                        `}
                                 </div>
                                 <div class="w-full bg-gray-200 h-[3px] mt-1 mb-4 rounded-full"></div>
                                 <div class="relative mb-5">

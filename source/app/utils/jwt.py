@@ -12,7 +12,6 @@ def generate_token(data: dict, expires_in_minutes: int = (6 * 60)) -> str:
     token = jwt.encode(payload, app.SECRET_KEY, algorithm="HS256")
     return token
 
-
 def decrypt_token(token: str) -> dict:
     try:
         payload = jwt.decode(token, app.SECRET_KEY, algorithms=["HS256"])

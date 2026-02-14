@@ -1,17 +1,28 @@
+
 function createMenuCard(menu) {
     return `
     <div class="menu-card bg-white rounded-2xl border-2 border-gray-300  transition-shadow duration-300 flex flex-col justify-between h-80 w-[360px] p-6">
         <div class="flex justify-between items-start mb-4">
             <h3 class="text-xl font-bold text-gray-900 capitalize">${menu.name}</h3>
-            <button 
-                title="Excluir"
-                class="btn-delete-menu px-3 py-1 rounded-full bg-red-500 text-white text-sm font-semibold
+            ${currentUserRoles?.includes("PRIVILEGED") || currentUserRoles.includes("ADMIN") ? `
+                <button 
+                    title="Excluir"
+                    class="btn-delete-menu px-3 py-1 rounded-full bg-red-500 text-white text-sm font-semibold
                        hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 transition"
-                data-id="${menu.id}">
+                    data-id="${menu.id}">
+                    Excluir
+                </button>
+                ` : `
+                <button 
+                    title="Permissão insuficiente"
+                    disabled
+                    class="px-3 py-1 rounded-full bg-gray-300 text-gray-500 text-sm font-semibold
+                    cursor-not-allowed opacity-70">
                 Excluir
-            </button>
+                </button>
+                `
+                }
         </div>
-        
         <p class="text-sm text-indigo-600 mb-2 truncate font-medium">${menu.slug}</p>
         <p class="text-gray-700 text-sm line-clamp-4 mb-4">${menu.description}</p>
         

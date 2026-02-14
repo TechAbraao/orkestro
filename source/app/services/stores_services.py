@@ -90,7 +90,7 @@ class StoresServices:
         )
 
         store_saved = self.stores_repository.save(account)
-        return store_saved.serialize
+        return store_saved
 
     @database_connection
     def about_me_store_account(self, store_id: str):

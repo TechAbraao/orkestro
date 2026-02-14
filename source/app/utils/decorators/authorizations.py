@@ -1,10 +1,32 @@
 from functools import wraps
 from flask import request, redirect, url_for, abort, jsonify
 from source.app.utils.jwt import decrypt_token
-from werkzeug.exceptions import Unauthorized
 from source.app.settings.application_settings import application_settings as credentials
 import base64
 from flask import g
+
+def get_token_from_request():
+    token = request.cookies.get("access_token")
+    if not token:
+        auth_header = request.headers.get("Authorization")
+        if auth_header and auth_header.startswith("Bearer "):
+            token = auth_header.split(" ")[1]
+
+    return token
+
+def redirect_by_role_logic(roles):
+
+    role_redirect_map = {
+        "ADMIN": "vws.views_main_dashboard",
+        "PRIVILEGED": "vws.views_profile_dashboard",
+        "COMMON": "vws.views_orders_dashboard"
+    }
+
+    for role in roles:
+        if role in role_redirect_map:
+            return redirect(url_for(role_redirect_map[role]))
+
+    return redirect(url_for("vws.views_login"))
 
 def permissions(strategy="jwt", roles=None):
     def decorator(f):
@@ -16,13 +38,7 @@ def permissions(strategy="jwt", roles=None):
             ## Utilizou um Token JWT? ##
             ## 1. Cenário: Token JWT Strategy ##
             if strategy in ("jwt", "either"):
-                token = request.cookies.get("access_token")
-
-                if not token:
-                    auth_header = request.headers.get("Authorization")
-                    if auth_header and auth_header.startswith("Bearer "):
-                        token = auth_header.split(" ")[1]
-
+                token = get_token_from_request()
                 if token:
                     try:
                         claims = decrypt_token(token)
@@ -73,22 +89,30 @@ def permissions(strategy="jwt", roles=None):
             if roles:
                 user_roles = claims.get("roles", [])
 
+                # 5. Cenário: Lógica que verifica as permissões necessárias
                 if not any(role in user_roles for role in roles):
-                    abort(403, "Acesso negado: permissões insuficientes para acessar este recurso.")
+
+                    ## 6. Sem permissões através da /api
+                    if request.path.startswith("/api"):
+                        abort(403, "Acesso negado: Você não possui permissão para acessar este recurso.")
+
+                    ## 7. Sem permissões através da /web
+                    return redirect(url_for("vws.redirect_by_role"))
 
             return f(*args, **kwargs)
-
         return decorated
     return decorator
 
 def authenticated(f):
     @wraps(f)
     def decorated(*args, **kwargs):
-        token = request.cookies.get("access_token")
+        token = get_token_from_request()
         if token:
             try:
-                decrypt_token(token)
-                return redirect(url_for("vws.views_main_dashboard"))
+                claims = decrypt_token(token)
+                roles = claims.get("roles", [])
+
+                return redirect_by_role_logic(roles)
             except ValueError:
                 pass
         return f(*args, **kwargs)

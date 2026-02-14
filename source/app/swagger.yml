@@ -2,7 +2,7 @@ openapi: 2.0
 
 info:
   version: "1.1.0"
-  title: "Orkestro | Documentação dos Endpoints (Swagger)"
+  title: "Orkestro | Ambiente Administrativo (Swagger)"
 
 consumes:
   - application/json
@@ -15,6 +15,8 @@ tags:
     description: "Endpoints responsáveis por autenticação e geração de tokens de acesso."
   - name: "Lojas"
     description: "Operações relacionadas ao gerenciamento de lojas."
+  - name: "Funcionários"
+    description: "Operações relacionados ao gerenciamento de funcionários."
   - name: "Cardápios"
     description: "Operações relacionadas ao gerenciamento de cardápios."
   - name: "Categorias"
@@ -248,11 +250,10 @@ paths:
     post:
       tags:
         - "Pedidos"
-  /api/orders/{menu_id}:
+  /api/orders/{order_id}:
     get:
       tags:
         - "Pedidos"
-  /api/orders/{order_id}:
     delete:
       tags:
         - "Pedidos"
@@ -264,3 +265,17 @@ paths:
     put:
       tags:
         - "Status"
+  /api/stores/{store_id}/employees:
+    get:
+      tags:
+        - "Funcionários"
+    post:
+      tags:
+        - "Funcionários"
+  /api/stores/{store_id}/employees/{employee_id}:
+    put:
+      tags:
+        - "Funcionários"
+    delete:
+      tags:
+        - "Funcionários"
