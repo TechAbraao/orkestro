@@ -100,43 +100,68 @@
     </h2>
 
     {# Forms #}
-    <form method="POST" action="/menus/create" class="space-y-4">
-      <div>
-        <label for="menu_name" class="block text-sm font-medium text-gray-700">
-          Nome
-        </label>
-        <input type="text" id="menu_name" name="name" required
-               class="mt-1 w-full border-gray-300 shadow-sm h-10 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"/>
-      </div>
+      <form class="space-y-4">
+          <div>
+              <label for="menu_name" class="block text-sm font-medium text-gray-700">
+                  Nome
+              </label>
+              <input type="text" id="menu_name" name="name" required
+                     class="mt-1 w-full border-gray-300 shadow-sm h-10 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"/>
+          </div>
 
-      {# Description #}
-      <div>
-        <label for="menu_description" class="block text-sm font-medium text-gray-700">
-          Descrição
-        </label>
-        <textarea id="menu_description" name="description" rows="3"
-                  class="mt-1 w-full border-gray-300 shadow-sm
+          {# Description #}
+          <div>
+              <label for="menu_description" class="block text-sm font-medium text-gray-700">
+                  Descrição
+              </label>
+              <textarea id="menu_description" name="description" rows="3"
+                        class="mt-1 w-full border-gray-300 shadow-sm
                          focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
-      </div>
+          </div>
 
-        {# Actions #}
-      <div class="flex justify-end gap-3">
-        <button type="button"
-                onclick="document.getElementById('modalCreateMenuModal').classList.add('hidden')"
-                class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700
-                       hover:bg-gray-50 focus:outline-none focus:ring-2
-                       focus:ring-indigo-500">
-          Cancelar
-        </button>
-        <button type="submit"
-                id="btn-create-menu"
-                class="px-4 py-2 rounded-lg bg-indigo-600 text-white
+          {# Tipo de Cardápio (role) #}
+          <div class="flex flex-col gap-2 w-full">
+              <label
+                      for="role"
+                      class="text-sm font-semibold text-gray-700"
+              >
+                  Tipo de Cardápio
+              </label>
+
+              <select
+                      id="role_menu"
+                      name="role"
+                      class="w-full px-4 py-2 rounded-xl border border-gray-300
+               bg-white text-gray-700 text-sm
+               focus:outline-none focus:ring-2 focus:ring-blue-500
+               focus:border-blue-500
+               transition duration-200 ease-in-out
+               shadow-sm hover:border-gray-400"
+              >
+                  <option value="COMMON">COMMON</option>
+                  <option value="VIEWER">VIEWED</option>
+              </select>
+
+          </div>
+
+          {# Actions #}
+          <div class="flex flex-col gap-2">
+              <button type="submit"
+                      id="btn-create-menu"
+                      class="px-4 py-2 rounded-lg bg-indigo-600 text-white
                        hover:bg-indigo-700 focus:outline-none focus:ring-2
                        focus:ring-indigo-500">
-          Criar
-        </button>
-      </div>
-    </form>
+                  Criar
+              </button>
+              <button type="button"
+                      onclick="document.getElementById('modalCreateMenuModal').classList.add('hidden')"
+                      class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700
+                       hover:bg-gray-50 focus:outline-none focus:ring-2
+                       focus:ring-indigo-500">
+                  Cancelar
+              </button>
+          </div>
+      </form>
   </div>
 </div>
 {% endmacro %}

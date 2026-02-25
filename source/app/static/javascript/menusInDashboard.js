@@ -25,6 +25,11 @@ function createMenuCard(menu) {
         </div>
         <p class="text-sm text-indigo-600 mb-2 truncate font-medium">${menu.slug}</p>
         <p class="text-gray-700 text-sm line-clamp-4 mb-4">${menu.description}</p>
+        <div class="flex items-center gap-2">
+            <span class="text-gray-700 text-sm line-clamp">Tipo:</span>
+            <p class="text-gray-900 text-sm line-clamp-4 bg-purple-200 rounded-full pl-2 pr-2">${menu.roles}</p>
+        </div>
+   
         
         <div class="mt-auto flex flex-col gap-1">
             <a href="/menus/${menu.id}/categories" 

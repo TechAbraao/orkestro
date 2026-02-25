@@ -27,6 +27,7 @@ def view_menu_by_slug(slug: str):
         return render_template("errors/menu_not_found.jinja2", suggestion=suggestion), 404
 
     menu_id = menu_by_slug["id"]
+
     verify_category = categories_services.get_all_categories_by_menu(menu_id)
 
     hasCategory = False
@@ -39,7 +40,8 @@ def view_menu_by_slug(slug: str):
         "menu_slug": slug,
         "menu_id": menu_id,
         "menu_name": menu_by_slug.get("name"),
-        "has_category": bool(hasCategory)
+        "has_category": bool(hasCategory),
+        "menu_roles": menu_by_slug["roles"]
     }
 
     return render_template("pages/menu_clients.jinja2", strategy=rendering_strategy)
@@ -51,7 +53,7 @@ def views_category_by_id(slug: str, category_id: str):
     logger.info(f"Buscando menu através do slug '{slug}'")
     menu_by_slug = menu_services.get_menu_by_slug(slug)
     logger.info(f"Menu encontrado: {menu_by_slug}")
-
+    print("Suas rOles do menu: ", menu_by_slug["roles"])
     logger.info(f"Buscando informações da categoria")
     category_info = categories_services.get_category_by_id(category_id)
 
@@ -63,7 +65,8 @@ def views_category_by_id(slug: str, category_id: str):
         "menu_name": menu_by_slug.get("name"),
         "menu_id": menu_id,
         "category_id": category_id,
-        "category_name": category_info.get("name")
+        "category_name": category_info.get("name"),
+        "menu_roles": menu_by_slug["roles"]
     }
 
     return render_template("pages/category_clients.jinja2", strategy=rendering_strategy)

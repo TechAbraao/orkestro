@@ -16,7 +16,8 @@ def views_main_dashboard():
     rendering_strategy = {
         "profile": {
             "menu_id": menu_id.get("id", ""),
-            "roles": roles
+            "roles": roles,
+            "menu_roles": menu_id.get("roles", None)
         }
     }
 
@@ -32,7 +33,8 @@ def views_profile_dashboard():
     rendering_strategy = {
         "profile": {
             "menu_id": menu_id.get("id", ""),
-            "roles": roles
+            "roles": roles,
+            "menu_roles": menu_id.get("roles", None)
         }
     }
 
@@ -49,7 +51,8 @@ def views_orders_dashboard():
     rendering_strategy = {
         "profile": {
             "menu_id": menu_id.get("id", ""),
-            "roles": roles
+            "roles": roles,
+            "menu_roles": menu_id.get("roles", None)
         }
     }
     return render_template("pages/orders.jinja2", strategy=rendering_strategy)
@@ -71,7 +74,8 @@ def views_menus_manager_dashboard():
         "profile": {
             "roles": roles,
             "hasMenu": hasMenu,
-            "menu_id": menu_id.get("id")
+            "menu_id": menu_id.get("id"),
+            "menu_roles": menu_id.get("roles", None)
         },
         "logged": False
     }
@@ -109,7 +113,8 @@ def views_edit_menu_dashboard(menu_id: str):
             "menu_id": menu_id,
             "menu_name": menu_info["name"],
             "hasCategories": has_categories,
-            "roles": roles
+            "roles": roles,
+            "menu_roles": menu_info.get("roles", None)
         }
     }
 

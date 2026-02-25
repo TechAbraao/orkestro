@@ -19,7 +19,14 @@ def create_menu():
     logger.info(f"POST /menus - creating new menu in store_id: '{store_id}'")
 
     data = request.get_json()
+    roles = data.get("roles")
     data_validated = menu_schema.load(data)
+
+
+    roles_accepts = ["VIEWER", "COMMON"]
+    if roles not in roles_accepts:
+         abort(400, description="Invalid menu rule. Only the following are valid: ['VIEWER'] or ['COMMON']")
+
 
     data_validated["store_id"] = store_id
     created = menu_services.create_menu(data_validated)
@@ -44,6 +51,9 @@ def get_menus():
         logger.info(f"Retornando os menus da loja autenticada. UUID da loja: '{store_id}'. ")
 
         menus = menu_services.get_menus_by_store_id(store_id)
+        print(menus)
+
+
         return Response.success(
             message="Menus returned successfully (by store).",
             status_code=200,

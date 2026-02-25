@@ -49,7 +49,8 @@ class MenuServices:
             created_at=datetime.now(ZoneInfo("America/Sao_Paulo")),
             slug=slug,
             store_id=data.get("store_id"),
-            activated=False
+            activated=False,
+            roles=data.get("roles")
         )
 
         self.menu_repository.save(entity)

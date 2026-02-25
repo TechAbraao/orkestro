@@ -1,5 +1,6 @@
 from source.app.settings.definitions_settings import db as database
 from datetime import datetime, timezone
+from sqlalchemy.dialects.postgresql import ARRAY
 from source.app.entities.stores_entity import StoresEntity
 from source.app.entities.opening_hours_entity import OpeningHoursEntity
 import uuid
@@ -11,14 +12,18 @@ class MenusEntity(database.Model):
     created_at = database.Column(
         database.DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
+
     name = database.Column(database.String, nullable=False)
     slug = database.Column(database.String, nullable=True)
+    roles = database.Column(database.String, nullable=False)
     description = database.Column(database.Text, nullable=True)
+
     activated = database.Column(
         database.Boolean,
         nullable=False,
         default=False
     )
+
     categories = database.relationship(
         "CategoriesEntity", back_populates="menu", cascade="all, delete"
     )
@@ -44,6 +49,7 @@ class MenusEntity(database.Model):
             "created_at": self.created_at.isoformat() if self.created_at else None,
             "slug": self.slug,
             "activated": self.activated,
+            "roles": self.roles
             # "categories": [category.serialize for category in self.categories] if self.categories else [],
             # "products": [product.serialize for product in self.products] if self.products else []
         }
@@ -56,6 +62,7 @@ class MenusEntity(database.Model):
             "created_at": self.created_at.isoformat() if self.created_at else None,
             "slug": self.slug,
             "activated": self.activated,
+            "roles": self.roles
         }
 
         if include_categories:

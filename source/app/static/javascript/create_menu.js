@@ -17,6 +17,7 @@ $(document).ready(function () {
 
         let menuName = $("#menu_name").val();
         let menuDescription = $("#menu_description").val();
+        let roleMenu = $("#role_menu").val();
 
         $.ajax({
             url: "/api/menus",
@@ -24,7 +25,8 @@ $(document).ready(function () {
             contentType: "application/json",
             data: JSON.stringify({
                 name: menuName,
-                description: menuDescription
+                description: menuDescription,
+                roles: roleMenu
             }),
             success: function () {
                 console.log("Menu criado com sucesso!");
