@@ -3,7 +3,7 @@ from source.app.utils.responses import Response
 from source.app.schemas import menu_schema, uuid_schema, opening_hours_schemas
 from source.app.services import (menu_services, opening_hours_services, categories_services)
 from source.app.settings.logging_settings import get_logger
-from source.app.utils.decorators.authorizations import permissions
+from source.app.utils.decorators.authorizations import api_permissions
 from werkzeug.exceptions import *
 from source.app.blueprints.routes import api
 import os
@@ -13,7 +13,7 @@ dir_name = os.path.basename(__file__)
 
 """ 01. Criar um novo Menu (Cardápio). """
 @api.route("/menus", methods=["POST"])
-@permissions(strategy="jwt", roles=["ADMIN", "PRIVILEGED"])
+@api_permissions(strategy="jwt", roles=["ADMIN", "PRIVILEGED"])
 def create_menu():
     store_id = g.jwt_claims.get("sub")
     logger.info(f"POST /menus - creating new menu in store_id: '{store_id}'")
@@ -39,7 +39,7 @@ def create_menu():
 
 """ 02. Obter menus (do usuário autenticado ou todos). """
 @api.route("/menus", methods=["GET"], strict_slashes=False)
-@permissions(strategy="jwt", roles=["ADMIN", "COMMON", "PRIVILEGED"])
+@api_permissions(strategy="jwt", roles=["ADMIN", "COMMON", "PRIVILEGED"])
 def get_menus():
     logger.info("GET /menus ou /menus?mine=true - Retornando todos os menus.")
 
@@ -67,7 +67,7 @@ def get_menus():
 
 """ 03. Deletar Menu (Cardápio). """
 @api.route("/menus/<string:menu_id>", methods=["DELETE"])
-@permissions(strategy="jwt", roles=["ADMIN", "PRIVILEGED"])
+@api_permissions(strategy="jwt", roles=["ADMIN", "PRIVILEGED"])
 def delete_menu(menu_id: str):
     logger.info("DELETE /menus/<menu_id> - deleting a menu")
 
@@ -81,7 +81,7 @@ def delete_menu(menu_id: str):
 
 """ 04. Atualizar Menu (Cardápio). """
 @api.route("/menus/<string:menu_id>", methods=["PUT"])
-@permissions(strategy="jwt", roles=["ADMIN", "COMMON", "PRIVILEGED"])
+@api_permissions(strategy="jwt", roles=["ADMIN", "COMMON", "PRIVILEGED"])
 def update_menu(menu_id: str):
     logger.info("PUT /menus/<menu_id> - updating a menu")
 
@@ -90,6 +90,11 @@ def update_menu(menu_id: str):
 
     uuid_schema.load({"id": menu_id})
     data_validated = menu_schema.load(data)
+
+    roles = data.get("roles", None)
+    roles_accepts = ["VIEWER", "COMMON"]
+    if roles not in roles_accepts:
+        abort(400, description="Invalid menu rule. Only the following are valid: ['VIEWER'] or ['COMMON']")
 
     menu_services.update_menu(menu_id, data_validated)
 
@@ -100,7 +105,7 @@ def update_menu(menu_id: str):
 
 """ 05. Atualizar status do Menu (Cardápio) (ativado/desativado). """
 @api.route("/menus/<string:menu_id>/status", methods=["PATCH"])
-@permissions(strategy="jwt", roles=["ADMIN", "COMMON", "PRIVILEGED"])
+@api_permissions(strategy="jwt", roles=["ADMIN", "COMMON", "PRIVILEGED"])
 def change_status_menu(menu_id: str):
     store_id = g.jwt_claims.get("sub")
     logger.info(f"PATCH /menus/{menu_id}/status - Atualizando o status do cardápio.")
@@ -122,7 +127,7 @@ def change_status_menu(menu_id: str):
 
 """ 06. Ver o status atual do cardápio (ativado/desativado). """
 @api.route("/menus/<string:menu_id>/status", methods=["GET"])
-@permissions(strategy="jwt", roles=["ADMIN", "COMMON", "PRIVILEGED"])
+@api_permissions(strategy="jwt", roles=["ADMIN", "COMMON", "PRIVILEGED"])
 def get_status_menu(menu_id: str):
     store_id = g.jwt_claims.get("sub")
     logger.info(f"GET /menus/{menu_id}/status - Obtendo estado atual do cardápio (ativado/desativado).")

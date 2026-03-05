@@ -15,6 +15,8 @@
     <section id="" class="w-full h-full flex flex-col items-center justify-start gap-3">
         {# Modals #}
         {{ modals.modal_create_category() }}
+        {{ modals.modal_edit_category() }}
+        {{ modals.modal_edit_menu() }}
         {{ modals.modal_confirm_operation(
             modal_id="modalConfirmCategory",
             header_text="Confirmação",
@@ -30,23 +32,33 @@
         {{ modals.modal_add_product() }}
         {{ modals.modal_edit_category() }}
         {{ modals.modal_edit_product() }}
-
+        {{ modals.modal_qr_code() }}
+        
         {# Menu de Opções #}
-        <aside class="w-full h-[90px] pl-5 flex items-center justify-start bg-gray-100 gap-3 rounded-3xl border-2 border-gray-300">
+        <aside
+            class="w-full h-[90px] pl-5 flex items-center justify-start bg-gray-100 gap-3 rounded-3xl border-2 border-gray-300">
             {{ buttons.button_redirect(endpoint="vws.views_menus_manager_dashboard", text="Voltar") }}
-            <button id="btn-create-category"
-                    class="px-5 py-3 bg-gray-900 text-base
-                    text-white rounded-3xl hover:bg-gray-800 font-bold">
+            <button id="btn-create-category" class="px-5 py-3 bg-gray-900 text-base
+                            text-white rounded-3xl hover:bg-gray-800 font-bold">
                 Nova Categoria
             </button>
-            <button id="btn-status-menu"
-                    class="px-5 py-3 bg-gray-900 text-base
-                    text-white rounded-3xl hover:bg-gray-800 font-bold">
+            {% if strategy.get("profile")["menu_roles"] == "COMMON" %}
+            <button id="btn-status-menu" class="px-5 py-3 bg-gray-900 text-base
+                            text-white rounded-3xl hover:bg-gray-800 font-bold">
                 Status
             </button>
             <button id="btn-hours-config" class="px-5 py-3 bg-gray-900 text-base text-white 4
-            rounded-3xl hover:bg-gray-800 font-bold">
+                    rounded-3xl hover:bg-gray-800 font-bold">
                 Configurar Horários
+            </button>
+            {% endif %}
+            <button id="btn-edit-menu-open" class="px-5 py-3 bg-gray-900 text-base text-white 4
+                    rounded-3xl hover:bg-gray-800 font-bold">
+                Editar Cardápio
+            </button>
+            <button id="btn-qrcode-open" class="px-5 py-3 bg-gray-900 text-base text-white 4
+                    rounded-3xl hover:bg-gray-800 font-bold">
+                QRCode
             </button>
         </aside>
         <section
@@ -64,6 +76,7 @@
         </section>
     </section>
     <script>
+        const menuSlug = "{{ strategy.get('profile')['slug'] }}"
         const menuId = "{{ strategy.get('profile')['menu_id'] }}"
         const copyIdIcon = "{{ url_for('static', filename='icons/copy-alt-1.png') }}"
         const getCategoriesURL = `/api/menus/${menuId}/categories`
@@ -71,6 +84,8 @@
     <script src="{{ url_for('static', filename='javascript/categoryOperations.js') }}" defer></script>
     <script src="{{ url_for('static', filename='javascript/status_menu.js') }}" defer></script>
     <script src="{{ url_for('static', filename='javascript/hours_configs.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='javascript/editMenuInfos.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/QRCode.js') }}"></script>
 {% endblock dashboard %}
 
 {% block navbar %}

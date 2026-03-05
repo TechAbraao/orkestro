@@ -3,7 +3,7 @@ from source.app.settings.logging_settings import get_logger
 from source.app.utils.responses import Response
 from source.app.schemas import categories_schema, uuid_schema
 from source.app.services import categories_services
-from source.app.utils.decorators.authorizations import permissions
+from source.app.utils.decorators.authorizations import api_permissions
 from werkzeug.exceptions import *
 from source.app.blueprints.routes import api
 
@@ -72,7 +72,7 @@ def get_category_by_id(category_id: str):
 
 """ 04. Delete specific Category """
 @api.route("/categories/<string:category_id>", methods=["DELETE"])
-@permissions(strategy="jwt", roles=["ADMIN", "PRIVILEGED"])
+@api_permissions(strategy="jwt", roles=["ADMIN", "PRIVILEGED"])
 def delete_category_by_id(category_id: str):
     logger.info("DELETE /categories/{category_id} - delete category by ID.")
 

@@ -33,11 +33,13 @@ $(document).ready(() => {
                                 <p class="text-sm text-gray-500 line-clamp-2 pl-3 text-left">${product.description || "Sem descrição"}</p>
                                 <p data-price="${product.price}" class="text-gray-800 font-medium mt-2 pl-3 text-left price-product-id">R$ ${product.price.toFixed(2)}</p>
                             </div>
+                            {% if strategy["menu_roles"] == "COMMON" %}
                             <div class="w-full h-[42%] flex justify-end items-end">
                                 <button class="bg-gray-800 p-2 rounded-2xl text-white text-sm font-semibold btn-add-cart-product">
                                     Adicionar no Carrinho
                                 </button>
                             </div>
+                            {% endif %}
                         </div>
                         <!-- Obter detalhes do Produto! -->
                        <!-- <a href="#" class="absolute inset-0 z-10"></a> -->

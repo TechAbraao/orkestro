@@ -82,6 +82,7 @@ class MenusRepository:
 
     @transactional
     def update(self, menu_id: str, data) -> bool:
+
         menu = (
             self.session
             .query(MenusEntity)
@@ -92,7 +93,7 @@ class MenusRepository:
         if not menu:
             return False  
 
-        allowed_fields = {"name", "description", "slug"}
+        allowed_fields = {"name", "description", "slug", "roles"}
         for key, value in data.items():
             if key in allowed_fields:
                 setattr(menu, key, value)

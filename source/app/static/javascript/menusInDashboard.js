@@ -24,29 +24,30 @@ function createMenuCard(menu) {
                 }
         </div>
         <p class="text-sm text-indigo-600 mb-2 truncate font-medium">${menu.slug}</p>
-        <p class="text-gray-700 text-sm line-clamp-4 mb-4">${menu.description}</p>
+        <p class="text-gray-700 text-sm line-clamp-4 mb-2">${menu.description}</p>
         <div class="flex items-center gap-2">
             <span class="text-gray-700 text-sm line-clamp">Tipo:</span>
-            <p class="text-gray-900 text-sm line-clamp-4 bg-purple-200 rounded-full pl-2 pr-2">${menu.roles}</p>
+            <p class="text-gray-900 text-[14px] font-semibold line-clamp-4 bg-gray-200 rounded-full pl-3 pr-3">${menu.roles}</p>
         </div>
-   
         
-        <div class="mt-auto flex flex-col gap-1">
-            <a href="/menus/${menu.id}/categories" 
-                title="Configurar Cardápio"
-                class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium text-center
-                hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
-                Configurar Cardápio
-            </a>
+        <div class="mt-auto flex flex-col gap-1 h-[38%]">
             <a href="/menus/${menu.slug}" target="_blank"
-                title="Abrir Cardápio"
-               class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium text-center
-                      hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition">
-                Abrir Cardápio
+                title="Cardápio"
+                class="flex items-center justify-center bg-[#111111] hover:bg-[#050505] text-white transition-colors h-1/2 text-center
+                font-semibold px-3 py-1 rounded-3xl transition-all w-full">
+                    Acessar Cardápio
             </a>
+            <a href="/menus/${menu.id}/categories" 
+                title="Configurações"
+                class="flex items-center justify-center bg-gray-200 hover:bg-gray-300 font-semibold h-1/2 text-center
+                text-gray-700 px-3 py-1 rounded-3xl transition-colors w-full">
+                    Configurações
+            </a>
+            
             <!--
             <p class="text-xs text-gray-400">Criado em: ${menu.created_at ? menu.created_at.slice(0, 10) : "N/A"}</p>
             -->
+       
         </div>
     </div>
     `;

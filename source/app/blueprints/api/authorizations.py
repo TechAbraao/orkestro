@@ -82,7 +82,7 @@ def enter_the_platform():
     return resp
 
 @api.route("/logout", methods=["GET"])
-@permissions(strategy="jwt", roles=["ADMIN", "COMMON", "PRIVILEGED"])
+@api_permissions(strategy="jwt", roles=["ADMIN", "COMMON", "PRIVILEGED"])
 def end_session_store():
     resp = make_response(jsonify({"message": "User logged out successfully"}))
     resp.set_cookie("access_token",

@@ -14,6 +14,9 @@ def get_token_from_request():
 
     return token
 
+def get_cookie_from_request():
+    pass
+
 def redirect_by_role_logic(roles):
 
     role_redirect_map = {
@@ -28,7 +31,7 @@ def redirect_by_role_logic(roles):
 
     return redirect(url_for("vws.views_login"))
 
-def permissions(strategy="jwt", roles=None):
+def api_permissions(strategy="jwt", roles=None):
     def decorator(f):
         @wraps(f)
         def decorated(*args, **kwargs):
@@ -98,6 +101,22 @@ def permissions(strategy="jwt", roles=None):
 
                     ## 7. Sem permissões através da /web
                     return redirect(url_for("vws.redirect_by_role"))
+
+            return f(*args, **kwargs)
+        return decorated
+    return decorator
+
+def client_permissions(strategy="cookies", roles=None):
+    def decorator(f):
+        @wraps(f)
+        def decorated(*args, **kwargs):
+            if strategy in "cookies":
+                role_menu = request.cookies.get("role_menu", None)
+                if role_menu is None:
+                    abort(500, description=f"Cookie with name '{role_menu}' not found.")
+
+                if role_menu not in roles:
+                    abort(403, description=f"Acesso negado: Você não possui permissão para acessar este recurso.")
 
             return f(*args, **kwargs)
         return decorated

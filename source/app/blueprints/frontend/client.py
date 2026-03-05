@@ -1,5 +1,6 @@
-from flask import render_template, url_for, g, session, abort
+from flask import render_template, url_for, g, session, abort, make_response
 from source.app.exceptions.menu_exceptions import MenuNotFoundException
+from source.app.utils.decorators.authorizations import client_permissions
 from source.app.utils.fallbacks import find_similar_menu_slug
 from source.app.services import menu_services, categories_services, stores_services
 from source.app.settings.logging_settings import get_logger
@@ -11,6 +12,7 @@ dir_name = os.path.basename(__file__)
 
 """ 1. Esta parte do código é responsável por renderizar todos os cardápios disponíveis na interface. """
 @vws.get("/menus/<string:slug>")
+@client_permissions(strategy="cookies", roles=["COMMON", "VIEWER"])
 def view_menu_by_slug(slug: str):
     logger.info(f"[{dir_name}] Buscando menu pelo slug: {slug}")
 
@@ -44,10 +46,23 @@ def view_menu_by_slug(slug: str):
         "menu_roles": menu_by_slug["roles"]
     }
 
-    return render_template("pages/menu_clients.jinja2", strategy=rendering_strategy)
+    response = make_response(
+        render_template("pages/menu_clients.jinja2", strategy=rendering_strategy)
+    )
+
+    response.set_cookie(
+        "role_menu",
+        menu_by_slug["roles"],
+        max_age=60 * 60 * 24 * 7,
+        httponly=True,
+        samesite="lax"
+    )
+
+    return response
 
 """ 2. Aqui será feita a renderização dos produtos pertencentes às categorias dos cardápios. """
 @vws.get("/menus/<string:slug>/<string:category_id>")
+@client_permissions(strategy="cookies", roles=["COMMON", "VIEWER"])
 def views_category_by_id(slug: str, category_id: str):
 
     logger.info(f"Buscando menu através do slug '{slug}'")
@@ -69,10 +84,23 @@ def views_category_by_id(slug: str, category_id: str):
         "menu_roles": menu_by_slug["roles"]
     }
 
-    return render_template("pages/category_clients.jinja2", strategy=rendering_strategy)
+    response = make_response(
+        render_template("pages/category_clients.jinja2", strategy=rendering_strategy)
+    )
+
+    response.set_cookie(
+        "role_menu",
+        menu_by_slug["roles"],
+        max_age=60 * 60 * 24 * 7,
+        httponly=True,
+        samesite="lax"
+    )
+
+    return response
 
 """ 3. Aqui será feito a renderização do produto em específico que pertence a categoria do cardápio.  """
 @vws.get("/menus/<string:slug>/products/<string:product_id>")
+@client_permissions(strategy="cookies", roles=["COMMON", "VIEWER"])
 def views_product_by_id(slug: str, product_id: str):
     logger.info(f"Buscando menu através do slug '{slug}'")
     menu_by_slug = menu_services.get_menu_by_slug(slug)
@@ -85,23 +113,69 @@ def views_product_by_id(slug: str, product_id: str):
         "product_id": product_id
     }
 
-    return render_template("pages/products_details_clients.jinja2", strategy=rendering_strategy)
+    response = make_response(
+        render_template("pages/products_details_clients.jinja2", strategy=rendering_strategy)
+    )
+
+    response.set_cookie(
+        "role_menu",
+        menu_by_slug["roles"],
+        max_age=60 * 60 * 24 * 7,
+        httponly=True,
+        samesite="lax"
+    )
+    return response
 
 @vws.route("/menus/<string:slug>/cart", methods=["GET"])
+@client_permissions(strategy="cookies", roles=["COMMON"])
 def vws_payment_order(slug: str):
     g.return_id = session.get("return_id", "N/A")
     logger.info(f"Return UUID para retornar a categoria certa: {g.return_id}")
     """ Return UUID identifica e avisa o front-end qual é o cardapio pra retornar """
+
+    menu_by_slug = menu_services.get_menu_by_slug(slug)
+
     rendering_strategy = {
         "menu_slug": slug,
         "return_id": g.return_id
     }
-    return render_template("pages/cart.jinja2", strategy=rendering_strategy)
+
+    response = make_response(
+        render_template("pages/cart.jinja2", strategy=rendering_strategy)
+    )
+
+    response.set_cookie(
+        "role_menu",
+        menu_by_slug["roles"],
+        max_age=60 * 60 * 24 * 7,
+        httponly=True,
+        samesite="lax"
+    )
+
+    return response
+
 
 @vws.route("/menus/<string:slug>/payment", methods=["GET"])
+@client_permissions(strategy="cookies", roles=["COMMON"])
 def vws_finalize_order(slug: str):
+    menu_by_slug = menu_services.get_menu_by_slug(slug)
+
     rendering_strategy = {
         "menu_slug": slug,
+        "menu_roles": menu_by_slug["roles"],
     }
-    return render_template("pages/finalize_order.jinja2", strategy=rendering_strategy)
+
+    response = make_response(
+        render_template("pages/finalize_order.jinja2", strategy=rendering_strategy)
+    )
+
+    response.set_cookie(
+        "role_menu",
+        menu_by_slug["roles"],
+        max_age=60 * 60 * 24 * 7,
+        httponly=True,
+        samesite="lax"
+    )
+
+    return response
 
