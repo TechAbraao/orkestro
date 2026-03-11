@@ -148,10 +148,11 @@
 {% endmacro %}
 
 {% macro modal_edit_menu() %}
-<div id="modalEditMenuModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+<div id="modalEditMenuModal"
+    class="fixed inset-0 bg-black/40 backdrop-blur-[1.5px] flex items-center justify-center hidden z-50">
 
     {# Content #}
-    <div class="bg-white shadow-lg w-full max-w-md p-6 relative rounded-3xl">
+    <div class="bg-white rounded-3xl shadow-2xl border-2 border-gray-200 w-full max-w-md p-6 relative">
 
         <button type="button" onclick="document.getElementById('modalEditMenuModal').classList.add('hidden')"
             class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 focus:outline-none">
@@ -173,7 +174,7 @@
                     Nome
                 </label>
                 <input type="text" id="menu_name_edit" name="name" required
-                    class="mt-1 w-full border-gray-300 shadow-sm h-10 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" />
+                    class="w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </div>
 
             {# Description #}
@@ -181,14 +182,15 @@
                 <label for="menu_description" class="block text-sm font-medium text-gray-700">
                     Descrição
                 </label>
-                <textarea id="menu_description_edit" name="description" rows="3" class="mt-1 w-full border-gray-300 shadow-sm
-                         focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                <textarea id="menu_description_edit" name="description" rows="3" 
+                class="mt-1 w-full border border-gray-300 shadow-sm h-[160px] rounded-xl p-2
+                         focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm resize-none"></textarea>
             </div>
 
             {# Tipo de Cardápio (role) #}
             <div class="flex flex-col gap-2 w-full">
                 <label for="role" class="text-sm font-semibold text-gray-700">
-                    Tipo de Cardápio
+                    Tipo do Cardápio
                 </label>
 
                 <select id="role_menu_edit" name="role" class="w-full px-4 py-2 rounded-xl border border-gray-300
@@ -204,16 +206,24 @@
             </div>
 
             {# Actions #}
-            <div class="flex flex-col gap-2">
-                <button type="submit" id="btn-edit-menu" class="px-4 py-2 rounded-lg bg-indigo-600 text-white
-                       hover:bg-indigo-700 focus:outline-none focus:ring-2
-                       focus:ring-indigo-500">
+            <div class="flex flex-col gap-1">
+                <button type="submit" id="btn-edit-menu" class="flex items-center justify-center w-full h-[60px]
+                    bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700
+                    hover:from-indigo-600 hover:to-indigo-800
+                    text-white font-semibold
+                    rounded-2xl shadow-md hover:shadow-lg
+                    transition-all duration-200
+                    active:scale-95">
                     Criar
                 </button>
                 <button type="button" onclick="document.getElementById('modalEditMenuModal').classList.add('hidden')"
-                    class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700
-                       hover:bg-gray-50 focus:outline-none focus:ring-2
-                       focus:ring-indigo-500">
+                    class="flex items-center justify-center w-full h-[60px]
+                    bg-white border border-gray-300
+                    hover:bg-gray-100
+                    text-gray-700 font-semibold
+                    rounded-2xl shadow-sm hover:shadow
+                    transition-all duration-200
+                    active:scale-95">
                     Cancelar
                 </button>
             </div>
@@ -224,18 +234,48 @@
 
 {% macro modal_qr_code() %}
 <div id="modalQRCodeModal"
-    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-    {# Content #}
-    <div class="bg-white shadow-lg w-full max-w-md p-6 relative rounded-3xl">
-        <button type="button" onclick="document.getElementById('modalQRCodeModal').classList.add('hidden')"
-            class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+    class="fixed inset-0 bg-black/40 backdrop-blur-[1.5px] flex items-center justify-center hidden z-50">
+    <div
+        class="bg-white shadow-2xl border-2 border-gray-200 w-full max-w-md p-6 relative rounded-3xl flex flex-col gap-2">
+        <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition"
+            onclick="document.getElementById('modalQRCodeModal').classList.add('hidden')">
+            ✕
         </button>
-        <section id="QRCodeSection" class="w-full h-[450px] flex justify-center items-center">
-        </section>
+        <h2 class="text-2xl font-semibold text-gray-800 text-left">
+            QR Code
+        </h2>
+
+        <div class="flex justify-between items-center border-b mb-1 mt-1"></div>
+
+        <div class="w-full flex justify-center items-center bg-gray-50 border border-gray-200 h-[410px] rounded-3xl">
+
+            <section id="QRCodeSection"
+                class="w-[85%] h-[85%] flex justify-center items-center bg-white rounded-2xl shadow-inner">
+            </section>
+
+        </div>
+        <div class="flex flex-col items-center justify-center w-full gap-1">
+
+            <button class="flex items-center justify-center w-full h-[60px]
+            bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700
+            hover:from-indigo-600 hover:to-indigo-800
+            text-white font-semibold
+            rounded-2xl shadow-md hover:shadow-lg
+            transition-all duration-200
+            active:scale-95" id="btn-generate-qrcode">
+                Gerar QRCode
+            </button>
+
+            <button class="flex items-center justify-center w-full h-[60px]
+            bg-white border border-gray-300
+            hover:bg-gray-100
+            text-gray-700 font-semibold
+            rounded-2xl shadow-sm hover:shadow
+            transition-all duration-200
+            active:scale-95" onclick="document.getElementById('modalQRCodeModal').classList.add('hidden')">
+                Fechar
+            </button>
+        </div>
     </div>
 </div>
 {% endmacro %}
@@ -259,8 +299,9 @@
 {% endmacro %}
 
 {% macro modal_create_category() %}
-<div id="modalCreateCategory" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-    <div class="bg-white rounded-lg w-11/12 max-w-md p-6 relative shadow-lg">
+<div id="modalCreateCategory"
+    class="fixed inset-0 bg-black/40 backdrop-blur-[1.5px] flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-3xl shadow-2xl border-2 border-gray-200 w-11/12 max-w-md p-6 relative">
         {# Botão Fechar #}
         <button id="closeModal"
             class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 font-bold text-xl">&times;</button>
@@ -270,27 +311,39 @@
 
         <form id="formCreateCategory" class="flex flex-col gap-4">
             <div>
-                <label for="categoryName" class="block text-gray-700 font-semibold mb-1">Nome da Categoria</label>
+                <label for="categoryName" class="block text-gray-700 font-semibold mb-1">Nome da Categoria <small id="" class="text-[15px] text-red-500 pb-2">*</small></label>
                 <input type="text" id="categoryName" name="name"
-                    class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    required>
+                    class="w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required> 
+                            
             </div>
             <div>
                 <label for="categoryDescription" class="block text-gray-700 font-semibold mb-1">Descrição</label>
                 <textarea id="categoryDescription" name="description"
-                    class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    rows="3" required></textarea>
+                    class="w-full h-[170px] border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                    rows="3" cols="70" required></textarea>
             </div>
 
             {# Botões #}
-            <div class="flex justify-end gap-2 mt-4">
-                <button type="button" id="cancelCreateCategory"
-                    class="px-4 py-2 rounded bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold">
-                    Cancelar
-                </button>
-                <button id="btn-confirm-create-category" type="submit"
-                    class="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-white font-semibold">
+            <div class="flex flex-col justify-center gap-1">
+                <button id="btn-confirm-create-category" type="submit" class="flex items-center justify-center w-full h-[60px]
+                        bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700
+                        hover:from-indigo-600 hover:to-indigo-800
+                        text-white font-semibold
+                        rounded-2xl shadow-md hover:shadow-lg
+                        transition-all duration-200
+                        active:scale-95">
                     Confirmar
+                </button>
+                <button type="button" id="cancelCreateCategory"
+                    class="flex items-center justify-center w-full h-[60px]
+                        bg-white border border-gray-300
+                        hover:bg-gray-100
+                        text-gray-700 font-semibold
+                        rounded-2xl shadow-sm hover:shadow
+                        transition-all duration-200
+                        active:scale-95">
+                    Cancelar
                 </button>
             </div>
         </form>
@@ -531,7 +584,8 @@ modal_id="modalConfirmOperation") %}
 {% endmacro %}
 
 {% macro modal_add_product() %}
-<div id="modalAddProduct" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+<div id="modalAddProduct"
+    class="fixed inset-0 bg-black/40 backdrop-blur-[1.5px] flex items-center justify-center hidden z-50">
     <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
         <button id="closeModalAddProduct" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 font-bold"
             onclick="document.getElementById('modalAddProduct').classList.add('hidden')">
@@ -542,14 +596,14 @@ modal_id="modalConfirmOperation") %}
 
         <form id="formAddProduct" class="space-y-4">
             <div>
-                <label for="productName" class="block text-gray-700 font-medium mb-1">Nome do Produto</label>
+                <label for="productName" class="block text-gray-700 font-medium mb-1">Nome do Produto <small id="" class="text-[15px] text-red-500 pb-2">*</small></label>
                 <input type="text" id="productName" name="name"
                     class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Digite o nome do produto" required />
             </div>
 
             <div>
-                <label for="productPrice" class="block text-gray-700 font-medium mb-1">Preço (R$)</label>
+                <label for="productPrice" class="block text-gray-700 font-medium mb-1">Preço (R$) <small id="" class="text-[15px] text-red-500 pb-2">*</small></label>
                 <input type="number" step="0.01" id="productPrice" name="price"
                     class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="0.00" required />
@@ -562,14 +616,26 @@ modal_id="modalConfirmOperation") %}
                     placeholder="Digite a descrição do produto" required></textarea>
             </div>
 
-            <div class="flex justify-end gap-3 mt-2">
+            <div class="flex flex-col justify-start gap-1 mt-2">
                 <button type="button" id="cancelAddProduct"
-                    class="px-4 py-2 rounded-lg bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold"
+                    class="flex items-center justify-center w-full h-[60px]
+            bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700
+            hover:from-indigo-600 hover:to-indigo-800
+            text-white font-semibold
+            rounded-2xl shadow-md hover:shadow-lg
+            transition-all duration-200
+            active:scale-95"
                     onclick="document.getElementById('modalAddProduct').classList.add('hidden')">
                     Cancelar
                 </button>
                 <button id="btn-confirm-add-product" type="submit"
-                    class="px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-semibold">
+                    class="flex items-center justify-center w-full h-[60px]
+            bg-white border border-gray-300
+            hover:bg-gray-100
+            text-gray-700 font-semibold
+            rounded-2xl shadow-sm hover:shadow
+            transition-all duration-200
+            active:scale-95">
                     Adicionar
                 </button>
             </div>
@@ -579,8 +645,9 @@ modal_id="modalConfirmOperation") %}
 {% endmacro %}
 
 {% macro modal_edit_category(modal_id="modalEditCategory") %}
-<div id="{{ modal_id }}" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-    <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg p-6 relative">
+<div id="{{ modal_id }}"
+    class="fixed inset-0 bg-black/40 backdrop-blur-[1.5px] flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-3xl shadow-2xl border-2 border-gray-200 w-full max-w-lg p-6 relative">
         <div class="flex justify-between items-center border-b pb-3 mb-4">
             <h2 class="text-2xl font-semibold text-gray-800">Editar Categoria</h2>
             <button type="button" class="text-gray-400 hover:text-gray-600 transition"
@@ -626,7 +693,8 @@ modal_id="modalConfirmOperation") %}
 {% endmacro %}
 
 {% macro modal_edit_product(modal_id="modalEditProduct") %}
-<div id="{{ modal_id }}" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+<div id="{{ modal_id }}"
+    class="fixed inset-0 bg-black/40 backdrop-blur-[1.5px] flex items-center justify-center hidden z-50">
     <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg p-6 relative">
         <div class="flex justify-between items-center border-b pb-3 mb-4">
             <h2 class="text-2xl font-semibold text-gray-800">Editar Produto</h2>

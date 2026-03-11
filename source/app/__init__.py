@@ -16,7 +16,6 @@ from source.app.utils.jwt import decrypt_token
 logger = get_logger(__name__)
 
 def create_app(config_name: str = "default"):
-
     """
         Create and configure the Flask app.
         config_name:
