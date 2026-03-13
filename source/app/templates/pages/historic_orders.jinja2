@@ -2,134 +2,134 @@
 
 {% block scripts %}
 <script src="{{ url_for('static', filename='libs/jquery.mask.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='libs/jquery.dataTables.min.js') }}"></script>
+<script src="{{ url_for('static', filename='libs/jquery.dataTables.min.js') }}"></script>
 {% endblock scripts %}
 
 {% block title %}
-    Histórico de Pedidos
+Histórico de Pedidos
 {% endblock title %}
 
 {% block sidenav %}
-    {% include "partials/sidebar.jinja2" %}
-    <script>
-        const logoutURL = "{{ url_for('api.end_session_store') }}"
-    </script>
+{% include "partials/sidebar.jinja2" %}
+<script>
+    const logoutURL = "{{ url_for('api.end_session_store') }}"
+</script>
 {% endblock sidenav %}
 
 {% block dashboard %}
-    <section class="w-full h-full flex items-center p-10 gap-4 bg-gray-100 rounded-3xl border-2 border-gray-300">
-        <table id="historicOrdersTable" class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm text-sm">
-            <thead>
-                <tr>
-                    {#  #}
-                </tr>
-            </thead>
-            <tbody id="containerTBodyHistoricOrdersTable">
-                {#  #}
-            </tbody>
-        </table>
-    </section>
-    <script>
-        const copyIdIcon = "{{ url_for('static', filename='icons/copy-alt-1.png') }}"
+<section class="w-full h-full flex items-center p-10 gap-4 bg-gray-100 rounded-3xl border-2 border-gray-300">
+    <table id="historicOrdersTable"
+        class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm text-sm">
+        <thead>
+            <tr>
+                {# #}
+            </tr>
+        </thead>
+        <tbody id="containerTBodyHistoricOrdersTable">
+            {# #}
+        </tbody>
+    </table>
+</section>
+<script>
+    const copyIdIcon = "{{ url_for('static', filename='icons/copy-alt-1.png') }}"
 
-        function copyId(id) {
-            const input = document.createElement("input");
-            input.value = id;
-            document.body.appendChild(input);
-            input.select();
-            document.execCommand("copy");
-            document.body.removeChild(input);
-        }
+    function copyId(id) {
+        const input = document.createElement("input");
+        input.value = id;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand("copy");
+        document.body.removeChild(input);
+    }
 
-        $(document).ready(function () {
-            const menuId = '{{ strategy["profile"]["menu_id"]["id"] }}';
-            $('#historicOrdersTable').DataTable({
-                ajax: {
-                    url: `/api/orders/${menuId}`,
-                    dataSrc: 'data'
-                },
-                columns: [
-                    {
-                        data: 'id',
-                        title: 'Identificador do Pedido',
-                        render: function (data) {
-                            return `
+    $(document).ready(function () {
+        const menuId = '{{ strategy["profile"]["menu_id"]["id"] }}';
+        $('#historicOrdersTable').DataTable({
+            ajax: {
+                url: `/api/orders/${menuId}`,
+                dataSrc: 'data'
+            },
+            columns: [
+                {
+                    data: 'id',
+                    title: 'Identificador do Pedido',
+                    render: function (data) {
+                        return `
                                 <p class="flex justify-center items-center gap-1 cursor-pointer" title='${data}'>
                                      <img src="${copyIdIcon}" class="w-5 h-5 cursor-pointer" alt="Copy ID" title="Copiar ID" onclick="copyId('${data}')"/>
                                      <span class="cursor-pointer text-[14px] font-semibold" onclick="copyId('${data}')">${data.length > 8 ? data.slice(0, 12) + " ..." : data.id}</span>
                                 </p>`
-                        }
-                    },
-                    {
-                        data: 'order_number',
-                        title: 'Nº do Pedido',
-                        render: function(data) {
-                            return `<p class='bg-green-300 w-[15%] rounded-full font-bold text-green-900'>${data}</p>`
-                        }
-                    },
-                    {data: 'name', title: 'Nome'},
-                    /* {data: 'user_id', title: 'Identificador do Comprador'}, */
-                    {
-                        data: 'telephone',
-                        title: 'Telefone',
-                        render: function (data) {
-                            console.log(data)
-                            return `<span class="telephoneDataTables"> ${data} </span>`;
-                        }
-                    },
-                    {
-                        data: 'status',
-                        title: 'Status',
-                        render: function (data) {
-                            if (data === "done") return "<span class='pl-3 pr-3 bg-purple-400 rounded-full pt-1 pb-1 font-bold'>Realizado</span>";
-                            if (data === 'pending') return "<span class='pl-3 pr-3 bg-green-400 rounded-full pt-1 pb-1 font-bold'>Pendente</span>";
-                            if (data === 'canceled') return "<span class='pl-3 pr-3 bg-red-400 rounded-full pt-1 pb-1 font-bold'>Cancelado</span>";
-                            if (data === 'completed') return "<span class='pl-3 pr-3 bg-yellow-400 rounded-full pt-1 pb-1 font-bold'>Completo</span>";
-                            return data
-                        },
-                    },
-                    {
-                        data: 'total_value',
-                        title: 'Total da Compra',
-                        render: function(data) {
-                            return `<p class=''>R$ ${data.toFixed(2)}</p>`;
-                        }
-                    },
-                    {
-                        data: 'created_at',
-                        title: 'Realizado em',
-                        render: function (data) {
-                            const date = new Date(data);
-                            return date.toLocaleString('pt-BR', {dateStyle: 'short', timeStyle: 'short'});
-                        }
                     }
-                ],
-                drawCallback: function () {
-                    $('.telephoneDataTables').mask('(00) 0000-000000');
                 },
-                paging: true,
-                searching: true,
-                ordering: true,
-                pageLength: 10,
-                lengthChange: false,
-                language: {
-                    url: "https://cdn.datatables.net/plug-ins/2.3.6/i18n/pt-BR.json"
+                {
+                    data: 'order_number',
+                    title: 'Nº do Pedido',
+                    render: function (data) {
+                        return `<p class='bg-green-300 w-[15%] rounded-full font-bold text-green-900'>${data}</p>`
+                    }
+                },
+                { data: 'name', title: 'Nome' },
+                /* {data: 'user_id', title: 'Identificador do Comprador'}, */
+                {
+                    data: 'telephone',
+                    title: 'Telefone',
+                    render: function (data) {
+                        console.log(data)
+                        return `<span class="telephoneDataTables"> ${data} </span>`;
+                    }
+                },
+                {
+                    data: 'status',
+                    title: 'Status',
+                    render: function (data) {
+                        if (data === "done") return "<span class='pl-3 pr-3 bg-purple-400 rounded-full pt-1 pb-1 font-bold'>Realizado</span>";
+                        if (data === 'pending') return "<span class='pl-3 pr-3 bg-green-400 rounded-full pt-1 pb-1 font-bold'>Pendente</span>";
+                        if (data === 'canceled') return "<span class='pl-3 pr-3 bg-red-400 rounded-full pt-1 pb-1 font-bold'>Cancelado</span>";
+                        if (data === 'completed') return "<span class='pl-3 pr-3 bg-yellow-400 rounded-full pt-1 pb-1 font-bold'>Completo</span>";
+                        return data
+                    },
+                },
+                {
+                    data: 'total_value',
+                    title: 'Total da Compra',
+                    render: function (data) {
+                        return `<p class=''>R$ ${data.toFixed(2)}</p>`;
+                    }
+                },
+                {
+                    data: 'created_at',
+                    title: 'Realizado em',
+                    render: function (data) {
+                        const date = new Date(data);
+                        return date.toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+                    }
                 }
-            });
+            ],
+            drawCallback: function () {
+                $('.telephoneDataTables').mask('(00) 0000-000000');
+            },
+            paging: true,
+            searching: true,
+            ordering: true,
+            pageLength: 10,
+            lengthChange: false,
+            language: {
+                url: "https://cdn.datatables.net/plug-ins/2.3.6/i18n/pt-BR.json"
+            }
         });
-    </script>
+    });
+</script>
 {% endblock dashboard %}
 
 {% block navbar %}
-    <aside class="w-full pl-10 text-lg font-extrabold">
-        Histórico de Pedidos | <span class="font-extralight">Veja todos os pedidos realizados | </span>
-        <span class="font-extralight"
-              id="store-name-navbar"></span>
-    </aside>
+<aside class="w-full pl-10 text-lg font-extrabold">
+    Histórico de Pedidos | <span class="font-extralight">Veja todos os pedidos realizados | </span>
+    <span class="font-extralight" id="store-name-navbar"></span>
+</aside>
 {% endblock navbar %}
 
 {% block footer %}
-    <aside class="w-auto h-full">
-        Orkestro © 2025 | versão 1.0.0
-    </aside>
+<aside class="w-auto h-full">
+    Orkestro © 2025 | versão 1.1.0
+</aside>
 {% endblock footer %}

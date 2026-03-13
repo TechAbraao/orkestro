@@ -5,99 +5,96 @@
 {% endblock scripts %}
 
 {% block title %}
-    Pedidos
+Pedidos
 {% endblock title %}
 
 {% block sidenav %}
-    {% include "partials/sidebar.jinja2" %}
-    <script>
-        const logoutURL = "{{ url_for('api.end_session_store') }}"
-    </script>
+{% include "partials/sidebar.jinja2" %}
+<script>
+    const logoutURL = "{{ url_for('api.end_session_store') }}"
+</script>
 {% endblock sidenav %}
 
 {% block dashboard %}
-    <section class="w-full h-full flex items-center p-10 gap-4 bg-gray-100 rounded-3xl border-2 border-gray-300">
+<section class="w-full h-full flex items-center p-10 gap-4 bg-gray-100 rounded-3xl border-2 border-gray-300">
 
-        {{ modals.modal_confirm_operation(
-            modal_id="modalConfirmDeleteOrder",
-            header_text="Confirmação",
-            description_text="Deseja realmente rejeitar o pedido?",
-            id_btn_confirm="btn-confirm-order-delete") }}
+    {{ modals.modal_confirm_operation(
+    modal_id="modalConfirmDeleteOrder",
+    header_text="Confirmação",
+    description_text="Deseja realmente rejeitar o pedido?",
+    id_btn_confirm="btn-confirm-order-delete") }}
 
-        {{ modals.modal_confirm_operation(
-            modal_id="modalConfirmCancelOrder",
-            header_text="Confirmação",
-            description_text="Deseja realmente cancelar o pedido?",
-            id_btn_confirm="btn-confirm-cancel-delete") }}
+    {{ modals.modal_confirm_operation(
+    modal_id="modalConfirmCancelOrder",
+    header_text="Confirmação",
+    description_text="Deseja realmente cancelar o pedido?",
+    id_btn_confirm="btn-confirm-cancel-delete") }}
 
-        {{ modals.modal_order_details(modal_id="modalDetailsOrder") }}
+    {{ modals.modal_order_details(modal_id="modalDetailsOrder") }}
 
 
-        <div class="h-full w-1/2  bg-orange-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
-            <div class="text-xl text-left font-bold border-gray-300 border-2
-            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white flex items-center justify-between rounded-2xl" id="orders-count-container">
-                <h2>Pedidos Realizados</h2>
-                <span id="orders-count"
-                      class="text-[20px] font-bold text-green-800 bg-gradient-to-r from-green-200 via-green-300 to-green-400
+    <div class="h-full w-1/2  bg-orange-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
+        <div class="text-xl text-left font-bold border-gray-300 border-2
+            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white flex items-center justify-between rounded-2xl"
+            id="orders-count-container">
+            <h2>Pedidos Realizados</h2>
+            <span id="orders-count" class="text-[20px] font-bold text-green-800 bg-gradient-to-r from-green-200 via-green-300 to-green-400
                         rounded-3xl pl-[7.5px] pr-[7.5px] shadow-sm border transition-all duration-300">
-                    0
+                0
             </span>
-            </div>
-            <ul id="orders-list-done" class="w-[95%] max-w-4xl
+        </div>
+        <ul id="orders-list-done" class="w-[95%] max-w-4xl
             space-y-3 overflow-y-auto h-[600px] no-scrollbar">
-                {# Aqui renderizam os pedidos realizados #}
-            </ul>
-        </div>
-        <div class="h-full w-1/2 bg-yellow-300 rounded-3xl border-2 flex items-center flex-col border-gray-300">
-            <div class="text-xl text-left font-bold border-gray-300 border-2 flex items-center justify-between
+            {# Aqui renderizam os pedidos realizados #}
+        </ul>
+    </div>
+    <div class="h-full w-1/2 bg-yellow-300 rounded-3xl border-2 flex items-center flex-col border-gray-300">
+        <div class="text-xl text-left font-bold border-gray-300 border-2 flex items-center justify-between
             text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl" id="pending-count-container">
-                <h2>Pedidos Pendentes</h2>
-                <span id="pending-count"
-                      class="text-[20px] font-bold text-green-800 bg-gradient-to-r from-green-200 via-green-300 to-green-400
+            <h2>Pedidos Pendentes</h2>
+            <span id="pending-count" class="text-[20px] font-bold text-green-800 bg-gradient-to-r from-green-200 via-green-300 to-green-400
                         rounded-3xl pl-[7.5px] pr-[7.5px] shadow-sm border transition-all duration-300">
-                    0
-                </span>
-            </div>
-            <ul id="orders-list-accepts" class="w-[95%] max-w-4xl
-                space-y-3 overflow-y-auto h-[600px] no-scrollbar">
-                {# Aqui renderizam os pedidos pendentes #}
-            </ul>
+                0
+            </span>
         </div>
-        <div class="h-full w-1/2 bg-green-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
-            <div class="text-xl text-left font-bold border-gray-300 border-2 flex items-center justify-between
+        <ul id="orders-list-accepts" class="w-[95%] max-w-4xl
+                space-y-3 overflow-y-auto h-[600px] no-scrollbar">
+            {# Aqui renderizam os pedidos pendentes #}
+        </ul>
+    </div>
+    <div class="h-full w-1/2 bg-green-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
+        <div class="text-xl text-left font-bold border-gray-300 border-2 flex items-center justify-between
             text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl" id="completed-count-container">
-                <h2>Pedidos Concluídos</h2>
-                <span id="completed-count"
-                      class="text-[20px] font-bold text-green-800 bg-gradient-to-r from-green-200 via-green-300 to-green-400
+            <h2>Pedidos Concluídos</h2>
+            <span id="completed-count" class="text-[20px] font-bold text-green-800 bg-gradient-to-r from-green-200 via-green-300 to-green-400
                         rounded-3xl pl-[7.5px] pr-[7.5px] shadow-sm border transition-all duration-300">
-                    0
-                </span>
-            </div>
-            <ul id="orders-list-finish" class="w-[95%] max-w-4xl
-                space-y-3 overflow-y-auto h-[600px] no-scrollbar">
-                {# Aqui renderizam os pedidos concluídos #}
-            </ul>
+                0
+            </span>
         </div>
-    </section>
-    <script>
-        let menuId = '{{ strategy["profile"]["menu_id"] }}'
-        let orderId = "";
-        const URLGetProductsOrder = `/api/orders/${orderId}/products`
-        console.log(`ID do Pedido: ${orderId}`)
-    </script>
-    <script src="{{ url_for('static', filename='javascript/websocketOrders.js') }}" defer></script>
+        <ul id="orders-list-finish" class="w-[95%] max-w-4xl
+                space-y-3 overflow-y-auto h-[600px] no-scrollbar">
+            {# Aqui renderizam os pedidos concluídos #}
+        </ul>
+    </div>
+</section>
+<script>
+    let menuId = '{{ strategy["profile"]["menu_id"] }}'
+    let orderId = "";
+    const URLGetProductsOrder = `/api/orders/${orderId}/products`
+    console.log(`ID do Pedido: ${orderId}`)
+</script>
+<script src="{{ url_for('static', filename='javascript/websocketOrders.js') }}" defer></script>
 {% endblock dashboard %}
 
 {% block navbar %}
-    <aside class="w-full pl-10 text-lg font-extrabold">
-        Acompanhe seus Pedidos | <span class="font-extralight">Acompanhe todos os pedidos realizados em tempo real | </span>
-        <span class="font-extralight"
-              id="store-name-navbar"></span>
-    </aside>
+<aside class="w-full pl-10 text-lg font-extrabold">
+    Acompanhe seus Pedidos | <span class="font-extralight">Acompanhe todos os pedidos realizados em tempo real | </span>
+    <span class="font-extralight" id="store-name-navbar"></span>
+</aside>
 {% endblock navbar %}
 
 {% block footer %}
-    <aside class="w-auto h-full">
-        Orkestro © 2025 | versão 1.0.0
-    </aside>
+<aside class="w-auto h-full">
+    Orkestro © 2025 | versão 1.1.0
+</aside>
 {% endblock footer %}

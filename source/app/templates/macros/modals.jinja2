@@ -46,7 +46,7 @@
 
         <h2 class="text-2xl font-bold text-gray-800 mb-4">
             Sobre o Orkestro
-            <small id="versionProjectOrkestro" class="text-xs text-gray-500">versão 1.0.0</small>
+            <small id="versionProjectOrkestro" class="text-xs text-gray-500">versão 1.1.0</small>
         </h2>
         <p class="text-gray-600 leading-relaxed mb-4">
             A <strong>Orkestro</strong> é uma aplicação web completa para gerenciamento inteligente de
@@ -58,7 +58,7 @@
 
 
         <p class="text-gray-600 leading-relaxed">
-            Essa é apenas a primeira versão (v1.0.0), mas acreditamos que a <strong>Orkestro</strong> pode
+            Essa é apenas a primeira versão (v1.1.0), mas acreditamos que a <strong>Orkestro</strong> pode
             evoluir para se tornar uma solução robusta e completa.
         </p>
         <div class="mt-6 text-right">
@@ -133,7 +133,7 @@
                 <button type="submit" id="btn-create-menu" class="px-4 py-2 rounded-lg bg-indigo-600 text-white
                        hover:bg-indigo-700 focus:outline-none focus:ring-2
                        focus:ring-indigo-500">
-                    Criar
+                    Confirmar
                 </button>
                 <button type="button" onclick="document.getElementById('modalCreateMenuModal').classList.add('hidden')"
                     class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700
@@ -214,7 +214,7 @@
                     rounded-2xl shadow-md hover:shadow-lg
                     transition-all duration-200
                     active:scale-95">
-                    Criar
+                    Confirmar
                 </button>
                 <button type="button" onclick="document.getElementById('modalEditMenuModal').classList.add('hidden')"
                     class="flex items-center justify-center w-full h-[60px]
@@ -252,8 +252,10 @@
             <section id="QRCodeSection"
                 class="w-[85%] h-[85%] flex justify-center items-center bg-white rounded-2xl shadow-inner">
             </section>
-
         </div>
+
+        <div class="flex justify-between items-center border-b mb-1 mt-1"></div>
+
         <div class="flex flex-col items-center justify-center w-full gap-1">
 
             <button class="flex items-center justify-center w-full h-[60px]
@@ -308,6 +310,7 @@
 
         <h2 class="text-2xl font-bold mb-4">Criar Nova Categoria</h2>
 
+        <div class="flex justify-between items-center border-b mb-3 mt-1"></div>
 
         <form id="formCreateCategory" class="flex flex-col gap-4">
             <div>
@@ -323,6 +326,8 @@
                     class="w-full h-[170px] border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
                     rows="3" cols="70" required></textarea>
             </div>
+
+            <div class="flex justify-between items-center border-b mb-1"></div>
 
             {# Botões #}
             <div class="flex flex-col justify-center gap-1">
@@ -387,7 +392,7 @@ modal_id="modalConfirmOperation") %}
 {% endmacro %}
 
 {% macro modal_menu_status() %}
-<div id="modalMenuStatus" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+<div id="modalMenuStatus" class="fixed inset-0 bg-black/40 backdrop-blur-[1.5px] flex items-center justify-center hidden z-50">
     <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
 
         <h2 class="text-xl font-bold text-gray-800 mb-4">Status do Cardápio</h2>
@@ -411,14 +416,25 @@ modal_id="modalConfirmOperation") %}
             alert_message_class="notify-status-changed-msg") }}
         </div>
 
-        <div class="flex justify-end gap-4 mt-6">
-            <button id="btnCancelStatus"
-                class="px-4 py-2 rounded-xl bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
-                Fechar
-            </button>
-            <button id="btnConfirmStatus"
-                class="px-4 py-2 rounded-xl bg-green-500 text-white hover:bg-green-600 transition">
+        <div class="flex flex-col gap-1 mt-6">
+            <button id="btnConfirmStatus" class="flex items-center justify-center w-full h-[60px]
+            bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700
+            hover:from-indigo-600 hover:to-indigo-800
+            text-white font-semibold
+            rounded-2xl shadow-md hover:shadow-lg
+            transition-all duration-200
+            active:scale-95">
                 Salvar
+            </button>
+            <button id="btnCancelStatus"
+                class="flex items-center justify-center w-full h-[60px]
+            bg-white border border-gray-300
+            hover:bg-gray-100
+            text-gray-700 font-semibold
+            rounded-2xl shadow-sm hover:shadow
+            transition-all duration-200
+            active:scale-95">
+                Fechar
             </button>
         </div>
     </div>
@@ -446,7 +462,7 @@ modal_id="modalConfirmOperation") %}
                 } else {
                     toggleBtn.classList.add("bg-gray-300");
                     toggleBtn.querySelector("span").classList.add("translate-x-0");
-                    statusText.textContent = "Cardápio OFF";
+                    statusText.textContent = "Cardápio Desativado";
                     statusText.classList.add("text-red-600");
                 }
 
@@ -459,7 +475,7 @@ modal_id="modalConfirmOperation") %}
                         toggleBtn.classList.add("bg-gray-300");
                         toggleBtn.querySelector("span").classList.remove("translate-x-5");
                         toggleBtn.querySelector("span").classList.add("translate-x-0");
-                        statusText.textContent = "Cardápio OFF";
+                        statusText.textContent = "Cardápio Desativado";
                         statusText.classList.remove("text-green-600");
                         statusText.classList.add("text-red-600");
                         // menuStatusSidebar.text("Fechado");
@@ -522,7 +538,7 @@ modal_id="modalConfirmOperation") %}
 {% endmacro %}
 
 {% macro opening_hours() %}
-<div id="modalOpeningHours" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+<div id="modalOpeningHours" class="fixed inset-0 bg-black/40 backdrop-blur-[1.5px] flex items-center justify-center hidden z-50">
     <div class="bg-white w-full max-w-lg rounded-2xl shadow-lg p-6">
         <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Horários de Funcionamento</h2>
         <form id="openingHoursForm" class="space-y-3">
@@ -541,18 +557,18 @@ modal_id="modalConfirmOperation") %}
             {% endfor %}
         </form>
 
-        <div class="flex justify-end mt-6 gap-3">
-            <button type="button" id="cancelModalBtn"
-                class="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition">
-                Fechar
+        <div class="flex flex-col end mt-6 gap-3">
+            <button type="submit" form="openingHoursForm"
+                class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">
+                Confirmar
             </button>
             <button type="submit" id="restoreHoursBtn"
                 class="px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 transition">
                 Restaurar
             </button>
-            <button type="submit" form="openingHoursForm"
-                class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">
-                Salvar
+            <button type="button" id="cancelModalBtn"
+                class="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition">
+                Fechar
             </button>
         </div>
     </div>
@@ -594,6 +610,8 @@ modal_id="modalConfirmOperation") %}
 
         <h2 class="text-xl font-bold text-gray-800 mb-4">Adicionar Produto</h2>
 
+        <div class="flex justify-between items-center border-b mb-3"></div>
+
         <form id="formAddProduct" class="space-y-4">
             <div>
                 <label for="productName" class="block text-gray-700 font-medium mb-1">Nome do Produto <small id="" class="text-[15px] text-red-500 pb-2">*</small></label>
@@ -616,27 +634,30 @@ modal_id="modalConfirmOperation") %}
                     placeholder="Digite a descrição do produto" required></textarea>
             </div>
 
+            <div class="flex justify-between items-center border-b mb-1"></div>
+
             <div class="flex flex-col justify-start gap-1 mt-2">
-                <button type="button" id="cancelAddProduct"
-                    class="flex items-center justify-center w-full h-[60px]
+
+                <button id="btn-confirm-add-product" type="submit" class="flex items-center justify-center w-full h-[60px]
             bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700
             hover:from-indigo-600 hover:to-indigo-800
             text-white font-semibold
             rounded-2xl shadow-md hover:shadow-lg
             transition-all duration-200
-            active:scale-95"
-                    onclick="document.getElementById('modalAddProduct').classList.add('hidden')">
-                    Cancelar
+            active:scale-95">
+                                Confirmar
                 </button>
-                <button id="btn-confirm-add-product" type="submit"
+
+                <button type="button" id="cancelAddProduct"
                     class="flex items-center justify-center w-full h-[60px]
             bg-white border border-gray-300
             hover:bg-gray-100
             text-gray-700 font-semibold
             rounded-2xl shadow-sm hover:shadow
             transition-all duration-200
-            active:scale-95">
-                    Adicionar
+            active:scale-95"
+                    onclick="document.getElementById('modalAddProduct').classList.add('hidden')">
+                    Cancelar
                 </button>
             </div>
         </form>

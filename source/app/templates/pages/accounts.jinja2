@@ -1,37 +1,37 @@
 {% extends "layouts/administrative.jinja2" %}
 
 {% block title %}
-    Gerenciar Contas
+Gerenciar Contas
 {% endblock title %}
 
 
 
 {% block sidenav %}
-    {% include "partials/sidebar.jinja2" %}
-    <script>
-        const logoutURL = "{{ url_for('api.end_session_store') }}"
-    </script>
+{% include "partials/sidebar.jinja2" %}
+<script>
+    const logoutURL = "{{ url_for('api.end_session_store') }}"
+</script>
 {% endblock sidenav %}
 
 {% block navbar %}
-    <aside class="w-full pl-10 text-lg font-extrabold">
-        Visão Geral | <span class="font-extralight">Tenha uma visão geral dos principais indicadores | </span> <span class="font-extralight"
-                                                                                                                     id="store-name-navbar">Company name</span>
-    </aside>
+<aside class="w-full pl-10 text-lg font-extrabold">
+    Visão Geral | <span class="font-extralight">Tenha uma visão geral dos principais indicadores | </span> <span
+        class="font-extralight" id="store-name-navbar">Company name</span>
+</aside>
 {% endblock navbar %}
 
 {% block dashboard %}
-    <section class="w-full h-full bg-gray-100 flex items-center justify-around border-gray-300 border-2 rounded-2xl">
-        {% include "partials/forms_register_store.jinja2" %}
-    </section>
-    <script>
-        const createAccountStoreURL = "{{ url_for('api.create_new_account') }}"
-    </script>
-    <script src="{{ url_for('static', filename='javascript/create_account_store.js') }}" defer></script>
+<section class="w-full h-full bg-gray-100 flex items-center justify-around border-gray-300 border-2 rounded-2xl">
+    {% include "partials/forms_register_store.jinja2" %}
+</section>
+<script>
+    const createAccountStoreURL = "{{ url_for('api.create_new_account') }}"
+</script>
+<script src="{{ url_for('static', filename='javascript/create_account_store.js') }}" defer></script>
 {% endblock dashboard %}
 
 {% block footer %}
-    <aside class="w-auto h-full">
-        Orkestro © 2025 | versão 1.0.0
-    </aside>
+<aside class="w-auto h-full">
+    Orkestro © 2025 | versão 1.1.0
+</aside>
 {% endblock footer %}

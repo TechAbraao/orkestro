@@ -1,64 +1,65 @@
 {% extends "layouts/administrative.jinja2" %}
 
 {% block title %}
-    Gerenciar Cardápio
+Gerenciar Cardápio
 {% endblock title %}
 
 {% block sidenav %}
-    {# Dynamic rendering from the backend #}
-    {% include "partials/sidebar.jinja2" %}
-    <script>
-        let menuId = '{{ strategy["profile"]["menu_id"] }}'
-        const logoutURL = "{{ url_for('api.end_session_store') }}"
-    </script>
+{# Dynamic rendering from the backend #}
+{% include "partials/sidebar.jinja2" %}
+<script>
+    let menuId = '{{ strategy["profile"]["menu_id"] }}'
+    const logoutURL = "{{ url_for('api.end_session_store') }}"
+</script>
 {% endblock sidenav %}
 
 {% block dashboard %}
-    <section class="w-full h-full flex flex-col items-center justify-start gap-3">
-        {# Modals #}
-        {{ modals.modal_create_menu() }}
-        {{ modals.modal_confirm_operation(
+<section class="w-full h-full flex flex-col items-center justify-start gap-3">
+    {# Modals #}
+    {{ modals.modal_create_menu() }}
+    {{ modals.modal_confirm_operation(
     header_text="Confirmação",
     description_text="Deseja realmente excluir seu cardápio?",
     id_btn_confirm="btn-confirm-op-delete"
     ) }}
-        {#  #}
-        <aside class="w-full h-[90px] pl-5 flex items-center justify-start bg-gray-100 rounded-3xl border-2 border-gray-300">
-            {% if strategy.get("profile")["hasMenu"] == False %}
-                {{ buttons.button_create_menu(id_button="btn-open-modal-create-menu") }}
-            {% elif strategy.get("profile")["hasMenu"] == True %}
-                <button class="px-5 py-3 bg-gray-900 text-base text-white rounded-3xl hover:bg-gray-800 font-bold">
-                    Mais configurações
-                </button>
-            {% endif %}
-        </aside>
-        {#  #}
-        <section
-                class="w-full h-full bg-white-200 flex items-center justify-center rounded-3xl border-2 border-gray-300">
-            {% if strategy.get("profile")["hasMenu"] == False %}
-                <div class="bg-gray-100 w-full h-full rounded-3xl flex flex-col items-center justify-center">
-                    {{ errors.not_found(title="Nenhum cardápio encontrado.") }}
-                </div>
-            {% elif strategy.get("profile")["hasMenu"] == True %}
-                <div id="menusContainer"
-                     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-gray-100 w-full h-full rounded-3xl">
-                    {# Os cards dos Cardápios estão sendo populados aqui. #}
-                </div>
-            {% endif %}
-        </section>
+    {# #}
+    <aside
+        class="w-full h-[90px] pl-5 flex items-center justify-start bg-gray-100 rounded-3xl border-2 border-gray-300">
+        {% if strategy.get("profile")["hasMenu"] == False %}
+        {{ buttons.button_create_menu(id_button="btn-open-modal-create-menu") }}
+        {% elif strategy.get("profile")["hasMenu"] == True %}
+        <button class="px-5 py-3 bg-gray-900 text-base text-white rounded-3xl hover:bg-gray-800 font-bold">
+            Mais configurações
+        </button>
+        {% endif %}
+    </aside>
+    {# #}
+    <section class="w-full h-full bg-white-200 flex items-center justify-center rounded-3xl border-2 border-gray-300">
+        {% if strategy.get("profile")["hasMenu"] == False %}
+        <div class="bg-gray-100 w-full h-full rounded-3xl flex flex-col items-center justify-center">
+            {{ errors.not_found(title="Nenhum cardápio encontrado.") }}
+        </div>
+        {% elif strategy.get("profile")["hasMenu"] == True %}
+        <div id="menusContainer"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-gray-100 w-full h-full rounded-3xl">
+            {# Os cards dos Cardápios estão sendo populados aqui. #}
+        </div>
+        {% endif %}
     </section>
-    <script src="{{ url_for('static', filename='javascript/create_menu.js') }}" defer></script>
-    <script src="{{ url_for('static', filename='javascript/menusInDashboard.js') }}" defer></script>
+</section>
+<script src="{{ url_for('static', filename='javascript/create_menu.js') }}" defer></script>
+<script src="{{ url_for('static', filename='javascript/menusInDashboard.js') }}" defer></script>
 {% endblock dashboard %}
 
 {% block navbar %}
-    <aside class="w-full pl-10 text-lg font-extrabold">
-        Gerenciar Cardápios | <span class="font-extralight">Tenha total controle sobre seus cardápios de forma rápida e fácil | </span> <span class="font-extralight" id="store-name-navbar">Company name</span>
-    </aside>
+<aside class="w-full pl-10 text-lg font-extrabold">
+    Gerenciar Cardápios | <span class="font-extralight">Tenha total controle sobre seus cardápios de forma rápida e
+        fácil | </span> <span class="font-extralight" id="store-name-navbar">Company name</span>
+</aside>
 {% endblock navbar %}
 
 {% block footer %}
-    <aside class="w-auto h-full">
-        Orkestro © 2025 | versão 1.0.0
-    </aside>
+<aside class="w-auto h-full">
+    Orkestro © 2025 | versão 1.1.0
+</aside>
 {% endblock footer %}
