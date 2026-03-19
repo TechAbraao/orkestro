@@ -35,21 +35,3 @@ def views_login():
 
     return render_template("pages/signin.jinja2", strategy=rendering_strategy)
 
-@vws.get("/accounts")
-@api_permissions(strategy="jwt", roles=["ADMIN"])
-def views_register():
-    store_id = g.jwt_claims.get("sub")
-    roles = g.jwt_claims.get("roles")
-    menu_id = stores_services.get_menu_by_store_id(store_id)
-
-    rendering_strategy = {
-        "url": f"{request.path}",
-        "profile": {
-            "roles": roles,
-            "menu_id": menu_id.get("id"),
-        },
-        "logged": False,
-    }
-
-    return render_template("pages/accounts.jinja2", strategy=rendering_strategy)
-

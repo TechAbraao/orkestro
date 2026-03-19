@@ -19,14 +19,11 @@ def create_new_account():
 
     body = request.get_json()
     body_validated = stores_schemas.load(body)
-
+    
     created = stores_services.create_new_account(body)
 
     if not created:
-        return Response.error(
-            message="Erro ao criar loja.",
-            status_code=400
-        )
+        return Response.error(message="Erro ao criar loja.", status_code=400)
 
     return Response.success(
         message="Loja criada com sucesso.",

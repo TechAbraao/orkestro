@@ -12,7 +12,7 @@ dir_name = os.path.basename(__file__)
 
 """ 1. Esta parte do código é responsável por renderizar todos os cardápios disponíveis na interface. """
 @vws.get("/menus/<string:slug>")
-@client_permissions(strategy="cookies", roles=["COMMON", "VIEWER"])
+@client_permissions(strategy="cookies", roles=["COMMON", "VIEWER"], required=False)
 def view_menu_by_slug(slug: str):
     logger.info(f"[{dir_name}] Buscando menu pelo slug: {slug}")
 

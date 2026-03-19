@@ -6,6 +6,9 @@ $(document).ready(function () {
         let email = $("#email").val();
         let password = $("#password").val();
         let telephone = $("#telephone").val();
+        let role = $("#role_store").val();
+        let roleList = `["${role}"]`
+        console.log(roleList)
 
         $.ajax({
             url: createAccountStoreURL,
@@ -15,7 +18,8 @@ $(document).ready(function () {
                 name: storeName,
                 email: email,
                 password: password,
-                telephone: telephone
+                telephone: telephone,
+                roles: roleList
             }),
 
             success: function (response) {

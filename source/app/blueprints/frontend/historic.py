@@ -16,10 +16,13 @@ def vws_historic():
     if tab == "orders":
         store_id = g.jwt_claims.get("sub")
         menu_id = stores_services.get_menu_by_store_id(store_id)
+        roles = g.jwt_claims.get("roles")
 
         strategy = {
             "profile": {
-                "menu_id": menu_id
+                "menu_id": menu_id,
+                "roles": roles,
+                "menu_roles": menu_id.get("roles", None),
             }
         }
         return render_template("/pages/historic_orders.jinja2", strategy=strategy)
@@ -29,7 +32,7 @@ def vws_historic():
         strategy = {
             "profile": {
 
-            }
+}
         }
         return render_template("/pages/historic_customers.jinja2", strategy=strategy)
     elif not tab:

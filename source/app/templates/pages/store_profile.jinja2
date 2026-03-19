@@ -14,29 +14,126 @@
 {% endblock sidenav %}
 
 {% block dashboard %}
-    <section class="w-full h-full bg-red-50 flex flex-col items-center justify-center">
-        <h2 class="text-3xl font-extrabold mb-12 text-gray-800 tracking-wide">Perfil</h2>
-        <div class="w-full max-w-4xl bg-white rounded-3xl shadow-xl p-10 flex flex-col md:flex-row gap-8 transition-transform transform hover:scale-105 hover:shadow-2xl">
-            <div class="flex-shrink-0 flex items-center justify-center md:justify-start">
-                <img src="" alt="Store Logo"
-                     class="rounded-xl w-44 h-44 object-cover border-4 border-gray-200 shadow-sm">
+    <section class="w-full h-full flex flex-col items-center justify-start rounded-3xl border-2 border-gray-300">
+        <div class="w-[96%] bg-white rounded-3xl p-8 flex flex-col 
+                    border-2 border-gray-200 gap-8 mt-9
+                    transition-all duration-300">
+        
+            <div class="w-full flex justify-between items-start">
+        
+                <div class="flex flex-col md:flex-row gap-6 w-full">
+        
+                    <div class="flex-shrink-0 flex items-center justify-center md:justify-start">
+                        <img src="" alt="Store Logo" class="rounded-full w-[140px] h-[140px] md:w-[180px] md:h-[180px] 
+                                    object-cover border-2 border-gray-200">
+                    </div>
+        
+                    <div class="flex-1 flex flex-col justify-center gap-3">
+        
+                        <h3 class="text-2xl md:text-3xl font-semibold text-gray-800">
+                            <span id="store-profile-name">Nome da Empresa</span>
+                        </h3>
+        
+                        <p class="text-sm text-gray-500 flex items-center gap-2">
+                            Tipo:
+                            <span class="text-gray-700 text-xs font-medium px-3 py-1 
+                                         bg-gray-100 rounded-full" id="store-type"></span>
+                        </p>
+        
+                        <section class="flex flex-col md:flex-row gap-3 md:gap-6 mt-2">
+        
+                            <p class="text-gray-600 text-sm md:text-base flex items-center gap-2 
+                                      bg-gray-50 px-3 py-2 rounded-xl w-fit">
+                                <img class="w-5 h-5 opacity-70" src="{{ url_for('static', filename='icons/mobile.svg') }}"
+                                    alt="Telefone" />
+                                <span id="store-profile-telephone">(11) 1234-5678</span>
+                            </p>
+        
+                            <p class="text-gray-600 text-sm md:text-base flex items-center gap-2 
+                                      bg-gray-50 px-3 py-2 rounded-xl w-fit">
+                                <img class="w-5 h-5 opacity-70" src="{{ url_for('static', filename='icons/email.svg') }}"
+                                    alt="Email" />
+                                <span id="store-profile-email">contato@empresa.com</span>
+                            </p>
+        
+                        </section>
+                    </div>
+                </div>
+        
+              
+                <button class="ml-4 px-4 py-2 text-sm font-medium 
+                               bg-gray-900 text-white rounded-3xl
+                               hover:bg-gray-700 transition-all duration-200 
+                               shadow-sm hover:shadow-md whitespace-nowrap">
+                    Editar Perfil
+                </button>
             </div>
-
-            <div class="flex-1 flex flex-col justify-center gap-5">
-                <h3 class="text-2xl md:text-3xl font-bold text-gray-700">
-                    Nome: <span id="store-profile-name">Nome da Empresa </span>
-                </h3>
-                <p class="text-gray-600 text-base md:text-lg">
-                    <strong>
-                        Telefone:
-                    </strong>
-                    <span id="store-profile-telephone">
-                        (11) 1234-5678
-                    </span>
-                </p>
-                <p class="text-gray-600 text-base md:text-lg">
-                    E-mail: <span id="store-profile-email">contato@empresa.com</span>
-                </p>
+        
+            <div class="flex flex-col md:flex-row gap-4 w-full">
+                <div class="flex-1 h-[110px] bg-gray-50 rounded-2xl 
+                            border-2 border-gray-200 transition-all"></div>
+                <div class="flex-1 h-[110px] bg-gray-50 rounded-2xl 
+                            border-2 border-gray-200 transition-all"></div>
+                <div class="flex-1 h-[110px] bg-gray-50 rounded-2xl 
+                            border-2 border-gray-200 transition-all"></div>
+                <div class="flex-1 h-[110px] bg-gray-50 rounded-2xl 
+                            border-2 border-gray-200 transition-all"></div>
+            </div>
+        </div>
+        <div class="w-full h-full flex justify-between p-8">
+            <div class="w-[49%] bg-white rounded-3xl p-8 md:p-10 flex flex-col 
+                            border-2 border-gray-200 gap-8 mt-1
+                             transition-all duration-300">
+            
+            </div>
+            <div class="w-[49%] bg-white rounded-3xl p-8 md:p-10 flex flex-col  border-2 border-gray-200
+                         gap-6 mt-1
+                        transition-all duration-300">
+            
+                <h1 class="text-lg md:text-xl font-semibold text-gray-800">
+                    Configurações Rápidas
+                </h1>
+            
+                <div class="w-full flex flex-col gap-3">
+            
+                    <section class="w-full flex items-center justify-between border-2 border-gray-300
+                                    px-4 py-3 rounded-xl bg-gray-50 
+                                    hover:bg-gray-100 transition cursor-pointer">
+            
+                        <span class="text-sm md:text-base text-gray-700">
+                            Notificações dos Pedidos
+                        </span>
+            
+                        <div class="w-10 h-5 bg-gray-300 rounded-full relative">
+                            <div class="w-4 h-4 bg-white rounded-full absolute top-0.5 left-0.5 shadow"></div>
+                        </div>
+                    </section>
+            
+                    <section class="w-full flex items-center justify-between  border-2 border-gray-300
+                                    px-4 py-3 rounded-xl bg-gray-50 
+                                    hover:bg-gray-100 transition cursor-pointer">
+            
+                        <span class="text-sm md:text-base text-gray-700">
+                            Tema Escuro
+                        </span>
+            
+                        <div class="w-10 h-5 bg-gray-300 rounded-full relative">
+                            <div class="w-4 h-4 bg-white rounded-full absolute top-0.5 left-0.5 shadow"></div>
+                        </div>
+                    </section>
+            
+                    <section class="w-full flex items-center justify-between 
+                                    px-4 py-3 rounded-xl bg-gray-50  border-2 border-gray-300
+                                    hover:bg-gray-100 transition cursor-pointer">
+            
+                        <span class="text-sm md:text-base text-gray-700">
+                            Alterar Senha
+                        </span>
+            
+                        <span class="text-gray-400 text-lg">›</span>
+                    </section>
+            
+                </div>
             </div>
         </div>
     </section>

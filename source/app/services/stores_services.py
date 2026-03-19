@@ -5,7 +5,7 @@ from source.app.settings.logging_settings import get_logger
 from source.app.utils.decorators.database import database_connection
 from source.app.exceptions.stores_exceptions import *
 from source.app.utils.passwords import *
-from flask import url_for, current_app
+from flask import url_for, current_app, abort
 import uuid
 
 logger = get_logger(__name__)
@@ -20,6 +20,10 @@ class StoresServices:
         email = account_data.get("email")
         if not email or not account_data.get("password") or not account_data.get("telephone"):
             raise ValueError("E-mail, telefone e senha são campos obrigatórios.")
+
+        roles = account_data.get("roles", [])
+        if "COMMON" not in roles or "PRIVILEGED" not in roles:
+            abort(400, description="Roles selecionadas não permitidas. São as corretas: ['COMMON'] ou ['PRIVILEGED']")
 
         existing_store = self.stores_repository.find_by_unique_fields(
             email, account_data.get("name"), account_data.get("telephone")

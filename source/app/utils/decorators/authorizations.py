@@ -2,8 +2,13 @@ from functools import wraps
 from flask import request, redirect, url_for, abort, jsonify
 from source.app.utils.jwt import decrypt_token
 from source.app.settings.application_settings import application_settings as credentials
-import base64
+import base64, os
+from source.app.settings.logging_settings import get_logger
 from flask import g
+
+logger = get_logger()
+dir_name = os.path.basename(__file__)
+
 
 def get_token_from_request():
     token = request.cookies.get("access_token")
@@ -106,15 +111,21 @@ def api_permissions(strategy="jwt", roles=None):
         return decorated
     return decorator
 
-def client_permissions(strategy="cookies", roles=None):
+def client_permissions(strategy="cookies", roles=None, required=True):
     def decorator(f):
         @wraps(f)
         def decorated(*args, **kwargs):
             if strategy in "cookies":
                 role_menu = request.cookies.get("role_menu", None)
-                if role_menu is None:
-                    abort(500, description=f"Cookie with name '{role_menu}' not found.")
 
+                if role_menu is None:
+                    # 1. Se o REQUIRED for igual a TRUE
+                    if required:
+                        abort(500, description=f"Acesso negado: Não foi encontrado a role do cardápio: '{role_menu}'.")
+                    # 2. Se o REQUIRED for igual a FALSE
+                    else:
+                        return f(*args, **kwargs)
+                
                 if role_menu not in roles:
                     abort(403, description=f"Acesso negado: Você não possui permissão para acessar este recurso.")
 
@@ -136,4 +147,3 @@ def authenticated(f):
                 pass
         return f(*args, **kwargs)
     return decorated
-
