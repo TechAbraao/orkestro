@@ -4,22 +4,25 @@
 ...
 
 ## Descrição
-Uma aplicação web completa para gerenciamento inteligente de cardápios, combinando automação por chatbot para melhorar a interação com clientes e análises avançadas para orientar decisões mais inteligentes.
+Orkestro é uma aplicação web completa para gerenciamento de cardápios, com automação de atendimento por chatbot e análises integradas para apoiar decisões do negócio.
+
+Desenvolvido como artefato central do Projeto Integrador da FATEC Zona Leste, ao longo do 3º e 4º semestres — reunindo na prática os conteúdos estudados durante o curso.
 
 ## Pré-requisitos
 Para executar o projeto, as seguintes tecnologias são necessárias:
 
-- Python instalado (a versão >= 3.12.3 é utilizada neste projeto)
-- Docker e Docker Compose
-- Uma IDE de sua preferência (PyCharm, VSCode)
-- Make (para automação de tarefas em ambientes GNU/Linux)
+- Python instalado (a versão >= 3.12.3 é utilizada neste projeto);
+- Docker e Docker Compose;
+- Uma IDE de sua preferência (PyCharm, VSCode);
+- Make (para automação de tarefas em ambientes GNU/Linux).
 
-Clone o repositório do projeto:
+## Rodar localmente
+#### 1. Clone o repositório do projeto:
 ```bash
 git clone git@github.com:TechAbraao/orkestro.git
 cd ./orkestro
 ```
-Crie o ambiente virtual (.venv):
+#### 2. Crie o ambiente virtual (.venv):
 ```bash
 # Linux / macOS
 python3 -m venv .venv
@@ -29,11 +32,11 @@ source .venv/bin/activate
 python -m venv .venv
 .venv\Scripts\activate
 ```
-Instale todas as dependências necessárias para desenvolvimento:
+#### 3. Instale todas as dependências necessárias para desenvolvimento:
 ```bash
 pip install -r ./source/requirements/requirements-dev.txt
 ```
-Configure todas as variáveis de ambiente presente em `.env.template` e, após as configurações, renomeie para `.env`:
+#### 4. Configure todas as variáveis de ambiente presente em `.env.template` e, após as configurações, renomeie para `.env`:
 ```bash
 FLASK_APP=source.app:create_app
 FLASK_ENV=development
@@ -61,25 +64,25 @@ ADMIN_PASSWORD=[]
 > - As configurações das variáveis de ambiente são de extrema importância para a inicialização do projeto. Em caso de dúvidas, consulte um dos mantenedores.
 
 
-Na raíz do projeto, inicialize os containers Docker:
+#### 5. Na raíz do projeto, inicialize os containers Docker:
 ```bash
 make up
 ```
-Após isso, faça as migrations:
+#### 6. Após isso, faça as migrations:
 ```bash
 flask db upgrade
 ```
 
-Após todas as etapas, acesse em:
+#### 7. Disponível em:
 ```bash
 http://localhost:<port>
 ```
 
-## How to contribute
-
-## Documentation
+## Documentação
 
 ### API Swagger
 
-### Web Docs
+## Preview
+
+
 

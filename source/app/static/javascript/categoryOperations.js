@@ -34,12 +34,11 @@ $(document).ready(function () {
                 .catch(() => alert("Erro ao copiar"));
         }
 
-
         $.ajax({
             url: getCategoriesURL,
             method: "GET",
             success: function (res) {
-                console.log("Response: ", res);
+                console.log("Todos os produtos: ", res);
                 categoriesContainer.empty();
 
                 if (res.success && res.data.length > 0) {
@@ -144,7 +143,7 @@ $(document).ready(function () {
                                                         const ariaChecked = isActive ? "true" : "false";
                                                         
                                                         return `
-                                                        <div class="flex justify-center gap-1 h-[330px] items-center bg-white rounded-lg px-4 
+                                                        <div class="flex justify-center gap-1 h-[280px] items-center bg-white rounded-lg px-4 
                                                         py-3 shadow-sm hover:shadow-md transition-all duration-200 border-2 border-gray-200 flex flex-col">
                                                             <div class="h-[35px] w-full flex justify-between items-center">
                                                                 <p class="flex justify-center items-center gap-1">
@@ -162,9 +161,10 @@ $(document).ready(function () {
                                                                           onclick="copyProductId('${product.id}')"
                                                                             title="${product.id}"
                                                                       >
-                                                                         ${product.id.length > 8 ? product.id.slice(0, 12) + " ..." : product.id}
+                                                                         ${product.id.length > 26 ? product.id.slice(0, 26) + " ..." : product.id}
                                                                         </span>
                                                                     </p>
+                                                                <!-- DEPRECIADO, porém, deixarei o código fonte aqui
                                                                 <button
                                                                         data-id="${product.id}"
                                                                         type="button"
@@ -175,6 +175,7 @@ $(document).ready(function () {
                                                                         <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${toggleTranslateClass}"></span>
                                                                         <span id="menuStatusText" class="text-red-600 font-medium">
                                                                 </button>
+                                                                -->
                                                             </div>
                                                             <div class="w-full bg-gray-200 h-[2px] mt-[2px] mb-[3px] rounded-full"></div>
                                                             <div class="w-full h-[60%] flex justify-between">
@@ -187,11 +188,11 @@ $(document).ready(function () {
                                                                     <span 
                                                                     class="text-sm text-gray-500 w-[240px] break-words block"
                                                                     title="${product.description}"
-                                                                    >${product.description.length > 65 ? product.description.slice(0, 65) + " ..." : product.description}</span>
+                                                                    >${product.description.length > 35 ? product.description.slice(0, 35) + " ..." : product.description}</span>
                                                                 </div>
                                                             </div>
                                                             <div class="w-full bg-gray-200 h-[2px] mt-1 rounded-full"></div>
-                                                            <div class="flex justify-between gap-1 mt-1 w-full h-[130px] flex-col">
+                                                            <div class="flex justify-between gap-1 mt-1 w-full h-[65px]">
                                                                 <button id="btn-edit-product" data-id="${product.id}"
                                                                         class="bg-gray-200 hover:bg-gray-300 font-semibold text-gray-700 
                                                                         px-3 py-1 rounded-xl transition-colors w-full h-[55px]">
@@ -382,43 +383,47 @@ $(document).ready(function () {
             return;
         }
 
+        //
+        // AQUI PREENCHE - Tenho colocar o Activated aqui
         $("#editProductName").val(selectedProduct.name);
         $("#editProductDescription").val(selectedProduct.description);
         $("#editProductPrice").val(selectedProduct.price);
-
         modalEditProduct.data("product-id", productId);
+
+        //Inicializa o toggle com o estado atual do produto
+        const $toggle = modalEditProduct.find(".productToggleStatus");
+        const isActive = selectedProduct.activated;
+
+        $toggle.data("id", productId);
+        $toggle.attr("aria-checked", isActive.toString());
+
+        $toggle
+            .removeClass(`${activatedColors} ${disabledColors}`)
+            .addClass(isActive ? activatedColors : disabledColors);
+
+        $toggle.find("span")
+            .removeClass("translate-x-5 translate-x-0")
+            .addClass(isActive ? "translate-x-5" : "translate-x-0");
 
         modalEditProduct.removeClass("hidden");
         $("#editProductName").focus();
     });
 
-    categoriesContainer.on("click", ".productToggleStatus", function () {
+    $(document).on("click", ".productToggleStatus", function () {
     const $button = $(this);
-
     const isActive = $button.attr("aria-checked") === "true";
-    const productId = $button.data("id");
+    const newState = !isActive;
 
-    $.ajax({
-        method: "PATCH",
-        url: `/api/products/${productId}/status`,
-        success: function () {
+    $button.attr("aria-checked", newState.toString());
 
-            const newState = !isActive;
-            $button.attr("aria-checked", newState.toString());
+    $button
+        .removeClass(`${activatedColors} ${disabledColors}`)
+        .addClass(newState ? activatedColors : disabledColors);
 
-            $button
-              .removeClass(`${activatedColors} ${disabledColors}`)
-              .addClass(newState ? activatedColors : disabledColors);
-
-            $button.find("span")
-              .removeClass("translate-x-5 translate-x-0")
-              .addClass(newState ? "translate-x-5" : "translate-x-0");
-        },
-        error: function (xhr) {
-            console.error(xhr);
-        }
+    $button.find("span")
+        .removeClass("translate-x-5 translate-x-0")
+        .addClass(newState ? "translate-x-5" : "translate-x-0");
     });
-});
 
 
     $("#btnConfirmEditCategory").on("click", function (event) {
@@ -449,35 +454,49 @@ $(document).ready(function () {
         $("#modalEditCategory").addClass("hidden");
     });
 
-    $("#btnConfirmEditProduct").on("click", function (event) {
-        event.preventDefault()
+   $("#btnConfirmEditProduct").on("click", function (event) {
+    event.preventDefault();
 
-        const productId = $("#modalEditProduct").data("product-id");
-        console.log("Product ID: ", productId)
-        let newProductName = $("#editProductName").val();
-        let newProductPrice = $("#editProductPrice").val();
-        let newProductDescription = $("#editProductDescription").val();
+    const productId = $("#modalEditProduct").data("product-id");
+    const newProductName = $("#editProductName").val();
+    const newProductPrice = $("#editProductPrice").val();
+    const newProductDescription = $("#editProductDescription").val();
 
-        $.ajax({
-            url: `/api/products/${productId}`,
-            method: "PUT",
-            contentType: "application/json",
-            data: JSON.stringify({
-                name: newProductName,
-                description: newProductDescription,
-                price: parseFloat(newProductPrice),
-            }),
-            success: function(res) {
-                console.log("Produto atualizado com sucesso.");
-                loadCategories();
-                $("#editProductName").val("");
-                $("#editProductPrice").val("");
-                $("#editProductDescription").val("");
-                $("#modalEditProduct").addClass("hidden");
-            },
-            error: function(xhr) {
-                console.error("Erro ao atualizar produto:", xhr.responseText);
-            }
-        })
-    })
+    const toggleState = $("#modalEditProduct").find(".productToggleStatus").attr("aria-checked") === "true";
+
+    $.ajax({
+        url: `/api/products/${productId}`,
+        method: "PUT",
+        contentType: "application/json",
+        data: JSON.stringify({
+            name: newProductName,
+            description: newProductDescription,
+            price: parseFloat(newProductPrice),
+        }),
+        success: function () {
+            console.log("Produto atualizado com sucesso.");
+        },
+        error: function (xhr) {
+            console.error("Erro ao atualizar produto:", xhr.responseText);
+        }
+    });
+
+    $.ajax({
+        url: `/api/products/${productId}/status`,
+        method: "PATCH",
+        contentType: "application/json",
+        data: JSON.stringify({ activated: toggleState }),
+        success: function () {
+            console.log("Status atualizado:", toggleState);
+            loadCategories();
+            $("#editProductName").val("");
+            $("#editProductPrice").val("");
+            $("#editProductDescription").val("");
+            $("#modalEditProduct").addClass("hidden");
+        },
+        error: function (xhr) {
+            console.error("Erro ao atualizar status:", xhr.responseText);
+        }
+        });
+    });
 });
