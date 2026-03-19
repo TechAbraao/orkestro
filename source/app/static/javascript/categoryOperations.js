@@ -144,7 +144,7 @@ $(document).ready(function () {
                                                         const ariaChecked = isActive ? "true" : "false";
                                                         
                                                         return `
-                                                        <div class="flex justify-center gap-1 h-[250px] items-center bg-white rounded-lg px-4 
+                                                        <div class="flex justify-center gap-1 h-[330px] items-center bg-white rounded-lg px-4 
                                                         py-3 shadow-sm hover:shadow-md transition-all duration-200 border-2 border-gray-200 flex flex-col">
                                                             <div class="h-[35px] w-full flex justify-between items-center">
                                                                 <p class="flex justify-center items-center gap-1">
@@ -191,13 +191,15 @@ $(document).ready(function () {
                                                                 </div>
                                                             </div>
                                                             <div class="w-full bg-gray-200 h-[2px] mt-1 rounded-full"></div>
-                                                            <div class="flex justify-end gap-2 mt-1 w-full h-[50px]">
+                                                            <div class="flex justify-between gap-1 mt-1 w-full h-[130px] flex-col">
                                                                 <button id="btn-edit-product" data-id="${product.id}"
-                                                                        class="bg-gray-200 hover:bg-gray-300 font-semibold text-gray-700 px-3 py-1 rounded-xl transition-colors w-1/2 h-full">
-                                                                        Alterar
+                                                                        class="bg-gray-200 hover:bg-gray-300 font-semibold text-gray-700 
+                                                                        px-3 py-1 rounded-xl transition-colors w-full h-[55px]">
+                                                                        Configurações
                                                                 </button>
                                                                 <button id="btn-delete-product" data-id="${product.id}"
-                                                                        class="bg-[#111111] hover:bg-[#050505] text-white transition-colors font-semibold px-3 py-1 rounded-xl transition-all w-1/2">
+                                                                        class="bg-[#111111] hover:bg-[#050505] text-white transition-colors 
+                                                                        font-semibold px-3 py-1 rounded-xl transition-all w-full h-[55px]">
                                                                         Excluir
                                                                 </button>
                                                             </div>
