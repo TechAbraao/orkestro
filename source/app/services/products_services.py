@@ -97,8 +97,8 @@ class ProductsServices:
         return product.serialize
 
     @database_connection
-    def update_by_id(self, product_id: str) -> bool:
-        return self.products_repository.update_status_by_id(product_id)
+    def update_by_id(self, product_id: str, activated: bool) -> bool:
+        return self.products_repository.update_status_by_id(product_id, activated)
 
     @database_connection
     def delete(self, product_id: str):

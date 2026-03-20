@@ -365,51 +365,64 @@ $(document).ready(function () {
         modalEditCategory.removeClass("hidden");
     });
 
-    categoriesContainer.on("click", "#btn-edit-product", function () {
-        const productId = $(this).data("id");
-        const modalEditProduct = $("#modalEditProduct");
 
-        let selectedProduct = null;
-        for (const category of categoriesData) {
-            const found = category.products.find(p => p.id === productId);
-            if (found) {
-                selectedProduct = found;
-                break;
-            }
+categoriesContainer.on("click", "#btn-edit-product", function () {
+    const productId = $(this).data("id");
+    const modalEditProduct = $("#modalEditProduct");
+
+    let selectedProduct = null;
+    for (const category of categoriesData) {
+        const found = category.products.find(p => p.id === productId);
+        if (found) {
+            selectedProduct = found;
+            break;
         }
+    }
 
-        if (!selectedProduct) {
-            alert("Produto não encontrado!");
-            return;
-        }
+    if (!selectedProduct) {
+        alert("Produto não encontrado!");
+        return;
+    }
 
-        //
-        // AQUI PREENCHE - Tenho colocar o Activated aqui
-        $("#editProductName").val(selectedProduct.name);
-        $("#editProductDescription").val(selectedProduct.description);
-        $("#editProductPrice").val(selectedProduct.price);
-        modalEditProduct.data("product-id", productId);
+    $("#editProductName").val(selectedProduct.name);
+    $("#editProductDescription").val(selectedProduct.description);
+    $("#editProductPrice").val(selectedProduct.price);
+    modalEditProduct.data("product-id", productId);
 
-        //Inicializa o toggle com o estado atual do produto
-        const $toggle = modalEditProduct.find(".productToggleStatus");
-        const isActive = selectedProduct.activated;
 
-        $toggle.data("id", productId);
-        $toggle.attr("aria-checked", isActive.toString());
+    const $toggleStatus = modalEditProduct.find(".productToggleStatus");
+    const isActive = selectedProduct.activated;
 
-        $toggle
-            .removeClass(`${activatedColors} ${disabledColors}`)
-            .addClass(isActive ? activatedColors : disabledColors);
+    $toggleStatus.data("id", productId);
+    $toggleStatus.attr("aria-checked", isActive.toString());
 
-        $toggle.find("span")
-            .removeClass("translate-x-5 translate-x-0")
-            .addClass(isActive ? "translate-x-5" : "translate-x-0");
+    $toggleStatus
+        .removeClass(`${activatedColors} ${disabledColors}`)
+        .addClass(isActive ? activatedColors : disabledColors);
 
-        modalEditProduct.removeClass("hidden");
-        $("#editProductName").focus();
-    });
+    $toggleStatus.find("span")
+        .removeClass("translate-x-5 translate-x-0")
+        .addClass(isActive ? "translate-x-5" : "translate-x-0");
 
-    $(document).on("click", ".productToggleStatus", function () {
+
+    const $togglePromo = modalEditProduct.find(".productTogglePromo");
+
+    $togglePromo.attr("aria-checked", "false");
+    $togglePromo
+        .removeClass(`${activatedColors} ${disabledColors}`)
+        .addClass(disabledColors);
+
+    $togglePromo.find("span")
+        .removeClass("translate-x-5 translate-x-0")
+        .addClass("translate-x-0");
+    
+    modalEditProduct.removeClass("hidden");
+    $("#editProductName").focus();
+});
+
+
+
+$(document).on("click", ".productToggleStatus", function () {
     const $button = $(this);
     const isActive = $button.attr("aria-checked") === "true";
     const newState = !isActive;
@@ -423,38 +436,28 @@ $(document).ready(function () {
     $button.find("span")
         .removeClass("translate-x-5 translate-x-0")
         .addClass(newState ? "translate-x-5" : "translate-x-0");
-    });
+});
 
 
-    $("#btnConfirmEditCategory").on("click", function (event) {
-        event.preventDefault();
+$(document).on("click", ".productTogglePromo", function () {
+    const $button = $(this);
+    const isActive = $button.attr("aria-checked") === "true";
+    const newState = !isActive;
 
-        const categoryId = $("#modalEditCategory").data("category-id");
-        const categoryName = $("#editCategoryName").val();
-        const categoryDescription = $("#editCategoryDescription").val();
+    $button.attr("aria-checked", newState.toString());
 
-        console.log(`Category Name: ${categoryName}, Category Description: ${categoryDescription}, Category ID: ${categoryId}`);
-        $.ajax({
-            url: `/api/categories/${categoryId}`,
-            method: "PUT",
-            contentType: "application/json",
-            data: JSON.stringify({
-                name: categoryName,
-                description: categoryDescription
-            }),
-            success: function (res) {
-                console.log("Categoria atualizada:", res);
-                loadCategories();
-            },
-            error: function (xhr) {
-                console.error("Erro ao atualizar categoria:", xhr.responseText);
-            }
-        });
+    $button
+        .removeClass(`${activatedColors} ${disabledColors}`)
+        .addClass(newState ? activatedColors : disabledColors);
 
-        $("#modalEditCategory").addClass("hidden");
-    });
+    $button.find("span")
+        .removeClass("translate-x-5 translate-x-0")
+        .addClass(newState ? "translate-x-5" : "translate-x-0");
+});
 
-   $("#btnConfirmEditProduct").on("click", function (event) {
+
+
+$("#btnConfirmEditProduct").on("click", function (event) {
     event.preventDefault();
 
     const productId = $("#modalEditProduct").data("product-id");
@@ -462,7 +465,10 @@ $(document).ready(function () {
     const newProductPrice = $("#editProductPrice").val();
     const newProductDescription = $("#editProductDescription").val();
 
-    const toggleState = $("#modalEditProduct").find(".productToggleStatus").attr("aria-checked") === "true";
+
+    const toggleState = $("#modalEditProduct")
+        .find(".productToggleStatus")
+        .attr("aria-checked") === "true";
 
     $.ajax({
         url: `/api/products/${productId}`,
@@ -475,28 +481,27 @@ $(document).ready(function () {
         }),
         success: function () {
             console.log("Produto atualizado com sucesso.");
+            $.ajax({
+                url: `/api/products/${productId}/status`,
+                method: "PATCH",
+                contentType: "application/json",
+                data: JSON.stringify({ activated: toggleState }),
+                success: function () {
+                    console.log("Status atualizado:", toggleState);
+                    loadCategories();
+                    $("#editProductName").val("");
+                    $("#editProductPrice").val("");
+                    $("#editProductDescription").val("");
+                    $("#modalEditProduct").addClass("hidden");
+                },
+                error: function (xhr) {
+                    console.error("Erro ao atualizar status:", xhr.responseText);
+                }
+            });
         },
         error: function (xhr) {
             console.error("Erro ao atualizar produto:", xhr.responseText);
         }
     });
-
-    $.ajax({
-        url: `/api/products/${productId}/status`,
-        method: "PATCH",
-        contentType: "application/json",
-        data: JSON.stringify({ activated: toggleState }),
-        success: function () {
-            console.log("Status atualizado:", toggleState);
-            loadCategories();
-            $("#editProductName").val("");
-            $("#editProductPrice").val("");
-            $("#editProductDescription").val("");
-            $("#modalEditProduct").addClass("hidden");
-        },
-        error: function (xhr) {
-            console.error("Erro ao atualizar status:", xhr.responseText);
-        }
-        });
-    });
+});
 });

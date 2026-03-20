@@ -769,10 +769,9 @@ modal_id="modalConfirmOperation") %}
                     Opções
                 </label>
                 <div class="h-full flex justify-center items-center flex-col gap-2">
-                    <section
-                        class="w-[100%] flex items-center justify-between border border-gray-300 px-4 py-3 rounded-xl bg-gray-50 transition cursor-pointer">
+                    <section class="w-[100%] flex items-center justify-between border border-gray-300 px-4 py-3 rounded-xl bg-gray-50 transition cursor-pointer">
                         <span>Status</span>
-                        <button type="button" data-id="" aria-checked="false" role="switch"
+                        <button type="button" data-id="" data-toggle="status" aria-checked="false" role="switch"
                             class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-300 transition-colors focus:outline-none productToggleStatus">
                             <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-0"></span>
                         </button>
@@ -781,8 +780,8 @@ modal_id="modalConfirmOperation") %}
                         <span class="text-sm md:text-base text-gray-700">
                             Promoção
                         </span>
-                        <button type="button" data-id="" aria-checked="false" role="switch"
-                            class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-300 transition-colors focus:outline-none productToggleStatus">
+                        <button type="button" data-id="" data-toggle="promotional" aria-checked="false" role="switch"
+                            class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-300 transition-colors focus:outline-none productTogglePromo">
                             <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-0"></span>
                         </button>
                     </section>
@@ -790,7 +789,7 @@ modal_id="modalConfirmOperation") %}
             </div>
 
             <div class="flex flex-col gap-1 pt-4 border-t">
-                <button type="submit" id="btnConfirmEditProduct"
+                <button type="button" id="btnConfirmEditProduct"
                     class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                     Salvar
                 </button>

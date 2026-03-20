@@ -112,8 +112,13 @@ def patch_product_status(product_id: str):
     logger.info(f"[{dir_name}] Validando o UUID do Produto.")
 
     uuid_schema.load({"id": product_id})
+    data = request.get_json()
+    activated = data.get("activated")
 
-    new_status = products_services.update_by_id(product_id=product_id)
+    if activated is None:
+        return jsonify({"message": "Campo 'activated' é obrigatório"}), 400
+
+    new_status = products_services.update_by_id(product_id=product_id, activated=activated)
 
     if new_status is None:
         return jsonify({"message": "Produto não encontrado"}), 404

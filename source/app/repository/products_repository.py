@@ -94,7 +94,7 @@ class ProductsRepository(CRUDInterface):
         return True
 
     @transactional
-    def update_status_by_id(self, product_id: str) -> bool:
+    def update_status_by_id(self, product_id: str, activated: bool) -> bool:
         product = (
             self.session
             .query(ProductsEntity)
@@ -105,7 +105,7 @@ class ProductsRepository(CRUDInterface):
         if not product:
             return None
 
-        product.activated = not product.activated
+        product.activated = activated
         return product.activated
 
     @transactional
