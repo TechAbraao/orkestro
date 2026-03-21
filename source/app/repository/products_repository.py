@@ -19,7 +19,7 @@ class ProductsRepository(CRUDInterface):
                 .query(ProductsEntity)
                 .filter(ProductsEntity.id == product_id)
                 .first())
-
+    
     def all(self) -> List[ProductsEntity]:
         return (
             self.session
@@ -93,6 +93,11 @@ class ProductsRepository(CRUDInterface):
         logger.info(f"Product with ID '{entity_id}' updated successfully.")
         return True
 
+    @transactional
+    def save(self, product: ProductsEntity) -> ProductsEntity:
+        self.session.add(product)
+        return product
+    
     @transactional
     def update_status_by_id(self, product_id: str, activated: bool) -> bool:
         product = (

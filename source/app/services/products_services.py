@@ -4,7 +4,7 @@ from source.app.entities.products_entity import ProductsEntity
 from source.app.repository.products_repository import ProductsRepository
 from source.app.repository.categories_repository import CategoriesRepository
 from source.app.exceptions.products_exceptions import *
-from flask import url_for, current_app
+from flask import url_for, current_app, abort
 from source.app.exceptions.category_exceptions import *
 import uuid
 
@@ -100,6 +100,29 @@ class ProductsServices:
     def update_by_id(self, product_id: str, activated: bool) -> bool:
         return self.products_repository.update_status_by_id(product_id, activated)
 
+    @database_connection
+    def patch_product_by_id(self, product_id: str, data):
+    
+        product = self.products_repository.get(product_id=product_id)
+        if not product:
+            abort(404, description=f"Produto com id '{product_id}' não encontrado.")
+
+        promo = data.get("isPromotional")
+        if not isinstance(promo, bool):
+            abort(400, "Apenas booleanos são aceitos.")
+        
+        allowed_fields = {"name", "description", "price", "activated", "isPromotional", "price_promotional"}
+
+        for key, value in data.items():
+            if key not in allowed_fields:
+                abort(400, f"Campo inválido: {key}")
+
+            setattr(product, key, value)
+
+        self.products_repository.save(product=product)
+
+        return product
+        
     @database_connection
     def delete(self, product_id: str):
         deleted = (

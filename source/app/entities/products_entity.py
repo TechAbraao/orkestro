@@ -19,6 +19,8 @@ class ProductsEntity(database.Model):
         database.Boolean,
         default=True
     )
+    isPromotional = database.Column(database.Boolean, default=False)
+    price_promotional = database.Column(database.Numeric, default=0.00)
 
     category = database.relationship("CategoriesEntity", back_populates="products")
 
@@ -28,11 +30,15 @@ class ProductsEntity(database.Model):
             "id": str(self.id),
             "name": self.name,
             "description": self.description,
-            "price": float(self.price) if isinstance(self.price, Decimal) else self.price,
+            "price": (
+                float(self.price) if isinstance(self.price, Decimal) else self.price
+            ),
             "image_url": self.image_url,
             "category_id": str(self.category_id) if self.category_id else None,
             "activated": bool(self.activated),
             "created_at": self.created_at.isoformat() if self.created_at else None,
+            "isPromotional": self.isPromotional,
+            "price_promotional": (float(self.price_promotional) if isinstance(self.price_promotional, Decimal) else self.price_promotional),
         }
 
 from source.app.entities.associations_tables_entity import menu_product

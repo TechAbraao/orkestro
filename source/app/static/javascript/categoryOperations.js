@@ -143,7 +143,7 @@ $(document).ready(function () {
                                                         const ariaChecked = isActive ? "true" : "false";
                                                         
                                                         return `
-                                                        <div class="flex justify-center gap-1 h-[280px] items-center bg-white rounded-lg px-4 
+                                                        <div class="flex justify-center gap-1 h-[285px] items-center bg-white rounded-lg px-4 
                                                         py-3 shadow-sm hover:shadow-md transition-all duration-200 border-2 border-gray-200 flex flex-col">
                                                             <div class="h-[35px] w-full flex justify-between items-center">
                                                                 <p class="flex justify-center items-center gap-1">
@@ -161,21 +161,28 @@ $(document).ready(function () {
                                                                           onclick="copyProductId('${product.id}')"
                                                                             title="${product.id}"
                                                                       >
-                                                                         ${product.id.length > 26 ? product.id.slice(0, 26) + " ..." : product.id}
+                                                                         ${product.id.length > 13 ? product.id.slice(0, 13) + " ..." : product.id}
                                                                         </span>
                                                                     </p>
-                                                                <!-- DEPRECIADO, porém, deixarei o código fonte aqui
-                                                                <button
-                                                                        data-id="${product.id}"
-                                                                        type="button"
-                                                                        class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-300 transition-colors focus:outline-none productToggleStatus ${toggleBgClass}"
-                                                                        role="switch"
-                                                                        aria-checked="${ariaChecked}"
-                                                                    >
-                                                                        <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${toggleTranslateClass}"></span>
-                                                                        <span id="menuStatusText" class="text-red-600 font-medium">
-                                                                </button>
-                                                                -->
+                                                                    <div>
+                                                                    ${product.isPromotional  
+                                                                        ? `<aside class="inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold text-yellow-700 bg-yellow-100 rounded-full">
+                                                                            <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                                                                            Em promoção
+                                                                        </aside>` 
+                                                                        : ``
+                                                                    }
+                                                                   ${product.activated 
+                                                                        ? `<aside class="inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold text-green-700 bg-green-100 rounded-full">
+                                                                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                                                            Disponível
+                                                                        </aside>` 
+                                                                        : `<aside class="inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold text-gray-600 bg-gray-100 rounded-full">
+                                                                            <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+                                                                                Indisponível
+                                                                           </aside>`
+                                                                    }
+                                                                    </div>
                                                             </div>
                                                             <div class="w-full bg-gray-200 h-[2px] mt-[2px] mb-[3px] rounded-full"></div>
                                                             <div class="w-full h-[60%] flex justify-between">
@@ -184,7 +191,22 @@ $(document).ready(function () {
                                                                 </div>
                                                                 <div class="w-full p-2">
                                                                     <span class="text-gray-800 font-medium text-lg block">${product.name}</span>
-                                                                    <span class="text-sm text-gray-500 block">R$ ${product.price ? product.price.toFixed(2) : "0.00"}</span>
+                                                                    ${
+                                                                       product.isPromotional ? `
+                                                                            <div class="flex flex-col">
+                                                                                <span class="text-xs text-gray-400 line-through">
+                                                                                    R$ ${Number(product.price ?? 0).toFixed(2)}
+                                                                                </span>
+                                                                                <span class="text-sm font-semibold text-green-600">
+                                                                                    R$ ${Number(product.price_promotional ?? 0).toFixed(2)}
+                                                                                </span>
+                                                                            </div>
+                                                                                    ` : `
+                                                                            <span class="text-sm text-gray-500 block">
+                                                                                R$ ${Number(product.price ?? 0).toFixed(2)}
+                                                                            </span>
+                                                                        `
+                                                                    }
                                                                     <span 
                                                                     class="text-sm text-gray-500 w-[240px] break-words block"
                                                                     title="${product.description}"
@@ -387,11 +409,14 @@ categoriesContainer.on("click", "#btn-edit-product", function () {
     $("#editProductName").val(selectedProduct.name);
     $("#editProductDescription").val(selectedProduct.description);
     $("#editProductPrice").val(selectedProduct.price);
+    console.warn("PREÇO DA PROMO^ÇÂO PORA:" + JSON.stringify(selectedProduct));
+    $("#editProductPricePromotional").val(selectedProduct.price_promotional);
     modalEditProduct.data("product-id", productId);
 
 
     const $toggleStatus = modalEditProduct.find(".productToggleStatus");
     const isActive = selectedProduct.activated;
+    console.log("STATUS" + isActive)
 
     $toggleStatus.data("id", productId);
     $toggleStatus.attr("aria-checked", isActive.toString());
@@ -406,15 +431,26 @@ categoriesContainer.on("click", "#btn-edit-product", function () {
 
 
     const $togglePromo = modalEditProduct.find(".productTogglePromo");
+    const isActivePromo = selectedProduct.isPromotional;
+    console.log("PROMO:" + isActivePromo)
 
-    $togglePromo.attr("aria-checked", "false");
+    $togglePromo.attr("aria-checked", isActivePromo.toString());
     $togglePromo
         .removeClass(`${activatedColors} ${disabledColors}`)
-        .addClass(disabledColors);
+        .addClass(isActivePromo ? activatedColors : disabledColors);
 
     $togglePromo.find("span")
         .removeClass("translate-x-5 translate-x-0")
-        .addClass("translate-x-0");
+        .addClass(isActivePromo ? "translate-x-5" : "translate-x-0");
+    
+    const $inputPromo = $("#editProductPricePromotional");
+    if (isActivePromo) {
+        $inputPromo.prop("disabled", false);
+        $inputPromo.focus();
+    } else {
+        $inputPromo.prop("disabled", true);
+        $inputPromo.val(""); 
+    }
     
     modalEditProduct.removeClass("hidden");
     $("#editProductName").focus();
@@ -436,6 +472,7 @@ $(document).on("click", ".productToggleStatus", function () {
     $button.find("span")
         .removeClass("translate-x-5 translate-x-0")
         .addClass(newState ? "translate-x-5" : "translate-x-0");
+
 });
 
 
@@ -443,16 +480,25 @@ $(document).on("click", ".productTogglePromo", function () {
     const $button = $(this);
     const isActive = $button.attr("aria-checked") === "true";
     const newState = !isActive;
-
+    
     $button.attr("aria-checked", newState.toString());
-
+    
     $button
-        .removeClass(`${activatedColors} ${disabledColors}`)
-        .addClass(newState ? activatedColors : disabledColors);
-
+    .removeClass(`${activatedColors} ${disabledColors}`)
+    .addClass(newState ? activatedColors : disabledColors);
+    
     $button.find("span")
-        .removeClass("translate-x-5 translate-x-0")
-        .addClass(newState ? "translate-x-5" : "translate-x-0");
+    .removeClass("translate-x-5 translate-x-0")
+    .addClass(newState ? "translate-x-5" : "translate-x-0");
+    
+    const $inputPromo = $("#editProductPricePromotional");
+    if (newState) {
+        $inputPromo.prop("disabled", false);
+        $inputPromo.focus();
+    } else {
+        $inputPromo.prop("disabled", true);
+        $inputPromo.val(""); 
+    }
 });
 
 
@@ -464,30 +510,37 @@ $("#btnConfirmEditProduct").on("click", function (event) {
     const newProductName = $("#editProductName").val();
     const newProductPrice = $("#editProductPrice").val();
     const newProductDescription = $("#editProductDescription").val();
-
+    const newInputPromo = $("#editProductPricePromotional").val();
 
     const toggleState = $("#modalEditProduct")
         .find(".productToggleStatus")
         .attr("aria-checked") === "true";
 
+    const togglePromo = $("#modalEditProduct")
+        .find(".productTogglePromo")
+        .attr("aria-checked") === "true"    
+
     $.ajax({
         url: `/api/products/${productId}`,
-        method: "PUT",
+        method: "PATCH",
         contentType: "application/json",
         data: JSON.stringify({
             name: newProductName,
             description: newProductDescription,
             price: parseFloat(newProductPrice),
+            isPromotional: togglePromo,
+            price_promotional: parseFloat(newInputPromo),
         }),
         success: function () {
-            console.log("Produto atualizado com sucesso.");
+            console.warn("Produto atualizado com sucesso.");
             $.ajax({
                 url: `/api/products/${productId}/status`,
                 method: "PATCH",
                 contentType: "application/json",
                 data: JSON.stringify({ activated: toggleState }),
                 success: function () {
-                    console.log("Status atualizado:", toggleState);
+                    console.warn("Status do produto atualizado com sucesso:", toggleState);
+                    console.warn("isPromotion do Produto: ", togglePromo)
                     loadCategories();
                     $("#editProductName").val("");
                     $("#editProductPrice").val("");
@@ -498,6 +551,7 @@ $("#btnConfirmEditProduct").on("click", function (event) {
                     console.error("Erro ao atualizar status:", xhr.responseText);
                 }
             });
+
         },
         error: function (xhr) {
             console.error("Erro ao atualizar produto:", xhr.responseText);

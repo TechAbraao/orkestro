@@ -29,7 +29,8 @@ $(document).ready(() => {
                         </div>
                         <div class="w-full h-full">
                             <div class="w-full h-3/2">
-                                <h3 data-name="${product.name}" class="text-[20px] font-semibold text-gray-800 mb-2 pl-3 pt-3 text-left name-product-id">${product.name}</h3>
+                                <h3 data-name="${product.name}" class="text-[20px] font-semibold text-gray-800 mb-2 pl-3 pt-3 text-left name-product-id">${product.name}
+                                </h3>
                                 <p class="text-sm text-gray-500 line-clamp-2 pl-3 text-left">${product.description || "Sem descrição"}</p>
                                 <p data-price="${product.price}" class="text-gray-800 font-medium mt-2 pl-3 text-left price-product-id">R$ ${product.price.toFixed(2)}</p>
                             </div>
