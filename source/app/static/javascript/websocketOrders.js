@@ -116,72 +116,58 @@ $(function () {
         // Botões dinâmicos
         let buttonsHTML = ""
         if (order.status === "done") {
-        buttonsHTML = `
-            <button class="text-xs font-semibold text-white bg-blue-500
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-details-order"
-                title="Detalhes do pedido"
-                data-id='${order.id}'>
-                Detalhes
-            </button>
-            <button class="text-xs font-semibold text-white bg-red-600 hover:bg-red-700 
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-not-accept-order"
-                data-id='${order.id}'
-                title="Rejeitar pedido"
-                >
-                Rejeitar
-            </button>
-            <button class="text-xs font-semibold text-white bg-green-600 hover:bg-green-700 
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-accept-order"
-                data-id='${order.id}'
-                title="Aceitar pedido"
-                >
-                Aceitar
-            </button>
-        `;
-        } else if (order.status === "pending") {
-          buttonsHTML = `
-            <button class="text-xs font-semibold text-white bg-blue-500
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 .btn-details-order btn-details-order"
-                data-id='${order.id}'
-                title="Detalhes do pedido"
-                >
-                Detalhes
-            </button>
-            <button class="text-xs font-semibold text-white bg-red-600 hover:bg-red-700 
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-cancel-order"
-                data-id='${order.id}'
-                title="Cancelar pedido"
-                >
-                Cancelar
-            </button>
-            <button class="text-xs font-semibold text-white bg-green-600 hover:bg-green-700 
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-conclude-order"
-                data-id='${order.id}'
-                title="Concluir pedido"
-                >
-                Concluir
-            </button>
-        `;
-        } else if (order.status === "completed") {
-              buttonsHTML = `
-            <button class="text-xs font-semibold text-white bg-blue-500
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-details-order"
-                title="Detalhes do pedido"
-                data-id='${order.id}'>
-                Detalhes
-            </button>
-        `;
-        } else if (order.status === "canceled") {
-              buttonsHTML = `
-            <button class="text-xs font-semibold text-white bg-blue-500
-                px-2.5 py-1 rounded-3xl shadow-sm transition-all duration-200 btn-details-order"
-                data-id='${order.id}'
-                title="Detalhes do pedido"
-                >
-                Detalhes
-            </button>
-        `;
-        }
+    buttonsHTML = `
+        <button class="text-xs font-semibold text-blue-600 border border-blue-200 bg-blue-50 hover:bg-blue-100
+            px-3 py-1 rounded-full transition-all duration-200 btn-details-order"
+            title="Detalhes do pedido" data-id='${order.id}'>
+            Detalhes
+        </button>
+        <button class="text-xs font-semibold text-red-600 border border-red-200 bg-red-50 hover:bg-red-100
+            px-3 py-1 rounded-full transition-all duration-200 btn-not-accept-order"
+            title="Rejeitar pedido" data-id='${order.id}'>
+            Rejeitar
+        </button>
+        <button class="text-xs font-semibold text-green-600 border border-green-200 bg-green-50 hover:bg-green-100
+            px-3 py-1 rounded-full transition-all duration-200 btn-accept-order"
+            title="Aceitar pedido" data-id='${order.id}'>
+            Aceitar
+        </button>
+    `;
+} else if (order.status === "pending") {
+    buttonsHTML = `
+        <button class="text-xs font-semibold text-blue-600 border border-blue-200 bg-blue-50 hover:bg-blue-100
+            px-3 py-1 rounded-full transition-all duration-200 btn-details-order"
+            title="Detalhes do pedido" data-id='${order.id}'>
+            Detalhes
+        </button>
+        <button class="text-xs font-semibold text-red-600 border border-red-200 bg-red-50 hover:bg-red-100
+            px-3 py-1 rounded-full transition-all duration-200 btn-cancel-order"
+            title="Cancelar pedido" data-id='${order.id}'>
+            Cancelar
+        </button>
+        <button class="text-xs font-semibold text-green-600 border border-green-200 bg-green-50 hover:bg-green-100
+            px-3 py-1 rounded-full transition-all duration-200 btn-conclude-order"
+            title="Concluir pedido" data-id='${order.id}'>
+            Concluir
+        </button>
+    `;
+} else if (order.status === "completed") {
+    buttonsHTML = `
+        <button class="text-xs font-semibold text-blue-600 border border-blue-200 bg-blue-50 hover:bg-blue-100
+            px-3 py-1 rounded-full transition-all duration-200 btn-details-order"
+            title="Detalhes do pedido" data-id='${order.id}'>
+            Detalhes
+        </button>
+    `;
+} else if (order.status === "canceled") {
+    buttonsHTML = `
+        <button class="text-xs font-semibold text-blue-600 border border-blue-200 bg-blue-50 hover:bg-blue-100
+            px-3 py-1 rounded-full transition-all duration-200 btn-details-order"
+            title="Detalhes do pedido" data-id='${order.id}'>
+            Detalhes
+        </button>
+    `;
+}
 
         function formatStatus(status) {
             switch (status) {
@@ -207,22 +193,20 @@ $(function () {
                         <h3 class="font-bold text-gray-800 text-lg tracking-tight">Pedido</h3>
                         <span class="font-bold text-gray-800 text-lg tracking-tight">#${order.order_number}</span>
                     </div>
-                    <div>
-                        ${buttonsHTML}
-                    </div>
+                    <p class="text-xs text-gray-600">${statusText}</p>
                 </div>
                 <hr class="border-t-1 border-gray-200 mb-2">
                 <div class="space-y-0.5">
-                    <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Status:</span> ${statusText} </p>
                     <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Nome:</span> ${order.name}</p>
                     <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Telefone:</span> ${order.telephone}</p>
-                    <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Total:</span> R$ ${order.total_value.toFixed(2)}</p>
                     <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Horário:</span> ${now}</p>
                 </div>
-                <hr class="border-t-1 border-gray-200 mb-2">
-                <div class="flex">
-                    <button class="bg-gray-200 hover:bg-gray-300 font-semibold text-gray-700 px-3 py-1 rounded-xl transition-colors w-1/2 h-full">Rejeitar pedido</button>
-                    <button class="bg-[#111111] hover:bg-[#050505] text-white transition-colors font-semibold px-3 py-1 rounded-xl transition-all w-1/2">Aceitar pedido</button>
+                <hr class="border-t-1 border-gray-200 mb-2 mt-2">
+                <div class="flex justify-between items-center">
+                    <p class="text-[18px] text-gray-600"><span class="font-semibold text-gray-800">Total:</span> R$ ${order.total_value.toFixed(2)}</p>
+                     <div>
+                        ${buttonsHTML}
+                    </div>
                 </div>
             </li>
         `);
@@ -416,27 +400,4 @@ $(function () {
     $ordersListPending.on("click", '.btn-details-order', getDetailsOrder)
     $ordersListCompleted.on("click", '.btn-details-order', getDetailsOrder)
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

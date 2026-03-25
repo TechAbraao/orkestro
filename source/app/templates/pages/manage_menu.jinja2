@@ -47,6 +47,9 @@ Gerenciar Cardápio
         {% endif %}
     </section>
 </section>
+<script>
+    const btnDeleteMenuIcon = "{{ url_for('static', filename='icons/trash.svg') }}";
+</script>
 <script src="{{ url_for('static', filename='javascript/create_menu.js') }}" defer></script>
 <script src="{{ url_for('static', filename='javascript/menusInDashboard.js') }}" defer></script>
 {% endblock dashboard %}
@@ -59,7 +62,5 @@ Gerenciar Cardápio
 {% endblock navbar %}
 
 {% block footer %}
-<aside class="w-auto h-full">
-    Orkestro © 2025 | versão 1.1.0
-</aside>
+
 {% endblock footer %}

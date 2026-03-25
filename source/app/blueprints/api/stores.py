@@ -21,15 +21,11 @@ def api_post_stores():
 
     store = stores_services.create_store(body)
 
-    return jsonify({
-        "message": "Loja criada com sucesso.",
-        "status_code": 201
-    })
+    return jsonify({"message": "Loja criada com sucesso.", "status_code": 201})
 
+""" EM CONSTRUÇÃO """
 @api.route("/stores", methods=["GET"])
 def api_get_store():
-
-    ##
     slug = request.args.get("slug", "N/A")
     if slug and slug != "N/A":
         logger.info(f"[{dir_name}] Request Params (slug): '{slug}'")
@@ -47,11 +43,10 @@ def api_get_store():
                 "status_code" : 404
             })
 
-
-    all_stores = "TODO (futura implementação)"
+    all_stores = stores_services.all_stores()
     return Response.success(
         message="Lista de todos os comércios.",
-        data=all_stores,
+        data=stores_schemas.dump(all_stores, many=True),
         status_code=200
     )
 

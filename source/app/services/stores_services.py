@@ -114,3 +114,7 @@ class StoresServices:
         if not menu_by_store_id:
             return {"id": ""}
         return menu_by_store_id.serialize
+
+    @database_connection
+    def all_stores(self):
+        return self.stores_repository.all()

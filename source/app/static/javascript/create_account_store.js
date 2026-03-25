@@ -7,11 +7,12 @@ $(document).ready(function () {
         let password = $("#password").val();
         let telephone = $("#telephone").val();
         let role = $("#role_store").val();
-        let roleList = `["${role}"]`
+        let roleList = [role]
         console.log(roleList)
 
+
         $.ajax({
-            url: createAccountStoreURL,
+            url: "/api/stores",
             method: "POST",
             contentType: "application/json",
             data: JSON.stringify({

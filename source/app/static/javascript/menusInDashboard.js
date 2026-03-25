@@ -2,15 +2,17 @@
 function createMenuCard(menu) {
     return `
     <div class="menu-card bg-white rounded-2xl border-2 border-gray-300  transition-shadow duration-300 flex flex-col justify-between h-80 w-[360px] p-6">
-        <div class="flex justify-between items-start mb-4">
-            <h3 class="text-xl font-bold text-gray-900 capitalize">${menu.name}</h3>
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-[17px] font-bold text-gray-900 capitalize">${menu.name}</h3>
             ${currentUserRoles?.includes("PRIVILEGED") || currentUserRoles.includes("ADMIN") ? `
                 <button 
                     title="Excluir"
-                    class="btn-delete-menu px-3 py-1 rounded-full bg-red-500 text-white text-sm font-semibold
-                       hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 transition"
-                    data-id="${menu.id}">
-                    Excluir
+                    class="btn-delete-menu rounded-full bg-gray-100 text-white text-sm font-semibold
+                        p-2 focus:outline-none focus:ring-2 focus:ring-red-400 transition" data-id="${menu.id}">
+                        <img src="${btnDeleteMenuIcon}" 
+                        style="filter: invert(27%) sepia(91%) saturate(700%) hue-rotate(330deg) brightness(97%) contrast(97%)"
+                        alt="Excluir" 
+                        class="w-[20px] h-[20px] inline" />
                 </button>
                 ` : `
                 <button 
@@ -18,17 +20,20 @@ function createMenuCard(menu) {
                     disabled
                     class="px-3 py-1 rounded-full bg-gray-300 text-gray-500 text-sm font-semibold
                     cursor-not-allowed opacity-70">
-                Excluir
+                        <img src="${btnDeleteMenuIcon}" 
+                        style="filter: invert(27%) sepia(91%) saturate(700%) hue-rotate(330deg) brightness(97%) contrast(97%)"
+                        alt="Excluir" 
+                        class="w-[20px] h-[20px] inline" />
                 </button>
                 `
                 }
         </div>
-        <p class="text-sm text-indigo-600 mb-2 truncate font-medium">${menu.slug}</p>
-        <p class="text-gray-700 text-sm line-clamp-4 mb-2">${menu.description}</p>
+        <p class="text-sm text-indigo-600 truncate font-medium">${menu.slug}</p>
         <div class="flex items-center gap-2">
             <span class="text-gray-700 text-sm line-clamp">Tipo:</span>
             <p class="text-gray-900 text-[14px] font-semibold line-clamp-4 bg-gray-200 rounded-full pl-3 pr-3">${menu.roles}</p>
         </div>
+        <p class="text-gray-700 text-sm line-clamp-4 mt-2">${menu.description}</p>
         
         <div class="mt-auto flex flex-col gap-1 h-[38%]">
             <a href="/menus/${menu.slug}" target="_blank"

@@ -34,14 +34,25 @@ Pedidos
 
 
     <div class="h-full w-1/2  bg-orange-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
-        <div class="text-xl text-left font-bold border-gray-300 border-2
-            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white flex items-center justify-between rounded-2xl"
-            id="orders-count-container">
-            <h2>Pedidos Realizados</h2>
-            <span id="orders-count" class="text-[20px] font-bold text-green-800 bg-gradient-to-r from-green-200 via-green-300 to-green-400
-                        rounded-3xl pl-[7.5px] pr-[7.5px] shadow-sm border transition-all duration-300">
-                0
-            </span>
+        <div class="flex items-center justify-between w-[95%] mx-auto mt-4 mb-4 px-5 py-3.5
+                    bg-white rounded-2xl border border-gray-100
+                    shadow-[0_2px_12px_rgba(0,0,0,0.07)]" id="orders-count-container">
+        
+            <h2 class="text-base font-semibold text-gray-700 tracking-tight">
+                Pedidos Realizados
+            </h2>
+        
+            <div class="relative inline-flex items-center justify-center w-10 h-10">
+                <img src="{{ url_for('static', filename='icons/bell-2.svg') }}" class="w-6 h-6 opacity-70" />
+                <span id="orders-count" class="absolute -top-1 -right-1
+                             min-w-[1.25rem] h-5 px-1
+                             flex items-center justify-center
+                             text-[11px] font-bold text-white
+                             bg-green-500 rounded-full
+                             shadow transition-all duration-300">
+                    0
+                </span>
+            </div>
         </div>
         <ul id="orders-list-done" class="w-[95%] max-w-4xl
             space-y-3 overflow-y-auto h-[600px] no-scrollbar">
@@ -49,13 +60,26 @@ Pedidos
         </ul>
     </div>
     <div class="h-full w-1/2 bg-yellow-300 rounded-3xl border-2 flex items-center flex-col border-gray-300">
-        <div class="text-xl text-left font-bold border-gray-300 border-2 flex items-center justify-between
-            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl" id="pending-count-container">
-            <h2>Pedidos Pendentes</h2>
-            <span id="pending-count" class="text-[20px] font-bold text-green-800 bg-gradient-to-r from-green-200 via-green-300 to-green-400
-                        rounded-3xl pl-[7.5px] pr-[7.5px] shadow-sm border transition-all duration-300">
-                0
-            </span>
+        <div class="flex items-center justify-between w-[95%] mx-auto mt-4 mb-4 px-5 py-3.5
+                    bg-white rounded-2xl border border-gray-100
+                    shadow-[0_2px_12px_rgba(0,0,0,0.07)]" id="pending-count-container">
+        
+            <h2 class="text-base font-semibold text-gray-700 tracking-tight">
+                Pedidos Pendentes
+            </h2>
+        
+            <div class="relative inline-flex items-center justify-center w-10 h-10">
+                <img src="{{ url_for('static', filename='icons/bell-2.svg') }}" class="w-6 h-6 opacity-70" />
+                <span id="pending-count" class="absolute -top-1 -right-1
+                             min-w-[1.25rem] h-5 px-1
+                             flex items-center justify-center
+                             text-[11px] font-bold text-white
+                             bg-orange-400 rounded-full
+                             shadow transition-all duration-300">
+                    0
+                </span>
+            </div>
+        
         </div>
         <ul id="orders-list-accepts" class="w-[95%] max-w-4xl
                 space-y-3 overflow-y-auto h-[600px] no-scrollbar">
@@ -63,13 +87,26 @@ Pedidos
         </ul>
     </div>
     <div class="h-full w-1/2 bg-green-400 rounded-3xl border-2 flex items-center flex-col border-gray-300">
-        <div class="text-xl text-left font-bold border-gray-300 border-2 flex items-center justify-between
-            text-gray-800 mb-4 mt-4 w-[95%] p-3 bg-white rounded-2xl" id="completed-count-container">
-            <h2>Pedidos Concluídos</h2>
-            <span id="completed-count" class="text-[20px] font-bold text-green-800 bg-gradient-to-r from-green-200 via-green-300 to-green-400
-                        rounded-3xl pl-[7.5px] pr-[7.5px] shadow-sm border transition-all duration-300">
-                0
-            </span>
+        <div class="flex items-center justify-between w-[95%] mx-auto mt-4 mb-4 px-5 py-3.5
+                    bg-white rounded-2xl border border-gray-100
+                    shadow-[0_2px_12px_rgba(0,0,0,0.07)]" id="completed-count-container">
+        
+            <h2 class="text-base font-semibold text-gray-700 tracking-tight">
+                Pedidos Concluídos
+            </h2>
+        
+            <div class="relative inline-flex items-center justify-center w-10 h-10">
+                <img src="{{ url_for('static', filename='icons/bell-2.svg') }}" class="w-6 h-6 opacity-70" />
+                <span id="completed-count" class="absolute -top-1 -right-1
+                             min-w-[1.25rem] h-5 px-1
+                             flex items-center justify-center
+                             text-[11px] font-bold text-white
+                             bg-emerald-600 rounded-full
+                             shadow transition-all duration-300">
+                    0
+                </span>
+            </div>
+        
         </div>
         <ul id="orders-list-finish" class="w-[95%] max-w-4xl
                 space-y-3 overflow-y-auto h-[600px] no-scrollbar">
@@ -94,7 +131,5 @@ Pedidos
 {% endblock navbar %}
 
 {% block footer %}
-<aside class="w-auto h-full">
-    Orkestro © 2025 | versão 1.1.0
-</aside>
+
 {% endblock footer %}

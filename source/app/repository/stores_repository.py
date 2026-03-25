@@ -12,6 +12,9 @@ class StoresRepository:
         self.session.add(store)
         return store
 
+    def all(self):
+        return self.session.query(StoresEntity).all()
+    
     def find_by_id(self, store_id: int) -> StoresEntity | None:
         return self.session.get(StoresEntity, store_id)
 
