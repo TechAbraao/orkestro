@@ -1,5 +1,5 @@
-<aside id="sidebar" class="h-screen w-64 bg-[#F4F2EE] flex items-center justify-start flex flex-col shadow-lg transition-all duration-300 text-white">
-    <div class="h-[100%] w-[100%] bg-[#18191B] flex flex-col items-center">
+<aside id="sidebar" class="h-screen w-64 bg-[#F4F2EE] flex items-center justify-center flex flex-col shadow-lg transition-all duration-300 text-white">
+    <div class="h-[100%] w-[100%] bg-[#18191B] flex flex-col items-start">
         <div class="flex items-center justify-between h-16  px-4 w-full bg-[#353535] container-img-profile">
             <span id="sidebar-title" class="text-[23px] font-bold tracking-wide">Orkestro</span>
             <button id="toggle-btn-sidenav"
@@ -13,144 +13,173 @@
                 >
             </button>
         </div>
-        <div class="w-[85%] h-[110px] mt-3
-        rounded-2xl flex items-center  justify-center">
-            <aside class="w-[50%] flex items-center justify-center ml-2 flex-col container-account-photo">
-                <img src="{{ url_for('static', filename='images/default-store-logo.png') }}" alt="Account Photo"
-                     class="w-[75px] h-[75px] rounded-full container-account-photo-img">
-
-                {# MENU_ROLES #}
-                {% if strategy.get("profile")["menu_roles"] == "COMMON" %}
-                    <p class="text-[16px] font-bold text-center pl-2 pr-2 mt-2 w-[90%] rounded-full menu-status-in-sidebar"></p>
-                {% endif %}
-
-            </aside>
-        </div>
-        <div class="mt-4 border-t border-gray-700">
-            <br>
-        <nav class="flex-1 px-2 py-3 space-y-1">
-        {% if "ADMIN" in strategy.get("profile")["roles"] or "PRIVILEGED" in strategy.get("profile")["roles"] %}
-            <a href="{{ url_for("vws.views_main_dashboard") }}"
-               title="Geral"
-               class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                <img src="{{ url_for('static', filename='icons/dashboard.png') }}" alt="Geral"
-                     class="w-6 h-6 mr-3 brightness-0 invert">
-                <span class="text-[16px] font-medium sidebar-text font-semibold">Geral</span>
-            </a>
-        {% else %}
-            <a href="#"
-               disabled
-               title="Permissão insuficiente"
-               class="flex items-center px-3 py-2 rounded-lg bg-red-900 cursor-not-allowed transition group">
-                <img src="{{ url_for('static', filename='icons/dashboard.png') }}" alt="Geral"
-                     class="w-6 h-6 mr-3 brightness-0 invert">
-                <span class="text-[16px] font-medium sidebar-text font-semibold ">Geral</span>
-            </a>
-        {% endif %}
-            <a href="{{ url_for("vws.views_orders_dashboard") }}" class="flex items-center px-3 py-2 justify-between rounded-lg hover:bg-[#222327] transition group">
-                <div class="flex justify-center flex-items">
-                       <img src="{{ url_for('static', filename='icons/bell.png') }}" alt="Orders" class="w-6 h-6 mr-3 brightness-0 invert">
-                        <span class="text-[16px] font-medium sidebar-text">Pedidos</span>
-                </div>
-                <span class="w-[25px] h-[25px] bg-red-600 rounded-full flex items-center justify-center border-2 border-red-700 container-text-count-orders-sidenav">
-                    <p class="font-bold text-count-orders-sidenav text-white-100 text-[14px]">0</p>
-                </span>
-            </a>
-
-            <a href="#" id="statistics-btn"
-               title="Seção da Estatística"
-               class=" flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                <img src="{{ url_for('static', filename='icons/graphics.png') }}" alt="Statistics"
-                     class="w-6 h-6 mr-3 brightness-0 invert">
-                <span class="text-[16px] font-medium sidebar-text">Históricos</span>
-
-                <svg class="ml-auto w-4 h-4 transition-transform duration-200" id="statistics-arrow"
-                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-            </a>
-
-            <div id="statistics-submenu" class="submenu ml-8 mt-2 space-y-1">
-                <a href="/historic?tab=orders"
-                   class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                    <span class="text-[16px] font-medium sidebar-text">Pedidos</span>
-                </a>
-                <!--
-                <a href="/historic?tab=customers"
-                   class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                    <span class="text-[16px] font-medium sidebar-text">Clientes</span>
-                </a>
-                -->
+        {#
+            <div class="w-[85%] h-[110px] mt-3
+            rounded-2xl flex items-center  justify-center">
+                <aside class="w-[50%] flex items-center justify-center ml-2 flex-col container-account-photo">
+                    <img src="{{ url_for('static', filename='images/default-store-logo.png') }}" alt="Account Photo"
+                        class="w-[75px] h-[75px] rounded-full container-account-photo-img">
+                        <p class="text-[16px] font-bold text-center pl-2 pr-2 mt-2 w-[90%] rounded-full menu-status-in-sidebar"></p>
+                </aside>
             </div>
-
-            <a href="{{ url_for("vws.views_menus_manager_dashboard") }}"
-               class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                <img src="{{ url_for('static', filename='icons/menus.png') }}" alt="Menus"
-                     class="w-6 h-6 mr-3 brightness-0 invert">
-                <span class="text-[16px] font-medium sidebar-text">Cardápios</span>
-            </a>
-            <a href="#" id="settings-btn"
-               class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                <img src="{{ url_for('static', filename='icons/settings.png') }}" alt="Settings"
-                     class="w-6 h-6 mr-3 brightness-0 invert">
-                <span class="text-[16px] font-medium sidebar-text">Configurações</span>
-                <svg class="ml-auto w-4 h-4 transition-transform duration-200" id="settings-arrow"
-                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-            </a>
-
-            <div id="settings-submenu" class="submenu ml-8 mt-2 space-y-1">
-                <a href="/settings?tab=whatsapp"
-                   class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                    <span class="text-[16px] font-medium sidebar-text">Integrações</span>
+            <div class="mt-4 border-t border-gray-700">
+        #}
+        <br>
+        <nav class="flex-1 px-2 py-3">
+        <p class="px-3 mb-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white">Visão Geral</p>
+    {% if "ADMIN" in strategy.get("profile")["roles"] or "PRIVILEGED" in strategy.get("profile")["roles"] %}
+    <a href="{{ url_for('vws.views_main_dashboard') }}" title="Métricas"
+        class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 group">
+        <div
+            class="w-8 h-8 flex items-center justify-center rounded-md bg-white/5 group-hover:bg-indigo-500/20 transition-colors duration-200">
+            <img src="{{ url_for('static', filename='icons/dashboard.png') }}" alt="Métricas"
+                class="w-4 h-4 brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity duration-200">
+        </div>
+        <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Métricas</span>
+    </a>
+    {% else %}
+    <span title="Permissão insuficiente"
+        class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/20 cursor-not-allowed group">
+        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-red-500/10">
+            <img src="{{ url_for('static', filename='icons/dashboard.png') }}" alt="Métricas"
+                class="w-4 h-4 brightness-0 invert opacity-20">
+        </div>
+        <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Métricas</span>
+        <span
+            class="ml-auto text-[10px] px-1.5 py-0.5 rounded bg-red-500/20 text-red-400/70 tracking-wide uppercase font-semibold">Restrito</span>
+    </span>
+    {% endif %}
+    
+    <a href="{{ url_for('vws.views_orders_dashboard') }}"
+        class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 group">
+        <div
+            class="w-8 h-8 flex items-center justify-center rounded-md bg-white/5 group-hover:bg-indigo-500/20 transition-colors duration-200">
+            <img src="{{ url_for('static', filename='icons/bell.png') }}" alt="Pedidos"
+                class="w-4 h-4 brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity duration-200">
+        </div>
+        <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Pedidos</span>
+        <span
+            class="ml-auto w-5 h-5 bg-red-500 rounded-full flex items-center justify-center container-text-count-orders-sidenav">
+            <p class="font-bold text-count-orders-sidenav text-white text-[11px] leading-none">0</p>
+        </span>
+    </a>
+    
+    <a href="/historic?tab=orders"
+        class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 group">
+        <div
+            class="w-8 h-8 flex items-center justify-center rounded-md bg-white/5 group-hover:bg-indigo-500/20 transition-colors duration-200">
+            <img src="{{ url_for('static', filename='icons/graphics.png') }}" alt="Histórico"
+                class="w-4 h-4 brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity duration-200">
+        </div>
+        <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Histórico</span>
+    </a>
+    
+    <a href="{{ url_for('vws.views_menus_manager_dashboard') }}"
+        class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 group">
+        <div
+            class="w-8 h-8 flex items-center justify-center rounded-md bg-white/5 group-hover:bg-indigo-500/20 transition-colors duration-200">
+            <img src="{{ url_for('static', filename='icons/menus.png') }}" alt="Cardápios"
+                class="w-4 h-4 brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity duration-200">
+        </div>
+        <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Cardápios</span>
+    </a>
+            
+            <div class="pt-4 mt-2 border-t border-white/10">
+                <p class="px-3 mb-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white">Configurações</p>
+            
+                <a href="#" id="settings-btn"
+                    class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 group">
+                    <div
+                        class="w-8 h-8 flex items-center justify-center rounded-md bg-white/5 group-hover:bg-indigo-500/20 transition-colors duration-200">
+                        <img src="{{ url_for('static', filename='icons/settings.png') }}" alt="Settings"
+                            class="w-4 h-4 brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity duration-200">
+                    </div>
+                    <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Configurações</span>
+                    <svg class="ml-auto w-3.5 h-3.5 opacity-40 group-hover:opacity-70 transition-all duration-200"
+                        id="settings-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
                 </a>
-                <a href="/settings?tab=blocked"
-                   class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                    <span class="text-[16px] font-medium sidebar-text">Bloqueiar Clientes</span>
-                </a>
-                {% if "ADMIN" in strategy.get("profile")["roles"] %}
-                <a href="/settings?tab=stores"
-                   class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                    <span class="text-[16px] font-medium sidebar-text">Criar Lojas</span>
-                </a>
-                {% endif %}
-
-                {% if "PRIVILEGED" in strategy.get("profile")["roles"] %}
-                    <a href="#"
-                       class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                        <span class="text-[16px] font-medium sidebar-text">Gerenciar Usuários</span>
+            
+                <div id="settings-submenu" class="submenu mt-1 ml-3 space-y-0.5">
+                    <a href="/settings?tab=whatsapp"
+                        class="flex items-center px-3 py-1.5 rounded-md text-white hover:bg-white/5 transition-all duration-200 group">
+                        <span
+                            class="w-1 h-1 rounded-full bg-white/20 group-hover:bg-indigo-400 mr-2.5 transition-colors duration-200"></span>
+                        <span class="text-[13px] font-medium sidebar-text tracking-wide">Integrações</span>
                     </a>
-                {% endif %}
-
+                    <a href="/settings?tab=blocked"
+                        class="flex items-center px-3 py-1.5 rounded-md text-white hover:bg-white/5 transition-all duration-200 group">
+                        <span
+                            class="w-1 h-1 rounded-full bg-white/20 group-hover:bg-indigo-400 mr-2.5 transition-colors duration-200"></span>
+                        <span class="text-[13px] font-medium sidebar-text tracking-wide">Bloquear Clientes</span>
+                    </a>
+            
+                    {% if "PRIVILEGED" in strategy.get("profile")["roles"] %}
+                    <a href="#"
+                        class="flex items-center px-3 py-1.5 rounded-md text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200 group">
+                        <span
+                            class="w-1 h-1 rounded-full bg-white/20 group-hover:bg-indigo-400 mr-2.5 transition-colors duration-200"></span>
+                        <span class="text-[13px] font-medium sidebar-text tracking-wide text-white">Gerenciar Usuários</span>
+                    </a>
+                    {% endif %}
+                </div>
             </div>
             {% if "ADMIN" in strategy.get("profile")["roles"] %}
-            <a href="/apidocs" target="_blank"
-               class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                <img src="{{ url_for('static', filename='icons/documentation.png') }}" alt="Documentation"
-                     class="w-6 h-6 mr-3 brightness-0 invert">
-                <span class="text-[16px] font-medium sidebar-text">API Docs</span>
-            </a>
+            <div class="pt-4 mt-2 border-t border-white/10">
+                <p class="px-3 mb-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white">Administrativo</p>
+
+                <a href="/apidocs" target="_blank"
+                    class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 group">
+                    <div
+                        class="w-8 h-8 flex items-center justify-center rounded-md bg-white/5 group-hover:bg-indigo-500/20 transition-colors duration-200">
+                        <img src="{{ url_for('static', filename='icons/documentation.png') }}" alt="Swagger"
+                            class="w-4 h-4 brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity duration-200">
+                    </div>
+                    <span class="text-[14px] text-white font-medium sidebar-text tracking-wide">Swagger</span>
+                </a>
+
+                <a href="/settings?tab=stores"
+                    class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 group">
+                    <div
+                        class="w-8 h-8 flex items-center justify-center rounded-md bg-white/5 group-hover:bg-indigo-500/20 transition-colors duration-200">
+                        <img src="{{ url_for('static', filename='icons/documentation.png') }}" alt="Lojas"
+                            class="w-4 h-4 brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity duration-200">
+                    </div>
+                    <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Lojas</span>
+                </a>
+            </div>
             {% endif %}
-            <br>
-            <div class="pt-7 border-t border-gray-700">
+            <div class="pt-2 mt-2 border-t border-white/10">
                 <a href="#" id="btn-about-orkestro"
-                   class="flex items-center px-2 py-2 rounded-lg hover:bg-[#222327] transition group">
-                    <img src="{{ url_for('static', filename='icons/infos.png') }}" alt="About"
-                         class="w-6 h-6 mr-3 brightness-0 invert">
-                    <span class="text-[16px] font-medium sidebar-text px-1">Sobre</span>
+                    class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 group">
+                    <div
+                        class="w-8 h-8 flex items-center justify-center rounded-md bg-white/5 group-hover:bg-indigo-500/20 transition-colors duration-200">
+                        <img src="{{ url_for('static', filename='icons/infos.png') }}" alt="Sobre"
+                            class="w-4 h-4 brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity duration-200">
+                    </div>
+                    <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Sobre</span>
                 </a>
-                <a href="{{ url_for("vws.views_profile_dashboard") }}"
-                   class="flex items-center px-2 py-2 rounded-lg hover:bg-[#222327] transition group">
-                    <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Profile"
-                         class="w-6 h-6 mr-3 brightness-0 invert">
-                    <span class="text-[16px] font-medium sidebar-text">Perfil</span>
+            
+                <a href="{{ url_for('vws.views_profile_dashboard') }}"
+                    class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 group">
+                    <div
+                        class="w-8 h-8 flex items-center justify-center rounded-md bg-white/5 group-hover:bg-indigo-500/20 transition-colors duration-200">
+                        <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Perfil"
+                            class="w-4 h-4 brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity duration-200">
+                    </div>
+                    <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Perfil</span>
                 </a>
+            
                 <a href="#" id="btn-logout"
-                   class="flex items-center px-3 py-2 rounded-lg hover:bg-[#222327] transition group">
-                    <img src="{{ url_for('static', filename='icons/logout.png') }}" alt="Logout"
-                         class="w-6 h-6 mr-3 brightness-0 invert">
-                    <span class="text-[16px] font-medium sidebar-text">Sair</span>
+                    class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/40 hover:text-red-400 hover:bg-red-500/10 transition-all duration-200 group">
+                    <div
+                        class="w-8 h-8 flex items-center justify-center rounded-md bg-white/5 group-hover:bg-red-500/20 transition-colors duration-200">
+                        <img src="{{ url_for('static', filename='icons/logout.png') }}" alt="Sair"
+                            class="w-4 h-4 brightness-0 invert opacity-40 group-hover:opacity-100 transition-opacity duration-200">
+                    </div>
+                    <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Sair</span>
                 </a>
             </div>
         </nav>

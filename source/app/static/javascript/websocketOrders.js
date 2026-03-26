@@ -188,13 +188,7 @@ $(function () {
             <li class="p-3 mb-2 w-full rounded-xl shadow-sm border-2
                 bg-white via-white transition-all duration-300"
                 data-id="${order.id}">
-                <div class="flex items-center justify-between mb-2">
-                    <div class="flex items-center gap-2">
-                        <h3 class="font-bold text-gray-800 text-lg tracking-tight">Pedido</h3>
-                        <span class="font-bold text-gray-800 text-lg tracking-tight">#${order.order_number}</span>
-                    </div>
-                    <p class="text-xs text-gray-600">${statusText}</p>
-                </div>
+                <p># ${order.order_number}</p>
                 <hr class="border-t-1 border-gray-200 mb-2">
                 <div class="space-y-0.5">
                     <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">Nome:</span> ${order.name}</p>

@@ -44,9 +44,11 @@ def api_get_store():
             })
 
     all_stores = stores_services.all_stores()
+    all_stores_serialized = [stores.serialize for stores in all_stores]
+    
     return Response.success(
         message="Lista de todos os comércios.",
-        data=stores_schemas.dump(all_stores, many=True),
+        data=all_stores_serialized,
         status_code=200
     )
 

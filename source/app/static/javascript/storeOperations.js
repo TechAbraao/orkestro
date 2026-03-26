@@ -1,4 +1,17 @@
 $(document).ready(function () {
+    $.ajax({
+        url: "/api/stores",
+        method: "GET",
+        success: function(response) {
+            let responseParsed = JSON.stringify(response.data)
+            console.log(`Resposta da API: ${responseParsed}`)
+        },
+        error: function() {
+
+        }
+    })
+
+
     $("form").on("submit", function (e) {
         e.preventDefault();
 
