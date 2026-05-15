@@ -7,7 +7,7 @@ const containerPhoto = $(".container-account-photo")
 const containerTextCount = $(".container-text-count-orders-sidenav")
 
 function toggleSidebar(expand) {
-    const isExpanded = expand ?? !sidebar.classList.contains("w-64");
+    const isExpanded = expand ?? !sidebar.classList.contains("w-[215px]");
 
     if (!isExpanded) {
         containerPhoto.hide();
@@ -17,7 +17,7 @@ function toggleSidebar(expand) {
         containerTextCount.show();
     }
 
-    sidebar.classList.toggle("w-64", isExpanded);
+    sidebar.classList.toggle("w-[215px]", isExpanded);
     sidebar.classList.toggle("w-16", !isExpanded);
 
     sidebarTexts.forEach(text => text.classList.toggle("hidden", !isExpanded));

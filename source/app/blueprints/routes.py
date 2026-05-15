@@ -15,6 +15,7 @@ from source.app.blueprints.api.categories import *
 from source.app.blueprints.api.orders import *
 from source.app.blueprints.api.authorizations import *
 from source.app.blueprints.api.employees import *
+from source.app.blueprints.api.reviews import *
 
 from source.app.blueprints.frontend.dashboard import *
 from source.app.blueprints.frontend.integrations import *

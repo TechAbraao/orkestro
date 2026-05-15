@@ -15,19 +15,7 @@ def vws_settings():
     elif tab == "blocked":
         return render_template("/pages/blocked_phones.jinja2")
     elif tab == "stores":
-        store_id = g.jwt_claims.get("sub")
-        roles = g.jwt_claims.get("roles")
-        menu_id = stores_services.get_menu_by_store_id(store_id)
-
-        rendering_strategy = {
-            "url": f"{request.path}",
-            "profile": {
-                "roles": roles,
-                "menu_id": menu_id.get("id"),
-            },
-            "logged": False,
-        }
-        return render_template("pages/store_manager.jinja2", strategy=rendering_strategy)
+       pass
     elif not tab:
         return redirect(redirect_uri)
     return redirect(redirect_uri)

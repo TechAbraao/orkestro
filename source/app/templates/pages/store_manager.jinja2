@@ -1,10 +1,13 @@
 {% extends "layouts/administrative.jinja2" %}
 
 {% block title %}
-Gerenciar Contas
+Gestão de Lojas
 {% endblock title %}
 
-
+{% block scripts %}
+    <script src="{{ url_for('static', filename='libs/jquery.mask.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='libs/jquery.dataTables.min.js') }}"></script>
+{% endblock scripts %}
 
 {% block sidenav %}
 {% include "partials/sidebar.jinja2" %}
@@ -14,23 +17,103 @@ Gerenciar Contas
 {% endblock sidenav %}
 
 {% block navbar %}
-<aside class="w-full pl-10 text-lg font-extrabold">
-    Visão Geral | <span class="font-extralight">Tenha uma visão geral dos principais indicadores | </span> <span
-        class="font-extralight" id="store-name-navbar">Company name</span>
+<aside class="w-full pl-10 text-lg font-extrabold flex items-center justify-between">
+    <div class="w-1/2">
+        <p>Gestão de Lojas | <span class="font-extralight">Gerencie todas as Lojas disponíveis | </span> <span
+            class="font-extralight" id="store-name-navbar">Company name</span>
+        </p>
+    </div>
+    <div class="w-1/2 flex items-center justify-end ">
+        <a href="{{ url_for('vws.views_profile_dashboard') }}"
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 mr-5">
+            <div
+                class="w-8 h-8 flex items-center justify-center rounded-md bg-white/5 group-hover:bg-indigo-500/20 transition-colors duration-200">
+                <img src="{{ url_for('static', filename='icons/profile.png') }}" alt="Perfil"
+                    class="w-4 h-4 brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity duration-200">
+            </div>
+            <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Perfil</span>
+        </a>
+    </div>
 </aside>
 {% endblock navbar %}
 
 {% block dashboard %}
-<section class="w-full h-full bg-gray-100 flex items-center justify-around border-gray-300 border-2 rounded-2xl">
-    <aside class="w-[55%] h-full bg-purple-300 flex justify-center items-center">
+<section class="w-full h-full bg-gray-100 flex gap-4 p-4 border border-gray-300 rounded-2xl">
+
+    <aside class="w-[35%] bg-white rounded-xl shadow-sm p-4 flex items-center justify-center">
         {% include "partials/forms_register_store.jinja2" %}
     </aside>
-    <aside class="w-full h-full bg-red-500">
-    
+
+    <aside class="w-[65%] bg-white rounded-xl shadow-sm p-4 overflow-auto">
+        <table id="allStoresTable" class="w-full text-sm">
+            <thead class="text-left text-gray-500 border-b">
+                <tr>
+                    <th class="p-2">Logo</th>
+                    <th class="p-2">Nome</th>
+                    <th class="p-2">Email</th>
+                    <th class="p-2">Telefone</th>
+                    <th class="p-2">Role</th>
+                    <th class="p-2 text-right">Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </aside>
+
 </section>
 <script>
     const createAccountStoreURL = "{{ url_for('api.create_new_account') }}"
+
+    $(document).ready(function () {
+        $('#allStoresTable').DataTable({
+            ajax: {
+                url: '/api/stores',
+                dataSrc: 'data'
+            },
+            columns: [
+                {
+                    data: 'logo_url',
+                    render: function (data) {
+                        return `<img src="${data}" class="w-8 h-8 rounded-full object-cover"/>`
+                    }
+                },
+                { data: 'name' },
+                { data: 'email' },
+                { data: 'telephone' },
+                {
+                    data: 'roles',
+                    render: function (data) {
+                        return `<span class="px-2 py-1 text-xs rounded bg-indigo-100 text-indigo-600">${data[0]}</span>`
+                    }
+                },
+                {
+                    data: 'id',
+                    render: function (data) {
+                        return `
+                            <div class="flex justify-end gap-2">
+                                <button class="text-blue-500 hover:underline" onclick="editStore('${data}')">Editar</button>
+                                <button class="text-red-500 hover:underline" onclick="deleteStore('${data}')">Excluir</button>
+                            </div>
+                        `
+                    }
+                }
+            ],
+            language: {
+                url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json"
+            },
+            pageLength: 5,
+            lengthChange: false,
+            dom: '<"flex justify-between items-center mb-2"f>t<"flex justify-between mt-2"ip>'
+        })
+    })
+
+    function editStore(id) {
+        console.log("Editar:", id)
+    }
+
+    function deleteStore(id) {
+        console.log("Excluir:", id)
+    }
 </script>
 <script src="{{ url_for('static', filename='javascript/storeOperations.js') }}" defer></script>
 {% endblock dashboard %}

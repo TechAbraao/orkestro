@@ -78,6 +78,7 @@ def create_app(config_name: str = "default"):
     from source.app.entities.orders_products_entity import OrderProductsEntity
     from source.app.entities.chat_history_entity import ChatHistory
     from source.app.entities.opening_hours_entity import OpeningHoursEntity
+    from source.app.entities.reviews_entity import ReviewsEntity
 
     from source.app.blueprints.api.auth.me_auth import about_auth
 

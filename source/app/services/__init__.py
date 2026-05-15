@@ -8,6 +8,7 @@ from source.app.services.customers_services import CustomersServices
 from source.app.services.orders_services import OrdersServices
 from source.app.services.analysis_services import AnalysisServices
 from source.app.services.tokens_services import TokensServices
+from source.app.services.reviews_services import ReviewsServices
 
 # Initialize service instances
 menu_services = MenuServices()
@@ -20,3 +21,4 @@ customers_services = CustomersServices()
 orders_services = OrdersServices()
 analysis_services = AnalysisServices()
 tokens_services = TokensServices()
+reviews_services = ReviewsServices()

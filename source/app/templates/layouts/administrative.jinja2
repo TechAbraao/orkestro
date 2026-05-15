@@ -11,11 +11,17 @@
     <script src="{{ url_for('static', filename='libs/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='libs/qrcode.min.js') }}"></script>
 
+    <!-- Elfsight Accessibility | Untitled Accessibility -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-7ccd10fa-2c39-4542-9c97-7f6d3afcd0d4" data-elfsight-app-lazy></div>
+
+
     <script src="{{ url_for('static', filename='javascript/toggleSidenav.js') }}" defer></script>
     <script src="{{ url_for('static', filename='javascript/logout.js') }}" defer></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/transitions.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/scrollbar.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dataTables.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pluginAcessibility.css') }}">
 
     <link
             href="https://cdn.datatables.net/2.3.6/css/dataTables.bootstrap5.min.css"
@@ -39,7 +45,7 @@
 <body class="min-h-screen flex flex-col">
 <div class="flex flex-1 min-h-0">
 
-
+    
     {# Modals #}
     {{ modals.modal_logout(
     header_text="Confirmar Saída",
@@ -50,6 +56,8 @@
 
     ) }}
 
+    {{ modals.suggestion_admin() }}
+
 
     {# Sidenav #}
     {% block sidenav %}
@@ -58,7 +66,7 @@
     {# Main Content #}
     <div class="flex-1 flex flex-col min-h-0">
         {# Footer #}
-        <footer class="text-white py-4 flex-shrink-0 bg-gray-900 transition-all duration-300">
+        <footer class="text-white h-[66px] flex-shrink-0 bg-[#18191B] transition-all duration-300 flex items-center justify-center">
             {% block navbar %}
             {% endblock navbar %}
         </footer>

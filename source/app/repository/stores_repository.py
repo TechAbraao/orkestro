@@ -18,6 +18,11 @@ class StoresRepository:
     def find_by_id(self, store_id: int) -> StoresEntity | None:
         return self.session.get(StoresEntity, store_id)
 
+    def exists_by_name(self, name):
+        return self.session.query(
+            self.session.query(StoresEntity).filter_by(name=name).exists()
+        ).scalar()
+    
     def find_by_unique_fields(self, email: str, name: str, telephone: str):
         return (
             self.session

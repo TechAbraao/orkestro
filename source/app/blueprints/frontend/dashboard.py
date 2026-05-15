@@ -13,9 +13,12 @@ def views_main_dashboard():
     roles = g.jwt_claims.get("roles")
     menu_id = stores_services.get_menu_by_store_id(store_id)
 
+    print("NOME", menu_id.get("name", "N/A"))
+
     rendering_strategy = {
         "profile": {
             "menu_id": menu_id.get("id", ""),
+            "name": menu_id.get("name", "N/A"),
             "roles": roles,
             "menu_roles": menu_id.get("roles", None)
         }
@@ -120,3 +123,21 @@ def views_edit_menu_dashboard(menu_id: str):
     }
 
     return render_template("pages/edit_menu.jinja2", strategy=rendering_strategy)
+
+
+@vws.get("/stores")
+@api_permissions(strategy="jwt", roles=["ADMIN"])
+def views_all_stores_dashboard():
+    store_id = g.jwt_claims.get("sub")
+    roles = g.jwt_claims.get("roles")
+    menu_id = stores_services.get_menu_by_store_id(store_id)
+
+    rendering_strategy = {
+            "url": f"{request.path}",
+            "profile": {
+                "roles": roles,
+                "menu_id": menu_id.get("id"),
+            },
+            "logged": False,
+        }
+    return render_template("pages/store_manager.jinja2", strategy=rendering_strategy)
