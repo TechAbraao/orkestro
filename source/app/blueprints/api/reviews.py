@@ -11,9 +11,10 @@ dir_name = "reviews.py"
 @api.route("/reviews", methods=["GET"])
 def get_all_reviews():
     
+    
     return jsonify({
         "data": ""
-    })
+    }), 200
 
 @api.route("/reviews", methods=["POST"])
 def post_review():

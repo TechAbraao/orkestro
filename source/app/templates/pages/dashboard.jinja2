@@ -143,6 +143,7 @@ Geral
     </div>
     <div>
     <div class="flex">
+    {% if "ADMIN" not in strategy.get("profile").get("roles") %}
     <div class="suggestionAdmin w-1/2 flex items-center justify-end ">
         <a href="#"
             class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 mr-5">
@@ -154,6 +155,7 @@ Geral
             <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Avaliação</span>
         </a>
     </div>
+    {% endif %}
     <div class="w-1/2 flex items-center justify-end ">
         <a href="{{ url_for('vws.views_profile_dashboard') }}"
                 class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 mr-5">

@@ -118,3 +118,8 @@ class StoresServices:
     @database_connection
     def all_stores(self):
         return self.stores_repository.all()
+
+    @database_connection
+    def get_store_by_id(self, id):
+        store = self.stores_repository.find_by_id(id)
+        return store.serialize

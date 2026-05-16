@@ -40,3 +40,10 @@ class ReviewsServices():
             )
 
         return True
+
+    
+    def all_reviews(self):
+        pass
+    
+    def all_reviews_to(self):
+        pass

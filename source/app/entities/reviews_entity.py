@@ -14,3 +14,16 @@ class ReviewsEntity(db.Model):
     to = db.Column(db.String, nullable=False)
     
     created_at = db.Column(db.DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+    
+    @property
+    def serialize(self):
+        return {
+            "id": self.id,
+            "by": self.by,
+            "category": self.category,
+            "note": self.note,
+            "description": self.description,
+            "to": self.to,
+            "created": self.created_at
+        }

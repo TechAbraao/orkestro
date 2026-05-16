@@ -12,13 +12,12 @@ def views_main_dashboard():
     store_id = g.jwt_claims.get("sub")
     roles = g.jwt_claims.get("roles")
     menu_id = stores_services.get_menu_by_store_id(store_id)
-
-    print("NOME", menu_id.get("name", "N/A"))
-
+    current_user = stores_services.get_store_by_id(store_id)
+    
     rendering_strategy = {
         "profile": {
             "menu_id": menu_id.get("id", ""),
-            "name": menu_id.get("name", "N/A"),
+            "name": current_user.get("name", "N/A"),
             "roles": roles,
             "menu_roles": menu_id.get("roles", None)
         }
@@ -141,3 +140,23 @@ def views_all_stores_dashboard():
             "logged": False,
         }
     return render_template("pages/store_manager.jinja2", strategy=rendering_strategy)
+
+
+@vws.get("/reviews")
+@api_permissions(strategy="jwt", roles=["ADMIN"])
+def views_all_reviews_to_admin():
+    store_id = g.jwt_claims.get("sub")
+    roles = g.jwt_claims.get("roles")
+    menu_id = stores_services.get_menu_by_store_id(store_id)
+    current_user = stores_services.get_store_by_id(store_id)
+    
+    rendering_strategy = {
+        "profile": {
+            "menu_id": menu_id.get("id", ""),
+            "name": current_user.get("name", "N/A"),
+            "roles": roles,
+            "menu_roles": menu_id.get("roles", None)
+        }
+    }
+    
+    return render_template("pages/feedbacks.jinja2", strategy=rendering_strategy)
