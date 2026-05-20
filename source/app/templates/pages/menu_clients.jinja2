@@ -29,9 +29,21 @@
 
                 </div>
             </div>
-            <nav class="hidden md:flex gap-6">
+            <nav class="hidden md:flex gap-6 w-[40%] flex items-center justify-end">
                 <a href="#" id="btn-about-store" class="hover:text-gray-300 transition">Sobre o Comércio</a>
                 <a href="#" id="btn-contact-menu" class="hover:text-gray-300 transition">Contato</a>
+                <div class="suggestionMenu flex items-center justify-end">
+                    <a href="#"
+                        class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 mr-5">
+                        <div
+                            class="w-8 h-8 flex items-center justify-center rounded-md bg-white/5 group-hover:bg-indigo-500/20 transition-colors duration-200">
+                            <img src="{{ url_for('static', filename='icons/smile.svg') }}" alt="Avaliação"
+                                class="w-4 h-4 brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity duration-200">
+                        </div>
+                        <span class="text-[14px] font-medium sidebar-text tracking-wide text-white">Avaliação</span>
+                    </a>
+                </div>
+
             </nav>
         </div>
     </header>
@@ -47,6 +59,7 @@
         const menuClient = "{{ url_for('api.render_menu_with_slug', slug=strategy['menu_slug']) }}"
         let aboutMeStore = "{{ url_for('about_auth.about_me_store') }}"
         const menuSlug = "{{ strategy['menu_slug'] }}"
+        const storeName = "{{ strategy["store_name"] }}"
     </script>
     <script src="{{ url_for('static', filename='javascript/menus.js') }}" defer></script>
 {% endblock navbar %}

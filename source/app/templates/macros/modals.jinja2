@@ -1153,56 +1153,63 @@ modal_id="modalConfirmOperation") %}
 
 
 
-{% macro suggestion_menu(modal_id="suggestionMenuModal") %}
-<div id="{{ modal_id }}"
-    class="modalSuggestionMenu fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+{% macro suggestion_menu() %}
+<div id="suggestionMenuModal"
+    class="modalSuggestionMenu fixed inset-0 bg-black hidden bg-opacity-50 z-50 flex items-center justify-center">
     <div class="bg-white rounded-2xl shadow-xl p-6 w-[480px] relative">
 
-
         <button
-            class="closeModalSuggestionMenu absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-lg leading-none">✕</button>
-
+            class="closeModalSuggestionMenu absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-lg leading-none">
+            ✕
+        </button>
 
         <div class="mb-4">
             <h1 class="text-xl font-bold text-gray-900">Como foi pedir pelo cardápio?</h1>
             <p class="text-sm text-gray-500 mt-0.5">Sua resposta ajuda o restaurante a melhorar o atendimento.</p>
         </div>
 
-
         <div class="mb-5">
             <p class="text-sm text-gray-700 mb-2">Avalie a experiência:</p>
-            <div class="flex gap-2" id="{{ modal_id }}_stars">
+
+            <div class="flex gap-1" id="menuRating">
                 {% for i in range(1, 6) %}
-                <button type="button" data-value="{{ i }}" onclick="selectStar('{{ modal_id }}', {{ i }})"
-                    class="star-btn text-3xl text-gray-300 hover:text-yellow-400 transition-colors focus:outline-none">☆</button>
+                <button type="button" data-value="{{ i }}"
+                    class="rating-btn text-4xl text-gray-300 hover:text-yellow-400 transition-colors focus:outline-none leading-none">
+                    ★
+                </button>
                 {% endfor %}
             </div>
         </div>
 
         <div class="mb-4">
             <p class="text-sm font-medium text-gray-800 mb-2">O que influenciou sua nota? (opcional)</p>
-            <div class="flex flex-wrap gap-2">
+
+            <div class="flex flex-wrap gap-2" id="menuTags">
                 {% for tag in ["Facilidade de uso", "Clareza do pedido", "Tempo de resposta", "Problema no pedido"] %}
-                <button type="button" onclick="toggleTagMenu(this)"
-                    class="tag-btn px-4 py-1.5 rounded-full border border-gray-300 text-sm text-gray-700 hover:border-gray-500 hover:bg-gray-50 transition-all focus:outline-none">{{
-                    tag }}</button>
+                <button type="button" data-tag="{{ tag }}"
+                    class="tag-btn px-4 py-1.5 rounded-full border border-gray-300 text-sm text-gray-700 hover:border-gray-500 hover:bg-gray-50 transition-all">
+                    {{ tag }}
+                </button>
                 {% endfor %}
             </div>
         </div>
 
         <div class="mb-5">
-            <p class="text-sm text-gray-700 mb-1">Quer comentar algo?</p>
-            <textarea id="{{ modal_id }}_comment" rows="3" placeholder="Campo de texto opcional..."
+            <label class="text-sm text-gray-700 block mb-1">Quer comentar algo?</label>
+            <textarea id="menuComment" rows="3" placeholder="Campo de texto opcional..."
                 class="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm text-gray-700 placeholder-gray-400 resize-none focus:outline-none focus:border-gray-400"></textarea>
         </div>
 
-
         <div class="flex gap-3">
-            <button type="button" onclick="submitSuggestionMenu('{{ modal_id }}')"
-                class="flex-1 bg-gray-900 hover:bg-gray-700 text-white py-2.5 rounded-xl font-semibold text-sm transition-colors">Enviar</button>
+            <button type="button" id="sendMenuReviewBtn"
+                class="flex-1 bg-gray-900 hover:bg-gray-700 text-white py-2.5 rounded-xl font-semibold text-sm transition-colors">
+                Enviar
+            </button>
+
             <button type="button"
-                class="closeModalSuggestionMenu flex-1 border border-gray-300 hover:bg-gray-50 text-gray-800 py-2.5 rounded-xl font-semibold text-sm transition-colors">Agora
-                não</button>
+                class="closeModalSuggestionMenu flex-1 border border-gray-300 hover:bg-gray-50 text-gray-800 py-2.5 rounded-xl font-semibold text-sm transition-colors">
+                Agora não
+            </button>
         </div>
     </div>
 </div>

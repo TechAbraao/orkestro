@@ -143,7 +143,7 @@ def views_all_stores_dashboard():
 
 
 @vws.get("/reviews")
-@api_permissions(strategy="jwt", roles=["ADMIN"])
+@api_permissions(strategy="jwt", roles=["ADMIN", "PRIVILEGED"])
 def views_all_reviews_to_admin():
     store_id = g.jwt_claims.get("sub")
     roles = g.jwt_claims.get("roles")

@@ -38,7 +38,10 @@ def view_menu_by_slug(slug: str):
     else:
         hasCategory = False
 
+    menu_stored = stores_services.get_store_by_slug(slug=slug)
+    
     rendering_strategy = {
+        "store_name": menu_stored.get("name", "N/A"),
         "menu_slug": slug,
         "menu_id": menu_id,
         "menu_name": menu_by_slug.get("name"),

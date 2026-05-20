@@ -17,20 +17,73 @@ Feedbacks
 {% endblock sidenav %}
 
 {% block dashboard %}
-<section class="w-full h-full flex items-center p-10 gap-4 bg-gray-100 rounded-3xl border-2 border-gray-300">
-    <table id="historicOrdersTable"
-        class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm text-sm">
-        <thead>
-            <tr>
-                {# #}
-            </tr>
-        </thead>
-        <tbody id="containerTBodyFeedbacksTable">
-            {# #}
-        </tbody>
-    </table>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables.net-dt@2/css/dataTables.dataTables.min.css">
+
+<section style="width:100%; padding: 1.5rem 0;">
+
+    <div style="overflow-x:auto; border: 1px solid #e5e7eb; border-radius: 12px; background: #fff;">
+        <table id="historicFeedbacksTable" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Quem avaliou</th>
+                    <th>Categorias</th>
+                    <th>Nota</th>
+                    <th>Descrição</th>
+                    <th>Destino</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 </section>
+
 <script>
+    $(document).ready(function () {
+        $('#historicFeedbacksTable').DataTable({
+            ajax: { url: '/api/reviews/me', dataSrc: 'data' },
+            columns: [
+                {
+                    data: 'id',
+                    render: (data) => `<span style="font-family:monospace;font-size:11px;color:#9ca3af;background:#f3f4f6;padding:2px 6px;border-radius:6px">${String(data).slice(0, 8)}…</span>`
+                },
+                {
+                    data: 'by',
+                    render: (data) => `<span style="font-weight:500">${data}</span>`
+                },
+                {
+                    data: 'category',
+                    render: (data) => {
+                        const cats = String(data).replace(/[{}"]/g, '').split(',');
+                        return `<div style="display:flex;flex-wrap:wrap;gap:4px">${cats.map(c =>
+                            `<span style="font-size:11px;padding:2px 8px;border-radius:999px;background:#f3f4f6;border:1px solid #e5e7eb;color:#6b7280">${c.trim()}</span>`
+                        ).join('')}</div>`;
+                    }
+                },
+                {
+                    data: 'note',
+                    render: (data) => `<div style="display:flex;align-items:center;gap:5px;font-weight:500"><span style="color:#f59e0b">★</span>${data}</div>`
+                },
+                {
+                    data: 'description',
+                    render: (data) => `<span style="color:#6b7280;font-size:13px">${data}</span>`
+                },
+                {
+                    data: 'to',
+                    render: (data) => `<span style="font-size:11px;padding:3px 8px;border-radius:6px;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe">${data}</span>`
+                },
+                {
+                    data: 'created',
+                    render: (data) => new Date(data).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' })
+                }
+            ],
+            responsive: true,
+            pageLength: 5,
+            autoWidth: false,
+            language: { url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/pt-BR.json' }
+        });
+    });
 </script>
 {% endblock dashboard %}
 

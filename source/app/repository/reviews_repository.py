@@ -12,3 +12,11 @@ class ReviewsRepository():
     def add(self, entity):
         self.session.add(entity)
         return True
+
+    def all(self):
+        return self.session.query(ReviewsEntity).all()
+    
+    def get_reviews_by_to(self, to: str):
+        return self.session.query(ReviewsEntity).filter_by(
+            to=to
+        ).all()
