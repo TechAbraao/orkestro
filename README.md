@@ -55,7 +55,7 @@ python -m venv .venv
 ```bash
 pip install -r ./source/requirements/requirements-dev.txt
 ```
-#### 4. Configure todas as variáveis de ambiente presente em `.env.template` e, após as configurações, renomeie para `.env`:
+#### 4. Configure todas as variáveis de ambiente presentes em `.env.template`:
 ```bash
 FLASK_APP=source.app:create_app
 FLASK_ENV=development
@@ -82,22 +82,37 @@ ADMIN_PASSWORD=[]
 > **Notas:**
 > - As configurações das variáveis de ambiente são de extrema importância para a inicialização do projeto. Em caso de dúvidas, consulte um dos mantenedores.
 
+#### 5. Renomeie o arquivo `.env.template` para `.env`
+```bash
+# Linux / macOS
+mv .env.template .env
 
-#### 5. Na raiz do projeto, inicialize os containers Docker:
+# Windows (PowerShell)
+Rename-Item .env.template .env
+```
+
+#### 6. Na raiz do projeto, inicialize os containers Docker:
+
+- Utilizando o Makefile:
 ```bash
 make up
 ```
-#### 6. Após isso, faça as migrations:
+- Caso não possua o make instalado, execute diretamente o Docker Compose:
+```bash
+docker compose -f ./source/docker/compose/docker-compose.yml up -d
+```
+
+#### 7. Após isso, faça as migrations:
 ```bash
 flask db upgrade
 ```
 
-#### 7. Rode o projeto:
+#### 8. Rode o projeto:
 ```bash
 flask run 
 ```
 
-#### 8. Disponível em:
+#### 9. Acesse a aplicação:
 ```bash
 http://localhost:<port>
 ```
