@@ -82,7 +82,7 @@ ADMIN_PASSWORD=[]
 > **Notas:**
 > - As configurações das variáveis de ambiente são de extrema importância para a inicialização do projeto. Em caso de dúvidas, consulte um dos mantenedores.
 
-#### 5. Renomeie o arquivo `.env.template` para `.env`
+#### 5. Renomeie o arquivo `.env.template` para `.env`:
 ```bash
 # Linux / macOS
 mv .env.template .env
