@@ -1,12 +1,31 @@
-# Orkestro: plataforma web para gerenciamento de cardápios
+# Orkestro @ FATEC-ZL
+
 
 ## Tecnologias
-...
+
+<section align="left">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Python-grey?style=flat&logo=Python">
+    <img alt="Static Badge" src="https://img.shields.io/badge/JavaScript-grey?style=flat&logo=JavaScript">
+    <img alt="Static Badge" src="https://img.shields.io/badge/JQuery-grey?style=flat&logo=JQuery">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Marshmallow-grey?style=flat&logo=Python">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Jinja-grey?style=flat&logo=Jinja">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Flask-grey?style=flat&logo=Flask">
+    <img alt="Static Badge" src="https://img.shields.io/badge/SQLAlchemy-grey?style=flat&logo=SQLAlchemy">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Docker-grey?style=flat&logo=Docker">
+    <img alt="Static Badge" src="https://img.shields.io/badge/PostgreSQL-grey?style=flat&logo=PostgreSQL">
+    <img alt="Static Badge" src="https://img.shields.io/badge/PgAdmin-grey?style=flat&logo=PostgreSQL">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Postman-grey?style=flat&logo=Postman">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Unittest-grey?style=flat&logo=Python">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Pytest-grey?style=flat&logo=Pytest">
+    <img alt="Static Badge" src="https://img.shields.io/badge/TailwindCSS-grey?style=flat&logo=TailwindCSS">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Swagger (OpenAPI)-grey?style=flat&logo=Swagger">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Makefile-grey?style=flat&logo=Make">
+</section>
 
 ## Descrição
-Orkestro é uma aplicação web completa para gerenciamento de cardápios, com automação de atendimento por chatbot e análises integradas para apoiar decisões do negócio.
+- Orkestro é uma plataforma web de gerenciamento de cardápios desenvolvida para otimizar a rotina de pequenos comércios, centralizando a administração de produtos, preços e pedidos de forma simples e eficiente.
 
-Desenvolvido como artefato central do Projeto Integrador da FATEC Zona Leste, ao longo do 3º e 4º semestres — reunindo na prática os conteúdos estudados durante o curso.
+- Desenvolvido a partir dos conhecimentos adquiridos na Faculdade de Tecnologia da Zona Leste (FATEC-ZL), o projeto possui caráter acadêmico e busca simular práticas e processos utilizados em equipes reais de desenvolvimento de software.
 
 ## Pré-requisitos
 Para executar o projeto, as seguintes tecnologias são necessárias:
@@ -64,7 +83,7 @@ ADMIN_PASSWORD=[]
 > - As configurações das variáveis de ambiente são de extrema importância para a inicialização do projeto. Em caso de dúvidas, consulte um dos mantenedores.
 
 
-#### 5. Na raíz do projeto, inicialize os containers Docker:
+#### 5. Na raiz do projeto, inicialize os containers Docker:
 ```bash
 make up
 ```
@@ -73,16 +92,14 @@ make up
 flask db upgrade
 ```
 
-#### 7. Disponível em:
+#### 7. Rode o projeto:
+```bash
+flask run 
+```
+
+#### 8. Disponível em:
 ```bash
 http://localhost:<port>
 ```
-
-## Documentação
-
-### API Swagger
-
-## Preview
-
 
 
