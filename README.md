@@ -20,6 +20,7 @@
     <img alt="Static Badge" src="https://img.shields.io/badge/TailwindCSS-grey?style=flat&logo=TailwindCSS">
     <img alt="Static Badge" src="https://img.shields.io/badge/Swagger (OpenAPI)-grey?style=flat&logo=Swagger">
     <img alt="Static Badge" src="https://img.shields.io/badge/Makefile-grey?style=flat&logo=Make">
+    <img alt="Static Badge" src="https://img.shields.io/badge/CircleCI-grey?style=flat&logo=CircleCI">
 </section>
 
 ## Descrição
